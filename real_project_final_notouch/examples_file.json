@@ -1,0 +1,53 @@
+[
+    {
+        "cve_id": "CVE-2026-11281",
+        "published": "2026-06-05T00:17:05.400",
+        "description": "Integer overflow in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 allowed a local attacker to obtain potentially sensitive information from process memory via a crafted ETW event. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+        "cwe_id": "CWE-472",
+        "attack_vector": "LOCAL",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "NONE",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11245",
+        "published": "2026-06-05T00:17:00.857",
+        "description": "Inappropriate implementation in Payments in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+        "cwe_id": "CWE-451",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "LOW",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-25657",
+        "published": "2026-06-05T12:16:37.750",
+        "description": "Ericsson Packet Core Gateway (PCG) versions prior to 1.30 contain an Improper Handling of Syntactically Invalid Structure (CWE-228) vulnerability where an attacker continuously sending a specially crafted message can cause service degradation. The impact continues as long the attack persists but the system recovers from the crashes when the attack stops.",
+        "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cwe_id": "CWE-228",
+        "attack_vector": "ADJACENT_NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "NONE",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "ericsson packet core gateway"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:ericsson:packet_core_gateway:*:*:*:*:*:*:*:*"
+        ]
+    }
+]
