@@ -1,5 +1,10 @@
 .env
 venv/
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+pip-selfcheck.json
 __pycache__/
 *.pyc
 *.pyo
