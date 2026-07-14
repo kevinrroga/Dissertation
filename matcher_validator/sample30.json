@@ -1,0 +1,312 @@
+{
+  "CVE-2026-49195": {
+    "model": "gpt-5.5",
+    "ext": "Missing Authentication",
+    "gt": [
+      "Missing Authentication for Critical Function"
+    ],
+    "cwes": [
+      "CWE-306"
+    ]
+  },
+  "CVE-2026-49196": {
+    "model": "gpt-5.5",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+    ],
+    "cwes": [
+      "CWE-77"
+    ]
+  },
+  "CVE-2026-49197": {
+    "model": "gpt-5.5",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Improper Authentication"
+    ],
+    "cwes": [
+      "CWE-287"
+    ]
+  },
+  "CVE-2026-49198": {
+    "model": "gpt-5.5",
+    "ext": "Improper Access Control",
+    "gt": [
+      "Improper Access Control"
+    ],
+    "cwes": [
+      "CWE-284"
+    ]
+  },
+  "CVE-2026-42965": {
+    "model": "gpt-5.5",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-46579": {
+    "model": "gpt-5.5",
+    "ext": "Improper Authentication",
+    "gt": [
+      "Improper Authentication"
+    ],
+    "cwes": [
+      "CWE-287"
+    ]
+  },
+  "CVE-2026-49201": {
+    "model": "gpt-5.5",
+    "ext": "Hardcoded Cryptographic Key",
+    "gt": [
+      "Use of Hard-coded Credentials"
+    ],
+    "cwes": [
+      "CWE-798"
+    ]
+  },
+  "CVE-2025-41265": {
+    "model": "gpt-5.5",
+    "ext": "OS Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    ],
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  "CVE-2025-41266": {
+    "model": "gpt-5.5",
+    "ext": "OS Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    ],
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  "CVE-2026-48840": {
+    "model": "gpt-5.5",
+    "ext": "Information Disclosure",
+    "gt": [
+      "Numeric Range Comparison Without Minimum Check"
+    ],
+    "cwes": [
+      "CWE-839"
+    ]
+  },
+  "CVE-2026-46242": {
+    "model": "gpt-5.5",
+    "ext": "Use-After-Free",
+    "gt": [
+      "Use After Free"
+    ],
+    "cwes": [
+      "CWE-416"
+    ]
+  },
+  "CVE-2018-25412": {
+    "model": "gpt-5.5",
+    "ext": "Arbitrary File Upload",
+    "gt": [
+      "Missing Authentication for Critical Function"
+    ],
+    "cwes": [
+      "CWE-306"
+    ]
+  },
+  "CVE-2018-25426": {
+    "model": "gpt-5.5",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+    ],
+    "cwes": [
+      "CWE-120"
+    ]
+  },
+  "CVE-2026-48210": {
+    "model": "gpt-5.5",
+    "ext": "Improper Default Configuration",
+    "gt": [
+      "Exposure of Sensitive Information to an Unauthorized Actor",
+      "Improper Privilege Management"
+    ],
+    "cwes": [
+      "CWE-200",
+      "CWE-269"
+    ]
+  },
+  "CVE-2026-39831": {
+    "model": "gpt-5.5",
+    "ext": "Improper Authentication",
+    "gt": [
+      "Missing Authorization"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  "CVE-2026-8922": {
+    "model": "gpt-5.5",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Implementation of Authentication Algorithm"
+    ],
+    "cwes": [
+      "CWE-303"
+    ]
+  },
+  "CVE-2026-43617": {
+    "model": "gpt-5.5",
+    "ext": "Authorization Bypass",
+    "gt": [
+      "Authentication Bypass by Alternate Name"
+    ],
+    "cwes": [
+      "CWE-289"
+    ]
+  },
+  "CVE-2026-4273": {
+    "model": "gpt-5.5",
+    "ext": "Improper Authentication",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-6334": {
+    "model": "gpt-5.5",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Authentication Bypass by Primary Weakness"
+    ],
+    "cwes": [
+      "CWE-305"
+    ]
+  },
+  "CVE-2026-42267": {
+    "model": "gpt-5.5",
+    "ext": "CSV/Formula Injection",
+    "gt": [
+      "Improper Neutralization of Formula Elements in a CSV File"
+    ],
+    "cwes": [
+      "CWE-1236"
+    ]
+  },
+  "CVE-2026-43870": {
+    "model": "gpt-5.5",
+    "ext": "Path Traversal / HTTP Request/Response Splitting / Uncontrolled Resource Consumption",
+    "gt": [
+      "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+      "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')",
+      "Origin Validation Error",
+      "Uncontrolled Resource Consumption"
+    ],
+    "cwes": [
+      "CWE-22",
+      "CWE-113",
+      "CWE-346",
+      "CWE-400"
+    ]
+  },
+  "CVE-2026-43078": {
+    "model": "gpt-5.5",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-49014": {
+    "model": "claude-sonnet-4.6",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Stack-based Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-121"
+    ]
+  },
+  "CVE-2026-8376": {
+    "model": "claude-sonnet-4.6",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Integer Overflow to Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-680"
+    ]
+  },
+  "CVE-2026-45252": {
+    "model": "claude-sonnet-4.6",
+    "ext": "Buffer Over-read / Heap Buffer Overflow",
+    "gt": [
+      "Heap-based Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-122"
+    ]
+  },
+  "CVE-2026-45321": {
+    "model": "claude-sonnet-4.6",
+    "ext": "Pwn Request / Cache Poisoning / Credential Theft Chain",
+    "gt": [
+      "Embedded Malicious Code"
+    ],
+    "cwes": [
+      "CWE-506"
+    ]
+  },
+  "CVE-2026-42217": {
+    "model": "claude-sonnet-4.6",
+    "ext": "Undefined Behavior (Unbounded Shift)",
+    "gt": [
+      "Integer Overflow or Wraparound"
+    ],
+    "cwes": [
+      "CWE-190"
+    ]
+  },
+  "CVE-2026-48686": {
+    "model": "deepseek-v4-pro",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-120",
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-42002": {
+    "model": "deepseek-v4-pro",
+    "ext": "Concurrency/Locking Defect",
+    "gt": [
+      "Signal Handler Race Condition"
+    ],
+    "cwes": [
+      "CWE-364"
+    ]
+  },
+  "CVE-2026-7258": {
+    "model": "deepseek-v4-pro",
+    "ext": "Buffer Under-read / Out-of-bounds Read",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  }
+}
