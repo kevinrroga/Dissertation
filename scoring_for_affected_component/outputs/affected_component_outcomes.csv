@@ -1,0 +1,7 @@
+model,condition,Match,Partial,No Match,Declined,Malformed
+claude-sonnet-4.6,few_shot,270,71,159,0,0
+claude-sonnet-4.6,zero_shot,274,66,160,0,0
+deepseek-v4-pro,few_shot,276,71,152,1,0
+deepseek-v4-pro,zero_shot,283,69,148,0,0
+gpt-5.5,few_shot,275,72,153,0,0
+gpt-5.5,zero_shot,274,73,153,0,0

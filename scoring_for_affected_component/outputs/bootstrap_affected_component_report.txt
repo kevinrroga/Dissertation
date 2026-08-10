@@ -1,0 +1,33 @@
+==========================================================================================
+Bootstrap 95% confidence intervals — affected component
+==========================================================================================
+5000 CVE-level resamples, percentile method, seed 42.
+
+Metric: binary accuracy (= recall under the FP=0 policy).
+F1 is reported for cross-entity comparability; it is a deterministic
+transformation of accuracy when FP=0 (F1 = 2*acc / (1+acc)) and
+adds no independent information.
+Partial matches are excluded from the positive class throughout.
+
+------------------------------------------------------------------------------------------
+Model                    Condition   Accuracy  95% CI (acc)          F1        95% CI (F1)
+------------------------------------------------------------------------------------------
+claude-sonnet-4.6        few_shot    0.540     [0.498, 0.582]        0.701     [0.665, 0.736]
+claude-sonnet-4.6        zero_shot   0.548     [0.506, 0.590]        0.708     [0.672, 0.742]
+deepseek-v4-pro          few_shot    0.552     [0.510, 0.594]        0.711     [0.675, 0.745]
+deepseek-v4-pro          zero_shot   0.566     [0.524, 0.610]        0.723     [0.688, 0.758]
+gpt-5.5                  few_shot    0.550     [0.508, 0.592]        0.710     [0.674, 0.744]
+gpt-5.5                  zero_shot   0.548     [0.506, 0.590]        0.708     [0.672, 0.742]
+
+------------------------------------------------------------------------------------------
+INTERPRETATION NOTE
+------------------------------------------------------------------------------------------
+Overlapping CIs between two cells indicate that the difference in
+accuracy is consistent with sampling variation and should not be
+interpreted as a reliable performance gap. The McNemar test provides
+the formal paired significance test for each comparison.
+
+The relatively wide CIs here (compared to attack_vector and CIA)
+reflect the genuine difficulty of this entity: 500 CVEs is sufficient
+for the closed-class entities, but open-ended extraction accuracy
+is more sensitive to which specific CVEs happen to be sampled.

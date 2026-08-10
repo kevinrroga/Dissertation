@@ -1,0 +1,24 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-27T00:10:04.269060+00:00",
+  "output_text": "API connection successful.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 4,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 9,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 9
+      }
+    ],
+    "thoughts_token_count": 66,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 79,
+    "traffic_type": null
+  }
+}

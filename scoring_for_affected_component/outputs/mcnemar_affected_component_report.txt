@@ -1,0 +1,48 @@
+==========================================================================================
+McNemar significance testing — affected component
+==========================================================================================
+9 comparisons, Holm-Bonferroni corrected, alpha = 0.05.
+A CVE is 'correct' if matched == True (Match outcome only; Partial = incorrect).
+'b' = A correct/B wrong, 'c' = B correct/A wrong. Only discordant pairs inform the test.
+
+PROMPTING COMPARISONS (zero_shot vs few_shot, within model)
+------------------------------------------------------------------------------------------
+  deepseek-v4-pro: zero_shot vs few_shot             n=500   b=11   c=4    disc=15   p=0.1185  p_adj=0.9478  (exact_binomial)
+  claude-sonnet-4.6: zero_shot vs few_shot           n=500   b=5    c=1    disc=6    p=0.2188  p_adj=1.0000  (exact_binomial)
+  gpt-5.5: zero_shot vs few_shot                     n=500   b=3    c=4    disc=7    p=1.0000  p_adj=1.0000  (exact_binomial)
+
+MODEL COMPARISONS (pairwise within condition)
+------------------------------------------------------------------------------------------
+  zero_shot: deepseek-v4-pro vs gpt-5.5              n=500   b=15   c=6    disc=21   p=0.0784  p_adj=0.7052  (exact_binomial)
+  zero_shot: claude-sonnet-4.6 vs deepseek-v4-pro    n=500   b=9    c=18   disc=27   p=0.1237  p_adj=0.9478  (chi_square_corrected)
+  few_shot: claude-sonnet-4.6 vs deepseek-v4-pro     n=500   b=7    c=13   disc=20   p=0.2632  p_adj=1.0000  (exact_binomial)
+  few_shot: claude-sonnet-4.6 vs gpt-5.5             n=500   b=4    c=9    disc=13   p=0.2668  p_adj=1.0000  (exact_binomial)
+  zero_shot: claude-sonnet-4.6 vs gpt-5.5            n=500   b=8    c=8    disc=16   p=1.0000  p_adj=1.0000  (exact_binomial)
+  few_shot: deepseek-v4-pro vs gpt-5.5               n=500   b=12   c=11   disc=23   p=1.0000  p_adj=1.0000  (exact_binomial)
+
+ALL 9 TESTS (sorted by raw p-value)
+------------------------------------------------------------------------------------------
+  label                                                 b    c  disc     p_raw     p_adj  sig
+  --------------------------------------------------------------------------------------
+  zero_shot: deepseek-v4-pro vs gpt-5.5                15    6    21    0.0784    0.7052  no
+  deepseek-v4-pro: zero_shot vs few_shot               11    4    15    0.1185    0.9478  no
+  zero_shot: claude-sonnet-4.6 vs deepseek-v4-pro       9   18    27    0.1237    0.9478  no
+  claude-sonnet-4.6: zero_shot vs few_shot              5    1     6    0.2188    1.0000  no
+  few_shot: claude-sonnet-4.6 vs deepseek-v4-pro        7   13    20    0.2632    1.0000  no
+  few_shot: claude-sonnet-4.6 vs gpt-5.5                4    9    13    0.2668    1.0000  no
+  gpt-5.5: zero_shot vs few_shot                        3    4     7    1.0000    1.0000  no
+  zero_shot: claude-sonnet-4.6 vs gpt-5.5               8    8    16    1.0000    1.0000  no
+  few_shot: deepseek-v4-pro vs gpt-5.5                 12   11    23    1.0000    1.0000  no
+
+INTERPRETATION
+------------------------------------------------------------------------------------------
+Significant prompting row: few-shot reliably differs from zero-shot for
+this model on this entity. Non-significant: worked examples made no
+reliable difference — itself a finding, consistent with the proposal's
+risk analysis acknowledging that prompting gains may not hold.
+
+Significant model row: the two models differ beyond chance on affected
+component extraction. Given the open-ended nature of this entity,
+interpret direction (b vs c) alongside the accuracy gap in the scorer
+output — statistical significance with a small b/c gap has limited
+practical meaning when overall accuracy is ~55%.

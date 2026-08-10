@@ -1,0 +1,41 @@
+Declines overlap analysis - attack_vector
+A CVE is 'declined' by a model if it returned null in >=1 condition (pooled).
+
+Declined-CVE set size per model:
+  claude-sonnet-4.6        14
+  deepseek-v4-pro          20
+  gpt-5.5                  57
+
+Overlap across 3 models:
+  declined by 3: 12 CVEs
+  declined by 2: 8 CVEs
+  declined by 1: 39 CVEs
+
+Shared hard core (declined by ALL 3): 12 CVEs
+    CVE-2026-24160
+    CVE-2026-42002
+    CVE-2026-42396
+    CVE-2026-47308
+    CVE-2026-47310
+    CVE-2026-47311
+    CVE-2026-47312
+    CVE-2026-47314
+    CVE-2026-47316
+    CVE-2026-8915
+    CVE-2026-9156
+    CVE-2026-9207
+
+Model-specific declines (declined by that model alone):
+  claude-sonnet-4.6        0
+  deepseek-v4-pro          2
+  gpt-5.5                  37
+
+Cross-reference: on the 57 CVEs gpt-5.5 declined,
+how did the other models do? ('wrong' = incorrect in BOTH conditions)
+  both other models also wrong: 21
+  both other models correct:    27
+  mixed:                        9
+
+Reading: a large shared core points to hard descriptions (data); a large
+model-specific count points to a behavioural difference (that model is
+simply more willing to abstain).

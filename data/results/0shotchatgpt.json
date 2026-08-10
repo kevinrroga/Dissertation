@@ -1,0 +1,425 @@
+{
+  "gpt-5.5": [
+    {
+      "cve_id": "CVE-2026-49195",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "raw_response": "{\"vulnerability_type\":\"Missing Authentication\",\"attack_vector\":\"Adjacent Network\",\"affected_component\":\"/sbin/mtk_dut\",\"confidentiality_impact\":null,\"integrity_impact\":\"High\",\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Missing Authentication",
+        "attack_vector": "Adjacent Network",
+        "affected_component": "/sbin/mtk_dut",
+        "confidentiality_impact": null,
+        "integrity_impact": "High",
+        "availability_impact": null
+      },
+      "notes": [],
+      "latency_s": 6.571,
+      "usage": {
+        "input_tokens": 780,
+        "output_tokens": 51,
+        "total_tokens": 831
+      },
+      "served_model": "gpt-5.5-2026-04-23"
+    },
+    {
+      "cve_id": "CVE-2026-49196",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "raw_response": "{\"vulnerability_type\":\"Command Injection\",\"attack_vector\":null,\"affected_component\":\"Wi-Fi device blocking feature\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": null,
+        "affected_component": "Wi-Fi device blocking feature",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 2.166,
+      "usage": {
+        "input_tokens": 763,
+        "output_tokens": 47,
+        "total_tokens": 810
+      },
+      "served_model": "gpt-5.5-2026-04-23"
+    },
+    {
+      "cve_id": "CVE-2026-49197",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "raw_response": "{\"vulnerability_type\":\"Improper Authentication\",\"attack_vector\":\"Network\",\"affected_component\":\"Acer Connect app\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authentication",
+        "attack_vector": "Network",
+        "affected_component": "Acer Connect app",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "notes": [],
+      "latency_s": 2.175,
+      "usage": {
+        "input_tokens": 766,
+        "output_tokens": 47,
+        "total_tokens": 813
+      },
+      "served_model": "gpt-5.5-2026-04-23"
+    },
+    {
+      "cve_id": "CVE-2026-49198",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "raw_response": "{\"vulnerability_type\":\"Improper Access Control\",\"attack_vector\":\"Network\",\"affected_component\":\"MQTT broker\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"None\",\"availability_impact\":\"None\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": "Network",
+        "affected_component": "MQTT broker",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "notes": [],
+      "latency_s": 2.093,
+      "usage": {
+        "input_tokens": 762,
+        "output_tokens": 47,
+        "total_tokens": 809
+      },
+      "served_model": "gpt-5.5-2026-04-23"
+    },
+    {
+      "cve_id": "CVE-2026-49199",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "raw_response": "{\"vulnerability_type\":\"Command Injection\",\"attack_vector\":\"Network\",\"affected_component\":\"MQTT\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": "MQTT",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 2.155,
+      "usage": {
+        "input_tokens": 761,
+        "output_tokens": 44,
+        "total_tokens": 805
+      },
+      "served_model": "gpt-5.5-2026-04-23"
+    },
+    {
+      "cve_id": "CVE-2026-49200",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "The acer_cgi.log file in the device firmware is accessible without authentication via the web interface. This file contains cleartext login credentials (for web and Telnet), leading to unauthorized system access.",
+      "raw_response": "{\"vulnerability_type\":\"Cleartext Storage of Sensitive Information\",\"attack_vector\":\"Network\",\"affected_component\":\"device firmware web interface\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Cleartext Storage of Sensitive Information",
+        "attack_vector": "Network",
+        "affected_component": "device firmware web interface",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 4.748,
+      "usage": {
+        "input_tokens": 780,
+        "output_tokens": 50,
+        "total_tokens": 830
+      },
+      "served_model": "gpt-5.5-2026-04-23"
+    }
+  ],
+  "claude-sonnet-4.6": [
+    {
+      "cve_id": "CVE-2026-49195",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Adjacent Network\",\n  \"affected_component\": \"/sbin/mtk_dut\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Adjacent Network",
+        "affected_component": "/sbin/mtk_dut",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 3.599,
+      "usage": {
+        "input_tokens": 875,
+        "output_tokens": 79,
+        "total_tokens": 954
+      },
+      "served_model": "claude-sonnet-4-6"
+    },
+    {
+      "cve_id": "CVE-2026-49196",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Wi-Fi device blocking feature\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": "Wi-Fi device blocking feature",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 2.037,
+      "usage": {
+        "input_tokens": 852,
+        "output_tokens": 75,
+        "total_tokens": 927
+      },
+      "served_model": "claude-sonnet-4-6"
+    },
+    {
+      "cve_id": "CVE-2026-49197",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Acer Connect\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"Low\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "Acer Connect",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "Low"
+      },
+      "notes": [],
+      "latency_s": 2.566,
+      "usage": {
+        "input_tokens": 859,
+        "output_tokens": 74,
+        "total_tokens": 933
+      },
+      "served_model": "claude-sonnet-4-6"
+    },
+    {
+      "cve_id": "CVE-2026-49198",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"MQTT broker\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "MQTT broker",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "notes": [],
+      "latency_s": 6.29,
+      "usage": {
+        "input_tokens": 855,
+        "output_tokens": 73,
+        "total_tokens": 928
+      },
+      "served_model": "claude-sonnet-4-6"
+    },
+    {
+      "cve_id": "CVE-2026-49199",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": null,\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": null,
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 2.002,
+      "usage": {
+        "input_tokens": 851,
+        "output_tokens": 69,
+        "total_tokens": 920
+      },
+      "served_model": "claude-sonnet-4-6"
+    },
+    {
+      "cve_id": "CVE-2026-49200",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "The acer_cgi.log file in the device firmware is accessible without authentication via the web interface. This file contains cleartext login credentials (for web and Telnet), leading to unauthorized system access.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Acer device firmware\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "Acer device firmware",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 3.452,
+      "usage": {
+        "input_tokens": 871,
+        "output_tokens": 75,
+        "total_tokens": 946
+      },
+      "served_model": "claude-sonnet-4-6"
+    }
+  ],
+  "deepseek-v4-pro": [
+    {
+      "cve_id": "CVE-2026-49195",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authentication\",\n  \"attack_vector\": \"Adjacent Network\",\n  \"affected_component\": \"MediaTek mtk_dut\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authentication",
+        "attack_vector": "Adjacent Network",
+        "affected_component": "MediaTek mtk_dut",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 2.204,
+      "usage": {
+        "input_tokens": 788,
+        "output_tokens": 68,
+        "total_tokens": 856
+      },
+      "served_model": "deepseek-v4-pro"
+    },
+    {
+      "cve_id": "CVE-2026-49196",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Adjacent Network\",\n  \"affected_component\": null,\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Adjacent Network",
+        "affected_component": null,
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 2.919,
+      "usage": {
+        "input_tokens": 772,
+        "output_tokens": 61,
+        "total_tokens": 833
+      },
+      "served_model": "deepseek-v4-pro"
+    },
+    {
+      "cve_id": "CVE-2026-49197",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Acer Connect\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "Acer Connect",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "None"
+      },
+      "notes": [],
+      "latency_s": 2.131,
+      "usage": {
+        "input_tokens": 775,
+        "output_tokens": 63,
+        "total_tokens": 838
+      },
+      "served_model": "deepseek-v4-pro"
+    },
+    {
+      "cve_id": "CVE-2026-49198",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Access Control\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"MQTT broker\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": "Network",
+        "affected_component": "MQTT broker",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "notes": [],
+      "latency_s": 2.025,
+      "usage": {
+        "input_tokens": 775,
+        "output_tokens": 64,
+        "total_tokens": 839
+      },
+      "served_model": "deepseek-v4-pro"
+    },
+    {
+      "cve_id": "CVE-2026-49199",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": null,\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": null,
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 2.021,
+      "usage": {
+        "input_tokens": 771,
+        "output_tokens": 59,
+        "total_tokens": 830
+      },
+      "served_model": "deepseek-v4-pro"
+    },
+    {
+      "cve_id": "CVE-2026-49200",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "The acer_cgi.log file in the device firmware is accessible without authentication via the web interface. This file contains cleartext login credentials (for web and Telnet), leading to unauthorized system access.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Insufficiently Protected Credentials\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"device firmware\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Insufficiently Protected Credentials",
+        "attack_vector": "Network",
+        "affected_component": "device firmware",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": [],
+      "latency_s": 1.965,
+      "usage": {
+        "input_tokens": 790,
+        "output_tokens": 66,
+        "total_tokens": 856
+      },
+      "served_model": "deepseek-v4-pro"
+    }
+  ]
+}

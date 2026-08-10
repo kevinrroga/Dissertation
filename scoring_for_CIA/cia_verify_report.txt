@@ -1,0 +1,127 @@
+CIA impact verification — ..\ultimate_dataset\merging_results.json
+
+1. Structure
+------------
+total rows: 3000
+models: {'gpt-5.5': 1000, 'claude-sonnet-4.6': 1000, 'deepseek-v4-pro': 1000}
+conditions: {'zero_shot': 1500, 'few_shot': 1500}
+valid flag: {True: 3000}
+unique CVEs: 500
+rows per CVE: {6: 500}
+CVEs not appearing exactly 6 times: 0
+
+2. Ground truth consistency — confidentiality_impact
+----------------------------------------------------
+CVEs with inconsistent ground truth: 0
+observed label set: ['HIGH', 'LOW', 'NONE']
+unexpected labels: none
+CVEs with null ground truth: 0
+
+3. Ground truth distribution (unique CVEs) — confidentiality_impact
+-------------------------------------------------------------------
+class          n       %
+HIGH         226   45.2%
+NONE         174   34.8%
+LOW          100   20.0%
+TOTAL        500
+
+All classes have n >= 20 - no low-support classes for this component
+(unlike attack_vector's ADJACENT_NETWORK/PHYSICAL).
+
+4. Extracted values (normalisation map input) — confidentiality_impact
+----------------------------------------------------------------------
+distinct values: 4
+    n  value
+ 1438  'High'
+  836  'None'
+  424  'Low'
+  302  None
+
+5. Null extractions (declines) by model and condition — confidentiality_impact
+------------------------------------------------------------------------------
+model                       few_shot     zero_shot     total
+claude-sonnet-4.6          14 (2.8%)     26 (5.2%)        40
+deepseek-v4-pro            47 (9.4%)     26 (5.2%)        73
+gpt-5.5                   83 (16.6%)   106 (21.2%)       189
+TOTAL                                                    302
+
+nulls in rows flagged valid=True: 302
+(these are extraction refusals/declines, not malformed responses)
+
+2. Ground truth consistency — integrity_impact
+----------------------------------------------
+CVEs with inconsistent ground truth: 0
+observed label set: ['HIGH', 'LOW', 'NONE']
+unexpected labels: none
+CVEs with null ground truth: 0
+
+3. Ground truth distribution (unique CVEs) — integrity_impact
+-------------------------------------------------------------
+class          n       %
+NONE         227   45.4%
+HIGH         173   34.6%
+LOW          100   20.0%
+TOTAL        500
+
+All classes have n >= 20 - no low-support classes for this component
+(unlike attack_vector's ADJACENT_NETWORK/PHYSICAL).
+
+4. Extracted values (normalisation map input) — integrity_impact
+----------------------------------------------------------------
+distinct values: 4
+    n  value
+ 1220  'High'
+ 1160  'None'
+  379  'Low'
+  241  None
+
+5. Null extractions (declines) by model and condition — integrity_impact
+------------------------------------------------------------------------
+model                       few_shot     zero_shot     total
+claude-sonnet-4.6          12 (2.4%)     13 (2.6%)        25
+deepseek-v4-pro            41 (8.2%)     22 (4.4%)        63
+gpt-5.5                   65 (13.0%)    88 (17.6%)       153
+TOTAL                                                    241
+
+nulls in rows flagged valid=True: 241
+(these are extraction refusals/declines, not malformed responses)
+
+2. Ground truth consistency — availability_impact
+-------------------------------------------------
+CVEs with inconsistent ground truth: 0
+observed label set: ['HIGH', 'LOW', 'NONE']
+unexpected labels: none
+CVEs with null ground truth: 0
+
+3. Ground truth distribution (unique CVEs) — availability_impact
+----------------------------------------------------------------
+class          n       %
+HIGH         221   44.2%
+NONE         178   35.6%
+LOW          101   20.2%
+TOTAL        500
+
+All classes have n >= 20 - no low-support classes for this component
+(unlike attack_vector's ADJACENT_NETWORK/PHYSICAL).
+
+4. Extracted values (normalisation map input) — availability_impact
+-------------------------------------------------------------------
+distinct values: 4
+    n  value
+ 1503  'High'
+ 1070  'None'
+  276  None
+  151  'Low'
+
+5. Null extractions (declines) by model and condition — availability_impact
+---------------------------------------------------------------------------
+model                       few_shot     zero_shot     total
+claude-sonnet-4.6           8 (1.6%)     14 (2.8%)        22
+deepseek-v4-pro            40 (8.0%)     20 (4.0%)        60
+gpt-5.5                   83 (16.6%)   111 (22.2%)       194
+TOTAL                                                    276
+
+nulls in rows flagged valid=True: 276
+(these are extraction refusals/declines, not malformed responses)
+
+Done. Record the per-component distributions and null counts in the decision log.

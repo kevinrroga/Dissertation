@@ -1,0 +1,95 @@
+{
+  "input_file": "C:\\Users\\kevin\\Desktop\\cve-ner-dissertation\\ultimate_dataset\\merging_results.json",
+  "entity": "attack_vector",
+  "structure": {
+    "total_rows": 3000,
+    "models": {
+      "gpt-5.5": 1000,
+      "claude-sonnet-4.6": 1000,
+      "deepseek-v4-pro": 1000
+    },
+    "conditions": {
+      "zero_shot": 1500,
+      "few_shot": 1500
+    },
+    "valid_flag": {
+      "True": 3000
+    },
+    "unique_cves": 500,
+    "expected_rows_per_cve": 6,
+    "cves_with_wrong_row_count": 0
+  },
+  "ground_truth": {
+    "inconsistent_cves": 0,
+    "observed_labels": [
+      "ADJACENT_NETWORK",
+      "LOCAL",
+      "NETWORK",
+      "PHYSICAL"
+    ],
+    "unexpected_labels": [],
+    "null_ground_truth_cves": 0
+  },
+  "distribution": {
+    "counts": {
+      "ADJACENT_NETWORK": 10,
+      "NETWORK": 388,
+      "LOCAL": 99,
+      "PHYSICAL": 3
+    },
+    "total": 500,
+    "low_support_classes": {
+      "ADJACENT_NETWORK": 10,
+      "PHYSICAL": 3
+    }
+  },
+  "extracted_values": {
+    "Adjacent Network": 63,
+    "Network": 2271,
+    "None": 140,
+    "Local": 505,
+    "Physical": 21
+  },
+  "nulls": {
+    "by_model_condition": {
+      "claude-sonnet-4.6": {
+        "few_shot": {
+          "nulls": 14,
+          "n": 500,
+          "pct": 2.8
+        },
+        "zero_shot": {
+          "nulls": 10,
+          "n": 500,
+          "pct": 2.0
+        }
+      },
+      "deepseek-v4-pro": {
+        "few_shot": {
+          "nulls": 20,
+          "n": 500,
+          "pct": 4.0
+        },
+        "zero_shot": {
+          "nulls": 2,
+          "n": 500,
+          "pct": 0.4
+        }
+      },
+      "gpt-5.5": {
+        "few_shot": {
+          "nulls": 44,
+          "n": 500,
+          "pct": 8.8
+        },
+        "zero_shot": {
+          "nulls": 50,
+          "n": 500,
+          "pct": 10.0
+        }
+      }
+    },
+    "total": 140,
+    "null_but_valid": 140
+  }
+}

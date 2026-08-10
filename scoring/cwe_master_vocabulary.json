@@ -1,0 +1,1858 @@
+{
+  "vocabulary_name": "CWE Master Vocabulary (dataset_v1_locked_24jun)",
+  "description": "Controlled vocabulary of the 145 unique CWEs present in the locked 500-CVE dataset, used as the fixed target space for scoring LLM vulnerability-type extraction. Two levels: leaf CWE (strict) and author-defined coarse category (lenient).",
+  "levels": {
+    "strict": "cwe_id",
+    "lenient": "category"
+  },
+  "category_scheme": "author-defined coarse grouping (reproducible); NOT MITRE CWE-1000. Official CWE-1000 pillar can be added later via the 'cwe_1000_pillar' field.",
+  "name_corrections": [
+    {
+      "cwe_id": "CWE-189",
+      "was": "None",
+      "set_to": "Numeric Errors",
+      "note": "official name was missing in the dataset enrichment; filled from MITRE definitions"
+    },
+    {
+      "cwe_id": "CWE-840",
+      "was": "None",
+      "set_to": "Business Logic Errors",
+      "note": "official name was missing in the dataset enrichment; filled from MITRE definitions"
+    }
+  ],
+  "total_unique_cwes": 145,
+  "total_cwe_occurrences": 559,
+  "num_categories": 15,
+  "categories": [
+    {
+      "category": "Memory Safety",
+      "num_cwes": 19,
+      "total_frequency": 103,
+      "member_cwes": [
+        "CWE-119",
+        "CWE-120",
+        "CWE-121",
+        "CWE-122",
+        "CWE-125",
+        "CWE-126",
+        "CWE-129",
+        "CWE-130",
+        "CWE-415",
+        "CWE-416",
+        "CWE-476",
+        "CWE-680",
+        "CWE-763",
+        "CWE-787",
+        "CWE-789",
+        "CWE-823",
+        "CWE-843",
+        "CWE-908",
+        "CWE-1325"
+      ]
+    },
+    {
+      "category": "Injection",
+      "num_cwes": 16,
+      "total_frequency": 99,
+      "member_cwes": [
+        "CWE-74",
+        "CWE-77",
+        "CWE-78",
+        "CWE-79",
+        "CWE-88",
+        "CWE-89",
+        "CWE-90",
+        "CWE-93",
+        "CWE-94",
+        "CWE-113",
+        "CWE-150",
+        "CWE-915",
+        "CWE-917",
+        "CWE-1236",
+        "CWE-1321",
+        "CWE-1336"
+      ]
+    },
+    {
+      "category": "Authorization & Access Control",
+      "num_cwes": 17,
+      "total_frequency": 91,
+      "member_cwes": [
+        "CWE-15",
+        "CWE-250",
+        "CWE-266",
+        "CWE-269",
+        "CWE-276",
+        "CWE-280",
+        "CWE-281",
+        "CWE-284",
+        "CWE-285",
+        "CWE-441",
+        "CWE-639",
+        "CWE-732",
+        "CWE-837",
+        "CWE-862",
+        "CWE-863",
+        "CWE-939",
+        "CWE-1280"
+      ]
+    },
+    {
+      "category": "Resource Management & DoS",
+      "num_cwes": 11,
+      "total_frequency": 63,
+      "member_cwes": [
+        "CWE-400",
+        "CWE-401",
+        "CWE-404",
+        "CWE-407",
+        "CWE-617",
+        "CWE-672",
+        "CWE-674",
+        "CWE-770",
+        "CWE-772",
+        "CWE-835",
+        "CWE-1333"
+      ]
+    },
+    {
+      "category": "Path & Resource Traversal",
+      "num_cwes": 12,
+      "total_frequency": 40,
+      "member_cwes": [
+        "CWE-22",
+        "CWE-23",
+        "CWE-35",
+        "CWE-36",
+        "CWE-59",
+        "CWE-61",
+        "CWE-426",
+        "CWE-427",
+        "CWE-552",
+        "CWE-647",
+        "CWE-669",
+        "CWE-829"
+      ]
+    },
+    {
+      "category": "Information Disclosure",
+      "num_cwes": 11,
+      "total_frequency": 27,
+      "member_cwes": [
+        "CWE-200",
+        "CWE-201",
+        "CWE-204",
+        "CWE-208",
+        "CWE-209",
+        "CWE-212",
+        "CWE-522",
+        "CWE-524",
+        "CWE-532",
+        "CWE-798",
+        "CWE-922"
+      ]
+    },
+    {
+      "category": "Authentication",
+      "num_cwes": 14,
+      "total_frequency": 27,
+      "member_cwes": [
+        "CWE-287",
+        "CWE-288",
+        "CWE-289",
+        "CWE-294",
+        "CWE-303",
+        "CWE-305",
+        "CWE-306",
+        "CWE-307",
+        "CWE-322",
+        "CWE-384",
+        "CWE-603",
+        "CWE-613",
+        "CWE-640",
+        "CWE-1188"
+      ]
+    },
+    {
+      "category": "Cryptography & Trust",
+      "num_cwes": 13,
+      "total_frequency": 23,
+      "member_cwes": [
+        "CWE-295",
+        "CWE-297",
+        "CWE-319",
+        "CWE-338",
+        "CWE-340",
+        "CWE-341",
+        "CWE-345",
+        "CWE-346",
+        "CWE-347",
+        "CWE-656",
+        "CWE-693",
+        "CWE-923",
+        "CWE-924"
+      ]
+    },
+    {
+      "category": "Request Forgery & Redirect",
+      "num_cwes": 5,
+      "total_frequency": 22,
+      "member_cwes": [
+        "CWE-352",
+        "CWE-444",
+        "CWE-601",
+        "CWE-611",
+        "CWE-918"
+      ]
+    },
+    {
+      "category": "Numeric Errors",
+      "num_cwes": 6,
+      "total_frequency": 19,
+      "member_cwes": [
+        "CWE-189",
+        "CWE-190",
+        "CWE-191",
+        "CWE-193",
+        "CWE-839",
+        "CWE-1284"
+      ]
+    },
+    {
+      "category": "Deserialization & Untrusted Code",
+      "num_cwes": 3,
+      "total_frequency": 15,
+      "member_cwes": [
+        "CWE-502",
+        "CWE-506",
+        "CWE-749"
+      ]
+    },
+    {
+      "category": "Improper Input Validation",
+      "num_cwes": 8,
+      "total_frequency": 12,
+      "member_cwes": [
+        "CWE-20",
+        "CWE-184",
+        "CWE-436",
+        "CWE-684",
+        "CWE-690",
+        "CWE-696",
+        "CWE-704",
+        "CWE-1287"
+      ]
+    },
+    {
+      "category": "Concurrency",
+      "num_cwes": 3,
+      "total_frequency": 9,
+      "member_cwes": [
+        "CWE-362",
+        "CWE-364",
+        "CWE-367"
+      ]
+    },
+    {
+      "category": "Improper Error/Exception Handling",
+      "num_cwes": 4,
+      "total_frequency": 6,
+      "member_cwes": [
+        "CWE-248",
+        "CWE-703",
+        "CWE-754",
+        "CWE-755"
+      ]
+    },
+    {
+      "category": "Other / Business Logic",
+      "num_cwes": 3,
+      "total_frequency": 3,
+      "member_cwes": [
+        "CWE-434",
+        "CWE-451",
+        "CWE-840"
+      ]
+    }
+  ],
+  "cwes": [
+    {
+      "cwe_id": "CWE-15",
+      "official_name": "External Control of System or Configuration Setting",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43531"
+      ]
+    },
+    {
+      "cwe_id": "CWE-20",
+      "official_name": "Improper Input Validation",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-8751",
+        "CVE-2026-42261"
+      ]
+    },
+    {
+      "cwe_id": "CWE-22",
+      "official_name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 17,
+      "example_cves": [
+        "CVE-2026-41009",
+        "CVE-2024-47267",
+        "CVE-2026-41863"
+      ]
+    },
+    {
+      "cwe_id": "CWE-23",
+      "official_name": "Relative Path Traversal",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 4,
+      "example_cves": [
+        "CVE-2025-41268",
+        "CVE-2025-41271",
+        "CVE-2025-48977"
+      ]
+    },
+    {
+      "cwe_id": "CWE-35",
+      "official_name": "Path Traversal: '.../...//'",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-0804"
+      ]
+    },
+    {
+      "cwe_id": "CWE-36",
+      "official_name": "Absolute Path Traversal",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-6418"
+      ]
+    },
+    {
+      "cwe_id": "CWE-59",
+      "official_name": "Improper Link Resolution Before File Access ('Link Following')",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-42496",
+        "CVE-2026-42497",
+        "CVE-2026-43619"
+      ]
+    },
+    {
+      "cwe_id": "CWE-61",
+      "official_name": "UNIX Symbolic Link (Symlink) Following",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-5223",
+        "CVE-2026-42275"
+      ]
+    },
+    {
+      "cwe_id": "CWE-74",
+      "official_name": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 4,
+      "example_cves": [
+        "CVE-2026-8346",
+        "CVE-2026-7690",
+        "CVE-2026-7691"
+      ]
+    },
+    {
+      "cwe_id": "CWE-77",
+      "official_name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 18,
+      "example_cves": [
+        "CVE-2026-49196",
+        "CVE-2026-49199",
+        "CVE-2026-42000"
+      ]
+    },
+    {
+      "cwe_id": "CWE-78",
+      "official_name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 34,
+      "example_cves": [
+        "CVE-2025-41265",
+        "CVE-2025-41266",
+        "CVE-2025-41267"
+      ]
+    },
+    {
+      "cwe_id": "CWE-79",
+      "official_name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 13,
+      "example_cves": [
+        "CVE-2025-10466",
+        "CVE-2026-45249",
+        "CVE-2026-6841"
+      ]
+    },
+    {
+      "cwe_id": "CWE-88",
+      "official_name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-46483"
+      ]
+    },
+    {
+      "cwe_id": "CWE-89",
+      "official_name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 6,
+      "example_cves": [
+        "CVE-2026-8724",
+        "CVE-2025-14179",
+        "CVE-2026-41640"
+      ]
+    },
+    {
+      "cwe_id": "CWE-90",
+      "official_name": "Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-46745"
+      ]
+    },
+    {
+      "cwe_id": "CWE-93",
+      "official_name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-47069",
+        "CVE-2026-47072",
+        "CVE-2026-47075"
+      ]
+    },
+    {
+      "cwe_id": "CWE-94",
+      "official_name": "Improper Control of Generation of Code ('Code Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 9,
+      "example_cves": [
+        "CVE-2018-25357",
+        "CVE-2026-42396",
+        "CVE-2026-35194"
+      ]
+    },
+    {
+      "cwe_id": "CWE-113",
+      "official_name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43870"
+      ]
+    },
+    {
+      "cwe_id": "CWE-119",
+      "official_name": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 7,
+      "example_cves": [
+        "CVE-2026-9541",
+        "CVE-2026-39830",
+        "CVE-2026-8746"
+      ]
+    },
+    {
+      "cwe_id": "CWE-120",
+      "official_name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 9,
+      "example_cves": [
+        "CVE-2018-25426",
+        "CVE-2025-12686",
+        "CVE-2026-48686"
+      ]
+    },
+    {
+      "cwe_id": "CWE-121",
+      "official_name": "Stack-based Buffer Overflow",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 4,
+      "example_cves": [
+        "CVE-2026-49014",
+        "CVE-2026-45250",
+        "CVE-2026-39461"
+      ]
+    },
+    {
+      "cwe_id": "CWE-122",
+      "official_name": "Heap-based Buffer Overflow",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 7,
+      "example_cves": [
+        "CVE-2026-25713",
+        "CVE-2026-9541",
+        "CVE-2026-40033"
+      ]
+    },
+    {
+      "cwe_id": "CWE-125",
+      "official_name": "Out-of-bounds Read",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 14,
+      "example_cves": [
+        "CVE-2026-9803",
+        "CVE-2026-46155",
+        "CVE-2026-48684"
+      ]
+    },
+    {
+      "cwe_id": "CWE-126",
+      "official_name": "Buffer Over-read",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8463"
+      ]
+    },
+    {
+      "cwe_id": "CWE-129",
+      "official_name": "Improper Validation of Array Index",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-46598"
+      ]
+    },
+    {
+      "cwe_id": "CWE-130",
+      "official_name": "Improper Handling of Length Parameter Inconsistency",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-48685"
+      ]
+    },
+    {
+      "cwe_id": "CWE-150",
+      "official_name": "Improper Neutralization of Escape, Meta, or Control Sequences",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-45803"
+      ]
+    },
+    {
+      "cwe_id": "CWE-184",
+      "official_name": "Incomplete List of Disallowed Inputs",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43532"
+      ]
+    },
+    {
+      "cwe_id": "CWE-189",
+      "official_name": "Numeric Errors",
+      "category": "Numeric Errors",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-7736"
+      ]
+    },
+    {
+      "cwe_id": "CWE-190",
+      "official_name": "Integer Overflow or Wraparound",
+      "category": "Numeric Errors",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 9,
+      "example_cves": [
+        "CVE-2026-39834",
+        "CVE-2026-43618",
+        "CVE-2026-24210"
+      ]
+    },
+    {
+      "cwe_id": "CWE-191",
+      "official_name": "Integer Underflow (Wrap or Wraparound)",
+      "category": "Numeric Errors",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-25104",
+        "CVE-2026-8463",
+        "CVE-2026-7736"
+      ]
+    },
+    {
+      "cwe_id": "CWE-193",
+      "official_name": "Off-by-one Error",
+      "category": "Numeric Errors",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-45232",
+        "CVE-2026-44603",
+        "CVE-2026-7572"
+      ]
+    },
+    {
+      "cwe_id": "CWE-200",
+      "official_name": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 5,
+      "example_cves": [
+        "CVE-2026-48210",
+        "CVE-2026-3636",
+        "CVE-2026-32244"
+      ]
+    },
+    {
+      "cwe_id": "CWE-201",
+      "official_name": "Insertion of Sensitive Information Into Sent Data",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-41181"
+      ]
+    },
+    {
+      "cwe_id": "CWE-204",
+      "official_name": "Observable Response Discrepancy",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2024-0391"
+      ]
+    },
+    {
+      "cwe_id": "CWE-208",
+      "official_name": "Observable Timing Discrepancy",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-47783",
+        "CVE-2026-47784"
+      ]
+    },
+    {
+      "cwe_id": "CWE-209",
+      "official_name": "Generation of Error Message Containing Sensitive Information",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-9794"
+      ]
+    },
+    {
+      "cwe_id": "CWE-212",
+      "official_name": "Improper Removal of Sensitive Information Before Storage or Transfer",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43528"
+      ]
+    },
+    {
+      "cwe_id": "CWE-248",
+      "official_name": "Uncaught Exception",
+      "category": "Improper Error/Exception Handling",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8161"
+      ]
+    },
+    {
+      "cwe_id": "CWE-250",
+      "official_name": "Execution with Unnecessary Privileges",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-41900"
+      ]
+    },
+    {
+      "cwe_id": "CWE-266",
+      "official_name": "Incorrect Privilege Assignment",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 6,
+      "example_cves": [
+        "CVE-2026-9795",
+        "CVE-2026-48172",
+        "CVE-2026-8743"
+      ]
+    },
+    {
+      "cwe_id": "CWE-269",
+      "official_name": "Improper Privilege Management",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 5,
+      "example_cves": [
+        "CVE-2026-48210",
+        "CVE-2026-9490",
+        "CVE-2026-45254"
+      ]
+    },
+    {
+      "cwe_id": "CWE-276",
+      "official_name": "Incorrect Default Permissions",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 4,
+      "example_cves": [
+        "CVE-2026-44468",
+        "CVE-2026-44469",
+        "CVE-2026-21015"
+      ]
+    },
+    {
+      "cwe_id": "CWE-280",
+      "official_name": "Improper Handling of Insufficient Permissions or Privileges",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-9792",
+        "CVE-2026-20448"
+      ]
+    },
+    {
+      "cwe_id": "CWE-281",
+      "official_name": "Improper Preservation of Permissions",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2024-47270"
+      ]
+    },
+    {
+      "cwe_id": "CWE-284",
+      "official_name": "Improper Access Control",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 11,
+      "example_cves": [
+        "CVE-2026-49198",
+        "CVE-2026-41704",
+        "CVE-2026-2734"
+      ]
+    },
+    {
+      "cwe_id": "CWE-285",
+      "official_name": "Improper Authorization",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-8743",
+        "CVE-2026-8786"
+      ]
+    },
+    {
+      "cwe_id": "CWE-287",
+      "official_name": "Improper Authentication",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-49197",
+        "CVE-2026-46579"
+      ]
+    },
+    {
+      "cwe_id": "CWE-288",
+      "official_name": "Authentication Bypass Using an Alternate Path or Channel",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 4,
+      "example_cves": [
+        "CVE-2025-41273",
+        "CVE-2026-24206",
+        "CVE-2026-24207"
+      ]
+    },
+    {
+      "cwe_id": "CWE-289",
+      "official_name": "Authentication Bypass by Alternate Name",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43617"
+      ]
+    },
+    {
+      "cwe_id": "CWE-294",
+      "official_name": "Authentication Bypass by Capture-replay",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-7168"
+      ]
+    },
+    {
+      "cwe_id": "CWE-295",
+      "official_name": "Improper Certificate Validation",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 5,
+      "example_cves": [
+        "CVE-2026-39828",
+        "CVE-2026-39835",
+        "CVE-2026-42508"
+      ]
+    },
+    {
+      "cwe_id": "CWE-297",
+      "official_name": "Improper Validation of Certificate with Host Mismatch",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43869"
+      ]
+    },
+    {
+      "cwe_id": "CWE-303",
+      "official_name": "Incorrect Implementation of Authentication Algorithm",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8922"
+      ]
+    },
+    {
+      "cwe_id": "CWE-305",
+      "official_name": "Authentication Bypass by Primary Weakness",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-9798",
+        "CVE-2026-6334",
+        "CVE-2026-2652"
+      ]
+    },
+    {
+      "cwe_id": "CWE-306",
+      "official_name": "Missing Authentication for Critical Function",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 4,
+      "example_cves": [
+        "CVE-2026-49195",
+        "CVE-2018-25412",
+        "CVE-2026-48692"
+      ]
+    },
+    {
+      "cwe_id": "CWE-307",
+      "official_name": "Improper Restriction of Excessive Authentication Attempts",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-7255",
+        "CVE-2023-54347"
+      ]
+    },
+    {
+      "cwe_id": "CWE-319",
+      "official_name": "Cleartext Transmission of Sensitive Information",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2024-47269",
+        "CVE-2026-6276"
+      ]
+    },
+    {
+      "cwe_id": "CWE-322",
+      "official_name": "Key Exchange without Entity Authentication",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-45361"
+      ]
+    },
+    {
+      "cwe_id": "CWE-338",
+      "official_name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8503"
+      ]
+    },
+    {
+      "cwe_id": "CWE-340",
+      "official_name": "Generation of Predictable Numbers or Identifiers",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8503"
+      ]
+    },
+    {
+      "cwe_id": "CWE-341",
+      "official_name": "Predictable from Observable State",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-42365"
+      ]
+    },
+    {
+      "cwe_id": "CWE-345",
+      "official_name": "Insufficient Verification of Data Authenticity",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-32323",
+        "CVE-2026-43534",
+        "CVE-2026-7606"
+      ]
+    },
+    {
+      "cwe_id": "CWE-346",
+      "official_name": "Origin Validation Error",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-6339",
+        "CVE-2026-43870"
+      ]
+    },
+    {
+      "cwe_id": "CWE-347",
+      "official_name": "Improper Verification of Cryptographic Signature",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-9793",
+        "CVE-2026-39829"
+      ]
+    },
+    {
+      "cwe_id": "CWE-352",
+      "official_name": "Cross-Site Request Forgery (CSRF)",
+      "category": "Request Forgery & Redirect",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2018-25321",
+        "CVE-2026-45773",
+        "CVE-2026-4527"
+      ]
+    },
+    {
+      "cwe_id": "CWE-362",
+      "official_name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+      "category": "Concurrency",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-4635",
+        "CVE-2026-8741"
+      ]
+    },
+    {
+      "cwe_id": "CWE-364",
+      "official_name": "Signal Handler Race Condition",
+      "category": "Concurrency",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-42002"
+      ]
+    },
+    {
+      "cwe_id": "CWE-367",
+      "official_name": "Time-of-check Time-of-use (TOCTOU) Race Condition",
+      "category": "Concurrency",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 6,
+      "example_cves": [
+        "CVE-2026-9796",
+        "CVE-2026-43619",
+        "CVE-2026-41702"
+      ]
+    },
+    {
+      "cwe_id": "CWE-384",
+      "official_name": "Session Fixation",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-45773",
+        "CVE-2026-40010"
+      ]
+    },
+    {
+      "cwe_id": "CWE-400",
+      "official_name": "Uncontrolled Resource Consumption",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 10,
+      "example_cves": [
+        "CVE-2026-47071",
+        "CVE-2026-47073",
+        "CVE-2026-47077"
+      ]
+    },
+    {
+      "cwe_id": "CWE-401",
+      "official_name": "Missing Release of Memory after Effective Lifetime",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 4,
+      "example_cves": [
+        "CVE-2026-46147",
+        "CVE-2026-46151",
+        "CVE-2026-43074"
+      ]
+    },
+    {
+      "cwe_id": "CWE-404",
+      "official_name": "Improper Resource Shutdown or Release",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 24,
+      "example_cves": [
+        "CVE-2026-8728",
+        "CVE-2026-8729",
+        "CVE-2026-8730"
+      ]
+    },
+    {
+      "cwe_id": "CWE-407",
+      "official_name": "Inefficient Algorithmic Complexity",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-45186"
+      ]
+    },
+    {
+      "cwe_id": "CWE-415",
+      "official_name": "Double Free",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43097"
+      ]
+    },
+    {
+      "cwe_id": "CWE-416",
+      "official_name": "Use After Free",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 12,
+      "example_cves": [
+        "CVE-2026-46242",
+        "CVE-2026-46154",
+        "CVE-2026-45251"
+      ]
+    },
+    {
+      "cwe_id": "CWE-426",
+      "official_name": "Untrusted Search Path",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-45772"
+      ]
+    },
+    {
+      "cwe_id": "CWE-427",
+      "official_name": "Uncontrolled Search Path Element",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 5,
+      "example_cves": [
+        "CVE-2023-52945",
+        "CVE-2026-32323",
+        "CVE-2024-36333"
+      ]
+    },
+    {
+      "cwe_id": "CWE-434",
+      "official_name": "Unrestricted Upload of File with Dangerous Type",
+      "category": "Other / Business Logic",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-7490"
+      ]
+    },
+    {
+      "cwe_id": "CWE-436",
+      "official_name": "Interpretation Conflict",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-47076",
+        "CVE-2026-6322"
+      ]
+    },
+    {
+      "cwe_id": "CWE-441",
+      "official_name": "Unintended Proxy or Intermediary ('Confused Deputy')",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-3160"
+      ]
+    },
+    {
+      "cwe_id": "CWE-444",
+      "official_name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')",
+      "category": "Request Forgery & Redirect",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-40561"
+      ]
+    },
+    {
+      "cwe_id": "CWE-451",
+      "official_name": "User Interface (UI) Misrepresentation of Critical Information",
+      "category": "Other / Business Logic",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-9078"
+      ]
+    },
+    {
+      "cwe_id": "CWE-476",
+      "official_name": "NULL Pointer Dereference",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 13,
+      "example_cves": [
+        "CVE-2026-47307",
+        "CVE-2026-47308",
+        "CVE-2026-8252"
+      ]
+    },
+    {
+      "cwe_id": "CWE-502",
+      "official_name": "Deserialization of Untrusted Data",
+      "category": "Deserialization & Untrusted Code",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 12,
+      "example_cves": [
+        "CVE-2026-45247",
+        "CVE-2026-4372",
+        "CVE-2026-39832"
+      ]
+    },
+    {
+      "cwe_id": "CWE-506",
+      "official_name": "Embedded Malicious Code",
+      "category": "Deserialization & Untrusted Code",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-8398",
+        "CVE-2026-45321"
+      ]
+    },
+    {
+      "cwe_id": "CWE-522",
+      "official_name": "Insufficiently Protected Credentials",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 6,
+      "example_cves": [
+        "CVE-2026-2255",
+        "CVE-2024-47271",
+        "CVE-2026-0393"
+      ]
+    },
+    {
+      "cwe_id": "CWE-524",
+      "official_name": "Use of Cache Containing Sensitive Information",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-32244"
+      ]
+    },
+    {
+      "cwe_id": "CWE-532",
+      "official_name": "Insertion of Sensitive Information into Log File",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 6,
+      "example_cves": [
+        "CVE-2026-49200",
+        "CVE-2025-13755",
+        "CVE-2026-8200"
+      ]
+    },
+    {
+      "cwe_id": "CWE-552",
+      "official_name": "Files or Directories Accessible to External Parties",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2024-11399",
+        "CVE-2026-40564",
+        "CVE-2026-6418"
+      ]
+    },
+    {
+      "cwe_id": "CWE-601",
+      "official_name": "URL Redirection to Untrusted Site ('Open Redirect')",
+      "category": "Request Forgery & Redirect",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-47070",
+        "CVE-2026-35253"
+      ]
+    },
+    {
+      "cwe_id": "CWE-603",
+      "official_name": "Use of Client-Side Authentication",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8830"
+      ]
+    },
+    {
+      "cwe_id": "CWE-611",
+      "official_name": "Improper Restriction of XML External Entity Reference",
+      "category": "Request Forgery & Redirect",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-2253"
+      ]
+    },
+    {
+      "cwe_id": "CWE-613",
+      "official_name": "Insufficient Session Expiration",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-9802",
+        "CVE-2026-5545"
+      ]
+    },
+    {
+      "cwe_id": "CWE-617",
+      "official_name": "Reachable Assertion",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-8257",
+        "CVE-2026-20450"
+      ]
+    },
+    {
+      "cwe_id": "CWE-639",
+      "official_name": "Authorization Bypass Through User-Controlled Key",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 9,
+      "example_cves": [
+        "CVE-2026-3473",
+        "CVE-2026-8786",
+        "CVE-2025-13874"
+      ]
+    },
+    {
+      "cwe_id": "CWE-640",
+      "official_name": "Weak Password Recovery Mechanism for Forgotten Password",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-29199",
+        "CVE-2026-7554"
+      ]
+    },
+    {
+      "cwe_id": "CWE-647",
+      "official_name": "Use of Non-Canonical URL Paths for Authorization Decisions",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-5222"
+      ]
+    },
+    {
+      "cwe_id": "CWE-656",
+      "official_name": "Reliance on Security Through Obscurity",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-7161"
+      ]
+    },
+    {
+      "cwe_id": "CWE-669",
+      "official_name": "Incorrect Resource Transfer Between Spheres",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-44599"
+      ]
+    },
+    {
+      "cwe_id": "CWE-672",
+      "official_name": "Operation on a Resource after Expiration or Release",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-32244"
+      ]
+    },
+    {
+      "cwe_id": "CWE-674",
+      "official_name": "Uncontrolled Recursion",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 5,
+      "example_cves": [
+        "CVE-2026-46149",
+        "CVE-2026-47309",
+        "CVE-2026-47317"
+      ]
+    },
+    {
+      "cwe_id": "CWE-680",
+      "official_name": "Integer Overflow to Buffer Overflow",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8376"
+      ]
+    },
+    {
+      "cwe_id": "CWE-684",
+      "official_name": "Incorrect Provision of Specified Functionality",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-44597"
+      ]
+    },
+    {
+      "cwe_id": "CWE-690",
+      "official_name": "Unchecked Return Value to NULL Pointer Dereference",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-24160"
+      ]
+    },
+    {
+      "cwe_id": "CWE-693",
+      "official_name": "Protection Mechanism Failure",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-41900",
+        "CVE-2026-42261"
+      ]
+    },
+    {
+      "cwe_id": "CWE-696",
+      "official_name": "Incorrect Behavior Order",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-44919",
+        "CVE-2026-44600"
+      ]
+    },
+    {
+      "cwe_id": "CWE-703",
+      "official_name": "Improper Check or Handling of Exceptional Conditions",
+      "category": "Improper Error/Exception Handling",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-47316"
+      ]
+    },
+    {
+      "cwe_id": "CWE-704",
+      "official_name": "Incorrect Type Conversion or Cast",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-46597"
+      ]
+    },
+    {
+      "cwe_id": "CWE-732",
+      "official_name": "Incorrect Permission Assignment for Critical Resource",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 5,
+      "example_cves": [
+        "CVE-2026-2254",
+        "CVE-2026-42497",
+        "CVE-2026-8612"
+      ]
+    },
+    {
+      "cwe_id": "CWE-749",
+      "official_name": "Exposed Dangerous Method or Function",
+      "category": "Deserialization & Untrusted Code",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-6402"
+      ]
+    },
+    {
+      "cwe_id": "CWE-754",
+      "official_name": "Improper Check for Unusual or Exceptional Conditions",
+      "category": "Improper Error/Exception Handling",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-4915",
+        "CVE-2026-47315",
+        "CVE-2026-4643"
+      ]
+    },
+    {
+      "cwe_id": "CWE-755",
+      "official_name": "Improper Handling of Exceptional Conditions",
+      "category": "Improper Error/Exception Handling",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8162"
+      ]
+    },
+    {
+      "cwe_id": "CWE-763",
+      "official_name": "Release of Invalid Pointer or Reference",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-47312"
+      ]
+    },
+    {
+      "cwe_id": "CWE-770",
+      "official_name": "Allocation of Resources Without Limits or Throttling",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 9,
+      "example_cves": [
+        "CVE-2026-47067",
+        "CVE-2026-2325",
+        "CVE-2026-8202"
+      ]
+    },
+    {
+      "cwe_id": "CWE-772",
+      "official_name": "Missing Release of Resource after Effective Lifetime",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-9156"
+      ]
+    },
+    {
+      "cwe_id": "CWE-787",
+      "official_name": "Out-of-bounds Write",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 21,
+      "example_cves": [
+        "CVE-2026-8915",
+        "CVE-2026-48686",
+        "CVE-2026-46300"
+      ]
+    },
+    {
+      "cwe_id": "CWE-789",
+      "official_name": "Memory Allocation with Excessive Size Value",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 6,
+      "example_cves": [
+        "CVE-2026-9538",
+        "CVE-2026-5740",
+        "CVE-2026-47313"
+      ]
+    },
+    {
+      "cwe_id": "CWE-798",
+      "official_name": "Use of Hard-coded Credentials",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-49201",
+        "CVE-2026-33893"
+      ]
+    },
+    {
+      "cwe_id": "CWE-823",
+      "official_name": "Use of Out-of-range Pointer Offset",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-28764"
+      ]
+    },
+    {
+      "cwe_id": "CWE-829",
+      "official_name": "Inclusion of Functionality from Untrusted Control Sphere",
+      "category": "Path & Resource Traversal",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43003"
+      ]
+    },
+    {
+      "cwe_id": "CWE-835",
+      "official_name": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 5,
+      "example_cves": [
+        "CVE-2026-46146",
+        "CVE-2026-47066",
+        "CVE-2026-39806"
+      ]
+    },
+    {
+      "cwe_id": "CWE-837",
+      "official_name": "Improper Enforcement of a Single, Unique Action",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-44601"
+      ]
+    },
+    {
+      "cwe_id": "CWE-839",
+      "official_name": "Numeric Range Comparison Without Minimum Check",
+      "category": "Numeric Errors",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-48840"
+      ]
+    },
+    {
+      "cwe_id": "CWE-840",
+      "official_name": "Business Logic Errors",
+      "category": "Other / Business Logic",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-1322"
+      ]
+    },
+    {
+      "cwe_id": "CWE-843",
+      "official_name": "Access of Resource Using Incompatible Type ('Type Confusion')",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-20451"
+      ]
+    },
+    {
+      "cwe_id": "CWE-862",
+      "official_name": "Missing Authorization",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 21,
+      "example_cves": [
+        "CVE-2024-47268",
+        "CVE-2026-2651",
+        "CVE-2026-39831"
+      ]
+    },
+    {
+      "cwe_id": "CWE-863",
+      "official_name": "Incorrect Authorization",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 19,
+      "example_cves": [
+        "CVE-2024-47272",
+        "CVE-2026-9791",
+        "CVE-2026-9807"
+      ]
+    },
+    {
+      "cwe_id": "CWE-908",
+      "official_name": "Use of Uninitialized Resource",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-45736"
+      ]
+    },
+    {
+      "cwe_id": "CWE-915",
+      "official_name": "Improperly Controlled Modification of Dynamically-Determined Object Attributes",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-41139"
+      ]
+    },
+    {
+      "cwe_id": "CWE-917",
+      "official_name": "Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-41705"
+      ]
+    },
+    {
+      "cwe_id": "CWE-918",
+      "official_name": "Server-Side Request Forgery (SSRF)",
+      "category": "Request Forgery & Redirect",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 15,
+      "example_cves": [
+        "CVE-2026-42965",
+        "CVE-2026-8606",
+        "CVE-2026-9312"
+      ]
+    },
+    {
+      "cwe_id": "CWE-922",
+      "official_name": "Insecure Storage of Sensitive Information",
+      "category": "Information Disclosure",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-7257"
+      ]
+    },
+    {
+      "cwe_id": "CWE-923",
+      "official_name": "Improper Restriction of Communication Channel to Intended Endpoints",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-22726"
+      ]
+    },
+    {
+      "cwe_id": "CWE-924",
+      "official_name": "Improper Enforcement of Message Integrity During Transmission in a Communication Channel",
+      "category": "Cryptography & Trust",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-39827"
+      ]
+    },
+    {
+      "cwe_id": "CWE-939",
+      "official_name": "Improper Authorization in Handler for Custom URL Scheme",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-3471"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1188",
+      "official_name": "Initialization of a Resource with an Insecure Default",
+      "category": "Authentication",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-43527"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1236",
+      "official_name": "Improper Neutralization of Formula Elements in a CSV File",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-42267"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1280",
+      "official_name": "Access Control Check Implemented After Asset is Accessed",
+      "category": "Authorization & Access Control",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-3607"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1284",
+      "official_name": "Improper Validation of Specified Quantity in Input",
+      "category": "Numeric Errors",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-9801",
+        "CVE-2025-14869"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1287",
+      "official_name": "Improper Validation of Specified Type of Input",
+      "category": "Improper Input Validation",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-4646",
+        "CVE-2026-0802"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1321",
+      "official_name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 2,
+      "example_cves": [
+        "CVE-2026-8161",
+        "CVE-2026-42264"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1325",
+      "official_name": "Improperly Controlled Sequential Memory Allocation",
+      "category": "Memory Safety",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8199"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1333",
+      "official_name": "Inefficient Regular Expression Complexity",
+      "category": "Resource Management & DoS",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 1,
+      "example_cves": [
+        "CVE-2026-8159"
+      ]
+    },
+    {
+      "cwe_id": "CWE-1336",
+      "official_name": "Improper Neutralization of Special Elements Used in a Template Engine",
+      "category": "Injection",
+      "cwe_1000_pillar": null,
+      "dataset_frequency": 3,
+      "example_cves": [
+        "CVE-2026-29207",
+        "CVE-2026-41713",
+        "CVE-2026-42203"
+      ]
+    }
+  ]
+}

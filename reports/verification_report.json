@@ -1,0 +1,411 @@
+{
+  "summary": {
+    "dataset_file_checked": "dataset_minus_rejected.json",
+    "sample_size_requested": 10,
+    "checked": 10,
+    "match": 10,
+    "mismatch": 0,
+    "errors": 0
+  },
+  "results": [
+    {
+      "cve_id": "CVE-2026-42497",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "type": "Secondary",
+            "values": [
+              "CWE-59",
+              "CWE-732"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:archive\\:\\:tar_project:archive\\:\\:tar:*:*:*:*:*:perl:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "NONE"
+          }
+        },
+        "vulnStatus": "Modified"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-47315",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "PSIRT@samsung.com",
+            "type": "Secondary",
+            "values": [
+              "CWE-754"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:samsung:escargot:2026-05-14:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "LOCAL",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "HIGH"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-8750",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "cna@vuldb.com",
+            "type": "Secondary",
+            "values": [
+              "CWE-200",
+              "CWE-284"
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "values": [
+              "NVD-CWE-noinfo"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:h2o:h2o:*:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-3607",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "cve@gitlab.com",
+            "type": "Secondary",
+            "values": [
+              "CWE-1280"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+          "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+          "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+          "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+          "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+          "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-44599",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "cve@mitre.org",
+            "type": "Secondary",
+            "values": [
+              "CWE-669"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:torproject:tor:*:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-47783",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "cve@mitre.org",
+            "type": "Secondary",
+            "values": [
+              "CWE-208"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:memcached:memcached:*:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "HIGH"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-5740",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "responsibledisclosure@mattermost.com",
+            "type": "Secondary",
+            "values": [
+              "CWE-789"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "HIGH"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-4055",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "responsibledisclosure@mattermost.com",
+            "type": "Secondary",
+            "values": [
+              "CWE-863"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2025-48977",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "security@apache.org",
+            "type": "Secondary",
+            "values": [
+              "CWE-23"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:apache:ignite:*:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-24072",
+      "status": "match",
+      "diffs": [],
+      "drift_warning": null,
+      "raw_evidence": {
+        "weaknesses": [
+          {
+            "source": "security@apache.org",
+            "type": "Secondary",
+            "values": [
+              "CWE-269"
+            ]
+          }
+        ],
+        "cpe_matches": [
+          "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+        ],
+        "raw_cvss": {
+          "metric_version": "cvssMetricV31",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "HIGH"
+          }
+        },
+        "vulnStatus": "Analyzed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+You are a cybersecurity analyst assistant. You will be given a single CVE
+vulnerability description.
+
+Your task is to extract and classify triage-relevant vulnerability
+information from the supplied CVE description.
+
+Extract vulnerability type and affected component from the description.
+For attack vector and CIA impacts, infer the most defensible CVSS-style
+category from the exploitation conditions and consequences described.
+
+Use only the information and reasonable implications contained in the
+description. Do not use external knowledge about the specific CVE, do not
+search for the CVE, and do not use the CVE identifier as evidence.
+
+If the description does not explicitly name a product, file, endpoint, service,
+function, or module, but clearly identifies the relevant protocol, feature, or
+processing area, return a concise normalized functional description.
+
+The normalized description must remain directly grounded in the text and must
+not invent a specific internal implementation component.
+
+Return a single valid JSON object with exactly these six fields, in this order,
+and nothing else:
+
+{
+  "vulnerability_type": string or null,
+  "attack_vector": one of ["Network", "Adjacent Network", "Local", "Physical", null],
+  "affected_component": string or null,
+  "confidentiality_impact": one of ["None", "Low", "High", null],
+  "integrity_impact": one of ["None", "Low", "High", null],
+  "availability_impact": one of ["None", "Low", "High", null]
+}
+
+Decision rules:
+
+1. vulnerability_type
+- Return a short, standard vulnerability category, such as "Command Injection",
+  "Path Traversal", "Improper Authorization", "Buffer Overflow", or
+  "Cross-Site Scripting".
+- Prefer the explicitly stated vulnerability type when one is given.
+- If the type is not explicitly named, infer the most defensible category from
+  the described weakness and exploitation behaviour.
+- Return null only when no defensible vulnerability category can be identified.
+
+2. attack_vector
+- "Network": exploitation occurs through a remotely reachable network service
+  or protocol and does not require the attacker to share the target's local
+  network segment.
+- "Adjacent Network": exploitation requires access to the same local, wireless,
+  broadcast, or otherwise logically adjacent network.
+- "Local": exploitation requires local access, a local account, local code
+  execution, or local interaction with the target system.
+- "Physical": exploitation requires physical interaction with the device.
+- Infer the most defensible NVD/CVSS-style value from the described exploitation
+  conditions.
+- Return null when the required access path cannot be determined.
+
+3. affected_component
+Return the most specific affected product or vulnerable component explicitly
+named in the description.
+Preserve product names, file names, file paths, functions, endpoints, services,
+modules, and version numbers when stated.
+When both a product and an internal component are named, include both in one
+concise value.
+Do not replace a specific named component with a generic phrase such as
+"device firmware", "application", or "system".
+
+4. confidentiality_impact, integrity_impact, availability_impact
+- Predict the most defensible NVD/CVSS-style impact value from the consequences
+  described in the text.
+- The correct value may not be explicitly written in the description, so
+  reasonable inference is allowed.
+- "High": substantial or complete compromise of the relevant security property.
+- "Low": limited or partial compromise of the relevant security property.
+- "None": the vulnerability does not affect that security property.
+- null: the description provides insufficient evidence for a defensible
+  prediction.
+- Do not assign impacts solely from the general vulnerability type.
+- Do not automatically interpret an unmentioned impact as "None".
+- An overall publisher severity label is not the same as an individual CIA
+  impact value.
+
+Output requirements:
+- Return valid JSON only.
+- Do not include markdown code fences.
+- Do not include explanations or additional text.
+- Do not include additional fields.
+- Use JSON null, not the string "null".
+- Follow the field order shown above.
+
+Here are three worked examples showing the expected extraction.
+
+Example 1
+
+CVE Description:
+"""
+Integer overflow in Chromoting in Google Chrome on Windows prior to
+149.0.7827.53 allowed a local attacker to obtain potentially sensitive
+information from process memory via a crafted ETW event.
+(Chromium security severity: Low)
+"""
+
+Output:
+{
+  "vulnerability_type": "Integer Overflow",
+  "attack_vector": "Local",
+  "affected_component": "Chromoting in Google Chrome on Windows prior to 149.0.7827.53",
+  "confidentiality_impact": "High",
+  "integrity_impact": "None",
+  "availability_impact": "None"
+}
+
+Example 2
+
+CVE Description:
+"""
+Inappropriate implementation in Payments in Google Chrome prior to
+149.0.7827.53 allowed a remote attacker to perform UI spoofing via a crafted
+HTML page. (Chromium security severity: Low)
+"""
+
+Output:
+{
+  "vulnerability_type": "UI Spoofing",
+  "attack_vector": "Network",
+  "affected_component": "Payments in Google Chrome prior to 149.0.7827.53",
+  "confidentiality_impact": "None",
+  "integrity_impact": "Low",
+  "availability_impact": "None"
+}
+
+Example 3
+
+CVE Description:
+"""
+Ericsson Packet Core Gateway (PCG) versions prior to 1.30 contain an Improper
+Handling of Syntactically Invalid Structure (CWE-228) vulnerability where an
+attacker continuously sending a specially crafted message can cause service
+degradation. The impact continues as long as the attack persists but the
+system recovers from the crashes when the attack stops.
+"""
+
+Output:
+{
+  "vulnerability_type": "Improper Handling of Syntactically Invalid Structure",
+  "attack_vector": "Adjacent Network",
+  "affected_component": "Ericsson Packet Core Gateway versions prior to 1.30",
+  "confidentiality_impact": "None",
+  "integrity_impact": "None",
+  "availability_impact": "High"
+}
+
+Now analyse the following CVE using exactly the same decision rules and output
+format. Return only the JSON object.
+
+CVE Description:
+"""
+{description}
+"""

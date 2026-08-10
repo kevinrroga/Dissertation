@@ -1,0 +1,102 @@
+====================================================================================================
+Bootstrap 95% confidence intervals — CIA impact
+5000 CVE-level resamples, percentile method, seed 42.
+All three classes (NONE/LOW/HIGH) have real support -- single macro-F1 CI per cell
+(no rare-class 'supported subset' split needed, unlike attack_vector).
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+confidentiality_impact
+----------------------------------------------------------------------------------------------------
+Model               Condition   Accuracy  Macro-F1  95% CI              
+claude-sonnet-4.6   zero_shot   0.690     0.660     [0.617, 0.701]
+claude-sonnet-4.6   few_shot    0.694     0.648     [0.606, 0.689]
+deepseek-v4-pro     zero_shot   0.690     0.631     [0.587, 0.673]
+deepseek-v4-pro     few_shot    0.674     0.621     [0.578, 0.664]
+gpt-5.5             zero_shot   0.604     0.640     [0.597, 0.681]
+gpt-5.5             few_shot    0.628     0.638     [0.593, 0.679]
+
+  Per-class F1 with 95% CI:
+  Model               Condition   Class   n     F1      95% CI
+  claude-sonnet-4.6   zero_shot   NONE    174   0.779   [0.721, 0.827]
+  claude-sonnet-4.6   zero_shot   LOW     100   0.416   [0.326, 0.500]
+  claude-sonnet-4.6   zero_shot   HIGH    226   0.785   [0.742, 0.823]
+  claude-sonnet-4.6   few_shot    NONE    174   0.804   [0.754, 0.851]
+  claude-sonnet-4.6   few_shot    LOW     100   0.372   [0.281, 0.456]
+  claude-sonnet-4.6   few_shot    HIGH    226   0.768   [0.724, 0.807]
+  deepseek-v4-pro     zero_shot   NONE    174   0.777   [0.722, 0.826]
+  deepseek-v4-pro     zero_shot   LOW     100   0.340   [0.243, 0.433]
+  deepseek-v4-pro     zero_shot   HIGH    226   0.777   [0.735, 0.815]
+  deepseek-v4-pro     few_shot    NONE    174   0.801   [0.750, 0.847]
+  deepseek-v4-pro     few_shot    LOW     100   0.304   [0.202, 0.400]
+  deepseek-v4-pro     few_shot    HIGH    226   0.759   [0.714, 0.798]
+  gpt-5.5             zero_shot   NONE    174   0.797   [0.746, 0.844]
+  gpt-5.5             zero_shot   LOW     100   0.433   [0.337, 0.521]
+  gpt-5.5             zero_shot   HIGH    226   0.690   [0.635, 0.741]
+  gpt-5.5             few_shot    NONE    174   0.809   [0.760, 0.853]
+  gpt-5.5             few_shot    LOW     100   0.405   [0.304, 0.493]
+  gpt-5.5             few_shot    HIGH    226   0.700   [0.647, 0.750]
+
+----------------------------------------------------------------------------------------------------
+integrity_impact
+----------------------------------------------------------------------------------------------------
+Model               Condition   Accuracy  Macro-F1  95% CI              
+claude-sonnet-4.6   zero_shot   0.738     0.695     [0.652, 0.736]
+claude-sonnet-4.6   few_shot    0.748     0.706     [0.664, 0.747]
+deepseek-v4-pro     zero_shot   0.742     0.682     [0.637, 0.726]
+deepseek-v4-pro     few_shot    0.710     0.658     [0.611, 0.702]
+gpt-5.5             zero_shot   0.654     0.654     [0.608, 0.695]
+gpt-5.5             few_shot    0.672     0.656     [0.611, 0.698]
+
+  Per-class F1 with 95% CI:
+  Model               Condition   Class   n     F1      95% CI
+  claude-sonnet-4.6   zero_shot   NONE    227   0.840   [0.799, 0.876]
+  claude-sonnet-4.6   zero_shot   LOW     100   0.454   [0.363, 0.541]
+  claude-sonnet-4.6   zero_shot   HIGH    173   0.790   [0.743, 0.830]
+  claude-sonnet-4.6   few_shot    NONE    227   0.845   [0.805, 0.880]
+  claude-sonnet-4.6   few_shot    LOW     100   0.478   [0.384, 0.563]
+  claude-sonnet-4.6   few_shot    HIGH    173   0.796   [0.750, 0.837]
+  deepseek-v4-pro     zero_shot   NONE    227   0.859   [0.824, 0.893]
+  deepseek-v4-pro     zero_shot   LOW     100   0.411   [0.305, 0.509]
+  deepseek-v4-pro     zero_shot   HIGH    173   0.777   [0.729, 0.819]
+  deepseek-v4-pro     few_shot    NONE    227   0.860   [0.824, 0.894]
+  deepseek-v4-pro     few_shot    LOW     100   0.380   [0.270, 0.480]
+  deepseek-v4-pro     few_shot    HIGH    173   0.734   [0.682, 0.781]
+  gpt-5.5             zero_shot   NONE    227   0.829   [0.788, 0.866]
+  gpt-5.5             zero_shot   LOW     100   0.403   [0.302, 0.497]
+  gpt-5.5             zero_shot   HIGH    173   0.729   [0.671, 0.780]
+  gpt-5.5             few_shot    NONE    227   0.838   [0.799, 0.874]
+  gpt-5.5             few_shot    LOW     100   0.405   [0.305, 0.497]
+  gpt-5.5             few_shot    HIGH    173   0.726   [0.669, 0.776]
+
+----------------------------------------------------------------------------------------------------
+availability_impact
+----------------------------------------------------------------------------------------------------
+Model               Condition   Accuracy  Macro-F1  95% CI              
+claude-sonnet-4.6   zero_shot   0.650     0.542     [0.508, 0.578]
+claude-sonnet-4.6   few_shot    0.680     0.572     [0.536, 0.610]
+deepseek-v4-pro     zero_shot   0.686     0.553     [0.520, 0.590]
+deepseek-v4-pro     few_shot    0.652     0.528     [0.496, 0.560]
+gpt-5.5             zero_shot   0.554     0.507     [0.471, 0.544]
+gpt-5.5             few_shot    0.592     0.523     [0.487, 0.560]
+
+  Per-class F1 with 95% CI:
+  Model               Condition   Class   n     F1      95% CI
+  claude-sonnet-4.6   zero_shot   NONE    178   0.773   [0.718, 0.820]
+  claude-sonnet-4.6   zero_shot   LOW     101   0.107   [0.042, 0.177]
+  claude-sonnet-4.6   zero_shot   HIGH    221   0.747   [0.704, 0.789]
+  claude-sonnet-4.6   few_shot    NONE    178   0.822   [0.777, 0.864]
+  claude-sonnet-4.6   few_shot    LOW     101   0.152   [0.074, 0.230]
+  claude-sonnet-4.6   few_shot    HIGH    221   0.743   [0.699, 0.786]
+  deepseek-v4-pro     zero_shot   NONE    178   0.831   [0.787, 0.869]
+  deepseek-v4-pro     zero_shot   LOW     101   0.089   [0.020, 0.168]
+  deepseek-v4-pro     zero_shot   HIGH    221   0.739   [0.694, 0.782]
+  deepseek-v4-pro     few_shot    NONE    178   0.819   [0.773, 0.858]
+  deepseek-v4-pro     few_shot    LOW     101   0.056   [0.000, 0.124]
+  deepseek-v4-pro     few_shot    HIGH    221   0.708   [0.658, 0.754]
+  gpt-5.5             zero_shot   NONE    178   0.738   [0.679, 0.789]
+  gpt-5.5             zero_shot   LOW     101   0.097   [0.032, 0.174]
+  gpt-5.5             zero_shot   HIGH    221   0.686   [0.635, 0.735]
+  gpt-5.5             few_shot    NONE    178   0.796   [0.746, 0.840]
+  gpt-5.5             few_shot    LOW     101   0.100   [0.034, 0.180]
+  gpt-5.5             few_shot    HIGH    221   0.673   [0.620, 0.723]

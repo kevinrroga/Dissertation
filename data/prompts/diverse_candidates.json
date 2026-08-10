@@ -1,0 +1,523 @@
+[
+    {
+        "cve_id": "CVE-2026-10878",
+        "published": "2026-06-05T00:16:59.730",
+        "description": "A vulnerability was detected in D-Link DWR-M920 1.1.50/1.1.70. Affected is the function sub_41C8E8 of the file /boafrm/formSmsManage. Performing a manipulation of the argument action_value results in command injection. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+        "cwe_id": "CWE-74",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "LOW",
+        "availability_impact": "LOW",
+        "affected_components": [
+            "dlink dwr-m920 firmware"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:o:dlink:dwr-m920_firmware:1.1.50:*:*:*:*:*:*:*",
+            "cpe:2.3:o:dlink:dwr-m920_firmware:1.1.70:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11238",
+        "published": "2026-06-05T00:16:59.920",
+        "description": "Inappropriate implementation in DevTools in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to obtain potentially sensitive information from process memory via a crafted Chrome Extension. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "cwe_id": "CWE-306",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "NONE",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11239",
+        "published": "2026-06-05T00:17:00.067",
+        "description": "Inappropriate implementation in Extensions in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to perform privilege escalation via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "cwe_id": "CWE-20",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "HIGH",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11240",
+        "published": "2026-06-05T00:17:00.207",
+        "description": "Insufficient validation of untrusted input in Loader in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "cwe_id": "CWE-20",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "NONE",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11241",
+        "published": "2026-06-05T00:17:00.340",
+        "description": "Insufficient validation of untrusted input in Cast in Google Chrome prior to 149.0.7827.53 allowed an attacker on the local network segment to perform privilege escalation via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "cwe_id": "CWE-20",
+        "attack_vector": "ADJACENT_NETWORK",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "HIGH",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11242",
+        "published": "2026-06-05T00:17:00.470",
+        "description": "Insufficient validation of untrusted input in Plugins in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "cwe_id": "CWE-20",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "NONE",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11243",
+        "published": "2026-06-05T00:17:00.607",
+        "description": "Inappropriate implementation in Downloads in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L",
+        "cwe_id": "CWE-346",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "NONE",
+        "availability_impact": "LOW",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11244",
+        "published": "2026-06-05T00:17:00.727",
+        "description": "Insufficient validation of untrusted input in WebAuthentication in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to bypass same origin policy via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "cwe_id": "CWE-20",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "NONE",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11245",
+        "published": "2026-06-05T00:17:00.857",
+        "description": "Inappropriate implementation in Payments in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+        "cwe_id": "CWE-451",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "LOW",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11246",
+        "published": "2026-06-05T00:17:00.983",
+        "description": "Insufficient validation of untrusted input in IndexedDB in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to bypass same origin policy via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+        "cwe_id": "CWE-20",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "HIGH",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11248",
+        "published": "2026-06-05T00:17:01.247",
+        "description": "Inappropriate implementation in Google Lens in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "cwe_id": "CWE-693",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "HIGH",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11252",
+        "published": "2026-06-05T00:17:01.733",
+        "description": "Insufficient policy enforcement in Content Settings in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass discretionary access control via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+        "cwe_id": "CWE-284",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "LOW",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11258",
+        "published": "2026-06-05T00:17:02.470",
+        "description": "Inappropriate implementation in File System Access in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to bypass discretionary access control via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+        "cwe_id": "CWE-284",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "HIGH",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11269",
+        "published": "2026-06-05T00:17:03.887",
+        "description": "Inappropriate implementation in Extensions in Google Chrome prior to 149.0.7827.53 allowed an attacker in a privileged network position to execute arbitrary code inside a sandbox via a crafted Chrome Extension. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "cwe_id": "CWE-829",
+        "attack_vector": "ADJACENT_NETWORK",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "HIGH",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11273",
+        "published": "2026-06-05T00:17:04.387",
+        "description": "Insufficient validation of untrusted input in Omnibox in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to inject arbitrary scripts or HTML (UXSS) via a crafted HTML page. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "cwe_id": "CWE-20",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "LOW",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11276",
+        "published": "2026-06-05T00:17:04.760",
+        "description": "Inappropriate implementation in Cast in Google Chrome prior to 149.0.7827.53 allowed an attacker on the local network segment to bypass discretionary access control via malicious network traffic. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "cwe_id": "CWE-269",
+        "attack_vector": "LOCAL",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "LOW",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11281",
+        "published": "2026-06-05T00:17:05.400",
+        "description": "Integer overflow in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 allowed a local attacker to obtain potentially sensitive information from process memory via a crafted ETW event. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+        "cwe_id": "CWE-472",
+        "attack_vector": "LOCAL",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "NONE",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11290",
+        "published": "2026-06-05T00:17:06.577",
+        "description": "Integer overflow in WebView in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to cause a denial of service via a malicious file. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H",
+        "cwe_id": "CWE-472",
+        "attack_vector": "LOCAL",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "NONE",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11297",
+        "published": "2026-06-05T00:17:07.450",
+        "description": "Insufficient validation of untrusted input in Reader Mode in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to bypass navigation restrictions via a malicious file. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+        "cwe_id": "CWE-20",
+        "attack_vector": "LOCAL",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "HIGH",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-11308",
+        "published": "2026-06-05T00:17:08.870",
+        "description": "Inappropriate implementation in Extensions in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to perform privilege escalation via a crafted Chrome Extension. (Chromium security severity: Low)",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+        "cwe_id": "CWE-269",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "LOW",
+        "availability_impact": "LOW",
+        "affected_components": [
+            "google chrome"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-50589",
+        "published": "2026-06-05T00:17:09.213",
+        "description": "In OpenStack Ironic 32 before 37.0.0, an unauthenticated malicious user could submit a crafted JSON string to some endpoints on the API or JSON-RPC service and effect a service crash.",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "cwe_id": "CWE-770",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "NONE",
+        "availability_impact": "LOW",
+        "affected_components": [
+            "openstack ironic"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:openstack:ironic:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-21825",
+        "published": "2026-06-05T07:16:29.707",
+        "description": "HCL Digital Experience Compose is affected by a reflected cross-site scripting (XSS) vulnerability in the search center.\u00a0 An attacker could execute arbitrary JavaScript in the victim's browser.",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "cwe_id": "CWE-79",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "LOW",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "hcltech digital experience compose",
+            "hcltech digital experience"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:-:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf224:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf225:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf226:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf227:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf228:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf229:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf230:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf231:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf232:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf233:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience_compose:9.5:cf234:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:-:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf17:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf171:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf172:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf173:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf18:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf181:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf182:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf183:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf184:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf19:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf191:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf192:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf193:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf194:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf195:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf196:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf197:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf198:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf199:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf200:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf201:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf202:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf203:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf204:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf205:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf206:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf207:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf208:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf209:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf210:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf211:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf212:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf213:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf214:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf215:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf216:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf217:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf218:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf219:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf220:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf221:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf222:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf223:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf224:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf225:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf226:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf227:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf228:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf229:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf230:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf231:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf232:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf233:*:*:*:*:*:*",
+            "cpe:2.3:a:hcltech:digital_experience:9.5:cf234:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-21031",
+        "published": "2026-06-05T11:16:35.673",
+        "description": "Improper authorization in AppBlock prior to SMR Jun-2026 Release 1 allows local attacker to launch arbitrary activity. User interaction is required for triggering this vulnerability.",
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "cwe_id": "CWE-863",
+        "attack_vector": "LOCAL",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "HIGH",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "samsung android"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:o:samsung:android:15.0:-:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-apr-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-apr-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-aug-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-dec-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-feb-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-feb-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-jan-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-jan-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-jul-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-jun-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-mar-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-mar-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-may-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-may-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-nov-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-oct-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:15.0:smr-sep-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:-:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-apr-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-aug-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-dec-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-feb-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-jan-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-mar-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-may-2026-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-nov-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-oct-2025-r1:*:*:*:*:*:*",
+            "cpe:2.3:o:samsung:android:16.0:smr-sep-2025-r1:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-21036",
+        "published": "2026-06-05T11:16:36.310",
+        "description": "Improper authorization in Samsung Internet prior to version 30.0.0.39 allows local attackers to access sensitive information.",
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "cwe_id": "CWE-863",
+        "attack_vector": "LOCAL",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "NONE",
+        "availability_impact": "NONE",
+        "affected_components": [
+            "samsung internet"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:samsung:internet:*:*:*:*:*:*:*:*"
+        ]
+    },
+    {
+        "cve_id": "CVE-2026-25657",
+        "published": "2026-06-05T12:16:37.750",
+        "description": "Ericsson Packet Core Gateway (PCG) versions prior to 1.30 contain an Improper Handling of Syntactically Invalid Structure (CWE-228) vulnerability where an attacker continuously sending a specially crafted message can cause service degradation. The impact continues as long the attack persists but the system recovers from the crashes when the attack stops.",
+        "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cwe_id": "CWE-228",
+        "attack_vector": "ADJACENT_NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "NONE",
+        "availability_impact": "HIGH",
+        "affected_components": [
+            "ericsson packet core gateway"
+        ],
+        "affected_cpes_raw": [
+            "cpe:2.3:a:ericsson:packet_core_gateway:*:*:*:*:*:*:*:*"
+        ]
+    }
+]

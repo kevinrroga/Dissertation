@@ -1,0 +1,7 @@
+model,condition,attempted,failures,failure_rate,verdict
+claude-sonnet-4.6,few_shot,20,0,0.0%,PROCEED
+claude-sonnet-4.6,zero_shot,20,0,0.0%,PROCEED
+deepseek-v4-pro,few_shot,20,0,0.0%,PROCEED
+deepseek-v4-pro,zero_shot,20,0,0.0%,PROCEED
+gpt-5.5,few_shot,20,0,0.0%,PROCEED
+gpt-5.5,zero_shot,20,0,0.0%,PROCEED

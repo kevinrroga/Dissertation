@@ -1,0 +1,232 @@
+{
+  "input_file": "C:\\Users\\kevin\\Desktop\\cve-ner-dissertation\\ultimate_dataset\\merging_results.json",
+  "components": [
+    "confidentiality_impact",
+    "integrity_impact",
+    "availability_impact"
+  ],
+  "per_component": {
+    "confidentiality_impact": {
+      "ground_truth": {
+        "inconsistent_cves": 0,
+        "observed_labels": [
+          "HIGH",
+          "LOW",
+          "NONE"
+        ],
+        "unexpected_labels": [],
+        "null_ground_truth_cves": 0
+      },
+      "distribution": {
+        "counts": {
+          "HIGH": 226,
+          "NONE": 174,
+          "LOW": 100
+        },
+        "total": 500,
+        "low_support_classes": {}
+      },
+      "extracted_values": {
+        "None": 836,
+        "High": 1438,
+        "Low": 424
+      },
+      "nulls": {
+        "by_model_condition": {
+          "claude-sonnet-4.6": {
+            "few_shot": {
+              "nulls": 14,
+              "n": 500,
+              "pct": 2.8
+            },
+            "zero_shot": {
+              "nulls": 26,
+              "n": 500,
+              "pct": 5.2
+            }
+          },
+          "deepseek-v4-pro": {
+            "few_shot": {
+              "nulls": 47,
+              "n": 500,
+              "pct": 9.4
+            },
+            "zero_shot": {
+              "nulls": 26,
+              "n": 500,
+              "pct": 5.2
+            }
+          },
+          "gpt-5.5": {
+            "few_shot": {
+              "nulls": 83,
+              "n": 500,
+              "pct": 16.6
+            },
+            "zero_shot": {
+              "nulls": 106,
+              "n": 500,
+              "pct": 21.2
+            }
+          }
+        },
+        "total": 302,
+        "null_but_valid": 302
+      }
+    },
+    "integrity_impact": {
+      "ground_truth": {
+        "inconsistent_cves": 0,
+        "observed_labels": [
+          "HIGH",
+          "LOW",
+          "NONE"
+        ],
+        "unexpected_labels": [],
+        "null_ground_truth_cves": 0
+      },
+      "distribution": {
+        "counts": {
+          "HIGH": 173,
+          "NONE": 227,
+          "LOW": 100
+        },
+        "total": 500,
+        "low_support_classes": {}
+      },
+      "extracted_values": {
+        "High": 1220,
+        "None": 1160,
+        "Low": 379
+      },
+      "nulls": {
+        "by_model_condition": {
+          "claude-sonnet-4.6": {
+            "few_shot": {
+              "nulls": 12,
+              "n": 500,
+              "pct": 2.4
+            },
+            "zero_shot": {
+              "nulls": 13,
+              "n": 500,
+              "pct": 2.6
+            }
+          },
+          "deepseek-v4-pro": {
+            "few_shot": {
+              "nulls": 41,
+              "n": 500,
+              "pct": 8.2
+            },
+            "zero_shot": {
+              "nulls": 22,
+              "n": 500,
+              "pct": 4.4
+            }
+          },
+          "gpt-5.5": {
+            "few_shot": {
+              "nulls": 65,
+              "n": 500,
+              "pct": 13.0
+            },
+            "zero_shot": {
+              "nulls": 88,
+              "n": 500,
+              "pct": 17.6
+            }
+          }
+        },
+        "total": 241,
+        "null_but_valid": 241
+      }
+    },
+    "availability_impact": {
+      "ground_truth": {
+        "inconsistent_cves": 0,
+        "observed_labels": [
+          "HIGH",
+          "LOW",
+          "NONE"
+        ],
+        "unexpected_labels": [],
+        "null_ground_truth_cves": 0
+      },
+      "distribution": {
+        "counts": {
+          "HIGH": 221,
+          "NONE": 178,
+          "LOW": 101
+        },
+        "total": 500,
+        "low_support_classes": {}
+      },
+      "extracted_values": {
+        "None": 1070,
+        "High": 1503,
+        "Low": 151
+      },
+      "nulls": {
+        "by_model_condition": {
+          "claude-sonnet-4.6": {
+            "few_shot": {
+              "nulls": 8,
+              "n": 500,
+              "pct": 1.6
+            },
+            "zero_shot": {
+              "nulls": 14,
+              "n": 500,
+              "pct": 2.8
+            }
+          },
+          "deepseek-v4-pro": {
+            "few_shot": {
+              "nulls": 40,
+              "n": 500,
+              "pct": 8.0
+            },
+            "zero_shot": {
+              "nulls": 20,
+              "n": 500,
+              "pct": 4.0
+            }
+          },
+          "gpt-5.5": {
+            "few_shot": {
+              "nulls": 83,
+              "n": 500,
+              "pct": 16.6
+            },
+            "zero_shot": {
+              "nulls": 111,
+              "n": 500,
+              "pct": 22.2
+            }
+          }
+        },
+        "total": 276,
+        "null_but_valid": 276
+      }
+    }
+  },
+  "structure": {
+    "total_rows": 3000,
+    "models": {
+      "gpt-5.5": 1000,
+      "claude-sonnet-4.6": 1000,
+      "deepseek-v4-pro": 1000
+    },
+    "conditions": {
+      "zero_shot": 1500,
+      "few_shot": 1500
+    },
+    "valid_flag": {
+      "True": 3000
+    },
+    "unique_cves": 500,
+    "expected_rows_per_cve": 6,
+    "cves_with_wrong_row_count": 0
+  }
+}

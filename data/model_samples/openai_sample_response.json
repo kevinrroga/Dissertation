@@ -1,0 +1,17 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.5",
+  "timestamp_utc": "2026-06-25T22:53:38.002543+00:00",
+  "output_text": "API connection successful.",
+  "usage": {
+    "input_tokens": 14,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 8,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 22
+  }
+}

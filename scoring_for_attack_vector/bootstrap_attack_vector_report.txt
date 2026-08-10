@@ -1,0 +1,64 @@
+Bootstrap confidence intervals - attack_vector
+5000 resamples, CVE-level, percentile method, seed 42
+
+Two macro-F1 variants per cell:
+  all-class     = mean over NETWORK, ADJACENT_NETWORK, LOCAL, PHYSICAL
+                  (honest headline; wide because two classes are tiny)
+  supported     = mean over NETWORK and LOCAL only
+                  (precise; aligns with the paired significance tests)
+
+cell                               macro(all)            95% CI   macro(sup)            95% CI
+----------------------------------------------------------------------------------------------
+claude-sonnet-4.6 [few_shot]            0.744   [0.568, 0.861]        0.833   [0.788, 0.873]
+claude-sonnet-4.6 [zero_shot]           0.759   [0.561, 0.871]        0.835   [0.790, 0.875]
+deepseek-v4-pro [few_shot]              0.699   [0.522, 0.816]        0.807   [0.761, 0.849]
+deepseek-v4-pro [zero_shot]             0.664   [0.507, 0.809]        0.810   [0.762, 0.853]
+gpt-5.5 [few_shot]                      0.716   [0.541, 0.832]        0.778   [0.731, 0.820]
+gpt-5.5 [zero_shot]                     0.713   [0.537, 0.831]        0.791   [0.744, 0.833]
+
+Per-class F1 with 95% CI (all cells)
+Note the width on ADJACENT_NETWORK (n=10) and PHYSICAL (n=3): these
+intervals are the honest measure of how little those scores can be trusted.
+
+  claude-sonnet-4.6 [few_shot]
+    class                  n      F1              95% CI
+    NETWORK              388   0.940   [0.922, 0.956]
+    ADJACENT_NETWORK      10   0.737   [0.444, 0.933]
+    LOCAL                 99   0.726   [0.648, 0.795]
+    PHYSICAL               3   0.571   [0.000, 1.000]
+
+  claude-sonnet-4.6 [zero_shot]
+    class                  n      F1              95% CI
+    NETWORK              388   0.939   [0.921, 0.955]
+    ADJACENT_NETWORK      10   0.700   [0.400, 0.900]
+    LOCAL                 99   0.730   [0.652, 0.798]
+    PHYSICAL               3   0.667   [0.000, 1.000]
+
+  deepseek-v4-pro [few_shot]
+    class                  n      F1              95% CI
+    NETWORK              388   0.919   [0.898, 0.938]
+    ADJACENT_NETWORK      10   0.609   [0.316, 0.818]
+    LOCAL                 99   0.696   [0.615, 0.769]
+    PHYSICAL               3   0.571   [0.000, 1.000]
+
+  deepseek-v4-pro [zero_shot]
+    class                  n      F1              95% CI
+    NETWORK              388   0.924   [0.904, 0.943]
+    ADJACENT_NETWORK      10   0.636   [0.333, 0.846]
+    LOCAL                 99   0.696   [0.615, 0.767]
+    PHYSICAL               3   0.400   [0.000, 1.000]
+
+  gpt-5.5 [few_shot]
+    class                  n      F1              95% CI
+    NETWORK              388   0.910   [0.886, 0.930]
+    ADJACENT_NETWORK      10   0.737   [0.429, 0.933]
+    LOCAL                 99   0.646   [0.564, 0.721]
+    PHYSICAL               3   0.571   [0.000, 1.000]
+
+  gpt-5.5 [zero_shot]
+    class                  n      F1              95% CI
+    NETWORK              388   0.912   [0.888, 0.932]
+    ADJACENT_NETWORK      10   0.700   [0.400, 0.900]
+    LOCAL                 99   0.670   [0.586, 0.743]
+    PHYSICAL               3   0.571   [0.000, 1.000]
+

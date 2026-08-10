@@ -1,0 +1,548 @@
+{
+  "confidentiality_impact": {
+    "claude-sonnet-4.6|zero_shot": {
+      "accuracy": 0.69,
+      "macro_f1": 0.6599119431717124,
+      "macro_ci_low": 0.6171574147311438,
+      "macro_ci_high": 0.7005068383521822,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.7785234899328858,
+          "support": 174,
+          "ci_low": 0.7210884353741497,
+          "ci_high": 0.8273615635179153,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.416243654822335,
+          "support": 100,
+          "ci_low": 0.3263157894736842,
+          "ci_high": 0.4999999999999999,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7849686847599164,
+          "support": 226,
+          "ci_low": 0.7415254237288135,
+          "ci_high": 0.8233009708737864,
+          "low_support": false
+        }
+      }
+    },
+    "claude-sonnet-4.6|few_shot": {
+      "accuracy": 0.694,
+      "macro_f1": 0.6480553640742636,
+      "macro_ci_low": 0.6064824905550712,
+      "macro_ci_high": 0.6893266527265113,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8038585209003215,
+          "support": 174,
+          "ci_low": 0.7543252595155711,
+          "ci_high": 0.8506493506493507,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.3723404255319149,
+          "support": 100,
+          "ci_low": 0.2810810810810811,
+          "ci_high": 0.45631067961165045,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7679671457905544,
+          "support": 226,
+          "ci_low": 0.7244701348747591,
+          "ci_high": 0.8065173116089611,
+          "low_support": false
+        }
+      }
+    },
+    "deepseek-v4-pro|zero_shot": {
+      "accuracy": 0.69,
+      "macro_f1": 0.6313040200573218,
+      "macro_ci_low": 0.5865083374484409,
+      "macro_ci_high": 0.6725795046379658,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.7766990291262136,
+          "support": 174,
+          "ci_low": 0.7218934911242603,
+          "ci_high": 0.825503355704698,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.3398692810457516,
+          "support": 100,
+          "ci_low": 0.24285714285714285,
+          "ci_high": 0.43274853801169594,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7773437500000001,
+          "support": 226,
+          "ci_low": 0.7347826086956522,
+          "ci_high": 0.8148148148148148,
+          "low_support": false
+        }
+      }
+    },
+    "deepseek-v4-pro|few_shot": {
+      "accuracy": 0.674,
+      "macro_f1": 0.6214035839223245,
+      "macro_ci_low": 0.5779557236934286,
+      "macro_ci_high": 0.6641035649232371,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8012422360248447,
+          "support": 174,
+          "ci_low": 0.7500000000000001,
+          "ci_high": 0.8469055374592834,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.30434782608695654,
+          "support": 100,
+          "ci_low": 0.2018348623853211,
+          "ci_high": 0.4,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7586206896551724,
+          "support": 226,
+          "ci_low": 0.7139959432048681,
+          "ci_high": 0.7983539094650205,
+          "low_support": false
+        }
+      }
+    },
+    "gpt-5.5|zero_shot": {
+      "accuracy": 0.604,
+      "macro_f1": 0.6401957629319935,
+      "macro_ci_low": 0.5967199647150628,
+      "macro_ci_high": 0.6812888653235317,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.797427652733119,
+          "support": 174,
+          "ci_low": 0.7458745874587459,
+          "ci_high": 0.8438538205980066,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.43333333333333335,
+          "support": 100,
+          "ci_low": 0.33749999999999997,
+          "ci_high": 0.5212121212121212,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.6898263027295285,
+          "support": 226,
+          "ci_low": 0.6346153846153847,
+          "ci_high": 0.7409326424870467,
+          "low_support": false
+        }
+      }
+    },
+    "gpt-5.5|few_shot": {
+      "accuracy": 0.628,
+      "macro_f1": 0.637757514353259,
+      "macro_ci_low": 0.5930074928522133,
+      "macro_ci_high": 0.6785537219329713,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8085106382978723,
+          "support": 174,
+          "ci_low": 0.7597402597402597,
+          "ci_high": 0.8530259365994236,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.40476190476190477,
+          "support": 100,
+          "ci_low": 0.30379746835443033,
+          "ci_high": 0.49261083743842365,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7,
+          "support": 226,
+          "ci_low": 0.6469135802469136,
+          "ci_high": 0.7499999999999999,
+          "low_support": false
+        }
+      }
+    }
+  },
+  "integrity_impact": {
+    "claude-sonnet-4.6|zero_shot": {
+      "accuracy": 0.738,
+      "macro_f1": 0.6945344896801208,
+      "macro_ci_low": 0.6523362449090474,
+      "macro_ci_high": 0.7362452902231156,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8398058252427184,
+          "support": 227,
+          "ci_low": 0.7989690721649484,
+          "ci_high": 0.8764568764568764,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.4540540540540541,
+          "support": 100,
+          "ci_low": 0.36257309941520466,
+          "ci_high": 0.5412844036697247,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7897435897435898,
+          "support": 173,
+          "ci_low": 0.743455497382199,
+          "ci_high": 0.8304668304668305,
+          "low_support": false
+        }
+      }
+    },
+    "claude-sonnet-4.6|few_shot": {
+      "accuracy": 0.748,
+      "macro_f1": 0.7062798103623046,
+      "macro_ci_low": 0.6638481933185437,
+      "macro_ci_high": 0.7473270134313967,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8446601941747574,
+          "support": 227,
+          "ci_low": 0.8050000000000002,
+          "ci_high": 0.8801742919389979,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.4782608695652174,
+          "support": 100,
+          "ci_low": 0.38372093023255816,
+          "ci_high": 0.5628140703517588,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7959183673469388,
+          "support": 173,
+          "ci_low": 0.7499999999999999,
+          "ci_high": 0.8368421052631578,
+          "low_support": false
+        }
+      }
+    },
+    "deepseek-v4-pro|zero_shot": {
+      "accuracy": 0.742,
+      "macro_f1": 0.6823412206156294,
+      "macro_ci_low": 0.6374675913785152,
+      "macro_ci_high": 0.7261895861045815,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.859122401847575,
+          "support": 227,
+          "ci_low": 0.8240963855421687,
+          "ci_high": 0.8932806324110673,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.410958904109589,
+          "support": 100,
+          "ci_low": 0.30508474576271183,
+          "ci_high": 0.5090909090909093,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7769423558897243,
+          "support": 173,
+          "ci_low": 0.7292225201072385,
+          "ci_high": 0.819047619047619,
+          "low_support": false
+        }
+      }
+    },
+    "deepseek-v4-pro|few_shot": {
+      "accuracy": 0.71,
+      "macro_f1": 0.6577274293123718,
+      "macro_ci_low": 0.6112619035693514,
+      "macro_ci_high": 0.7024919554854829,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8597701149425286,
+          "support": 227,
+          "ci_low": 0.8240740740740741,
+          "ci_high": 0.8939393939393939,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.3795620437956205,
+          "support": 100,
+          "ci_low": 0.2698412698412698,
+          "ci_high": 0.48,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7338501291989664,
+          "support": 173,
+          "ci_low": 0.6815642458100558,
+          "ci_high": 0.7806122448979591,
+          "low_support": false
+        }
+      }
+    },
+    "gpt-5.5|zero_shot": {
+      "accuracy": 0.654,
+      "macro_f1": 0.6535489965714334,
+      "macro_ci_low": 0.6084508568671733,
+      "macro_ci_high": 0.6952126952126951,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8292682926829269,
+          "support": 227,
+          "ci_low": 0.7883211678832118,
+          "ci_high": 0.8660714285714285,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.40251572327044033,
+          "support": 100,
+          "ci_low": 0.3021582733812949,
+          "ci_high": 0.4969696969696969,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.728862973760933,
+          "support": 173,
+          "ci_low": 0.6710526315789473,
+          "ci_high": 0.7795698924731183,
+          "low_support": false
+        }
+      }
+    },
+    "gpt-5.5|few_shot": {
+      "accuracy": 0.672,
+      "macro_f1": 0.6563606422396048,
+      "macro_ci_low": 0.6111626868867837,
+      "macro_ci_high": 0.6984733091193744,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8380952380952382,
+          "support": 227,
+          "ci_low": 0.7990074441687345,
+          "ci_high": 0.8741418764302059,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.40476190476190477,
+          "support": 100,
+          "ci_low": 0.30508474576271183,
+          "ci_high": 0.4971098265895953,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7262247838616714,
+          "support": 173,
+          "ci_low": 0.6688311688311689,
+          "ci_high": 0.7762803234501348,
+          "low_support": false
+        }
+      }
+    }
+  },
+  "availability_impact": {
+    "claude-sonnet-4.6|zero_shot": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5424106196916509,
+      "macro_ci_low": 0.5080571961264129,
+      "macro_ci_high": 0.577592877931861,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.7728613569321534,
+          "support": 178,
+          "ci_low": 0.717948717948718,
+          "ci_high": 0.8196721311475409,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.10738255033557048,
+          "support": 101,
+          "ci_low": 0.04195804195804197,
+          "ci_high": 0.17687074829931973,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.746987951807229,
+          "support": 221,
+          "ci_low": 0.7037861915367483,
+          "ci_high": 0.7891682785299807,
+          "low_support": false
+        }
+      }
+    },
+    "claude-sonnet-4.6|few_shot": {
+      "accuracy": 0.68,
+      "macro_f1": 0.5724242829532075,
+      "macro_ci_low": 0.5359148568724993,
+      "macro_ci_high": 0.6098926730952624,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8222222222222223,
+          "support": 178,
+          "ci_low": 0.7771739130434783,
+          "ci_high": 0.8636363636363635,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.15172413793103448,
+          "support": 101,
+          "ci_low": 0.07352941176470588,
+          "ci_high": 0.2302158273381295,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7433264887063655,
+          "support": 221,
+          "ci_low": 0.698744769874477,
+          "ci_high": 0.7861271676300579,
+          "low_support": false
+        }
+      }
+    },
+    "deepseek-v4-pro|zero_shot": {
+      "accuracy": 0.686,
+      "macro_f1": 0.5532596164633697,
+      "macro_ci_low": 0.5202349585604227,
+      "macro_ci_high": 0.5896749554536439,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8310991957104558,
+          "support": 178,
+          "ci_low": 0.7873563218390806,
+          "ci_high": 0.8689320388349515,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.08928571428571429,
+          "support": 101,
+          "ci_low": 0.020202020202020204,
+          "ci_high": 0.16822429906542058,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7393939393939393,
+          "support": 221,
+          "ci_low": 0.6942800788954635,
+          "ci_high": 0.7819253438113948,
+          "low_support": false
+        }
+      }
+    },
+    "deepseek-v4-pro|few_shot": {
+      "accuracy": 0.652,
+      "macro_f1": 0.5275331742648278,
+      "macro_ci_low": 0.4957220145800468,
+      "macro_ci_high": 0.5602050549144133,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.8188976377952757,
+          "support": 178,
+          "ci_low": 0.7733333333333332,
+          "ci_high": 0.8578811369509044,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.05607476635514018,
+          "support": 101,
+          "ci_low": 0.0,
+          "ci_high": 0.12371134020618556,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.7076271186440678,
+          "support": 221,
+          "ci_low": 0.6583333333333333,
+          "ci_high": 0.75390625,
+          "low_support": false
+        }
+      }
+    },
+    "gpt-5.5|zero_shot": {
+      "accuracy": 0.554,
+      "macro_f1": 0.5070259758108026,
+      "macro_ci_low": 0.4706413711812549,
+      "macro_ci_high": 0.5440339010028591,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.7378048780487805,
+          "support": 178,
+          "ci_low": 0.6790123456790124,
+          "ci_high": 0.7894736842105263,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.0967741935483871,
+          "support": 101,
+          "ci_low": 0.03174603174603175,
+          "ci_high": 0.174496644295302,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.6864988558352403,
+          "support": 221,
+          "ci_low": 0.6352357320099257,
+          "ci_high": 0.7352297592997813,
+          "low_support": false
+        }
+      }
+    },
+    "gpt-5.5|few_shot": {
+      "accuracy": 0.592,
+      "macro_f1": 0.5227484933367287,
+      "macro_ci_low": 0.4869848134375077,
+      "macro_ci_high": 0.5601836965265045,
+      "n": 500,
+      "per_class": {
+        "NONE": {
+          "f1": 0.7955182072829132,
+          "support": 178,
+          "ci_low": 0.7456647398843931,
+          "ci_high": 0.84,
+          "low_support": false
+        },
+        "LOW": {
+          "f1": 0.1,
+          "support": 101,
+          "ci_low": 0.03361344537815126,
+          "ci_high": 0.1801801801801802,
+          "low_support": false
+        },
+        "HIGH": {
+          "f1": 0.6727272727272726,
+          "support": 221,
+          "ci_low": 0.6203703703703703,
+          "ci_high": 0.7233115468409586,
+          "low_support": false
+        }
+      }
+    }
+  }
+}

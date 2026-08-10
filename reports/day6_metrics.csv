@@ -1,0 +1,4 @@
+model,valid,total,mean_latency_s,total_latency_s,input_tokens,output_tokens,est_cost_usd
+gpt-5.5,498,500,2.006,1002.9,235657,26486,1.97287
+claude-sonnet-4.6,500,500,2.484,1242.2,261420,41604,1.40832
+deepseek-v4-pro,500,500,1.929,964.7,240045,32768,0.53171

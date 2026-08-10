@@ -1,0 +1,49 @@
+==========================================================================================
+AFFECTED COMPONENT SCORING
+==========================================================================================
+Records: 3000   Cells: 6 (3 models x 2 conditions)
+
+Matching policy:
+  Layer 1 (Match)   — bidirectional token-overlap against any GT component
+  Layer 2 (Partial) — vendor-token presence fallback
+  Any-match across multi-component GT lists.
+  Partial is FN for the headline metric; reported separately for discussion.
+
+------------------------------------------------------------------------------------------
+1. OUTCOME BREAKDOWN per cell
+------------------------------------------------------------------------------------------
+model                    condition     Match       Partial     No Match    Declined    Malformed   
+claude-sonnet-4.6        few_shot      270         71          159         0           0           
+claude-sonnet-4.6        zero_shot     274         66          160         0           0           
+deepseek-v4-pro          few_shot      276         71          152         1           0           
+deepseek-v4-pro          zero_shot     283         69          148         0           0           
+gpt-5.5                  few_shot      275         72          153         0           0           
+gpt-5.5                  zero_shot     274         73          153         0           0           
+
+------------------------------------------------------------------------------------------
+2. BINARY F1  [PRIMARY METRIC]
+------------------------------------------------------------------------------------------
+model                    condition     F1       precision  recall   accuracy  partial%  
+claude-sonnet-4.6        few_shot      0.701    1.000      0.540    0.540     14.2      
+claude-sonnet-4.6        zero_shot     0.708    1.000      0.548    0.548     13.2      
+deepseek-v4-pro          few_shot      0.711    1.000      0.552    0.552     14.2      
+deepseek-v4-pro          zero_shot     0.723    1.000      0.566    0.566     13.8      
+gpt-5.5                  few_shot      0.710    1.000      0.550    0.550     14.4      
+gpt-5.5                  zero_shot     0.708    1.000      0.548    0.548     14.6      
+
+------------------------------------------------------------------------------------------
+3. COUNTS
+------------------------------------------------------------------------------------------
+model                    condition     n     TP    FN    partial  no_match   no_pred  
+claude-sonnet-4.6        few_shot      500   270   230   71       159        0        
+claude-sonnet-4.6        zero_shot     500   274   226   66       160        0        
+deepseek-v4-pro          few_shot      500   276   224   71       152        1        
+deepseek-v4-pro          zero_shot     500   283   217   69       148        0        
+gpt-5.5                  few_shot      500   275   225   72       153        0        
+gpt-5.5                  zero_shot     500   274   226   73       153        0        
+
+NOTE: FP is defined as 0 throughout. Precision is always 1.0.
+The meaningful metric is recall (= accuracy). F1 reported for comparability.
+
+NOTE: No Match does not purely indicate failure — LLMs extract feature-level
+names from description text rather than CPE-registered product names.

@@ -1,0 +1,495 @@
+{
+  "entity": "attack_vector",
+  "input_file": "C:\\Users\\kevin\\Desktop\\cve-ner-dissertation\\ultimate_dataset\\merging_results.json",
+  "classes": [
+    "NETWORK",
+    "ADJACENT_NETWORK",
+    "LOCAL",
+    "PHYSICAL"
+  ],
+  "policy": {
+    "no_prediction_categories": [
+      "Unmapped",
+      "Declined",
+      "Malformed"
+    ],
+    "no_prediction_treatment": "FN for ground truth class, no FP",
+    "denominator": "all records retained",
+    "undefined_precision": 0.0
+  },
+  "cells": {
+    "claude-sonnet-4.6|few_shot": {
+      "n": 500,
+      "outcomes": {
+        "Correct": 441,
+        "Incorrect": 45,
+        "Unmapped": 0,
+        "Declined": 14,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 367,
+          "fp": 26,
+          "fn": 21,
+          "support": 388,
+          "precision": 0.9338422391857506,
+          "recall": 0.9458762886597938,
+          "f1": 0.9398207426376439,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 3,
+          "support": 10,
+          "precision": 0.7777777777777778,
+          "recall": 0.7,
+          "f1": 0.7368421052631577,
+          "precision_undefined": false
+        },
+        "LOCAL": {
+          "tp": 65,
+          "fp": 15,
+          "fn": 34,
+          "support": 99,
+          "precision": 0.8125,
+          "recall": 0.6565656565656566,
+          "f1": 0.7262569832402236,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "support": 3,
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "f1": 0.5714285714285715,
+          "precision_undefined": false
+        }
+      },
+      "macro_f1": 0.7435871006423992,
+      "accuracy": 0.882,
+      "no_prediction_count": 14,
+      "no_prediction_rate": 0.028,
+      "confusion": {
+        "ADJACENT_NETWORK": {
+          "ADJACENT_NETWORK": 7,
+          "NETWORK": 3
+        },
+        "NETWORK": {
+          "NETWORK": 367,
+          "LOCAL": 14,
+          "Declined": 5,
+          "ADJACENT_NETWORK": 2
+        },
+        "LOCAL": {
+          "LOCAL": 65,
+          "NETWORK": 23,
+          "PHYSICAL": 2,
+          "Declined": 9
+        },
+        "PHYSICAL": {
+          "PHYSICAL": 2,
+          "LOCAL": 1
+        }
+      }
+    },
+    "claude-sonnet-4.6|zero_shot": {
+      "n": 500,
+      "outcomes": {
+        "Correct": 443,
+        "Incorrect": 47,
+        "Unmapped": 0,
+        "Declined": 10,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 369,
+          "fp": 29,
+          "fn": 19,
+          "support": 388,
+          "precision": 0.9271356783919598,
+          "recall": 0.9510309278350515,
+          "f1": 0.9389312977099236,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 7,
+          "fp": 3,
+          "fn": 3,
+          "support": 10,
+          "precision": 0.7,
+          "recall": 0.7,
+          "f1": 0.7,
+          "precision_undefined": false
+        },
+        "LOCAL": {
+          "tp": 65,
+          "fp": 14,
+          "fn": 34,
+          "support": 99,
+          "precision": 0.8227848101265823,
+          "recall": 0.6565656565656566,
+          "f1": 0.7303370786516854,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "support": 3,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "precision_undefined": false
+        }
+      },
+      "macro_f1": 0.7589837607570689,
+      "accuracy": 0.886,
+      "no_prediction_count": 10,
+      "no_prediction_rate": 0.02,
+      "confusion": {
+        "ADJACENT_NETWORK": {
+          "ADJACENT_NETWORK": 7,
+          "NETWORK": 3
+        },
+        "NETWORK": {
+          "NETWORK": 369,
+          "LOCAL": 13,
+          "Declined": 3,
+          "ADJACENT_NETWORK": 3
+        },
+        "LOCAL": {
+          "LOCAL": 65,
+          "NETWORK": 26,
+          "PHYSICAL": 1,
+          "Declined": 7
+        },
+        "PHYSICAL": {
+          "PHYSICAL": 2,
+          "LOCAL": 1
+        }
+      }
+    },
+    "deepseek-v4-pro|few_shot": {
+      "n": 500,
+      "outcomes": {
+        "Correct": 425,
+        "Incorrect": 55,
+        "Unmapped": 0,
+        "Declined": 20,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 352,
+          "fp": 26,
+          "fn": 36,
+          "support": 388,
+          "precision": 0.9312169312169312,
+          "recall": 0.9072164948453608,
+          "f1": 0.9190600522193212,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 7,
+          "fp": 6,
+          "fn": 3,
+          "support": 10,
+          "precision": 0.5384615384615384,
+          "recall": 0.7,
+          "f1": 0.608695652173913,
+          "precision_undefined": false
+        },
+        "LOCAL": {
+          "tp": 64,
+          "fp": 21,
+          "fn": 35,
+          "support": 99,
+          "precision": 0.7529411764705882,
+          "recall": 0.6464646464646465,
+          "f1": 0.6956521739130435,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "support": 3,
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "f1": 0.5714285714285715,
+          "precision_undefined": false
+        }
+      },
+      "macro_f1": 0.6987091124337123,
+      "accuracy": 0.85,
+      "no_prediction_count": 20,
+      "no_prediction_rate": 0.04,
+      "confusion": {
+        "ADJACENT_NETWORK": {
+          "ADJACENT_NETWORK": 7,
+          "NETWORK": 2,
+          "LOCAL": 1
+        },
+        "NETWORK": {
+          "ADJACENT_NETWORK": 6,
+          "NETWORK": 352,
+          "LOCAL": 19,
+          "Declined": 10,
+          "PHYSICAL": 1
+        },
+        "LOCAL": {
+          "LOCAL": 64,
+          "NETWORK": 24,
+          "PHYSICAL": 1,
+          "Declined": 10
+        },
+        "PHYSICAL": {
+          "PHYSICAL": 2,
+          "LOCAL": 1
+        }
+      }
+    },
+    "deepseek-v4-pro|zero_shot": {
+      "n": 500,
+      "outcomes": {
+        "Correct": 436,
+        "Incorrect": 62,
+        "Unmapped": 0,
+        "Declined": 2,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 365,
+          "fp": 37,
+          "fn": 23,
+          "support": 388,
+          "precision": 0.9079601990049752,
+          "recall": 0.9407216494845361,
+          "f1": 0.9240506329113924,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 7,
+          "fp": 5,
+          "fn": 3,
+          "support": 10,
+          "precision": 0.5833333333333334,
+          "recall": 0.7,
+          "f1": 0.6363636363636365,
+          "precision_undefined": false
+        },
+        "LOCAL": {
+          "tp": 63,
+          "fp": 19,
+          "fn": 36,
+          "support": 99,
+          "precision": 0.7682926829268293,
+          "recall": 0.6363636363636364,
+          "f1": 0.6961325966850828,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 2,
+          "support": 3,
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "precision_undefined": false
+        }
+      },
+      "macro_f1": 0.6641367164900279,
+      "accuracy": 0.872,
+      "no_prediction_count": 2,
+      "no_prediction_rate": 0.004,
+      "confusion": {
+        "ADJACENT_NETWORK": {
+          "ADJACENT_NETWORK": 7,
+          "NETWORK": 3
+        },
+        "NETWORK": {
+          "ADJACENT_NETWORK": 5,
+          "NETWORK": 365,
+          "LOCAL": 17,
+          "Declined": 1
+        },
+        "LOCAL": {
+          "LOCAL": 63,
+          "NETWORK": 34,
+          "PHYSICAL": 1,
+          "Declined": 1
+        },
+        "PHYSICAL": {
+          "LOCAL": 2,
+          "PHYSICAL": 1
+        }
+      }
+    },
+    "gpt-5.5|few_shot": {
+      "n": 500,
+      "outcomes": {
+        "Correct": 407,
+        "Incorrect": 49,
+        "Unmapped": 0,
+        "Declined": 44,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 337,
+          "fp": 16,
+          "fn": 51,
+          "support": 388,
+          "precision": 0.9546742209631728,
+          "recall": 0.8685567010309279,
+          "f1": 0.9095816464237516,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 3,
+          "support": 10,
+          "precision": 0.7777777777777778,
+          "recall": 0.7,
+          "f1": 0.7368421052631577,
+          "precision_undefined": false
+        },
+        "LOCAL": {
+          "tp": 61,
+          "fp": 29,
+          "fn": 38,
+          "support": 99,
+          "precision": 0.6777777777777778,
+          "recall": 0.6161616161616161,
+          "f1": 0.6455026455026455,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "support": 3,
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "f1": 0.5714285714285715,
+          "precision_undefined": false
+        }
+      },
+      "macro_f1": 0.7158387421545316,
+      "accuracy": 0.814,
+      "no_prediction_count": 44,
+      "no_prediction_rate": 0.088,
+      "confusion": {
+        "ADJACENT_NETWORK": {
+          "ADJACENT_NETWORK": 7,
+          "NETWORK": 1,
+          "LOCAL": 1,
+          "Declined": 1
+        },
+        "NETWORK": {
+          "Declined": 22,
+          "NETWORK": 337,
+          "LOCAL": 27,
+          "ADJACENT_NETWORK": 2
+        },
+        "LOCAL": {
+          "LOCAL": 61,
+          "NETWORK": 15,
+          "PHYSICAL": 2,
+          "Declined": 21
+        },
+        "PHYSICAL": {
+          "PHYSICAL": 2,
+          "LOCAL": 1
+        }
+      }
+    },
+    "gpt-5.5|zero_shot": {
+      "n": 500,
+      "outcomes": {
+        "Correct": 407,
+        "Incorrect": 43,
+        "Unmapped": 0,
+        "Declined": 50,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 335,
+          "fp": 12,
+          "fn": 53,
+          "support": 388,
+          "precision": 0.9654178674351584,
+          "recall": 0.8634020618556701,
+          "f1": 0.9115646258503403,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 7,
+          "fp": 3,
+          "fn": 3,
+          "support": 10,
+          "precision": 0.7,
+          "recall": 0.7,
+          "f1": 0.7,
+          "precision_undefined": false
+        },
+        "LOCAL": {
+          "tp": 63,
+          "fp": 26,
+          "fn": 36,
+          "support": 99,
+          "precision": 0.7078651685393258,
+          "recall": 0.6363636363636364,
+          "f1": 0.6702127659574467,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "support": 3,
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "f1": 0.5714285714285715,
+          "precision_undefined": false
+        }
+      },
+      "macro_f1": 0.7133014908090896,
+      "accuracy": 0.814,
+      "no_prediction_count": 50,
+      "no_prediction_rate": 0.1,
+      "confusion": {
+        "ADJACENT_NETWORK": {
+          "ADJACENT_NETWORK": 7,
+          "Declined": 2,
+          "LOCAL": 1
+        },
+        "NETWORK": {
+          "ADJACENT_NETWORK": 3,
+          "NETWORK": 335,
+          "Declined": 26,
+          "LOCAL": 24
+        },
+        "LOCAL": {
+          "LOCAL": 63,
+          "NETWORK": 12,
+          "PHYSICAL": 2,
+          "Declined": 22
+        },
+        "PHYSICAL": {
+          "PHYSICAL": 2,
+          "LOCAL": 1
+        }
+      }
+    }
+  }
+}

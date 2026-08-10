@@ -1,0 +1,55 @@
+Attack vector verification — ..\ultimate_dataset\merging_results.json
+
+1. Structure
+------------
+total rows: 3000
+models: {'gpt-5.5': 1000, 'claude-sonnet-4.6': 1000, 'deepseek-v4-pro': 1000}
+conditions: {'zero_shot': 1500, 'few_shot': 1500}
+valid flag: {True: 3000}
+unique CVEs: 500
+rows per CVE: {6: 500}
+CVEs not appearing exactly 6 times: 0
+
+2. Ground truth consistency
+---------------------------
+CVEs with inconsistent ground truth: 0
+observed label set: ['ADJACENT_NETWORK', 'LOCAL', 'NETWORK', 'PHYSICAL']
+unexpected labels: none
+CVEs with null ground truth: 0
+
+3. Ground truth distribution (unique CVEs)
+------------------------------------------
+class                    n       %
+NETWORK                388   77.6%
+LOCAL                   99   19.8%
+ADJACENT_NETWORK        10    2.0%
+PHYSICAL                 3    0.6%
+TOTAL                  500
+
+NOTE: classes with n < 20 — per-class F1 will be unstable.
+Report n alongside every per-class score and treat these as indicative only:
+   ADJACENT_NETWORK (n=10)
+   PHYSICAL (n=3)
+
+4. Extracted values (normalisation map input)
+---------------------------------------------
+distinct values: 5
+    n  value
+ 2271  'Network'
+  505  'Local'
+  140  None
+   63  'Adjacent Network'
+   21  'Physical'
+
+5. Null extractions by model and condition
+------------------------------------------
+model                       few_shot     zero_shot     total
+claude-sonnet-4.6          14 (2.8%)     10 (2.0%)        24
+deepseek-v4-pro            20 (4.0%)      2 (0.4%)        22
+gpt-5.5                    44 (8.8%)    50 (10.0%)        94
+TOTAL                                                    140
+
+nulls in rows flagged valid=True: 140
+(these are extraction refusals, not malformed responses)
+
+Done. Record the distribution and null counts in your decision log.

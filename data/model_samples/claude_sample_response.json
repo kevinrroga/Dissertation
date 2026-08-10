@@ -1,0 +1,21 @@
+{
+  "provider": "claude",
+  "model_requested": "claude-sonnet-4-6",
+  "model_echoed": "claude-sonnet-4-6",
+  "timestamp_utc": "2026-06-27T22:38:21.417314+00:00",
+  "output_text": "API connection successful.",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 15,
+    "output_tokens": 7,
+    "output_tokens_details": null,
+    "server_tool_use": null,
+    "service_tier": "standard"
+  }
+}

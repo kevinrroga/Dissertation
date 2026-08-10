@@ -1,0 +1,154 @@
+Attack vector scoring — ..\ultimate_dataset\merging_results.json
+records: 3000   cells: 6
+
+claude-sonnet-4.6  |  few_shot
+==============================
+n = 500
+
+Outcomes
+  Correct        441  ( 88.2%)
+  Incorrect       45  (  9.0%)
+  Unmapped         0  (  0.0%)
+  Declined        14  (  2.8%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK             388   367    26    21   0.934   0.946   0.940
+  ADJACENT_NETWORK     10     7     2     3   0.778   0.700   0.737
+  LOCAL                99    65    15    34   0.812   0.657   0.726
+  PHYSICAL              3     2     2     1   0.500   0.667   0.571
+
+Macro-F1        0.744
+Accuracy        0.882
+No prediction   14 (2.8%)
+
+claude-sonnet-4.6  |  zero_shot
+===============================
+n = 500
+
+Outcomes
+  Correct        443  ( 88.6%)
+  Incorrect       47  (  9.4%)
+  Unmapped         0  (  0.0%)
+  Declined        10  (  2.0%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK             388   369    29    19   0.927   0.951   0.939
+  ADJACENT_NETWORK     10     7     3     3   0.700   0.700   0.700
+  LOCAL                99    65    14    34   0.823   0.657   0.730
+  PHYSICAL              3     2     1     1   0.667   0.667   0.667
+
+Macro-F1        0.759
+Accuracy        0.886
+No prediction   10 (2.0%)
+
+deepseek-v4-pro  |  few_shot
+============================
+n = 500
+
+Outcomes
+  Correct        425  ( 85.0%)
+  Incorrect       55  ( 11.0%)
+  Unmapped         0  (  0.0%)
+  Declined        20  (  4.0%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK             388   352    26    36   0.931   0.907   0.919
+  ADJACENT_NETWORK     10     7     6     3   0.538   0.700   0.609
+  LOCAL                99    64    21    35   0.753   0.646   0.696
+  PHYSICAL              3     2     2     1   0.500   0.667   0.571
+
+Macro-F1        0.699
+Accuracy        0.850
+No prediction   20 (4.0%)
+
+deepseek-v4-pro  |  zero_shot
+=============================
+n = 500
+
+Outcomes
+  Correct        436  ( 87.2%)
+  Incorrect       62  ( 12.4%)
+  Unmapped         0  (  0.0%)
+  Declined         2  (  0.4%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK             388   365    37    23   0.908   0.941   0.924
+  ADJACENT_NETWORK     10     7     5     3   0.583   0.700   0.636
+  LOCAL                99    63    19    36   0.768   0.636   0.696
+  PHYSICAL              3     1     1     2   0.500   0.333   0.400
+
+Macro-F1        0.664
+Accuracy        0.872
+No prediction   2 (0.4%)
+
+gpt-5.5  |  few_shot
+====================
+n = 500
+
+Outcomes
+  Correct        407  ( 81.4%)
+  Incorrect       49  (  9.8%)
+  Unmapped         0  (  0.0%)
+  Declined        44  (  8.8%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK             388   337    16    51   0.955   0.869   0.910
+  ADJACENT_NETWORK     10     7     2     3   0.778   0.700   0.737
+  LOCAL                99    61    29    38   0.678   0.616   0.646
+  PHYSICAL              3     2     2     1   0.500   0.667   0.571
+
+Macro-F1        0.716
+Accuracy        0.814
+No prediction   44 (8.8%)
+
+gpt-5.5  |  zero_shot
+=====================
+n = 500
+
+Outcomes
+  Correct        407  ( 81.4%)
+  Incorrect       43  (  8.6%)
+  Unmapped         0  (  0.0%)
+  Declined        50  ( 10.0%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK             388   335    12    53   0.965   0.863   0.912
+  ADJACENT_NETWORK     10     7     3     3   0.700   0.700   0.700
+  LOCAL                99    63    26    36   0.708   0.636   0.670
+  PHYSICAL              3     2     2     1   0.500   0.667   0.571
+
+Macro-F1        0.713
+Accuracy        0.814
+No prediction   50 (10.0%)
+
+SUMMARY — all cells
+===================
+  model                  condition     macro-F1  accuracy   no-pred
+  claude-sonnet-4.6      few_shot         0.744     0.882      2.8%
+  claude-sonnet-4.6      zero_shot        0.759     0.886      2.0%
+  deepseek-v4-pro        few_shot         0.699     0.850      4.0%
+  deepseek-v4-pro        zero_shot        0.664     0.872      0.4%
+  gpt-5.5                few_shot         0.716     0.814      8.8%
+  gpt-5.5                zero_shot        0.713     0.814     10.0%
+
+Per-class F1 across cells
+  class                 claude    claude  deepseek  deepseek       gpt       gpt
+  NETWORK                0.940     0.939     0.919     0.924     0.910     0.912   (n=388)
+  ADJACENT_NETWORK       0.737     0.700     0.609     0.636     0.737     0.700   (n=10)
+  LOCAL                  0.726     0.730     0.696     0.696     0.646     0.670   (n=99)
+  PHYSICAL               0.571     0.667     0.571     0.400     0.571     0.571   (n=3)
+
+NOTE: classes with low support yield unstable F1. Interpret
+ADJACENT_NETWORK and PHYSICAL as indicative only.

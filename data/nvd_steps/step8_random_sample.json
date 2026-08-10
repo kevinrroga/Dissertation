@@ -1,0 +1,720 @@
+[
+    {
+        "description": "capacitor-native-biometric before 12.128.2 contains an authentication bypass vulnerability where the onAuthenticationSucceeded() method fails to validate CryptoObject parameters. Attackers can hook the onAuthenticationSucceeded() function using dynamic instrumentation to bypass biometric authentication without valid credentials.",
+        "cvss_vector": "CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "vulnerability_type": "CWE-287",
+        "attack_vector": "PHYSICAL",
+        "confidentiality_impact": "HIGH",
+        "integrity_impact": "LOW",
+        "availability_impact": "NONE",
+        "affected_component_source": "affected",
+        "affected_components": [
+            "capacitor-native-biometric capacitor-native-biometric"
+        ],
+        "cve": {
+            "id": "CVE-2026-56294",
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "published": "2026-06-20T16:17:05.187",
+            "lastModified": "2026-06-20T16:17:05.187",
+            "vulnStatus": "Received",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "capacitor-native-biometric before 12.128.2 contains an authentication bypass vulnerability where the onAuthenticationSucceeded() method fails to validate CryptoObject parameters. Attackers can hook the onAuthenticationSucceeded() function using dynamic instrumentation to bypass biometric authentication without valid credentials."
+                }
+            ],
+            "affected": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "affectedData": [
+                        {
+                            "vendor": "capacitor-native-biometric",
+                            "product": "capacitor-native-biometric",
+                            "defaultStatus": "unaffected",
+                            "packageURL": "pkg:npm/capgo/capacitor-native-biometric",
+                            "versions": [
+                                {
+                                    "version": "0",
+                                    "lessThan": "12.128.2",
+                                    "versionType": "semver",
+                                    "status": "affected"
+                                },
+                                {
+                                    "version": "12.128.2",
+                                    "versionType": "semver",
+                                    "status": "unaffected"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "metrics": {
+                "cvssMetricV40": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "cvssData": {
+                            "version": "4.0",
+                            "vectorString": "CVSS:4.0/AV:P/AC:H/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                            "baseScore": 4.3,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "PHYSICAL",
+                            "attackComplexity": "HIGH",
+                            "attackRequirements": "NONE",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "vulnConfidentialityImpact": "HIGH",
+                            "vulnIntegrityImpact": "LOW",
+                            "vulnAvailabilityImpact": "NONE",
+                            "subConfidentialityImpact": "NONE",
+                            "subIntegrityImpact": "NONE",
+                            "subAvailabilityImpact": "NONE",
+                            "exploitMaturity": "NOT_DEFINED",
+                            "confidentialityRequirement": "NOT_DEFINED",
+                            "integrityRequirement": "NOT_DEFINED",
+                            "availabilityRequirement": "NOT_DEFINED",
+                            "modifiedAttackVector": "NOT_DEFINED",
+                            "modifiedAttackComplexity": "NOT_DEFINED",
+                            "modifiedAttackRequirements": "NOT_DEFINED",
+                            "modifiedPrivilegesRequired": "NOT_DEFINED",
+                            "modifiedUserInteraction": "NOT_DEFINED",
+                            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                            "Safety": "NOT_DEFINED",
+                            "Automatable": "NOT_DEFINED",
+                            "Recovery": "NOT_DEFINED",
+                            "valueDensity": "NOT_DEFINED",
+                            "vulnerabilityResponseEffort": "NOT_DEFINED",
+                            "providerUrgency": "NOT_DEFINED"
+                        }
+                    }
+                ],
+                "cvssMetricV31": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+                            "baseScore": 4.8,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "PHYSICAL",
+                            "attackComplexity": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "LOW",
+                            "availabilityImpact": "NONE"
+                        },
+                        "exploitabilityScore": 0.5,
+                        "impactScore": 4.2
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-287"
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-vx5f-vmr6-32wf",
+                    "source": "disclosure@vulncheck.com"
+                },
+                {
+                    "url": "https://www.vulncheck.com/advisories/capacitor-native-biometric-authentication-bypass-via-unvalidated-cryptoobject-in-onauthenticationsucceeded",
+                    "source": "disclosure@vulncheck.com"
+                }
+            ]
+        }
+    },
+    {
+        "description": "Capgo before 12.128.2 contains an authorization bypass vulnerability in webhook management endpoints that allows non-expiring API keys to bypass the require_apikey_expiration organization policy. The checkWebhookPermission function fails to call apikeyHasOrgRightWithPolicy, enabling attackers with legacy non-expiring keys to list, create, and delete webhooks despite explicit organizational policy requiring key expiration.",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+        "vulnerability_type": "CWE-285",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "LOW",
+        "integrity_impact": "LOW",
+        "availability_impact": "LOW",
+        "affected_component_source": "affected",
+        "affected_components": [
+            "Capgo Capgo"
+        ],
+        "cve": {
+            "id": "CVE-2026-56295",
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "published": "2026-06-20T16:17:05.330",
+            "lastModified": "2026-06-20T16:17:05.330",
+            "vulnStatus": "Received",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "Capgo before 12.128.2 contains an authorization bypass vulnerability in webhook management endpoints that allows non-expiring API keys to bypass the require_apikey_expiration organization policy. The checkWebhookPermission function fails to call apikeyHasOrgRightWithPolicy, enabling attackers with legacy non-expiring keys to list, create, and delete webhooks despite explicit organizational policy requiring key expiration."
+                }
+            ],
+            "affected": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "affectedData": [
+                        {
+                            "vendor": "Capgo",
+                            "product": "Capgo",
+                            "defaultStatus": "unaffected",
+                            "versions": [
+                                {
+                                    "version": "0",
+                                    "lessThan": "12.128.2",
+                                    "versionType": "semver",
+                                    "status": "affected"
+                                },
+                                {
+                                    "version": "12.128.2",
+                                    "versionType": "semver",
+                                    "status": "unaffected"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "metrics": {
+                "cvssMetricV40": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "cvssData": {
+                            "version": "4.0",
+                            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                            "baseScore": 5.3,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "attackRequirements": "NONE",
+                            "privilegesRequired": "LOW",
+                            "userInteraction": "NONE",
+                            "vulnConfidentialityImpact": "LOW",
+                            "vulnIntegrityImpact": "LOW",
+                            "vulnAvailabilityImpact": "LOW",
+                            "subConfidentialityImpact": "NONE",
+                            "subIntegrityImpact": "NONE",
+                            "subAvailabilityImpact": "NONE",
+                            "exploitMaturity": "NOT_DEFINED",
+                            "confidentialityRequirement": "NOT_DEFINED",
+                            "integrityRequirement": "NOT_DEFINED",
+                            "availabilityRequirement": "NOT_DEFINED",
+                            "modifiedAttackVector": "NOT_DEFINED",
+                            "modifiedAttackComplexity": "NOT_DEFINED",
+                            "modifiedAttackRequirements": "NOT_DEFINED",
+                            "modifiedPrivilegesRequired": "NOT_DEFINED",
+                            "modifiedUserInteraction": "NOT_DEFINED",
+                            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                            "Safety": "NOT_DEFINED",
+                            "Automatable": "NOT_DEFINED",
+                            "Recovery": "NOT_DEFINED",
+                            "valueDensity": "NOT_DEFINED",
+                            "vulnerabilityResponseEffort": "NOT_DEFINED",
+                            "providerUrgency": "NOT_DEFINED"
+                        }
+                    }
+                ],
+                "cvssMetricV31": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+                            "baseScore": 6.3,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "LOW",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "LOW",
+                            "integrityImpact": "LOW",
+                            "availabilityImpact": "LOW"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 3.4
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-285"
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-vwpp-cqv5-cmfm",
+                    "source": "disclosure@vulncheck.com"
+                },
+                {
+                    "url": "https://www.vulncheck.com/advisories/capgo-policy-enforcement-bypass-in-webhook-management-endpoints-via-non-expiring-api-keys",
+                    "source": "disclosure@vulncheck.com"
+                }
+            ]
+        }
+    },
+    {
+        "description": "picklescan before 1.0.1 contains an unsafe pickle deserialization vulnerability allowing unauthenticated attackers to create arbitrary zero-byte files via logging.FileHandler class instantiation. Attackers can exploit this by crafting malicious pickle payloads to bypass RCE blocklists and create lock files or other filesystem artifacts, potentially causing denial of service or application disruption.",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "vulnerability_type": "CWE-502",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "LOW",
+        "availability_impact": "LOW",
+        "affected_component_source": "affected",
+        "affected_components": [
+            "picklescan picklescan"
+        ],
+        "cve": {
+            "id": "CVE-2026-56304",
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "published": "2026-06-20T16:17:05.463",
+            "lastModified": "2026-06-20T16:17:05.463",
+            "vulnStatus": "Received",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "picklescan before 1.0.1 contains an unsafe pickle deserialization vulnerability allowing unauthenticated attackers to create arbitrary zero-byte files via logging.FileHandler class instantiation. Attackers can exploit this by crafting malicious pickle payloads to bypass RCE blocklists and create lock files or other filesystem artifacts, potentially causing denial of service or application disruption."
+                }
+            ],
+            "affected": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "affectedData": [
+                        {
+                            "vendor": "picklescan",
+                            "product": "picklescan",
+                            "defaultStatus": "unaffected",
+                            "packageURL": "pkg:pypi/picklescan",
+                            "versions": [
+                                {
+                                    "version": "0",
+                                    "lessThan": "1.0.1",
+                                    "versionType": "semver",
+                                    "status": "affected"
+                                },
+                                {
+                                    "version": "1.0.1",
+                                    "versionType": "semver",
+                                    "status": "unaffected"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "metrics": {
+                "cvssMetricV40": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "cvssData": {
+                            "version": "4.0",
+                            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                            "baseScore": 6.9,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "attackRequirements": "NONE",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "vulnConfidentialityImpact": "NONE",
+                            "vulnIntegrityImpact": "LOW",
+                            "vulnAvailabilityImpact": "LOW",
+                            "subConfidentialityImpact": "NONE",
+                            "subIntegrityImpact": "NONE",
+                            "subAvailabilityImpact": "NONE",
+                            "exploitMaturity": "NOT_DEFINED",
+                            "confidentialityRequirement": "NOT_DEFINED",
+                            "integrityRequirement": "NOT_DEFINED",
+                            "availabilityRequirement": "NOT_DEFINED",
+                            "modifiedAttackVector": "NOT_DEFINED",
+                            "modifiedAttackComplexity": "NOT_DEFINED",
+                            "modifiedAttackRequirements": "NOT_DEFINED",
+                            "modifiedPrivilegesRequired": "NOT_DEFINED",
+                            "modifiedUserInteraction": "NOT_DEFINED",
+                            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                            "Safety": "NOT_DEFINED",
+                            "Automatable": "NOT_DEFINED",
+                            "Recovery": "NOT_DEFINED",
+                            "valueDensity": "NOT_DEFINED",
+                            "vulnerabilityResponseEffort": "NOT_DEFINED",
+                            "providerUrgency": "NOT_DEFINED"
+                        }
+                    }
+                ],
+                "cvssMetricV31": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+                            "baseScore": 6.5,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "LOW",
+                            "availabilityImpact": "LOW"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 2.5
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-502"
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-m7j5-r2p5-c39r",
+                    "source": "disclosure@vulncheck.com"
+                },
+                {
+                    "url": "https://www.vulncheck.com/advisories/picklescan-arbitrary-file-creation-via-logging-filehandler-deserialization",
+                    "source": "disclosure@vulncheck.com"
+                }
+            ]
+        }
+    },
+    {
+        "description": "Cap-go before 12.128.12 contains a broken cursor pagination vulnerability in the /private/devices endpoint on the Cloudflare/workerd path that allows authenticated attackers to cause duplicate-page loops and make later rows unreachable. Attackers with app.read_devices access can exploit non-advancing cursor filters to trigger infinite pagination loops, prevent dataset traversal, and cause repeated processing in device-management workflows.",
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "vulnerability_type": "CWE-670",
+        "attack_vector": "NETWORK",
+        "confidentiality_impact": "NONE",
+        "integrity_impact": "NONE",
+        "availability_impact": "LOW",
+        "affected_component_source": "affected",
+        "affected_components": [
+            "Cap-go capgo"
+        ],
+        "cve": {
+            "id": "CVE-2026-56307",
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "published": "2026-06-20T16:17:05.597",
+            "lastModified": "2026-06-20T16:17:05.597",
+            "vulnStatus": "Received",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "Cap-go before 12.128.12 contains a broken cursor pagination vulnerability in the /private/devices endpoint on the Cloudflare/workerd path that allows authenticated attackers to cause duplicate-page loops and make later rows unreachable. Attackers with app.read_devices access can exploit non-advancing cursor filters to trigger infinite pagination loops, prevent dataset traversal, and cause repeated processing in device-management workflows."
+                }
+            ],
+            "affected": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "affectedData": [
+                        {
+                            "vendor": "Cap-go",
+                            "product": "capgo",
+                            "defaultStatus": "unaffected",
+                            "versions": [
+                                {
+                                    "version": "0",
+                                    "lessThan": "12.128.12",
+                                    "versionType": "semver",
+                                    "status": "affected"
+                                },
+                                {
+                                    "version": "12.128.12",
+                                    "versionType": "semver",
+                                    "status": "unaffected"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "metrics": {
+                "cvssMetricV40": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "cvssData": {
+                            "version": "4.0",
+                            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                            "baseScore": 5.3,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "attackRequirements": "NONE",
+                            "privilegesRequired": "LOW",
+                            "userInteraction": "NONE",
+                            "vulnConfidentialityImpact": "NONE",
+                            "vulnIntegrityImpact": "NONE",
+                            "vulnAvailabilityImpact": "LOW",
+                            "subConfidentialityImpact": "NONE",
+                            "subIntegrityImpact": "NONE",
+                            "subAvailabilityImpact": "NONE",
+                            "exploitMaturity": "NOT_DEFINED",
+                            "confidentialityRequirement": "NOT_DEFINED",
+                            "integrityRequirement": "NOT_DEFINED",
+                            "availabilityRequirement": "NOT_DEFINED",
+                            "modifiedAttackVector": "NOT_DEFINED",
+                            "modifiedAttackComplexity": "NOT_DEFINED",
+                            "modifiedAttackRequirements": "NOT_DEFINED",
+                            "modifiedPrivilegesRequired": "NOT_DEFINED",
+                            "modifiedUserInteraction": "NOT_DEFINED",
+                            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                            "Safety": "NOT_DEFINED",
+                            "Automatable": "NOT_DEFINED",
+                            "Recovery": "NOT_DEFINED",
+                            "valueDensity": "NOT_DEFINED",
+                            "vulnerabilityResponseEffort": "NOT_DEFINED",
+                            "providerUrgency": "NOT_DEFINED"
+                        }
+                    }
+                ],
+                "cvssMetricV31": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                            "baseScore": 4.3,
+                            "baseSeverity": "MEDIUM",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "LOW",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "LOW"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 1.4
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-670"
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-8p6w-x7jg-v4xq",
+                    "source": "disclosure@vulncheck.com"
+                },
+                {
+                    "url": "https://www.vulncheck.com/advisories/cap-go-broken-cursor-pagination-in-private-devices-endpoint",
+                    "source": "disclosure@vulncheck.com"
+                }
+            ]
+        }
+    },
+    {
+        "description": "Nuxt before 4.4.7 (and the 3.x branch before 3.21.7) contains a cross-site scripting vulnerability in the NoScript component that writes slot content to innerHTML without escaping. Attackers can inject malicious scripts through untrusted data in NoScript slots, such as route.query parameters, which execute in the document context when the noscript tag is implicitly closed by script tags.",
+        "cvss_vector": null,
+        "vulnerability_type": "CWE-79",
+        "attack_vector": null,
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null,
+        "affected_component_source": "affected",
+        "affected_components": [
+            "Nuxt Nuxt"
+        ],
+        "cve": {
+            "id": "CVE-2026-56317",
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "published": "2026-06-20T16:17:05.733",
+            "lastModified": "2026-06-20T16:17:05.733",
+            "vulnStatus": "Received",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "Nuxt before 4.4.7 (and the 3.x branch before 3.21.7) contains a cross-site scripting vulnerability in the NoScript component that writes slot content to innerHTML without escaping. Attackers can inject malicious scripts through untrusted data in NoScript slots, such as route.query parameters, which execute in the document context when the noscript tag is implicitly closed by script tags."
+                }
+            ],
+            "affected": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "affectedData": [
+                        {
+                            "vendor": "Nuxt",
+                            "product": "Nuxt",
+                            "defaultStatus": "unaffected",
+                            "packageURL": "pkg:npm/nuxt",
+                            "versions": [
+                                {
+                                    "version": "4.0.0",
+                                    "lessThan": "4.4.7",
+                                    "versionType": "semver",
+                                    "status": "affected"
+                                },
+                                {
+                                    "version": "4.4.7",
+                                    "versionType": "semver",
+                                    "status": "unaffected"
+                                }
+                            ]
+                        },
+                        {
+                            "vendor": "Nuxt",
+                            "product": "Nuxt",
+                            "defaultStatus": "unaffected",
+                            "packageURL": "pkg:npm/nuxt",
+                            "versions": [
+                                {
+                                    "version": "0",
+                                    "lessThan": "3.21.7",
+                                    "versionType": "semver",
+                                    "status": "affected"
+                                },
+                                {
+                                    "version": "3.21.7",
+                                    "versionType": "semver",
+                                    "status": "unaffected"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "metrics": {
+                "cvssMetricV40": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "cvssData": {
+                            "version": "4.0",
+                            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                            "baseScore": 2.3,
+                            "baseSeverity": "LOW",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "attackRequirements": "PRESENT",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "PASSIVE",
+                            "vulnConfidentialityImpact": "LOW",
+                            "vulnIntegrityImpact": "LOW",
+                            "vulnAvailabilityImpact": "NONE",
+                            "subConfidentialityImpact": "NONE",
+                            "subIntegrityImpact": "NONE",
+                            "subAvailabilityImpact": "NONE",
+                            "exploitMaturity": "NOT_DEFINED",
+                            "confidentialityRequirement": "NOT_DEFINED",
+                            "integrityRequirement": "NOT_DEFINED",
+                            "availabilityRequirement": "NOT_DEFINED",
+                            "modifiedAttackVector": "NOT_DEFINED",
+                            "modifiedAttackComplexity": "NOT_DEFINED",
+                            "modifiedAttackRequirements": "NOT_DEFINED",
+                            "modifiedPrivilegesRequired": "NOT_DEFINED",
+                            "modifiedUserInteraction": "NOT_DEFINED",
+                            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                            "Safety": "NOT_DEFINED",
+                            "Automatable": "NOT_DEFINED",
+                            "Recovery": "NOT_DEFINED",
+                            "valueDensity": "NOT_DEFINED",
+                            "vulnerabilityResponseEffort": "NOT_DEFINED",
+                            "providerUrgency": "NOT_DEFINED"
+                        }
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "disclosure@vulncheck.com",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-79"
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/nuxt/nuxt/commit/4b054e9d95f8daf366cb144b52782047c511a66e",
+                    "source": "disclosure@vulncheck.com"
+                },
+                {
+                    "url": "https://github.com/nuxt/nuxt/commit/7fea9fd687f1dacbfb63db5fae5839896b017a0e",
+                    "source": "disclosure@vulncheck.com"
+                },
+                {
+                    "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-m3q2-p4fw-w38m",
+                    "source": "disclosure@vulncheck.com"
+                },
+                {
+                    "url": "https://www.vulncheck.com/advisories/nuxt-cross-site-scripting-via-noscript-component-slot-content",
+                    "source": "disclosure@vulncheck.com"
+                }
+            ]
+        }
+    }
+]

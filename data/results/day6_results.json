@@ -1,0 +1,218 @@
+{
+  "gpt-5.5": [
+    {
+      "cve_id": "CVE-2026-49195",
+      "raw_response": "{\"vulnerability_type\":\"Unauthenticated Debug Service\",\"attack_vector\":\"Adjacent Network\",\"affected_component\":\"/sbin/mtk_dut binary\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Unauthenticated Debug Service",
+        "attack_vector": "Adjacent Network",
+        "affected_component": "/sbin/mtk_dut binary",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49196",
+      "raw_response": "{\"vulnerability_type\":\"Command Injection\",\"attack_vector\":null,\"affected_component\":\"Wi-Fi device blocking feature\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": null,
+        "affected_component": "Wi-Fi device blocking feature",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49197",
+      "raw_response": "{\"vulnerability_type\":\"Improper Authorization Header Validation\",\"attack_vector\":\"Network\",\"affected_component\":\"Acer Connect app web endpoints\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization Header Validation",
+        "attack_vector": "Network",
+        "affected_component": "Acer Connect app web endpoints",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49198",
+      "raw_response": "{\"vulnerability_type\":\"Improper Access Control\",\"attack_vector\":null,\"affected_component\":\"MQTT broker\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"None\",\"availability_impact\":\"None\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": null,
+        "affected_component": "MQTT broker",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49199",
+      "raw_response": "{\"vulnerability_type\":\"Command Injection\",\"attack_vector\":\"Network\",\"affected_component\":\"MQTT message handling on target device\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": "MQTT message handling on target device",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": []
+    }
+  ],
+  "claude-sonnet-4.6": [
+    {
+      "cve_id": "CVE-2026-49195",
+      "raw_response": "{\n  \"vulnerability_type\": \"Missing Authentication for Critical Function\",\n  \"attack_vector\": \"Adjacent Network\",\n  \"affected_component\": \"/sbin/mtk_dut binary\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Missing Authentication for Critical Function",
+        "attack_vector": "Adjacent Network",
+        "affected_component": "/sbin/mtk_dut binary",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49196",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Wi-Fi device blocking feature\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": "Wi-Fi device blocking feature",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49197",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Input Validation\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Acer Connect app web endpoints\",\n  \"confidentiality_impact\": null,\n  \"integrity_impact\": null,\n  \"availability_impact\": null\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Input Validation",
+        "attack_vector": "Network",
+        "affected_component": "Acer Connect app web endpoints",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49198",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Access Control\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"MQTT broker\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": "Network",
+        "affected_component": "MQTT broker",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49199",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": null,\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": null,
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": []
+    }
+  ],
+  "deepseek-v4-pro": [
+    {
+      "cve_id": "CVE-2026-49195",
+      "raw_response": "{\n  \"vulnerability_type\": \"Unauthenticated Debug Service\",\n  \"attack_vector\": \"Adjacent Network\",\n  \"affected_component\": \"/sbin/mtk_dut\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Unauthenticated Debug Service",
+        "attack_vector": "Adjacent Network",
+        "affected_component": "/sbin/mtk_dut",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49196",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Adjacent Network\",\n  \"affected_component\": \"Wi-Fi device blocking feature\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Adjacent Network",
+        "affected_component": "Wi-Fi device blocking feature",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49197",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Acer Connect app\",\n  \"confidentiality_impact\": null,\n  \"integrity_impact\": null,\n  \"availability_impact\": null\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "Acer Connect app",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49198",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Access Control\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"MQTT broker\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": null,\n  \"availability_impact\": null\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": "Network",
+        "affected_component": "MQTT broker",
+        "confidentiality_impact": "High",
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "notes": []
+    },
+    {
+      "cve_id": "CVE-2026-49199",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": null,\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": null,
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "notes": []
+    }
+  ]
+}

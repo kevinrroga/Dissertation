@@ -1,0 +1,20 @@
+McNemar significance testing - attack_vector
+9 comparisons, Holm-Bonferroni corrected, alpha = 0.05
+A CVE is 'correct' if extracted maps to ground truth; declines count as wrong.
+'b' = A right/B wrong, 'c' = B right/A wrong. Only disagreements inform the test.
+
+A                             B                                b   c  disc    n    p_raw   p_holm  sig
+------------------------------------------------------------------------------------------------------
+claude-sonnet-4.6 [zero_shot] gpt-5.5 [zero_shot]             41   5    46  500   0.0000   0.0000  yes
+claude-sonnet-4.6 [few_shot]  gpt-5.5 [few_shot]              39   5    44  500   0.0000   0.0000  yes
+deepseek-v4-pro [zero_shot]   gpt-5.5 [zero_shot]             37   8    45  500   0.0000   0.0002  yes
+claude-sonnet-4.6 [few_shot]  deepseek-v4-pro [few_shot]      21   5    26  500   0.0033   0.0196  yes
+deepseek-v4-pro [few_shot]    gpt-5.5 [few_shot]              29  11    40  500   0.0072   0.0359  yes
+deepseek-v4-pro [few_shot]    deepseek-v4-pro [zero_shot]      5  16    21  500   0.0266   0.1064  no
+claude-sonnet-4.6 [zero_shot] deepseek-v4-pro [zero_shot]     16   9    25  500   0.2301   0.6904  no
+claude-sonnet-4.6 [few_shot]  claude-sonnet-4.6 [zero_shot]    3   5     8  500   0.7266   1.0000  no
+gpt-5.5 [few_shot]            gpt-5.5 [zero_shot]              8   8    16  500   1.0000   1.0000  no
+
+Significant row: the two systems differ beyond chance; b vs c gives
+direction and size. Non-significant prompting rows mean worked examples
+made no reliable difference - itself a finding.

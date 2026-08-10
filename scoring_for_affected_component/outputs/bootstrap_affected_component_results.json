@@ -1,0 +1,88 @@
+{
+  "entity": "affected_component",
+  "n_bootstrap": 5000,
+  "seed": 42,
+  "method": "percentile, CVE-level resampling, shared indices across cells",
+  "metric": "binary accuracy (= recall under FP=0 policy)",
+  "note": "F1 = 2*acc/(1+acc) when FP=0; reported for comparability only",
+  "cells": {
+    "claude-sonnet-4.6|few_shot": {
+      "n": 500,
+      "accuracy": {
+        "point": 0.54,
+        "ci_low": 0.498,
+        "ci_high": 0.582
+      },
+      "f1": {
+        "point": 0.7012987012987013,
+        "ci_low": 0.664886515353805,
+        "ci_high": 0.7357774968394437
+      }
+    },
+    "claude-sonnet-4.6|zero_shot": {
+      "n": 500,
+      "accuracy": {
+        "point": 0.548,
+        "ci_low": 0.506,
+        "ci_high": 0.59
+      },
+      "f1": {
+        "point": 0.7080103359173127,
+        "ci_low": 0.6719787516600265,
+        "ci_high": 0.7421383647798743
+      }
+    },
+    "deepseek-v4-pro|few_shot": {
+      "n": 500,
+      "accuracy": {
+        "point": 0.552,
+        "ci_low": 0.51,
+        "ci_high": 0.594
+      },
+      "f1": {
+        "point": 0.711340206185567,
+        "ci_low": 0.6754966887417219,
+        "ci_high": 0.7452948557089084
+      }
+    },
+    "deepseek-v4-pro|zero_shot": {
+      "n": 500,
+      "accuracy": {
+        "point": 0.566,
+        "ci_low": 0.524,
+        "ci_high": 0.61
+      },
+      "f1": {
+        "point": 0.722860791826309,
+        "ci_low": 0.6876640419947507,
+        "ci_high": 0.7577639751552795
+      }
+    },
+    "gpt-5.5|few_shot": {
+      "n": 500,
+      "accuracy": {
+        "point": 0.55,
+        "ci_low": 0.508,
+        "ci_high": 0.592
+      },
+      "f1": {
+        "point": 0.7096774193548387,
+        "ci_low": 0.6737400530503979,
+        "ci_high": 0.743718592964824
+      }
+    },
+    "gpt-5.5|zero_shot": {
+      "n": 500,
+      "accuracy": {
+        "point": 0.548,
+        "ci_low": 0.506,
+        "ci_high": 0.59
+      },
+      "f1": {
+        "point": 0.7080103359173127,
+        "ci_low": 0.6719787516600265,
+        "ci_high": 0.7421383647798743
+      }
+    }
+  }
+}

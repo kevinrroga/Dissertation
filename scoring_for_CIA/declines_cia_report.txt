@@ -1,0 +1,139 @@
+
+Declines overlap analysis — confidentiality_impact
+==================================================
+A CVE is 'declined' by a model if it returned null in >=1 condition (pooled).
+
+Declined-CVE set size per model:
+  claude-sonnet-4.6        27
+  deepseek-v4-pro          51
+  gpt-5.5                  111
+
+Overlap across 3 models:
+  declined by 3: 15 CVEs
+  declined by 2: 35 CVEs
+  declined by 1: 74 CVEs
+
+Shared hard core (declined by ALL 3): 15 CVEs
+    CVE-2026-35253
+    CVE-2026-41999
+    CVE-2026-42000
+    CVE-2026-42001
+    CVE-2026-42002
+    CVE-2026-42217
+    CVE-2026-42308
+    CVE-2026-43078
+    CVE-2026-43530
+    CVE-2026-43868
+    CVE-2026-44600
+    CVE-2026-47308
+    CVE-2026-7606
+    CVE-2026-7736
+    CVE-2026-8741
+
+Model-specific declines (declined by that model alone):
+  claude-sonnet-4.6        8
+  deepseek-v4-pro          4
+  gpt-5.5                  62
+
+Cross-reference: on the 111 CVEs gpt-5.5 declined,
+how did the other models do? ('wrong' = incorrect in BOTH conditions)
+  both other models also wrong: 40
+  both other models correct:    46
+  mixed:                        25
+
+
+Declines overlap analysis — integrity_impact
+============================================
+A CVE is 'declined' by a model if it returned null in >=1 condition (pooled).
+
+Declined-CVE set size per model:
+  claude-sonnet-4.6        16
+  deepseek-v4-pro          44
+  gpt-5.5                  89
+
+Overlap across 3 models:
+  declined by 3: 11 CVEs
+  declined by 2: 30 CVEs
+  declined by 1: 56 CVEs
+
+Shared hard core (declined by ALL 3): 11 CVEs
+    CVE-2026-41999
+    CVE-2026-42000
+    CVE-2026-42001
+    CVE-2026-42002
+    CVE-2026-42217
+    CVE-2026-42308
+    CVE-2026-43078
+    CVE-2026-43868
+    CVE-2026-44600
+    CVE-2026-7736
+    CVE-2026-8741
+
+Model-specific declines (declined by that model alone):
+  claude-sonnet-4.6        2
+  deepseek-v4-pro          5
+  gpt-5.5                  49
+
+Cross-reference: on the 89 CVEs gpt-5.5 declined,
+how did the other models do? ('wrong' = incorrect in BOTH conditions)
+  both other models also wrong: 26
+  both other models correct:    37
+  mixed:                        26
+
+
+Declines overlap analysis — availability_impact
+===============================================
+A CVE is 'declined' by a model if it returned null in >=1 condition (pooled).
+
+Declined-CVE set size per model:
+  claude-sonnet-4.6        15
+  deepseek-v4-pro          45
+  gpt-5.5                  116
+
+Overlap across 3 models:
+  declined by 3: 13 CVEs
+  declined by 2: 32 CVEs
+  declined by 1: 73 CVEs
+
+Shared hard core (declined by ALL 3): 13 CVEs
+    CVE-2026-29220
+    CVE-2026-35253
+    CVE-2026-41002
+    CVE-2026-41999
+    CVE-2026-42000
+    CVE-2026-42001
+    CVE-2026-42002
+    CVE-2026-43529
+    CVE-2026-43530
+    CVE-2026-47315
+    CVE-2026-47316
+    CVE-2026-7606
+    CVE-2026-8741
+
+Model-specific declines (declined by that model alone):
+  claude-sonnet-4.6        0
+  deepseek-v4-pro          2
+  gpt-5.5                  71
+
+Cross-reference: on the 116 CVEs gpt-5.5 declined,
+how did the other models do? ('wrong' = incorrect in BOTH conditions)
+  both other models also wrong: 35
+  both other models correct:    56
+  mixed:                        25
+
+
+Reading
+=======
+A large shared core points to hard descriptions (data); a large
+model-specific count points to a behavioural difference (that model is
+simply more willing to abstain). Compare across the three components:
+if the SAME CVEs recur in the shared core across all three, that points
+to certain CVE descriptions being generally hard to extract impact from,
+not a component-specific issue.
+
+CVEs in the shared hard core for ALL THREE components: 5
+    CVE-2026-41999
+    CVE-2026-42000
+    CVE-2026-42001
+    CVE-2026-42002
+    CVE-2026-8741

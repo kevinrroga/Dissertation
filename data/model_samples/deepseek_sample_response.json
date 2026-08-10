@@ -1,0 +1,18 @@
+{
+  "provider": "deepseek",
+  "model": "deepseek-v4-pro",
+  "timestamp_utc": "2026-06-27T02:03:58.157927+00:00",
+  "output_text": "API connection successful.",
+  "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 12,
+    "total_tokens": 16,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 12
+  }
+}
