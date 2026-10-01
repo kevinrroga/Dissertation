@@ -1,9 +1,9 @@
-# Day 18 — Vulnerability-Type Matcher: Build & Validation Record
+# Day 18: Vulnerability-Type Matcher: Build and Validation Record
 
 **Purpose of this file:** a factual record of how the vulnerability-type scoring
 matcher was built and validated, written so it can be adapted almost directly into
 the Methodology / Evaluation chapter. It documents *what was decided, why, what was
-tested, and what was found* — including the honest limitations, which the marking
+tested, and what was found*, including the honest limitations, which the marking
 scheme rewards.
 
 Companion file: `vuln_type_matcher.py` (the validated implementation).
@@ -17,13 +17,13 @@ A classifier that compares each LLM-extracted `vulnerability_type` (free-text pr
 against the NVD ground-truth CWE (carried as its MITRE canonical name), and returns
 one of four outcomes:
 
-- **exact** — the model's committed answer names the same specific weakness
+- **exact**: the model's committed answer names the same specific weakness
   (alias/phrasing differences allowed).
-- **family** — the model's committed answer is a correct broader parent, sibling,
+- **family**: the model's committed answer is a correct broader parent, sibling,
   or named component of the assigned CWE within the same weakness hierarchy.
-- **partial** — the model returned *multiple* types (a hedge) and one of them was
+- **partial**: the model returned *multiple* types (a hedge) and one of them was
   correct, but it did not commit to a single answer. Never counts as a headline hit.
-- **miss** — wrong weakness, unrelated, or null.
+- **miss**: wrong weakness, unrelated, or null.
 
 Strength ordering: exact > family > partial > miss.
 
@@ -69,9 +69,9 @@ reported rather than either silently discarded or falsely credited.
    is kept.
 
 7. **Case A vs Case B (hedge handling by ground-truth cardinality).**
-   - *Case A* — multi-CWE ground truth + multi-type answer: matching a real set of
+   - *Case A*: multi-CWE ground truth + multi-type answer: matching a real set of
      answers against a real set of weaknesses is legitimate; strongest outcome kept.
-   - *Case B* — single-CWE ground truth + multi-type answer: a correct fragment is
+   - *Case B*: single-CWE ground truth + multi-type answer: a correct fragment is
      present but the model did not commit, so it is scored **partial** (not a
      headline hit), avoiding scorer-side selection bias.
 
@@ -96,7 +96,7 @@ established from MITRE rather than from memory. The matcher's automated verdicts
 were then compared against these human labels.
 
 *(Note on method integrity: labelling by hand before building the matcher avoids
-circularity — had the matcher been used to produce the labels it was then tested
+circularity: had the matcher been used to produce the labels it was then tested
 against, the agreement rate would be meaningless.)*
 
 ---
@@ -108,16 +108,16 @@ against, the agreement rate would be meaningless.)*
 An initial run agreed on 24/30. The 6 disagreements were examined individually and
 resolved as follows:
 
-- **3 were genuine matcher bugs** — the exact/family rule was too greedy and scored
+- **3 were genuine matcher bugs**: the exact/family rule was too greedy and scored
   broad-term answers (e.g. "Buffer Overflow" for a stack-based overflow) as exact
   instead of family. Fixed via the specificity-token rule (rule 3 above). Human
   labels were correct.
-- **1 was a family-map gap** — "Hardcoded Cryptographic Key" vs CWE-798 (Use of
+- **1 was a family-map gap**: "Hardcoded Cryptographic Key" vs CWE-798 (Use of
   Hard-coded Credentials) was missed because the credential relationship was not in
   the map. Fixed by adding it. Human label was correct.
-- **1 was a compound-term split error** — "CSV/Formula Injection" was wrongly split
+- **1 was a compound-term split error**: "CSV/Formula Injection" was wrongly split
   into a hedge. Fixed by compound-term protection (rule 5). Human label was correct.
-- **1 was a data-transcription error in the validation sample itself** — the
+- **1 was a data-transcription error in the validation sample itself**: the
   displayed extracted string differed from the source data
   (CVE-2026-42217 was shown as "Undefined Behavior / Integer Overflow" but the
   actual response was "Undefined Behavior (Unbounded Shift)"). Against source data
@@ -125,9 +125,9 @@ resolved as follows:
   the mistaken string. The sample was corrected.
 
 ### Remaining disagreements after fixes (2/30)
-- **CVE-2026-42217** — resolved as above; the human label should read **miss**
+- **CVE-2026-42217**: resolved as above; the human label should read **miss**
   against source data. Retained as a documented data-integrity catch.
-- **CVE-2026-48686** — "Buffer Overflow" vs ["Classic Buffer Overflow" (CWE-120),
+- **CVE-2026-48686**: "Buffer Overflow" vs ["Classic Buffer Overflow" (CWE-120),
   "Out-of-bounds Write" (CWE-787)]. Matcher scored **exact** (CWE-120's alias is
   literally "Classic Buffer Overflow", nearly synonymous with "Buffer Overflow");
   the researcher labelled **family**. This is a genuine exact-versus-family boundary
@@ -143,7 +143,7 @@ code to specific labels on a genuinely ambiguous case and a corrected data error
 i.e. overfitting the validation set. A reported 93.3% with fully explained residuals
 is more credible than a 100% that would signal the matcher had been tuned until it
 agreed. The residuals are one corrected data error and one legitimate boundary
-ambiguity — neither is a systematic matcher fault.
+ambiguity; neither is a systematic matcher fault.
 
 ---
 
@@ -166,11 +166,11 @@ ambiguity — neither is a systematic matcher fault.
 **Done:** vulnerability-type matcher built and validated (93.3% agreement).
 
 **Still to do for Day 18 completion:**
-- Attack-vector scorer — simple exact category match against the parsed CVSS `AV:`
+- Attack-vector scorer: simple exact category match against the parsed CVSS `AV:`
   value. Do not over-engineer; no hierarchy or fuzzy matching needed.
-- CIA scorer — exact match against parsed `C:` / `I:` / `A:` values, three separate
+- CIA scorer: exact match against parsed `C:` / `I:` / `A:` values, three separate
   sub-scores (decision already locked).
-- Affected-component scorer — plug in the Day-2 matching function. This is the last
+- Affected-component scorer: plug in the Day-2 matching function. This is the last
   unvalidated component and should get its own small sanity check.
 - Assemble the full scoring pipeline over all 3,000 rows to produce the
   precision / recall / F1 table (rows = entity type, columns = model × condition).
