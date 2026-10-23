@@ -1,0 +1,10 @@
+component,model,condition,Correct,Incorrect,Unmapped,Declined,Malformed
+availability_impact,claude-sonnet-4.6,zero_shot,16,9,0,0,0
+availability_impact,deepseek-v4-pro,zero_shot,17,7,0,1,0
+availability_impact,gpt-5.5,zero_shot,13,5,0,7,0
+confidentiality_impact,claude-sonnet-4.6,zero_shot,19,6,0,0,0
+confidentiality_impact,deepseek-v4-pro,zero_shot,18,6,0,1,0
+confidentiality_impact,gpt-5.5,zero_shot,16,2,0,7,0
+integrity_impact,claude-sonnet-4.6,zero_shot,20,5,0,0,0
+integrity_impact,deepseek-v4-pro,zero_shot,18,6,0,1,0
+integrity_impact,gpt-5.5,zero_shot,15,4,0,6,0

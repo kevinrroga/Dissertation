@@ -1,0 +1,4 @@
+model,condition,f1,precision,recall,accuracy,n,tp,fn,partial,no_match,no_prediction
+claude-sonnet-4.6,zero_shot,0.8889,1.0,0.8,0.8,25,20,5,2,3,0
+deepseek-v4-pro,zero_shot,0.913,1.0,0.84,0.84,25,21,4,2,2,0
+gpt-5.5,zero_shot,0.8889,1.0,0.8,0.8,25,20,5,2,3,0

@@ -1,0 +1,466 @@
+[
+  {
+    "item_id": "VT-001",
+    "extracted": "Algorithmic Complexity",
+    "ground_truth": "Uncontrolled Resource Consumption",
+    "cwe": "CWE-400",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-007",
+    "extracted": "Path Traversal",
+    "ground_truth": "Relative Path Traversal",
+    "cwe": "CWE-23",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-018",
+    "extracted": "Resource Allocation Without Limits",
+    "ground_truth": "Uncontrolled Resource Consumption | Allocation of Resources Without Limits or Throttling",
+    "cwe": "CWE-400 | CWE-770",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-021",
+    "extracted": "Stack Overflow",
+    "ground_truth": "Out-of-bounds Write",
+    "cwe": "CWE-787",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-022",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-027",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-031",
+    "extracted": "Symlink Race Condition",
+    "ground_truth": "Improper Link Resolution Before File Access ('Link Following') | Time-of-check Time-of-use (TOCTOU) Race Condition",
+    "cwe": "CWE-59 | CWE-367",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-033",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-036",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-040",
+    "extracted": "Insecure Deserialization",
+    "ground_truth": "Deserialization of Untrusted Data",
+    "cwe": "CWE-502",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-042",
+    "extracted": "Buffer Overflow",
+    "ground_truth": "Improper Handling of Length Parameter Inconsistency",
+    "cwe": "CWE-130",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-051",
+    "extracted": "Insecure Deserialization",
+    "ground_truth": "Deserialization of Untrusted Data | Incorrect Permission Assignment for Critical Resource",
+    "cwe": "CWE-502 | CWE-732",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-054",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Privilege Assignment",
+    "cwe": "CWE-266",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-056",
+    "extracted": "PHP Object Injection",
+    "ground_truth": "Deserialization of Untrusted Data",
+    "cwe": "CWE-502",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-059",
+    "extracted": "Command Injection",
+    "ground_truth": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') | Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')",
+    "cwe": "CWE-78 | CWE-88",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-063",
+    "extracted": "Command Injection",
+    "ground_truth": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+    "cwe": "CWE-78",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-067",
+    "extracted": "Environment Variable Injection",
+    "ground_truth": "External Control of System or Configuration Setting",
+    "cwe": "CWE-15",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-070",
+    "extracted": "Improper Link Resolution Before File Access",
+    "ground_truth": "UNIX Symbolic Link (Symlink) Following",
+    "cwe": "CWE-61",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-077",
+    "extracted": "Out-of-bounds Read",
+    "ground_truth": "Out-of-bounds Write",
+    "cwe": "CWE-787",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-079",
+    "extracted": "Path Traversal",
+    "ground_truth": "Absolute Path Traversal | Files or Directories Accessible to External Parties",
+    "cwe": "CWE-36 | CWE-552",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-088",
+    "extracted": "Server-Side Template Injection",
+    "ground_truth": "Improper Neutralization of Special Elements Used in a Template Engine",
+    "cwe": "CWE-1336",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-089",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Missing Authorization",
+    "cwe": "CWE-862",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-100",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-101",
+    "extracted": "Information Disclosure",
+    "ground_truth": "Exposure of Sensitive Information to an Unauthorized Actor | Use of Cache Containing Sensitive Information | Operation on a Resource after Expiration or Release",
+    "cwe": "CWE-200 | CWE-524 | CWE-672",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-102",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Improper Privilege Management",
+    "cwe": "CWE-269",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-104",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Missing Authorization",
+    "cwe": "CWE-862",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-105",
+    "extracted": "Out-of-bounds Read",
+    "ground_truth": "Improper Handling of Length Parameter Inconsistency",
+    "cwe": "CWE-130",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-107",
+    "extracted": "Buffer Over-read",
+    "ground_truth": "Out-of-bounds Read",
+    "cwe": "CWE-125",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-109",
+    "extracted": "Command Injection",
+    "ground_truth": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+    "cwe": "CWE-78",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-115",
+    "extracted": "Information Disclosure",
+    "ground_truth": "Exposure of Sensitive Information to an Unauthorized Actor | Improper Access Control",
+    "cwe": "CWE-200 | CWE-284",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-116",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Missing Authorization",
+    "cwe": "CWE-862",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-117",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-119",
+    "extracted": "Uncontrolled Resource Consumption",
+    "ground_truth": "Allocation of Resources Without Limits or Throttling",
+    "cwe": "CWE-770",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-126",
+    "extracted": "Insecure Permissions",
+    "ground_truth": "Incorrect Default Permissions",
+    "cwe": "CWE-276",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-127",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Missing Authorization",
+    "cwe": "CWE-862",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-133",
+    "extracted": "Improper Input Validation",
+    "ground_truth": "Improper Validation of Array Index",
+    "cwe": "CWE-129",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-135",
+    "extracted": "Improper URL Normalization",
+    "ground_truth": "Use of Non-Canonical URL Paths for Authorization Decisions",
+    "cwe": "CWE-647",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-139",
+    "extracted": "Improper Link Resolution",
+    "ground_truth": "UNIX Symbolic Link (Symlink) Following",
+    "cwe": "CWE-61",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-142",
+    "extracted": "Improper Input Validation",
+    "ground_truth": "Improper Validation of Specified Type of Input",
+    "cwe": "CWE-1287",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-144",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Permission Assignment for Critical Resource",
+    "cwe": "CWE-732",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-146",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-150",
+    "extracted": "Uncontrolled Resource Consumption",
+    "ground_truth": "Memory Allocation with Excessive Size Value",
+    "cwe": "CWE-789",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-156",
+    "extracted": "Information Disclosure",
+    "ground_truth": "Exposure of Sensitive Information to an Unauthorized Actor | Improper Access Control",
+    "cwe": "CWE-200 | CWE-284",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-163",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Privilege Assignment",
+    "cwe": "CWE-266",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-166",
+    "extracted": "Reflected Cross-Site Scripting",
+    "ground_truth": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+    "cwe": "CWE-79",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-167",
+    "extracted": "XML External Entity (XXE) Injection",
+    "ground_truth": "Improper Restriction of XML External Entity Reference",
+    "cwe": "CWE-611",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-172",
+    "extracted": "Stack Overflow",
+    "ground_truth": "Stack-based Buffer Overflow",
+    "cwe": "CWE-121",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-179",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Permission Assignment for Critical Resource",
+    "cwe": "CWE-732",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-184",
+    "extracted": "Improper Access Control",
+    "ground_truth": "Authorization Bypass Through User-Controlled Key",
+    "cwe": "CWE-639",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-188",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Authorization",
+    "cwe": "CWE-863",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-189",
+    "extracted": "Regular Expression Denial of Service",
+    "ground_truth": "Inefficient Regular Expression Complexity",
+    "cwe": "CWE-1333",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-191",
+    "extracted": "Authentication Brute Force",
+    "ground_truth": "Improper Restriction of Excessive Authentication Attempts",
+    "cwe": "CWE-307",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-192",
+    "extracted": "Improper Authorization",
+    "ground_truth": "Incorrect Privilege Assignment",
+    "cwe": "CWE-266",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-193",
+    "extracted": "Improper Access Control",
+    "ground_truth": "Authorization Bypass Through User-Controlled Key",
+    "cwe": "CWE-639",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-195",
+    "extracted": "Use-After-Free",
+    "ground_truth": "Release of Invalid Pointer or Reference",
+    "cwe": "CWE-763",
+    "human": "family",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-197",
+    "extracted": "Command Injection",
+    "ground_truth": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+    "cwe": "CWE-78",
+    "human": "family",
+    "matcher": "exact"
+  },
+  {
+    "item_id": "VT-198",
+    "extracted": "DLL Hijacking",
+    "ground_truth": "Uncontrolled Search Path Element",
+    "cwe": "CWE-427",
+    "human": "exact",
+    "matcher": "miss"
+  },
+  {
+    "item_id": "VT-199",
+    "extracted": "Buffer Overflow",
+    "ground_truth": "Improper Restriction of Operations within the Bounds of a Memory Buffer | Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+    "cwe": "CWE-119 | CWE-120",
+    "human": "family",
+    "matcher": "exact"
+  }
+]

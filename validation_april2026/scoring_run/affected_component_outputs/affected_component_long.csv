@@ -1,0 +1,76 @@
+cve_id,model,condition,outcome,matched,extracted,ground_truth
+CVE-2026-4152,claude-sonnet-4.6,zero_shot,Match,True,GIMP JP2 file parsing,gimp gimp
+CVE-2026-25917,claude-sonnet-4.6,zero_shot,Match,True,Apache Airflow webserver XCom payload handling,apache airflow
+CVE-2026-5526,claude-sonnet-4.6,zero_shot,Match,True,Tenda 4G03 Pro /bin/httpd,tenda 4g03 pro firmware
+CVE-2026-28390,claude-sonnet-4.6,zero_shot,Match,True,OpenSSL CMS_decrypt() - CMS EnvelopedData KeyTransportRecipientInfo RSA-OAEP processing,openssl openssl
+CVE-2026-6539,claude-sonnet-4.6,zero_shot,Partial,False,Notepad++ 8.9.3 Find Results panel handler,notepad-plus-plus notepad\+\+
+CVE-2026-42171,claude-sonnet-4.6,zero_shot,Match,True,NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 - my_GetTempFileName,nullsoft nullsoft scriptable install system
+CVE-2026-34166,claude-sonnet-4.6,zero_shot,Match,True,LiquidJS replace filter (memoryLimit option),liquidjs liquidjs
+CVE-2026-29138,claude-sonnet-4.6,zero_shot,Match,True,SEPPmail Secure Email Gateway,seppmail secure email gateway
+CVE-2026-40606,claude-sonnet-4.6,zero_shot,Match,True,mitmproxy 12.2.1 builtin LDAP proxy authentication (proxyauth option),mitmproxy mitmproxy
+CVE-2026-35626,claude-sonnet-4.6,zero_shot,Match,True,OpenClaw voice call webhook handling,openclaw openclaw
+CVE-2026-33207,claude-sonnet-4.6,zero_shot,Match,True,"DataEase /datasource/getTableField endpoint, getTableFiledSql method in CalciteProvider.java",dataease dataease
+CVE-2026-6985,claude-sonnet-4.6,zero_shot,Match,True,Cesanta Mongoose up to 7.20 - handle_opt function in /src/net_builtin.c (TCP Option Handler),cesanta mongoose
+CVE-2026-39421,claude-sonnet-4.6,zero_shot,Match,True,MaxKB ToolExecutor component (sandbox.so LD_PRELOAD-based sandbox),maxkb maxkb
+CVE-2026-40518,claude-sonnet-4.6,zero_shot,Match,True,ByteDance DeerFlow bootstrap-mode custom-agent creation (agent name validation),bytedance deerflow
+CVE-2026-40385,claude-sonnet-4.6,zero_shot,Partial,False,libexif 0.6.25 - Nikon MakerNote handling,libexif project libexif
+CVE-2026-31527,claude-sonnet-4.6,zero_shot,Match,True,Linux kernel driver core platform bus driver_override handling in __driver_attach(),linux linux kernel
+CVE-2026-5570,claude-sonnet-4.6,zero_shot,Match,True,Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 - function index_config in /LoginCB,technostrobe hi-led-wr120-g2 firmware
+CVE-2025-59709,claude-sonnet-4.6,zero_shot,No Match,False,Biztalk360 (through version 11.5),kovai biztalk360
+CVE-2026-41382,claude-sonnet-4.6,zero_shot,Match,True,OpenClaw Discord voice ingress,openclaw openclaw
+CVE-2026-34951,claude-sonnet-4.6,zero_shot,No Match,False,Workbench footerScripts parameter,salesforce workbench
+CVE-2026-5188,claude-sonnet-4.6,zero_shot,Match,True,wolfSSL X.509 certificate SAN extension ASN.1 parser,wolfssl wolfssl
+CVE-2026-32957,claude-sonnet-4.6,zero_shot,No Match,False,SD-330AC and AMC Manager firmware maintenance function,silextechnology amc manager
+CVE-2026-7030,claude-sonnet-4.6,zero_shot,Match,True,Tenda F456 1.0.0.5 - function fromRouteStatic in /goform/RouteStatic,tenda f456 firmware
+CVE-2026-25908,claude-sonnet-4.6,zero_shot,Match,True,Dell Alienware Command Center (AWCC) versions prior to 6.13.8.0,dell alienware command center
+CVE-2026-30999,claude-sonnet-4.6,zero_shot,Match,True,FFmpeg v8.0.1 av_bprint_finalize() function,ffmpeg ffmpeg
+CVE-2026-4152,deepseek-v4-pro,zero_shot,Match,True,GIMP JP2 File Parsing,gimp gimp
+CVE-2026-25917,deepseek-v4-pro,zero_shot,Match,True,Apache Airflow webserver,apache airflow
+CVE-2026-5526,deepseek-v4-pro,zero_shot,Match,True,Tenda 4G03 Pro /bin/httpd,tenda 4g03 pro firmware
+CVE-2026-28390,deepseek-v4-pro,zero_shot,Match,True,OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo using RSA-OAEP,openssl openssl
+CVE-2026-6539,deepseek-v4-pro,zero_shot,Partial,False,Notepad++ 8.9.3 Find Results panel handler,notepad-plus-plus notepad\+\+
+CVE-2026-42171,deepseek-v4-pro,zero_shot,Match,True,NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12,nullsoft nullsoft scriptable install system
+CVE-2026-34166,deepseek-v4-pro,zero_shot,Match,True,LiquidJS replace filter,liquidjs liquidjs
+CVE-2026-29138,deepseek-v4-pro,zero_shot,Match,True,SEPPmail Secure Email Gateway,seppmail secure email gateway
+CVE-2026-40606,deepseek-v4-pro,zero_shot,Match,True,mitmproxy builtin LDAP proxy authentication,mitmproxy mitmproxy
+CVE-2026-35626,deepseek-v4-pro,zero_shot,Match,True,OpenClaw voice call webhook handling,openclaw openclaw
+CVE-2026-33207,deepseek-v4-pro,zero_shot,Match,True,"DataEase /datasource/getTableField endpoint, CalciteProvider.java getTableFiledSql method",dataease dataease
+CVE-2026-6985,deepseek-v4-pro,zero_shot,Match,True,"Cesanta Mongoose up to 7.20, function handle_opt in /src/net_builtin.c, TCP Option Handler",cesanta mongoose
+CVE-2026-39421,deepseek-v4-pro,zero_shot,Match,True,MaxKB ToolExecutor component,maxkb maxkb
+CVE-2026-40518,deepseek-v4-pro,zero_shot,Match,True,ByteDance DeerFlow bootstrap-mode custom-agent creation,bytedance deerflow
+CVE-2026-40385,deepseek-v4-pro,zero_shot,Partial,False,"libexif through 0.6.25, Nikon MakerNote handling",libexif project libexif
+CVE-2026-31527,deepseek-v4-pro,zero_shot,Match,True,Linux kernel driver core platform driver_override,linux linux kernel
+CVE-2026-5570,deepseek-v4-pro,zero_shot,Match,True,"Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30, function index_config of /LoginCB",technostrobe hi-led-wr120-g2 firmware
+CVE-2025-59709,deepseek-v4-pro,zero_shot,No Match,False,Biztalk360 through 11.5,kovai biztalk360
+CVE-2026-41382,deepseek-v4-pro,zero_shot,Match,True,OpenClaw Discord voice ingress,openclaw openclaw
+CVE-2026-34951,deepseek-v4-pro,zero_shot,Match,True,Workbench,salesforce workbench
+CVE-2026-5188,deepseek-v4-pro,zero_shot,Match,True,wolfSSL X.509 certificate Subject Alternative Name (SAN) extension parser,wolfssl wolfssl
+CVE-2026-32957,deepseek-v4-pro,zero_shot,No Match,False,SD-330AC and AMC Manager firmware maintenance,silextechnology amc manager
+CVE-2026-7030,deepseek-v4-pro,zero_shot,Match,True,Tenda F456 1.0.0.5 /goform/RouteStatic fromRouteStatic,tenda f456 firmware
+CVE-2026-25908,deepseek-v4-pro,zero_shot,Match,True,Dell Alienware Command Center (AWCC),dell alienware command center
+CVE-2026-30999,deepseek-v4-pro,zero_shot,Match,True,FFmpeg v8.0.1 av_bprint_finalize() function,ffmpeg ffmpeg
+CVE-2026-4152,gpt-5.5,zero_shot,Match,True,GIMP JP2 file parsing,gimp gimp
+CVE-2026-25917,gpt-5.5,zero_shot,Match,True,Apache Airflow webserver XCom payload handling,apache airflow
+CVE-2026-5526,gpt-5.5,zero_shot,Match,True,Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53 /bin/httpd,tenda 4g03 pro firmware
+CVE-2026-28390,gpt-5.5,zero_shot,Match,True,OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo and RSA-OAEP,openssl openssl
+CVE-2026-6539,gpt-5.5,zero_shot,Partial,False,Notepad++ 8.9.3 Find Results panel handler with nativeLang.xml language pack file,notepad-plus-plus notepad\+\+
+CVE-2026-42171,gpt-5.5,zero_shot,Match,True,NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 my_GetTempFileName / Low IL temp directory handling,nullsoft nullsoft scriptable install system
+CVE-2026-34166,gpt-5.5,zero_shot,Match,True,LiquidJS replace filter with memoryLimit option prior to 10.25.3,liquidjs liquidjs
+CVE-2026-29138,gpt-5.5,zero_shot,Match,True,SEPPmail Secure Email Gateway before version 15.0.3 PGP signature handling,seppmail secure email gateway
+CVE-2026-40606,gpt-5.5,zero_shot,Match,True,mitmproxy 12.2.1 and below builtin LDAP proxy authentication with proxyauth option,mitmproxy mitmproxy
+CVE-2026-35626,gpt-5.5,zero_shot,Match,True,OpenClaw before 2026.3.22 voice call webhook handling,openclaw openclaw
+CVE-2026-33207,gpt-5.5,zero_shot,Match,True,DataEase versions 2.10.20 and below /datasource/getTableField endpoint; getTableFiledSql method in CalciteProvider.java,dataease dataease
+CVE-2026-6985,gpt-5.5,zero_shot,Match,True,Cesanta Mongoose up to 7.20 TCP Option Handler handle_opt in /src/net_builtin.c,cesanta mongoose
+CVE-2026-39421,gpt-5.5,zero_shot,Match,True,MaxKB versions 2.7.1 and below ToolExecutor component / LD_PRELOAD-based sandbox.so module,maxkb maxkb
+CVE-2026-40518,gpt-5.5,zero_shot,Match,True,ByteDance DeerFlow before commit 2176b2b bootstrap-mode custom-agent creation,bytedance deerflow
+CVE-2026-40385,gpt-5.5,zero_shot,Partial,False,libexif through 0.6.25 Nikon MakerNote handling on 32bit systems,libexif project libexif
+CVE-2026-31527,gpt-5.5,zero_shot,Match,True,Linux kernel driver core platform driver_override infrastructure,linux linux kernel
+CVE-2026-5570,gpt-5.5,zero_shot,Match,True,Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 index_config function in /LoginCB,technostrobe hi-led-wr120-g2 firmware
+CVE-2025-59709,gpt-5.5,zero_shot,No Match,False,Biztalk360 through 11.5,kovai biztalk360
+CVE-2026-41382,gpt-5.5,zero_shot,Match,True,OpenClaw before 2026.3.31 Discord voice ingress,openclaw openclaw
+CVE-2026-34951,gpt-5.5,zero_shot,No Match,False,Workbench footerScripts parameter / error pages prior to 65.0.0,salesforce workbench
+CVE-2026-5188,gpt-5.5,zero_shot,Match,True,wolfSSL original ASN.1 parsing implementation for X.509 Subject Alternative Name (SAN) extension,wolfssl wolfssl
+CVE-2026-32957,gpt-5.5,zero_shot,No Match,False,SD-330AC and AMC Manager firmware maintenance,silextechnology amc manager
+CVE-2026-7030,gpt-5.5,zero_shot,Match,True,Tenda F456 1.0.0.5 fromRouteStatic function in /goform/RouteStatic,tenda f456 firmware
+CVE-2026-25908,gpt-5.5,zero_shot,Match,True,Dell Alienware Command Center (AWCC) prior to 6.13.8.0,dell alienware command center
+CVE-2026-30999,gpt-5.5,zero_shot,Match,True,FFmpeg v8.0.1 av_bprint_finalize() function,ffmpeg ffmpeg

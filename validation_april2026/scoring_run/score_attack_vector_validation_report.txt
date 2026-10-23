@@ -1,0 +1,88 @@
+Attack vector scoring — C:\Users\kevin\Desktop\cve-ner-dissertation\validation_april2026\merging_results_validation.json
+records: 75   cells: 3
+
+claude-sonnet-4.6  |  zero_shot
+===============================
+n = 25
+
+Outcomes
+  Correct         24  ( 96.0%)
+  Incorrect        1  (  4.0%)
+  Unmapped         0  (  0.0%)
+  Declined         0  (  0.0%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK              19    19     1     0   0.950   1.000   0.974
+  ADJACENT_NETWORK      0     0     0     0   0.000   0.000   0.000 *
+  LOCAL                 6     5     0     1   1.000   0.833   0.909
+  PHYSICAL              0     0     0     0   0.000   0.000   0.000 *
+  * class never predicted; precision undefined, reported as 0.000
+
+Macro-F1        0.471
+Accuracy        0.960
+No prediction   0 (0.0%)
+
+deepseek-v4-pro  |  zero_shot
+=============================
+n = 25
+
+Outcomes
+  Correct         25  (100.0%)
+  Incorrect        0  (  0.0%)
+  Unmapped         0  (  0.0%)
+  Declined         0  (  0.0%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK              19    19     0     0   1.000   1.000   1.000
+  ADJACENT_NETWORK      0     0     0     0   0.000   0.000   0.000 *
+  LOCAL                 6     6     0     0   1.000   1.000   1.000
+  PHYSICAL              0     0     0     0   0.000   0.000   0.000 *
+  * class never predicted; precision undefined, reported as 0.000
+
+Macro-F1        0.500
+Accuracy        1.000
+No prediction   0 (0.0%)
+
+gpt-5.5  |  zero_shot
+=====================
+n = 25
+
+Outcomes
+  Correct         21  ( 84.0%)
+  Incorrect        1  (  4.0%)
+  Unmapped         0  (  0.0%)
+  Declined         3  ( 12.0%)
+  Malformed        0  (  0.0%)
+
+Per class
+  class                 n    TP    FP    FN       P       R      F1
+  NETWORK              19    16     1     3   0.941   0.842   0.889
+  ADJACENT_NETWORK      0     0     0     0   0.000   0.000   0.000 *
+  LOCAL                 6     5     0     1   1.000   0.833   0.909
+  PHYSICAL              0     0     0     0   0.000   0.000   0.000 *
+  * class never predicted; precision undefined, reported as 0.000
+
+Macro-F1        0.449
+Accuracy        0.840
+No prediction   3 (12.0%)
+
+SUMMARY — all cells
+===================
+  model                  condition     macro-F1  accuracy   no-pred
+  claude-sonnet-4.6      zero_shot        0.471     0.960      0.0%
+  deepseek-v4-pro        zero_shot        0.500     1.000      0.0%
+  gpt-5.5                zero_shot        0.449     0.840     12.0%
+
+Per-class F1 across cells
+  class                 claude  deepseek       gpt
+  NETWORK                0.974     1.000     0.889   (n=19)
+  ADJACENT_NETWORK       0.000     0.000     0.000   (n=0)
+  LOCAL                  0.909     1.000     0.909   (n=6)
+  PHYSICAL               0.000     0.000     0.000   (n=0)
+
+NOTE: classes with low support yield unstable F1. Interpret
+ADJACENT_NETWORK and PHYSICAL as indicative only.

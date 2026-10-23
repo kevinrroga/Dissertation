@@ -1,0 +1,1895 @@
+[
+  {
+    "cve_id": "CVE-2026-4152",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-122",
+        "CWE-131",
+        "CWE-787"
+      ],
+      "affected_component": [
+        "gimp gimp"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Heap-based Buffer Overflow",
+      "attack_vector": "Network",
+      "affected_component": "GIMP JP2 file parsing",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-25917",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "affected_component": [
+        "apache airflow"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Code Injection",
+      "attack_vector": "Network",
+      "affected_component": "Apache Airflow webserver XCom payload handling",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5526",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-266",
+        "CWE-284"
+      ],
+      "affected_component": [
+        "tenda 4g03 pro firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Access Control",
+      "attack_vector": "Network",
+      "affected_component": "Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53 /bin/httpd",
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2026-28390",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "affected_component": [
+        "openssl openssl"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "NULL Pointer Dereference",
+      "attack_vector": "Network",
+      "affected_component": "OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo and RSA-OAEP",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-6539",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-134"
+      ],
+      "affected_component": [
+        "notepad-plus-plus notepad\\+\\+"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Format String Injection",
+      "attack_vector": "Local",
+      "affected_component": "Notepad++ 8.9.3 Find Results panel handler with nativeLang.xml language pack file",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-42171",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "affected_component": [
+        "nullsoft nullsoft scriptable install system"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Privilege Escalation",
+      "attack_vector": "Local",
+      "affected_component": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 my_GetTempFileName / Low IL temp directory handling",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-34166",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "affected_component": [
+        "liquidjs liquidjs"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Uncontrolled Resource Consumption",
+      "attack_vector": null,
+      "affected_component": "LiquidJS replace filter with memoryLimit option prior to 10.25.3",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-29138",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-90"
+      ],
+      "affected_component": [
+        "seppmail secure email gateway"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authorization",
+      "attack_vector": "Network",
+      "affected_component": "SEPPmail Secure Email Gateway before version 15.0.3 PGP signature handling",
+      "confidentiality_impact": "None",
+      "integrity_impact": "Low",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40606",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-90"
+      ],
+      "affected_component": [
+        "mitmproxy mitmproxy"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "LDAP Injection",
+      "attack_vector": "Network",
+      "affected_component": "mitmproxy 12.2.1 and below builtin LDAP proxy authentication with proxyauth option",
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-35626",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-405"
+      ],
+      "affected_component": [
+        "openclaw openclaw"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Resource Exhaustion",
+      "attack_vector": "Network",
+      "affected_component": "OpenClaw before 2026.3.22 voice call webhook handling",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-33207",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "affected_component": [
+        "dataease dataease"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "SQL Injection",
+      "attack_vector": "Network",
+      "affected_component": "DataEase versions 2.10.20 and below /datasource/getTableField endpoint; getTableFiledSql method in CalciteProvider.java",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2026-6985",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-404",
+        "CWE-835"
+      ],
+      "affected_component": [
+        "cesanta mongoose"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Infinite Loop",
+      "attack_vector": "Network",
+      "affected_component": "Cesanta Mongoose up to 7.20 TCP Option Handler handle_opt in /src/net_builtin.c",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-39421",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-693",
+        "CWE-94"
+      ],
+      "affected_component": [
+        "maxkb maxkb"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Sandbox Escape",
+      "attack_vector": "Network",
+      "affected_component": "MaxKB versions 2.7.1 and below ToolExecutor component / LD_PRELOAD-based sandbox.so module",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40518",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "affected_component": [
+        "bytedance deerflow"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Path Traversal",
+      "attack_vector": null,
+      "affected_component": "ByteDance DeerFlow before commit 2176b2b bootstrap-mode custom-agent creation",
+      "confidentiality_impact": "None",
+      "integrity_impact": "High",
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40385",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-190"
+      ],
+      "affected_component": [
+        "libexif project libexif"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Integer Overflow",
+      "attack_vector": "Local",
+      "affected_component": "libexif through 0.6.25 Nikon MakerNote handling on 32bit systems",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "Low"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-31527",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "affected_component": [
+        "linux linux kernel"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Use-After-Free",
+      "attack_vector": "Local",
+      "affected_component": "Linux kernel driver core platform driver_override infrastructure",
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5570",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "affected_component": [
+        "technostrobe hi-led-wr120-g2 firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authentication",
+      "attack_vector": "Network",
+      "affected_component": "Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 index_config function in /LoginCB",
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2025-59709",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "affected_component": [
+        "kovai biztalk360"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Path Traversal",
+      "attack_vector": "Network",
+      "affected_component": "Biztalk360 through 11.5",
+      "confidentiality_impact": "High",
+      "integrity_impact": "None",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-41382",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "affected_component": [
+        "openclaw openclaw"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Authorization Bypass",
+      "attack_vector": "Network",
+      "affected_component": "OpenClaw before 2026.3.31 Discord voice ingress",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-34951",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "affected_component": [
+        "salesforce workbench"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Cross-Site Scripting",
+      "attack_vector": "Network",
+      "affected_component": "Workbench footerScripts parameter / error pages prior to 65.0.0",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "Low",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5188",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-191"
+      ],
+      "affected_component": [
+        "wolfssl wolfssl"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Integer Underflow",
+      "attack_vector": "Network",
+      "affected_component": "wolfSSL original ASN.1 parsing implementation for X.509 Subject Alternative Name (SAN) extension",
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2026-32957",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "affected_component": [
+        "silextechnology amc manager"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Missing Authentication for Critical Function",
+      "attack_vector": "Network",
+      "affected_component": "SD-330AC and AMC Manager firmware maintenance",
+      "confidentiality_impact": null,
+      "integrity_impact": "High",
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2026-7030",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-120"
+      ],
+      "affected_component": [
+        "tenda f456 firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Buffer Overflow",
+      "attack_vector": "Network",
+      "affected_component": "Tenda F456 1.0.0.5 fromRouteStatic function in /goform/RouteStatic",
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2026-25908",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-250"
+      ],
+      "affected_component": [
+        "dell alienware command center"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Execution with Unnecessary Privileges",
+      "attack_vector": "Local",
+      "affected_component": "Dell Alienware Command Center (AWCC) prior to 6.13.8.0",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-30999",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-122"
+      ],
+      "affected_component": [
+        "ffmpeg ffmpeg"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Heap Buffer Overflow",
+      "attack_vector": null,
+      "affected_component": "FFmpeg v8.0.1 av_bprint_finalize() function",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-4152",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-122",
+        "CWE-131",
+        "CWE-787"
+      ],
+      "affected_component": [
+        "gimp gimp"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Heap-based Buffer Overflow",
+      "attack_vector": "Network",
+      "affected_component": "GIMP JP2 file parsing",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-25917",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "affected_component": [
+        "apache airflow"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Code Injection",
+      "attack_vector": "Network",
+      "affected_component": "Apache Airflow webserver XCom payload handling",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "Low",
+      "availability_impact": "Low"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5526",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-266",
+        "CWE-284"
+      ],
+      "affected_component": [
+        "tenda 4g03 pro firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Access Control",
+      "attack_vector": "Network",
+      "affected_component": "Tenda 4G03 Pro /bin/httpd",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-28390",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "affected_component": [
+        "openssl openssl"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "NULL Pointer Dereference",
+      "attack_vector": "Network",
+      "affected_component": "OpenSSL CMS_decrypt() - CMS EnvelopedData KeyTransportRecipientInfo RSA-OAEP processing",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-6539",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-134"
+      ],
+      "affected_component": [
+        "notepad-plus-plus notepad\\+\\+"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Format String Injection",
+      "attack_vector": "Local",
+      "affected_component": "Notepad++ 8.9.3 Find Results panel handler",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-42171",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "affected_component": [
+        "nullsoft nullsoft scriptable install system"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Privilege Escalation",
+      "attack_vector": "Local",
+      "affected_component": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 - my_GetTempFileName",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-34166",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "affected_component": [
+        "liquidjs liquidjs"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Denial of Service",
+      "attack_vector": "Network",
+      "affected_component": "LiquidJS replace filter (memoryLimit option)",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-29138",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-90"
+      ],
+      "affected_component": [
+        "seppmail secure email gateway"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authorization",
+      "attack_vector": "Network",
+      "affected_component": "SEPPmail Secure Email Gateway",
+      "confidentiality_impact": "None",
+      "integrity_impact": "High",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40606",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-90"
+      ],
+      "affected_component": [
+        "mitmproxy mitmproxy"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Input Validation",
+      "attack_vector": "Network",
+      "affected_component": "mitmproxy 12.2.1 builtin LDAP proxy authentication (proxyauth option)",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-35626",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-405"
+      ],
+      "affected_component": [
+        "openclaw openclaw"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Resource Exhaustion",
+      "attack_vector": "Network",
+      "affected_component": "OpenClaw voice call webhook handling",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-33207",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "affected_component": [
+        "dataease dataease"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "SQL Injection",
+      "attack_vector": "Network",
+      "affected_component": "DataEase /datasource/getTableField endpoint, getTableFiledSql method in CalciteProvider.java",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-6985",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-404",
+        "CWE-835"
+      ],
+      "affected_component": [
+        "cesanta mongoose"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Infinite Loop",
+      "attack_vector": "Network",
+      "affected_component": "Cesanta Mongoose up to 7.20 - handle_opt function in /src/net_builtin.c (TCP Option Handler)",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-39421",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-693",
+        "CWE-94"
+      ],
+      "affected_component": [
+        "maxkb maxkb"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Sandbox Escape",
+      "attack_vector": "Network",
+      "affected_component": "MaxKB ToolExecutor component (sandbox.so LD_PRELOAD-based sandbox)",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40518",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "affected_component": [
+        "bytedance deerflow"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Path Traversal",
+      "attack_vector": "Network",
+      "affected_component": "ByteDance DeerFlow bootstrap-mode custom-agent creation (agent name validation)",
+      "confidentiality_impact": "None",
+      "integrity_impact": "High",
+      "availability_impact": "Low"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40385",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-190"
+      ],
+      "affected_component": [
+        "libexif project libexif"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Integer Overflow",
+      "attack_vector": "Local",
+      "affected_component": "libexif 0.6.25 - Nikon MakerNote handling",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "Low"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-31527",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "affected_component": [
+        "linux linux kernel"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Use-After-Free",
+      "attack_vector": "Local",
+      "affected_component": "Linux kernel driver core platform bus driver_override handling in __driver_attach()",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5570",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "affected_component": [
+        "technostrobe hi-led-wr120-g2 firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authentication",
+      "attack_vector": "Network",
+      "affected_component": "Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 - function index_config in /LoginCB",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2025-59709",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "affected_component": [
+        "kovai biztalk360"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Path Traversal",
+      "attack_vector": "Network",
+      "affected_component": "Biztalk360 (through version 11.5)",
+      "confidentiality_impact": "High",
+      "integrity_impact": "None",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-41382",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "affected_component": [
+        "openclaw openclaw"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authorization",
+      "attack_vector": "Network",
+      "affected_component": "OpenClaw Discord voice ingress",
+      "confidentiality_impact": "High",
+      "integrity_impact": "Low",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-34951",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "affected_component": [
+        "salesforce workbench"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Cross-Site Scripting",
+      "attack_vector": "Network",
+      "affected_component": "Workbench footerScripts parameter",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "Low",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5188",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-191"
+      ],
+      "affected_component": [
+        "wolfssl wolfssl"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Integer Underflow",
+      "attack_vector": "Network",
+      "affected_component": "wolfSSL X.509 certificate SAN extension ASN.1 parser",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "Low",
+      "availability_impact": "Low"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-32957",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "affected_component": [
+        "silextechnology amc manager"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Missing Authentication for Critical Function",
+      "attack_vector": "Network",
+      "affected_component": "SD-330AC and AMC Manager firmware maintenance function",
+      "confidentiality_impact": "None",
+      "integrity_impact": "High",
+      "availability_impact": "Low"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-7030",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-120"
+      ],
+      "affected_component": [
+        "tenda f456 firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Buffer Overflow",
+      "attack_vector": "Network",
+      "affected_component": "Tenda F456 1.0.0.5 - function fromRouteStatic in /goform/RouteStatic",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-25908",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-250"
+      ],
+      "affected_component": [
+        "dell alienware command center"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Execution with Unnecessary Privileges",
+      "attack_vector": "Local",
+      "affected_component": "Dell Alienware Command Center (AWCC) versions prior to 6.13.8.0",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-30999",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-122"
+      ],
+      "affected_component": [
+        "ffmpeg ffmpeg"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Buffer Overflow",
+      "attack_vector": "Network",
+      "affected_component": "FFmpeg v8.0.1 av_bprint_finalize() function",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-4152",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-122",
+        "CWE-131",
+        "CWE-787"
+      ],
+      "affected_component": [
+        "gimp gimp"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Heap-based Buffer Overflow",
+      "attack_vector": "Local",
+      "affected_component": "GIMP JP2 File Parsing",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-25917",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "affected_component": [
+        "apache airflow"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Command Injection",
+      "attack_vector": "Network",
+      "affected_component": "Apache Airflow webserver",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5526",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-266",
+        "CWE-284"
+      ],
+      "affected_component": [
+        "tenda 4g03 pro firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Access Control",
+      "attack_vector": "Network",
+      "affected_component": "Tenda 4G03 Pro /bin/httpd",
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null
+    }
+  },
+  {
+    "cve_id": "CVE-2026-28390",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "affected_component": [
+        "openssl openssl"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "NULL Pointer Dereference",
+      "attack_vector": "Network",
+      "affected_component": "OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo using RSA-OAEP",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-6539",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-134"
+      ],
+      "affected_component": [
+        "notepad-plus-plus notepad\\+\\+"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Format String Injection",
+      "attack_vector": "Local",
+      "affected_component": "Notepad++ 8.9.3 Find Results panel handler",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-42171",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "affected_component": [
+        "nullsoft nullsoft scriptable install system"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Privilege Management",
+      "attack_vector": "Local",
+      "affected_component": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-34166",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "affected_component": [
+        "liquidjs liquidjs"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Resource Exhaustion",
+      "attack_vector": "Network",
+      "affected_component": "LiquidJS replace filter",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-29138",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-90"
+      ],
+      "affected_component": [
+        "seppmail secure email gateway"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authentication",
+      "attack_vector": "Network",
+      "affected_component": "SEPPmail Secure Email Gateway",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "High",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40606",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-90"
+      ],
+      "affected_component": [
+        "mitmproxy mitmproxy"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Input Validation",
+      "attack_vector": "Network",
+      "affected_component": "mitmproxy builtin LDAP proxy authentication",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-35626",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-405"
+      ],
+      "affected_component": [
+        "openclaw openclaw"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Resource Exhaustion",
+      "attack_vector": "Network",
+      "affected_component": "OpenClaw voice call webhook handling",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-33207",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "affected_component": [
+        "dataease dataease"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "SQL Injection",
+      "attack_vector": "Network",
+      "affected_component": "DataEase /datasource/getTableField endpoint, CalciteProvider.java getTableFiledSql method",
+      "confidentiality_impact": "High",
+      "integrity_impact": "Low",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-6985",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-404",
+        "CWE-835"
+      ],
+      "affected_component": [
+        "cesanta mongoose"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Infinite Loop",
+      "attack_vector": "Network",
+      "affected_component": "Cesanta Mongoose up to 7.20, function handle_opt in /src/net_builtin.c, TCP Option Handler",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-39421",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "cwe_ids": [
+        "CWE-693",
+        "CWE-94"
+      ],
+      "affected_component": [
+        "maxkb maxkb"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Sandbox Escape",
+      "attack_vector": "Network",
+      "affected_component": "MaxKB ToolExecutor component",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40518",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "affected_component": [
+        "bytedance deerflow"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Path Traversal",
+      "attack_vector": "Network",
+      "affected_component": "ByteDance DeerFlow bootstrap-mode custom-agent creation",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-40385",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-190"
+      ],
+      "affected_component": [
+        "libexif project libexif"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Integer Overflow",
+      "attack_vector": "Local",
+      "affected_component": "libexif through 0.6.25, Nikon MakerNote handling",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "Low"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-31527",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "affected_component": [
+        "linux linux kernel"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Use-After-Free",
+      "attack_vector": "Local",
+      "affected_component": "Linux kernel driver core platform driver_override",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5570",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "affected_component": [
+        "technostrobe hi-led-wr120-g2 firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authentication",
+      "attack_vector": "Network",
+      "affected_component": "Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30, function index_config of /LoginCB",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2025-59709",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "affected_component": [
+        "kovai biztalk360"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Directory Traversal",
+      "attack_vector": "Network",
+      "affected_component": "Biztalk360 through 11.5",
+      "confidentiality_impact": "High",
+      "integrity_impact": "None",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-41382",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "affected_component": [
+        "openclaw openclaw"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Improper Authorization",
+      "attack_vector": "Network",
+      "affected_component": "OpenClaw Discord voice ingress",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "None",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-34951",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "affected_component": [
+        "salesforce workbench"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Cross-Site Scripting",
+      "attack_vector": "Network",
+      "affected_component": "Workbench",
+      "confidentiality_impact": "Low",
+      "integrity_impact": "Low",
+      "availability_impact": "None"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5188",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-191"
+      ],
+      "affected_component": [
+        "wolfssl wolfssl"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Integer Underflow",
+      "attack_vector": "Network",
+      "affected_component": "wolfSSL X.509 certificate Subject Alternative Name (SAN) extension parser",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-32957",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "affected_component": [
+        "silextechnology amc manager"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Missing Authentication for Critical Function",
+      "attack_vector": "Network",
+      "affected_component": "SD-330AC and AMC Manager firmware maintenance",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-7030",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-120"
+      ],
+      "affected_component": [
+        "tenda f456 firmware"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Buffer Overflow",
+      "attack_vector": "Network",
+      "affected_component": "Tenda F456 1.0.0.5 /goform/RouteStatic fromRouteStatic",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-25908",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "LOCAL",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-250"
+      ],
+      "affected_component": [
+        "dell alienware command center"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Execution with Unnecessary Privileges",
+      "attack_vector": "Local",
+      "affected_component": "Dell Alienware Command Center (AWCC)",
+      "confidentiality_impact": "High",
+      "integrity_impact": "High",
+      "availability_impact": "High"
+    }
+  },
+  {
+    "cve_id": "CVE-2026-30999",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ground_truth": {
+      "attack_vector": "NETWORK",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "cwe_ids": [
+        "CWE-122"
+      ],
+      "affected_component": [
+        "ffmpeg ffmpeg"
+      ]
+    },
+    "extracted": {
+      "vulnerability_type": "Heap Buffer Overflow",
+      "attack_vector": "Network",
+      "affected_component": "FFmpeg v8.0.1 av_bprint_finalize() function",
+      "confidentiality_impact": "None",
+      "integrity_impact": "None",
+      "availability_impact": "High"
+    }
+  }
+]

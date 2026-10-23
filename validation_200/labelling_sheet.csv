@@ -1,0 +1,201 @@
+item_id,cve_id,model,prompt_condition,extracted,ground_truth,cwe_ids,your_label
+VT-001,CVE-2026-42402,deepseek-v4-pro,zero_shot,Algorithmic Complexity,Uncontrolled Resource Consumption,CWE-400,family
+VT-002,CVE-2026-9803,claude-sonnet-4.6,zero_shot,Denial of Service,Out-of-bounds Read,CWE-125,miss
+VT-003,CVE-2026-41139,claude-sonnet-4.6,zero_shot,Code Injection,Improperly Controlled Modification of Dynamically-Determined Object Attributes,CWE-915,miss
+VT-004,CVE-2024-0391,claude-sonnet-4.6,zero_shot,User Enumeration,Observable Response Discrepancy,CWE-204,miss
+VT-005,CVE-2026-47317,deepseek-v4-pro,few_shot,Uncontrolled Recursion,Uncontrolled Recursion,CWE-674,exact
+VT-006,CVE-2026-8121,deepseek-v4-pro,few_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-007,CVE-2025-41268,claude-sonnet-4.6,zero_shot,Path Traversal,Relative Path Traversal,CWE-23,family
+VT-008,CVE-2026-9792,gpt-5.5,zero_shot,Policy Bypass,Improper Handling of Insufficient Permissions or Privileges,CWE-280,miss
+VT-009,CVE-2026-47311,gpt-5.5,zero_shot,Heap-based Buffer Overflow,Heap-based Buffer Overflow,CWE-122,exact
+VT-010,CVE-2026-43869,gpt-5.5,few_shot,Improper Validation of Certificate with Host Mismatch,Improper Validation of Certificate with Host Mismatch,CWE-297,exact
+VT-011,CVE-2026-39830,gpt-5.5,few_shot,Resource Leak,Improper Restriction of Operations within the Bounds of a Memory Buffer,CWE-119,miss
+VT-012,CVE-2026-24072,gpt-5.5,few_shot,Privilege Escalation,Improper Privilege Management,CWE-269,miss
+VT-013,CVE-2026-41311,claude-sonnet-4.6,few_shot,Uncontrolled Recursion,Uncontrolled Recursion,CWE-674,exact
+VT-014,CVE-2026-7009,gpt-5.5,zero_shot,Improper Certificate Validation,Improper Certificate Validation,CWE-295,exact
+VT-015,CVE-2026-45772,gpt-5.5,zero_shot,Arbitrary Code Execution,Untrusted Search Path,CWE-426,miss
+VT-016,CVE-2025-14179,deepseek-v4-pro,few_shot,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'),CWE-89,exact
+VT-017,CVE-2026-40010,claude-sonnet-4.6,zero_shot,Session Fixation,Session Fixation,CWE-384,exact
+VT-018,CVE-2026-8124,claude-sonnet-4.6,few_shot,Resource Allocation Without Limits,Uncontrolled Resource Consumption | Allocation of Resources Without Limits or Throttling,CWE-400 | CWE-770,exact
+VT-019,CVE-2026-6735,gpt-5.5,zero_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-020,CVE-2026-42001,claude-sonnet-4.6,few_shot,Insufficient Input Validation,Uncontrolled Resource Consumption,CWE-400,miss
+VT-021,CVE-2026-7372,deepseek-v4-pro,few_shot,Stack Overflow,Out-of-bounds Write,CWE-787,family
+VT-022,CVE-2026-28732,deepseek-v4-pro,few_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-023,CVE-2026-8770,deepseek-v4-pro,few_shot,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-024,CVE-2026-8743,claude-sonnet-4.6,zero_shot,Improper Authorization,Incorrect Privilege Assignment | Improper Authorization,CWE-266 | CWE-285,exact
+VT-025,CVE-2026-42496,gpt-5.5,few_shot,Path Traversal,Improper Link Resolution Before File Access ('Link Following'),CWE-59,miss
+VT-026,CVE-2026-43620,claude-sonnet-4.6,zero_shot,Out-of-Bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-027,CVE-2026-28732,gpt-5.5,zero_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-028,CVE-2026-39829,claude-sonnet-4.6,few_shot,Uncontrolled Resource Consumption,Improper Verification of Cryptographic Signature,CWE-347,miss
+VT-029,CVE-2026-9312,claude-sonnet-4.6,few_shot,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-030,CVE-2026-42509,gpt-5.5,zero_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-031,CVE-2026-43619,deepseek-v4-pro,few_shot,Symlink Race Condition,Improper Link Resolution Before File Access ('Link Following') | Time-of-check Time-of-use (TOCTOU) Race Condition,CWE-59 | CWE-367,family
+VT-032,CVE-2026-7259,gpt-5.5,few_shot,NULL Pointer Dereference,NULL Pointer Dereference,CWE-476,exact
+VT-033,CVE-2026-43001,claude-sonnet-4.6,zero_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-034,CVE-2026-40004,claude-sonnet-4.6,few_shot,Privilege Escalation,Uncontrolled Search Path Element,CWE-427,miss
+VT-035,CVE-2026-47316,claude-sonnet-4.6,few_shot,Improper Check or Handling of Exceptional Conditions,Improper Check or Handling of Exceptional Conditions,CWE-703,exact
+VT-036,CVE-2026-43530,gpt-5.5,zero_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-037,CVE-2026-39461,deepseek-v4-pro,few_shot,Improper Input Validation,Stack-based Buffer Overflow,CWE-121,miss
+VT-038,CVE-2026-47309,gpt-5.5,few_shot,Uncontrolled Recursion,Uncontrolled Recursion,CWE-674,exact
+VT-039,CVE-2026-42404,gpt-5.5,zero_shot,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-040,CVE-2026-7584,gpt-5.5,zero_shot,Insecure Deserialization,Deserialization of Untrusted Data,CWE-502,exact
+VT-041,CVE-2026-40564,gpt-5.5,zero_shot,Server-Side Request Forgery,Files or Directories Accessible to External Parties | Server-Side Request Forgery (SSRF),CWE-552 | CWE-918,exact
+VT-042,CVE-2026-48685,deepseek-v4-pro,zero_shot,Buffer Overflow,Improper Handling of Length Parameter Inconsistency,CWE-130,family
+VT-043,CVE-2026-42404,claude-sonnet-4.6,zero_shot,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-044,CVE-2026-42439,claude-sonnet-4.6,zero_shot,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-045,CVE-2026-42275,claude-sonnet-4.6,few_shot,Symlink Following,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') | UNIX Symbolic Link (Symlink) Following,CWE-22 | CWE-61,exact
+VT-046,CVE-2026-3495,deepseek-v4-pro,few_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-047,CVE-2024-47091,deepseek-v4-pro,few_shot,Privilege Escalation,Uncontrolled Search Path Element,CWE-427,miss
+VT-048,CVE-2026-8161,gpt-5.5,few_shot,Denial of Service,Uncaught Exception | Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution'),CWE-248 | CWE-1321,miss
+VT-049,CVE-2026-41142,deepseek-v4-pro,zero_shot,Integer Overflow,Integer Overflow or Wraparound,CWE-190,exact
+VT-050,CVE-2026-7568,deepseek-v4-pro,zero_shot,Integer Overflow,Out-of-bounds Read | Integer Overflow or Wraparound,CWE-125 | CWE-190,exact
+VT-051,CVE-2026-8612,gpt-5.5,few_shot,Insecure Deserialization,Deserialization of Untrusted Data | Incorrect Permission Assignment for Critical Resource,CWE-502 | CWE-732,exact
+VT-052,CVE-2026-8745,gpt-5.5,zero_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-053,CVE-2026-42994,deepseek-v4-pro,few_shot,Embedded Malicious Code,Improper Control of Generation of Code ('Code Injection'),CWE-94,miss
+VT-054,CVE-2026-43535,deepseek-v4-pro,few_shot,Improper Authorization,Incorrect Privilege Assignment,CWE-266,family
+VT-055,CVE-2026-43527,claude-sonnet-4.6,zero_shot,Server-Side Request Forgery,Server-Side Request Forgery (SSRF) | Initialization of a Resource with an Insecure Default,CWE-918 | CWE-1188,exact
+VT-056,CVE-2026-45247,claude-sonnet-4.6,zero_shot,PHP Object Injection,Deserialization of Untrusted Data,CWE-502,exact
+VT-057,CVE-2024-47268,deepseek-v4-pro,few_shot,Missing Authorization,Missing Authorization,CWE-862,exact
+VT-058,CVE-2026-39827,deepseek-v4-pro,zero_shot,Resource Exhaustion,Improper Enforcement of Message Integrity During Transmission in a Communication Channel,CWE-924,miss
+VT-059,CVE-2026-46483,claude-sonnet-4.6,few_shot,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') | Improper Neutralization of Argument Delimiters in a Command ('Argument Injection'),CWE-78 | CWE-88,family
+VT-060,CVE-2026-39832,deepseek-v4-pro,zero_shot,Improper Authorization,Deserialization of Untrusted Data,CWE-502,miss
+VT-061,CVE-2026-8269,gpt-5.5,zero_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-062,CVE-2026-6253,deepseek-v4-pro,zero_shot,Improper Authorization,Insufficiently Protected Credentials,CWE-522,miss
+VT-063,CVE-2026-8265,gpt-5.5,zero_shot,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,family
+VT-064,CVE-2026-46151,claude-sonnet-4.6,zero_shot,Information Disclosure,Missing Release of Memory after Effective Lifetime,CWE-401,miss
+VT-065,CVE-2026-24072,gpt-5.5,zero_shot,Privilege Escalation,Improper Privilege Management,CWE-269,miss
+VT-066,CVE-2026-45249,claude-sonnet-4.6,zero_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-067,CVE-2026-43531,deepseek-v4-pro,zero_shot,Environment Variable Injection,External Control of System or Configuration Setting,CWE-15,family
+VT-068,CVE-2026-8830,deepseek-v4-pro,few_shot,Improper Authorization,Use of Client-Side Authentication,CWE-603,miss
+VT-069,CVE-2026-40004,deepseek-v4-pro,few_shot,Privilege Escalation,Uncontrolled Search Path Element,CWE-427,miss
+VT-070,CVE-2026-5223,gpt-5.5,zero_shot,Improper Link Resolution Before File Access,UNIX Symbolic Link (Symlink) Following,CWE-61,family
+VT-071,CVE-2026-40982,gpt-5.5,zero_shot,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-072,CVE-2026-47071,claude-sonnet-4.6,zero_shot,Uncontrolled Resource Consumption,Uncontrolled Resource Consumption,CWE-400,exact
+VT-073,CVE-2026-8269,deepseek-v4-pro,zero_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-074,CVE-2026-42308,gpt-5.5,zero_shot,Integer Overflow,Integer Overflow or Wraparound,CWE-190,exact
+VT-075,CVE-2026-5308,gpt-5.5,few_shot,Uncontrolled Resource Consumption,Uncontrolled Resource Consumption,CWE-400,exact
+VT-076,CVE-2026-31695,claude-sonnet-4.6,few_shot,Use-After-Free,Use After Free,CWE-416,exact
+VT-077,CVE-2026-31698,gpt-5.5,few_shot,Out-of-bounds Read,Out-of-bounds Write,CWE-787,family
+VT-078,CVE-2026-43089,deepseek-v4-pro,zero_shot,Information Leak,Missing Release of Memory after Effective Lifetime,CWE-401,miss
+VT-079,CVE-2026-6418,gpt-5.5,few_shot,Path Traversal,Absolute Path Traversal | Files or Directories Accessible to External Parties,CWE-36 | CWE-552,family
+VT-080,CVE-2026-8120,deepseek-v4-pro,few_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-081,CVE-2026-31695,deepseek-v4-pro,few_shot,Use-After-Free,Use After Free,CWE-416,exact
+VT-082,CVE-2026-6339,gpt-5.5,few_shot,Improper Input Validation,Origin Validation Error,CWE-346,miss
+VT-083,CVE-2026-45249,claude-sonnet-4.6,few_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-084,CVE-2026-6841,deepseek-v4-pro,few_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-085,CVE-2025-13755,deepseek-v4-pro,zero_shot,Insertion of Sensitive Information into Log File,Insertion of Sensitive Information into Log File,CWE-532,exact
+VT-086,CVE-2026-43097,claude-sonnet-4.6,zero_shot,Double Free,Double Free,CWE-415,exact
+VT-087,CVE-2026-9156,claude-sonnet-4.6,few_shot,Denial of Service,Missing Release of Resource after Effective Lifetime,CWE-772,miss
+VT-088,CVE-2026-42203,deepseek-v4-pro,zero_shot,Server-Side Template Injection,Improper Neutralization of Special Elements Used in a Template Engine,CWE-1336,exact
+VT-089,CVE-2026-41498,gpt-5.5,few_shot,Improper Authorization,Missing Authorization,CWE-862,family
+VT-090,CVE-2026-47310,gpt-5.5,few_shot,Use After Free,Use After Free,CWE-416,exact
+VT-091,CVE-2026-42309,deepseek-v4-pro,few_shot,Buffer Overflow,Heap-based Buffer Overflow,CWE-122,family
+VT-092,CVE-2026-21018,gpt-5.5,zero_shot,Out-of-bounds Write,Out-of-bounds Write,CWE-787,exact
+VT-093,CVE-2026-6735,deepseek-v4-pro,zero_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-094,CVE-2026-8728,deepseek-v4-pro,zero_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-095,CVE-2026-46146,claude-sonnet-4.6,few_shot,Improper Input Validation,Loop with Unreachable Exit Condition ('Infinite Loop'),CWE-835,miss
+VT-096,CVE-2026-47316,claude-sonnet-4.6,zero_shot,Improper Check or Handling of Exceptional Conditions,Improper Check or Handling of Exceptional Conditions,CWE-703,exact
+VT-097,CVE-2025-14179,deepseek-v4-pro,zero_shot,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'),CWE-89,exact
+VT-098,CVE-2025-10908,gpt-5.5,zero_shot,Authentication Bypass,Incorrect Authorization,CWE-863,miss
+VT-099,CVE-2026-42497,claude-sonnet-4.6,few_shot,Path Traversal,Improper Link Resolution Before File Access ('Link Following') | Incorrect Permission Assignment for Critical Resource,CWE-59 | CWE-732,miss
+VT-100,CVE-2026-28732,deepseek-v4-pro,zero_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-101,CVE-2026-32244,gpt-5.5,zero_shot,Information Disclosure,Exposure of Sensitive Information to an Unauthorized Actor | Use of Cache Containing Sensitive Information | Operation on a Resource after Expiration or Release,CWE-200 | CWE-524 | CWE-672,exact
+VT-102,CVE-2026-24072,deepseek-v4-pro,few_shot,Improper Authorization,Improper Privilege Management,CWE-269,family
+VT-103,CVE-2026-4873,gpt-5.5,few_shot,Improper TLS Enforcement,Improper Certificate Validation,CWE-295,miss
+VT-104,CVE-2026-39833,claude-sonnet-4.6,few_shot,Improper Authorization,Missing Authorization,CWE-862,family
+VT-105,CVE-2026-48685,deepseek-v4-pro,few_shot,Out-of-bounds Read,Improper Handling of Length Parameter Inconsistency,CWE-130,family
+VT-106,CVE-2026-42150,claude-sonnet-4.6,zero_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-107,CVE-2026-42216,deepseek-v4-pro,zero_shot,Buffer Over-read,Out-of-bounds Read,CWE-125,exact
+VT-108,CVE-2026-24214,deepseek-v4-pro,zero_shot,Integer Overflow,Integer Overflow or Wraparound,CWE-190,exact
+VT-109,CVE-2026-4480,gpt-5.5,zero_shot,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,family
+VT-110,CVE-2026-42051,claude-sonnet-4.6,zero_shot,Information Disclosure,Missing Authorization,CWE-862,miss
+VT-111,CVE-2026-7255,gpt-5.5,few_shot,Improper Restriction of Excessive Authentication Attempts,Improper Restriction of Excessive Authentication Attempts,CWE-307,exact
+VT-112,CVE-2025-10466,deepseek-v4-pro,zero_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-113,CVE-2026-43500,claude-sonnet-4.6,few_shot,Improper Input Validation,Out-of-bounds Write,CWE-787,miss
+VT-114,CVE-2026-7255,claude-sonnet-4.6,few_shot,Improper Restriction of Excessive Authentication Attempts,Improper Restriction of Excessive Authentication Attempts,CWE-307,exact
+VT-115,CVE-2026-8766,claude-sonnet-4.6,zero_shot,Information Disclosure,Exposure of Sensitive Information to an Unauthorized Actor | Improper Access Control,CWE-200 | CWE-284,exact
+VT-116,CVE-2026-42174,deepseek-v4-pro,zero_shot,Improper Authorization,Missing Authorization,CWE-862,family
+VT-117,CVE-2026-46595,deepseek-v4-pro,zero_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-118,CVE-2026-41640,deepseek-v4-pro,few_shot,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'),CWE-89,exact
+VT-119,CVE-2026-8202,claude-sonnet-4.6,few_shot,Uncontrolled Resource Consumption,Allocation of Resources Without Limits or Throttling,CWE-770,family
+VT-120,CVE-2026-9793,deepseek-v4-pro,zero_shot,Improper Verification of Cryptographic Signature,Improper Verification of Cryptographic Signature,CWE-347,exact
+VT-121,CVE-2026-46149,gpt-5.5,few_shot,Out-of-bounds Read,Uncontrolled Recursion,CWE-674,miss
+VT-122,CVE-2026-33862,deepseek-v4-pro,few_shot,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-123,CVE-2026-8270,gpt-5.5,few_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-124,CVE-2026-7735,deepseek-v4-pro,zero_shot,Buffer Overflow,Improper Restriction of Operations within the Bounds of a Memory Buffer | Buffer Copy without Checking Size of Input ('Classic Buffer Overflow'),CWE-119 | CWE-120,exact
+VT-125,CVE-2026-3471,gpt-5.5,zero_shot,Improper Input Validation,Improper Authorization in Handler for Custom URL Scheme,CWE-939,miss
+VT-126,CVE-2026-44468,gpt-5.5,few_shot,Insecure Permissions,Incorrect Default Permissions,CWE-276,family
+VT-127,CVE-2026-42297,deepseek-v4-pro,few_shot,Improper Authorization,Missing Authorization,CWE-862,family
+VT-128,CVE-2026-8768,gpt-5.5,few_shot,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-129,CVE-2026-40033,gpt-5.5,zero_shot,Heap Buffer Overflow,Heap-based Buffer Overflow,CWE-122,exact
+VT-130,CVE-2026-5405,deepseek-v4-pro,few_shot,Buffer Overflow,Out-of-bounds Write,CWE-787,family
+VT-131,CVE-2026-5545,claude-sonnet-4.6,zero_shot,Improper Authentication,Insufficient Session Expiration,CWE-613,miss
+VT-132,CVE-2026-8227,gpt-5.5,few_shot,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection') | Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-77 | CWE-78,exact
+VT-133,CVE-2026-46598,deepseek-v4-pro,few_shot,Improper Input Validation,Improper Validation of Array Index,CWE-129,family
+VT-134,CVE-2026-42264,claude-sonnet-4.6,few_shot,Prototype Pollution,Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution'),CWE-1321,exact
+VT-135,CVE-2026-5222,gpt-5.5,few_shot,Improper URL Normalization,Use of Non-Canonical URL Paths for Authorization Decisions,CWE-647,family
+VT-136,CVE-2026-1659,gpt-5.5,few_shot,Insufficient Input Validation,Allocation of Resources Without Limits or Throttling,CWE-770,miss
+VT-137,CVE-2026-45772,claude-sonnet-4.6,few_shot,Arbitrary Code Execution,Untrusted Search Path,CWE-426,miss
+VT-138,CVE-2026-46151,claude-sonnet-4.6,few_shot,Heap Information Disclosure,Missing Release of Memory after Effective Lifetime,CWE-401,miss
+VT-139,CVE-2026-5223,claude-sonnet-4.6,few_shot,Improper Link Resolution,UNIX Symbolic Link (Symlink) Following,CWE-61,family
+VT-140,CVE-2026-47310,claude-sonnet-4.6,zero_shot,Use After Free,Use After Free,CWE-416,exact
+VT-141,CVE-2024-47267,claude-sonnet-4.6,zero_shot,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-142,CVE-2026-4646,claude-sonnet-4.6,few_shot,Improper Input Validation,Improper Validation of Specified Type of Input,CWE-1287,family
+VT-143,CVE-2026-41863,deepseek-v4-pro,few_shot,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-144,CVE-2026-2254,claude-sonnet-4.6,few_shot,Improper Authorization,Incorrect Permission Assignment for Critical Resource,CWE-732,family
+VT-145,CVE-2026-43003,claude-sonnet-4.6,zero_shot,Code Execution via Malicious Image,Inclusion of Functionality from Untrusted Control Sphere,CWE-829,miss
+VT-146,CVE-2026-6341,claude-sonnet-4.6,zero_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-147,CVE-2026-39830,claude-sonnet-4.6,few_shot,Resource Leak,Improper Restriction of Operations within the Bounds of a Memory Buffer,CWE-119,miss
+VT-148,CVE-2026-40135,deepseek-v4-pro,zero_shot,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-77,exact
+VT-149,CVE-2026-0541,deepseek-v4-pro,zero_shot,Improper Input Validation,Incorrect Permission Assignment for Critical Resource,CWE-732,miss
+VT-150,CVE-2026-47313,deepseek-v4-pro,zero_shot,Uncontrolled Resource Consumption,Memory Allocation with Excessive Size Value,CWE-789,family
+VT-151,CVE-2026-41002,gpt-5.5,zero_shot,TOCTOU Race Condition,Time-of-check Time-of-use (TOCTOU) Race Condition,CWE-367,exact
+VT-152,CVE-2026-9796,deepseek-v4-pro,zero_shot,Time-of-check to time-of-use (TOCTOU),Time-of-check Time-of-use (TOCTOU) Race Condition,CWE-367,exact
+VT-153,CVE-2026-42508,deepseek-v4-pro,few_shot,Improper Certificate Validation,Improper Certificate Validation,CWE-295,exact
+VT-154,CVE-2026-46155,claude-sonnet-4.6,zero_shot,Out-of-Bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-155,CVE-2026-41501,gpt-5.5,zero_shot,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-77,exact
+VT-156,CVE-2026-8750,claude-sonnet-4.6,zero_shot,Information Disclosure,Exposure of Sensitive Information to an Unauthorized Actor | Improper Access Control,CWE-200 | CWE-284,exact
+VT-157,CVE-2026-5308,deepseek-v4-pro,zero_shot,Uncontrolled Resource Consumption,Uncontrolled Resource Consumption,CWE-400,exact
+VT-158,CVE-2026-6322,gpt-5.5,zero_shot,Improper Input Validation,Interpretation Conflict,CWE-436,miss
+VT-159,CVE-2025-41270,gpt-5.5,zero_shot,OS Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,exact
+VT-160,CVE-2026-49200,gpt-5.5,zero_shot,Cleartext Storage of Sensitive Information,Insertion of Sensitive Information into Log File,CWE-532,miss
+VT-161,CVE-2026-8745,claude-sonnet-4.6,zero_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-162,CVE-2026-43003,gpt-5.5,few_shot,Code Execution,Inclusion of Functionality from Untrusted Control Sphere,CWE-829,miss
+VT-163,CVE-2026-43535,deepseek-v4-pro,zero_shot,Improper Authorization,Incorrect Privilege Assignment,CWE-266,family
+VT-164,CVE-2024-47269,gpt-5.5,few_shot,Cleartext Transmission of Sensitive Information,Cleartext Transmission of Sensitive Information,CWE-319,exact
+VT-165,CVE-2026-41712,claude-sonnet-4.6,few_shot,Improper Authorization,Incorrect Default Permissions,CWE-276,miss
+VT-166,CVE-2026-6841,gpt-5.5,few_shot,Reflected Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-167,CVE-2026-2253,claude-sonnet-4.6,few_shot,XML External Entity (XXE) Injection,Improper Restriction of XML External Entity Reference,CWE-611,exact
+VT-168,CVE-2026-7692,deepseek-v4-pro,zero_shot,Command Injection,Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') | Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-74 | CWE-77,exact
+VT-169,CVE-2026-4524,claude-sonnet-4.6,few_shot,Improper Authorization,Authentication Bypass Using an Alternate Path or Channel,CWE-288,miss
+VT-170,CVE-2026-46597,claude-sonnet-4.6,few_shot,Improper Input Validation,Incorrect Type Conversion or Cast,CWE-704,miss
+VT-171,CVE-2026-42497,gpt-5.5,few_shot,Path Traversal,Improper Link Resolution Before File Access ('Link Following') | Incorrect Permission Assignment for Critical Resource,CWE-59 | CWE-732,miss
+VT-172,CVE-2026-6665,gpt-5.5,zero_shot,Stack Overflow,Stack-based Buffer Overflow,CWE-121,family
+VT-173,CVE-2026-41713,claude-sonnet-4.6,few_shot,Prompt Injection,Improper Neutralization of Special Elements Used in a Template Engine,CWE-1336,miss
+VT-174,CVE-2026-8269,claude-sonnet-4.6,zero_shot,Denial of Service,Improper Resource Shutdown or Release,CWE-404,miss
+VT-175,CVE-2026-6104,deepseek-v4-pro,few_shot,Out-of-bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-176,CVE-2026-8786,deepseek-v4-pro,few_shot,Improper Authorization,Improper Authorization | Authorization Bypass Through User-Controlled Key,CWE-285 | CWE-639,exact
+VT-177,CVE-2026-41641,claude-sonnet-4.6,few_shot,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') | Improper Access Control,CWE-89 | CWE-284,exact
+VT-178,CVE-2026-47314,claude-sonnet-4.6,few_shot,Out-of-bounds Write,Out-of-bounds Write,CWE-787,exact
+VT-179,CVE-2026-2254,deepseek-v4-pro,zero_shot,Improper Authorization,Incorrect Permission Assignment for Critical Resource,CWE-732,family
+VT-180,CVE-2026-9803,deepseek-v4-pro,few_shot,Improper Input Validation,Out-of-bounds Read,CWE-125,miss
+VT-181,CVE-2026-46508,gpt-5.5,few_shot,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-77,exact
+VT-182,CVE-2026-6722,claude-sonnet-4.6,few_shot,Use-After-Free,Use After Free,CWE-416,exact
+VT-183,CVE-2026-24213,gpt-5.5,few_shot,Out-of-bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-184,CVE-2026-3074,gpt-5.5,few_shot,Improper Access Control,Authorization Bypass Through User-Controlled Key,CWE-639,family
+VT-185,CVE-2026-45772,claude-sonnet-4.6,zero_shot,Arbitrary Code Execution,Untrusted Search Path,CWE-426,miss
+VT-186,CVE-2026-8765,deepseek-v4-pro,few_shot,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-187,CVE-2026-40564,claude-sonnet-4.6,zero_shot,Server-Side Request Forgery (SSRF),Files or Directories Accessible to External Parties | Server-Side Request Forgery (SSRF),CWE-552 | CWE-918,exact
+VT-188,CVE-2026-6342,claude-sonnet-4.6,zero_shot,Improper Authorization,Incorrect Authorization,CWE-863,family
+VT-189,CVE-2026-8159,gpt-5.5,few_shot,Regular Expression Denial of Service,Inefficient Regular Expression Complexity,CWE-1333,exact
+VT-190,CVE-2026-43620,gpt-5.5,zero_shot,Out-of-bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-191,CVE-2023-54347,gpt-5.5,few_shot,Authentication Brute Force,Improper Restriction of Excessive Authentication Attempts,CWE-307,family
+VT-192,CVE-2026-9795,deepseek-v4-pro,few_shot,Improper Authorization,Incorrect Privilege Assignment,CWE-266,family
+VT-193,CVE-2026-6063,gpt-5.5,few_shot,Improper Access Control,Authorization Bypass Through User-Controlled Key,CWE-639,family
+VT-194,CVE-2026-7568,claude-sonnet-4.6,few_shot,Integer Overflow,Out-of-bounds Read | Integer Overflow or Wraparound,CWE-125 | CWE-190,exact
+VT-195,CVE-2026-47312,deepseek-v4-pro,zero_shot,Use-After-Free,Release of Invalid Pointer or Reference,CWE-763,family
+VT-196,CVE-2026-39828,claude-sonnet-4.6,zero_shot,Improper Authorization,Improper Certificate Validation,CWE-295,miss
+VT-197,CVE-2026-45035,gpt-5.5,zero_shot,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,family
+VT-198,CVE-2024-36333,deepseek-v4-pro,zero_shot,DLL Hijacking,Uncontrolled Search Path Element,CWE-427,exact
+VT-199,CVE-2026-7607,claude-sonnet-4.6,zero_shot,Buffer Overflow,Improper Restriction of Operations within the Bounds of a Memory Buffer | Buffer Copy without Checking Size of Input ('Classic Buffer Overflow'),CWE-119 | CWE-120,family
+VT-200,CVE-2026-46745,gpt-5.5,zero_shot,LDAP Injection,Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection'),CWE-90,exact

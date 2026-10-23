@@ -1,0 +1,1287 @@
+{
+  "gpt-5.5": [
+    {
+      "cve_id": "CVE-2026-4152",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "GIMP JP2 File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of GIMP. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.\n\nThe specific flaw exists within the parsing of JP2 files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28863.",
+      "raw_response": "{\"vulnerability_type\":\"Heap-based Buffer Overflow\",\"attack_vector\":\"Network\",\"affected_component\":\"GIMP JP2 file parsing\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Heap-based Buffer Overflow",
+        "attack_vector": "Network",
+        "affected_component": "GIMP JP2 file parsing",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 6.887
+    },
+    {
+      "cve_id": "CVE-2026-25917",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "Dag Authors, who normally should not be able to execute code in the webserver context could craft XCom payload causing the webserver to execute arbitrary code. Since Dag Authors are already highly trusted, severity of this issue is Low.\n\nUsers are recommended to upgrade to Apache Airflow 3.2.0, which fixes the issue.",
+      "raw_response": "{\"vulnerability_type\":\"Code Injection\",\"attack_vector\":\"Network\",\"affected_component\":\"Apache Airflow webserver XCom payload handling\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Code Injection",
+        "attack_vector": "Network",
+        "affected_component": "Apache Airflow webserver XCom payload handling",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.212
+    },
+    {
+      "cve_id": "CVE-2026-5526",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "A security flaw has been discovered in Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53/192.168.0.1. Affected by this vulnerability is an unknown functionality of the file /bin/httpd. The manipulation results in improper access controls. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks.",
+      "raw_response": "{\"vulnerability_type\":\"Improper Access Control\",\"attack_vector\":\"Network\",\"affected_component\":\"Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53 /bin/httpd\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": "Network",
+        "affected_component": "Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53 /bin/httpd",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "time": 2.315
+    },
+    {
+      "cve_id": "CVE-2026-28390",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "Issue summary: During processing of a crafted CMS EnvelopedData message\nwith KeyTransportRecipientInfo a NULL pointer dereference can happen.\n\nImpact summary: Applications that process attacker-controlled CMS data may\ncrash before authentication or cryptographic operations occur resulting in\nDenial of Service.\n\nWhen a CMS EnvelopedData message that uses KeyTransportRecipientInfo with\nRSA-OAEP encryption is processed, the optional parameters field of\nRSA-OAEP SourceFunc algorithm identifier is examined without checking\nfor its presence. This results in a NULL pointer dereference if the field\nis missing.\n\nApplications and services that call CMS_decrypt() on untrusted input\n(e.g., S/MIME processing or CMS-based protocols) are vulnerable.\n\nThe FIPS modules in 3.6, 3.5, 3.4, 3.3 and 3.0 are not affected by this\nissue, as the affected code is outside the OpenSSL FIPS module boundary.",
+      "raw_response": "{\n  \"vulnerability_type\": \"NULL Pointer Dereference\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo and RSA-OAEP\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "NULL Pointer Dereference",
+        "attack_vector": "Network",
+        "affected_component": "OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo and RSA-OAEP",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.643
+    },
+    {
+      "cve_id": "CVE-2026-6539",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "Notepad++ 8.9.3 contains a format string injection vulnerability in the Find Results panel handler that allows attackers to cause denial of service and information disclosure by crafting a malicious nativeLang.xml language pack file. Attackers can distribute a poisoned language pack through community channels that triggers format string interpretation when a user performs search operations, leading to access violations and potential leakage of stack or register contents.",
+      "raw_response": "{\"vulnerability_type\":\"Format String Injection\",\"attack_vector\":\"Local\",\"affected_component\":\"Notepad++ 8.9.3 Find Results panel handler with nativeLang.xml language pack file\",\"confidentiality_impact\":\"Low\",\"integrity_impact\":\"None\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Format String Injection",
+        "attack_vector": "Local",
+        "affected_component": "Notepad++ 8.9.3 Find Results panel handler with nativeLang.xml language pack file",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.769
+    },
+    {
+      "cve_id": "CVE-2026-42171",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 sometimes uses the Low IL temp directory when executing as SYSTEM, allowing local attackers to gain privileges (if they can cause my_GetTempFileName to return 0, as shown in the references).",
+      "raw_response": "{\"vulnerability_type\":\"Privilege Escalation\",\"attack_vector\":\"Local\",\"affected_component\":\"NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 my_GetTempFileName / Low IL temp directory handling\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Privilege Escalation",
+        "attack_vector": "Local",
+        "affected_component": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 my_GetTempFileName / Low IL temp directory handling",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 1.894
+    },
+    {
+      "cve_id": "CVE-2026-34166",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.25.3, the replace filter in LiquidJS incorrectly accounts for memory usage when the memoryLimit option is enabled. It charges str.length + pattern.length + replacement.length bytes to the memory limiter, but the actual output from str.split(pattern).join(replacement) can be quadratically larger when the pattern occurs many times in the input string. This allows an attacker who controls template content to bypass the memoryLimit DoS protection with approximately 2,500x amplification, potentially causing out-of-memory conditions. This vulnerability is fixed in 10.25.3.",
+      "raw_response": "{\"vulnerability_type\":\"Uncontrolled Resource Consumption\",\"attack_vector\":null,\"affected_component\":\"LiquidJS replace filter with memoryLimit option prior to 10.25.3\",\"confidentiality_impact\":\"None\",\"integrity_impact\":\"None\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Uncontrolled Resource Consumption",
+        "attack_vector": null,
+        "affected_component": "LiquidJS replace filter with memoryLimit option prior to 10.25.3",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.45
+    },
+    {
+      "cve_id": "CVE-2026-29138",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "SEPPmail Secure Email Gateway before version 15.0.3 allows attackers with a specially crafted email address to claim another user's PGP signature as their own.",
+      "raw_response": "{\"vulnerability_type\":\"Improper Authorization\",\"attack_vector\":\"Network\",\"affected_component\":\"SEPPmail Secure Email Gateway before version 15.0.3 PGP signature handling\",\"confidentiality_impact\":\"None\",\"integrity_impact\":\"Low\",\"availability_impact\":\"None\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "SEPPmail Secure Email Gateway before version 15.0.3 PGP signature handling",
+        "confidentiality_impact": "None",
+        "integrity_impact": "Low",
+        "availability_impact": "None"
+      },
+      "time": 2.272
+    },
+    {
+      "cve_id": "CVE-2026-40606",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "mitmproxy is a interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers and mitmweb is a web-based interface for mitmproxy. In mitmproxy 12.2.1 and below, the builtin LDAP proxy authentication does not correctly sanitize the username when querying the LDAP server. This allows a malicious client to bypass authentication. Only mitmproxy instances using the proxyauth option with LDAP are affected. This option is not enabled by default. The vulnerability has been fixed in mitmproxy 12.2.2 and above.",
+      "raw_response": "{\"vulnerability_type\":\"LDAP Injection\",\"attack_vector\":\"Network\",\"affected_component\":\"mitmproxy 12.2.1 and below builtin LDAP proxy authentication with proxyauth option\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":\"None\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "LDAP Injection",
+        "attack_vector": "Network",
+        "affected_component": "mitmproxy 12.2.1 and below builtin LDAP proxy authentication with proxyauth option",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": "None"
+      },
+      "time": 1.716
+    },
+    {
+      "cve_id": "CVE-2026-35626",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "OpenClaw before 2026.3.22 contains an unauthenticated resource exhaustion vulnerability in voice call webhook handling that buffers request bodies before provider signature checks. Attackers can send large or malicious webhook requests to exhaust server resources without authentication by bypassing signature validation.",
+      "raw_response": "{\"vulnerability_type\":\"Resource Exhaustion\",\"attack_vector\":\"Network\",\"affected_component\":\"OpenClaw before 2026.3.22 voice call webhook handling\",\"confidentiality_impact\":\"None\",\"integrity_impact\":\"None\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Resource Exhaustion",
+        "attack_vector": "Network",
+        "affected_component": "OpenClaw before 2026.3.22 voice call webhook handling",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.186
+    },
+    {
+      "cve_id": "CVE-2026-33207",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "DataEase is an open-source data visualization and analytics platform. Versions 2.10.20 and below contain a SQL injection vulnerability in the /datasource/getTableField endpoint. The getTableFiledSql method in CalciteProvider.java incorporates the tableName parameter directly into SQL query strings using String.format without parameterization or sanitization. Although DatasourceServer.java validates that the table name exists in the datasource, an attacker can bypass this by first registering an API datasource with a malicious deTableName, which is then returned by getTables and passes the validation check. An authenticated attacker can execute arbitrary SQL commands, enabling error-based extraction of sensitive database information. This issue has been fixed in version 2.10.21.",
+      "raw_response": "{\"vulnerability_type\":\"SQL Injection\",\"attack_vector\":\"Network\",\"affected_component\":\"DataEase versions 2.10.20 and below /datasource/getTableField endpoint; getTableFiledSql method in CalciteProvider.java\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "SQL Injection",
+        "attack_vector": "Network",
+        "affected_component": "DataEase versions 2.10.20 and below /datasource/getTableField endpoint; getTableFiledSql method in CalciteProvider.java",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": null
+      },
+      "time": 2.082
+    },
+    {
+      "cve_id": "CVE-2026-6985",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "A weakness has been identified in Cesanta Mongoose up to 7.20. This vulnerability affects the function handle_opt of the file /src/net_builtin.c of the component TCP Option Handler. This manipulation of the argument optlen causes infinite loop. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 7.21 is able to resolve this issue. Upgrading the affected component is advised. VulDB has contacted the vendor early and they confirmed quickly, that this issue got fixed already.",
+      "raw_response": "{\"vulnerability_type\":\"Infinite Loop\",\"attack_vector\":\"Network\",\"affected_component\":\"Cesanta Mongoose up to 7.20 TCP Option Handler handle_opt in /src/net_builtin.c\",\"confidentiality_impact\":\"None\",\"integrity_impact\":\"None\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Infinite Loop",
+        "attack_vector": "Network",
+        "affected_component": "Cesanta Mongoose up to 7.20 TCP Option Handler handle_opt in /src/net_builtin.c",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.76
+    },
+    {
+      "cve_id": "CVE-2026-39421",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "MaxKB is an open-source AI assistant for enterprise. Versions 2.7.1 and below contain a sandbox escape vulnerability in the ToolExecutor component. By leveraging Python's ctypes library to execute raw system calls, an authenticated attacker with workspace privileges can bypass the LD_PRELOAD-based sandbox.so module to achieve arbitrary code execution via direct kernel system calls, enabling full network exfiltration and container compromise. The library intercepts critical standard system functions such as execve, system, connect, and open. It also intercepts mprotect to prevent PROT_EXEC (executable memory) allocations within the sandboxed Python processes, but pkey_mprotect is not blocked. This issue has been fixed in version 2.8.0.",
+      "raw_response": "{\"vulnerability_type\":\"Sandbox Escape\",\"attack_vector\":\"Network\",\"affected_component\":\"MaxKB versions 2.7.1 and below ToolExecutor component / LD_PRELOAD-based sandbox.so module\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Sandbox Escape",
+        "attack_vector": "Network",
+        "affected_component": "MaxKB versions 2.7.1 and below ToolExecutor component / LD_PRELOAD-based sandbox.so module",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 1.604
+    },
+    {
+      "cve_id": "CVE-2026-40518",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "ByteDance DeerFlow before commit 2176b2b contains a path traversal and arbitrary file write vulnerability in bootstrap-mode custom-agent creation where the agent name validation is bypassed. Attackers can supply traversal-style values or absolute paths as the agent name to influence directory creation and write files outside the intended custom-agent directory, potentially achieving arbitrary file write on the system subject to filesystem permissions.",
+      "raw_response": "{\"vulnerability_type\":\"Path Traversal\",\"attack_vector\":null,\"affected_component\":\"ByteDance DeerFlow before commit 2176b2b bootstrap-mode custom-agent creation\",\"confidentiality_impact\":\"None\",\"integrity_impact\":\"High\",\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Path Traversal",
+        "attack_vector": null,
+        "affected_component": "ByteDance DeerFlow before commit 2176b2b bootstrap-mode custom-agent creation",
+        "confidentiality_impact": "None",
+        "integrity_impact": "High",
+        "availability_impact": null
+      },
+      "time": 1.988
+    },
+    {
+      "cve_id": "CVE-2026-40385",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "In libexif through 0.6.25, an unsigned 32bit integer overflow in Nikon MakerNote handling could be used by local attackers to cause crashes or information leaks. This only affects 32bit systems.",
+      "raw_response": "{\"vulnerability_type\":\"Integer Overflow\",\"attack_vector\":\"Local\",\"affected_component\":\"libexif through 0.6.25 Nikon MakerNote handling on 32bit systems\",\"confidentiality_impact\":\"Low\",\"integrity_impact\":\"None\",\"availability_impact\":\"Low\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Integer Overflow",
+        "attack_vector": "Local",
+        "affected_component": "libexif through 0.6.25 Nikon MakerNote handling on 32bit systems",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "Low"
+      },
+      "time": 1.627
+    },
+    {
+      "cve_id": "CVE-2026-31527",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndriver core: platform: use generic driver_override infrastructure\n\nWhen a driver is probed through __driver_attach(), the bus' match()\ncallback is called without the device lock held, thus accessing the\ndriver_override field without a lock, which can cause a UAF.\n\nFix this by using the driver-core driver_override infrastructure taking\ncare of proper locking internally.\n\nNote that calling match() from __driver_attach() without the device lock\nheld is intentional. [1]",
+      "raw_response": "{\"vulnerability_type\":\"Use-After-Free\",\"attack_vector\":\"Local\",\"affected_component\":\"Linux kernel driver core platform driver_override infrastructure\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Use-After-Free",
+        "attack_vector": "Local",
+        "affected_component": "Linux kernel driver core platform driver_override infrastructure",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": "High"
+      },
+      "time": 1.592
+    },
+    {
+      "cve_id": "CVE-2026-5570",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "A vulnerability was determined in Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30. The affected element is the function index_config of the file /LoginCB. This manipulation causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "raw_response": "{\"vulnerability_type\":\"Improper Authentication\",\"attack_vector\":\"Network\",\"affected_component\":\"Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 index_config function in /LoginCB\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authentication",
+        "attack_vector": "Network",
+        "affected_component": "Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 index_config function in /LoginCB",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "time": 1.937
+    },
+    {
+      "cve_id": "CVE-2025-59709",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "An issue was discovered in Biztalk360 through 11.5. because of mishandling of user-provided input in a path to be read by the server, a Super User attacker is able to read files on the system and/or coerce an authentication from the service, aka Directory Traversal.",
+      "raw_response": "{\"vulnerability_type\":\"Path Traversal\",\"attack_vector\":\"Network\",\"affected_component\":\"Biztalk360 through 11.5\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"None\",\"availability_impact\":\"None\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Path Traversal",
+        "attack_vector": "Network",
+        "affected_component": "Biztalk360 through 11.5",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "time": 1.653
+    },
+    {
+      "cve_id": "CVE-2026-41382",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "OpenClaw before 2026.3.31 contains an authorization bypass vulnerability in Discord voice ingress that allows attackers to bypass channel and member allowlist restrictions. Attackers can exploit stale-role validation gaps and improper channel name validation to gain unauthorized access to restricted voice channels.",
+      "raw_response": "{\"vulnerability_type\":\"Authorization Bypass\",\"attack_vector\":\"Network\",\"affected_component\":\"OpenClaw before 2026.3.31 Discord voice ingress\",\"confidentiality_impact\":\"Low\",\"integrity_impact\":\"None\",\"availability_impact\":\"None\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Authorization Bypass",
+        "attack_vector": "Network",
+        "affected_component": "OpenClaw before 2026.3.31 Discord voice ingress",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "time": 1.641
+    },
+    {
+      "cve_id": "CVE-2026-34951",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "Workbench is a suite of tools for administrators and developers to interact with Salesforce.com organizations via the Force.com APIs. Prior to 65.0.0, Workbench contains a reflected cross-site scripting vulnerability via the footerScripts parameter, which does not sanitize user-supplied input before rendering it in the page response. Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Workbench allows XSS Targeting Error Pages. This vulnerability is fixed in 65.0.0.",
+      "raw_response": "{\"vulnerability_type\":\"Cross-Site Scripting\",\"attack_vector\":\"Network\",\"affected_component\":\"Workbench footerScripts parameter / error pages prior to 65.0.0\",\"confidentiality_impact\":\"Low\",\"integrity_impact\":\"Low\",\"availability_impact\":\"None\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Cross-Site Scripting",
+        "attack_vector": "Network",
+        "affected_component": "Workbench footerScripts parameter / error pages prior to 65.0.0",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "Low",
+        "availability_impact": "None"
+      },
+      "time": 1.963
+    },
+    {
+      "cve_id": "CVE-2026-5188",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "An integer underflow issue exists in wolfSSL when parsing the Subject Alternative Name (SAN) extension of X.509 certificates. A malformed certificate can specify an entry length larger than the enclosing sequence, causing the internal length counter to wrap during parsing. This results in incorrect handling of certificate data. The issue is limited to configurations using the original ASN.1 parsing implementation which is off by default.",
+      "raw_response": "{\"vulnerability_type\":\"Integer Underflow\",\"attack_vector\":\"Network\",\"affected_component\":\"wolfSSL original ASN.1 parsing implementation for X.509 Subject Alternative Name (SAN) extension\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Integer Underflow",
+        "attack_vector": "Network",
+        "affected_component": "wolfSSL original ASN.1 parsing implementation for X.509 Subject Alternative Name (SAN) extension",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "time": 1.748
+    },
+    {
+      "cve_id": "CVE-2026-32957",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "SD-330AC and AMC Manager provided by silex technology, Inc. contain a missing authentication for critical function issue on firmware maintenance. Arbitrary file may be uploaded on the device without authentication.",
+      "raw_response": "{\"vulnerability_type\":\"Missing Authentication for Critical Function\",\"attack_vector\":\"Network\",\"affected_component\":\"SD-330AC and AMC Manager firmware maintenance\",\"confidentiality_impact\":null,\"integrity_impact\":\"High\",\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Missing Authentication for Critical Function",
+        "attack_vector": "Network",
+        "affected_component": "SD-330AC and AMC Manager firmware maintenance",
+        "confidentiality_impact": null,
+        "integrity_impact": "High",
+        "availability_impact": null
+      },
+      "time": 1.744
+    },
+    {
+      "cve_id": "CVE-2026-7030",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "A security vulnerability has been detected in Tenda F456 1.0.0.5. This affects the function fromRouteStatic of the file /goform/RouteStatic. The manipulation of the argument page leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "raw_response": "{\"vulnerability_type\":\"Buffer Overflow\",\"attack_vector\":\"Network\",\"affected_component\":\"Tenda F456 1.0.0.5 fromRouteStatic function in /goform/RouteStatic\",\"confidentiality_impact\":null,\"integrity_impact\":null,\"availability_impact\":null}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Buffer Overflow",
+        "attack_vector": "Network",
+        "affected_component": "Tenda F456 1.0.0.5 fromRouteStatic function in /goform/RouteStatic",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "time": 1.867
+    },
+    {
+      "cve_id": "CVE-2026-25908",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "Dell Alienware Command Center (AWCC), versions prior to 6.13.8.0, contain an Execution with Unnecessary Privileges vulnerability in the AWCC. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
+      "raw_response": "{\"vulnerability_type\":\"Execution with Unnecessary Privileges\",\"attack_vector\":\"Local\",\"affected_component\":\"Dell Alienware Command Center (AWCC) prior to 6.13.8.0\",\"confidentiality_impact\":\"High\",\"integrity_impact\":\"High\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Execution with Unnecessary Privileges",
+        "attack_vector": "Local",
+        "affected_component": "Dell Alienware Command Center (AWCC) prior to 6.13.8.0",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 1.928
+    },
+    {
+      "cve_id": "CVE-2026-30999",
+      "prompt_condition": "zero_shot",
+      "model": "gpt-5.5",
+      "description": "A heap buffer overflow in the av_bprint_finalize() function of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
+      "raw_response": "{\"vulnerability_type\":\"Heap Buffer Overflow\",\"attack_vector\":null,\"affected_component\":\"FFmpeg v8.0.1 av_bprint_finalize() function\",\"confidentiality_impact\":\"None\",\"integrity_impact\":\"None\",\"availability_impact\":\"High\"}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Heap Buffer Overflow",
+        "attack_vector": null,
+        "affected_component": "FFmpeg v8.0.1 av_bprint_finalize() function",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.755
+    }
+  ],
+  "claude-sonnet-4.6": [
+    {
+      "cve_id": "CVE-2026-4152",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "GIMP JP2 File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of GIMP. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.\n\nThe specific flaw exists within the parsing of JP2 files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28863.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Heap-based Buffer Overflow\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"GIMP JP2 file parsing\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Heap-based Buffer Overflow",
+        "attack_vector": "Network",
+        "affected_component": "GIMP JP2 file parsing",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 3.507
+    },
+    {
+      "cve_id": "CVE-2026-25917",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "Dag Authors, who normally should not be able to execute code in the webserver context could craft XCom payload causing the webserver to execute arbitrary code. Since Dag Authors are already highly trusted, severity of this issue is Low.\n\nUsers are recommended to upgrade to Apache Airflow 3.2.0, which fixes the issue.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Code Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Apache Airflow webserver XCom payload handling\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"Low\",\n  \"availability_impact\": \"Low\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Code Injection",
+        "attack_vector": "Network",
+        "affected_component": "Apache Airflow webserver XCom payload handling",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "Low",
+        "availability_impact": "Low"
+      },
+      "time": 2.176
+    },
+    {
+      "cve_id": "CVE-2026-5526",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "A security flaw has been discovered in Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53/192.168.0.1. Affected by this vulnerability is an unknown functionality of the file /bin/httpd. The manipulation results in improper access controls. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Access Control\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Tenda 4G03 Pro /bin/httpd\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": "Network",
+        "affected_component": "Tenda 4G03 Pro /bin/httpd",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.062
+    },
+    {
+      "cve_id": "CVE-2026-28390",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "Issue summary: During processing of a crafted CMS EnvelopedData message\nwith KeyTransportRecipientInfo a NULL pointer dereference can happen.\n\nImpact summary: Applications that process attacker-controlled CMS data may\ncrash before authentication or cryptographic operations occur resulting in\nDenial of Service.\n\nWhen a CMS EnvelopedData message that uses KeyTransportRecipientInfo with\nRSA-OAEP encryption is processed, the optional parameters field of\nRSA-OAEP SourceFunc algorithm identifier is examined without checking\nfor its presence. This results in a NULL pointer dereference if the field\nis missing.\n\nApplications and services that call CMS_decrypt() on untrusted input\n(e.g., S/MIME processing or CMS-based protocols) are vulnerable.\n\nThe FIPS modules in 3.6, 3.5, 3.4, 3.3 and 3.0 are not affected by this\nissue, as the affected code is outside the OpenSSL FIPS module boundary.",
+      "raw_response": "{\n  \"vulnerability_type\": \"NULL Pointer Dereference\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"OpenSSL CMS_decrypt() - CMS EnvelopedData KeyTransportRecipientInfo RSA-OAEP processing\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "NULL Pointer Dereference",
+        "attack_vector": "Network",
+        "affected_component": "OpenSSL CMS_decrypt() - CMS EnvelopedData KeyTransportRecipientInfo RSA-OAEP processing",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.374
+    },
+    {
+      "cve_id": "CVE-2026-6539",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "Notepad++ 8.9.3 contains a format string injection vulnerability in the Find Results panel handler that allows attackers to cause denial of service and information disclosure by crafting a malicious nativeLang.xml language pack file. Attackers can distribute a poisoned language pack through community channels that triggers format string interpretation when a user performs search operations, leading to access violations and potential leakage of stack or register contents.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Format String Injection\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"Notepad++ 8.9.3 Find Results panel handler\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Format String Injection",
+        "attack_vector": "Local",
+        "affected_component": "Notepad++ 8.9.3 Find Results panel handler",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.101
+    },
+    {
+      "cve_id": "CVE-2026-42171",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 sometimes uses the Low IL temp directory when executing as SYSTEM, allowing local attackers to gain privileges (if they can cause my_GetTempFileName to return 0, as shown in the references).",
+      "raw_response": "{\n  \"vulnerability_type\": \"Privilege Escalation\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 - my_GetTempFileName\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Privilege Escalation",
+        "attack_vector": "Local",
+        "affected_component": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 - my_GetTempFileName",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.341
+    },
+    {
+      "cve_id": "CVE-2026-34166",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.25.3, the replace filter in LiquidJS incorrectly accounts for memory usage when the memoryLimit option is enabled. It charges str.length + pattern.length + replacement.length bytes to the memory limiter, but the actual output from str.split(pattern).join(replacement) can be quadratically larger when the pattern occurs many times in the input string. This allows an attacker who controls template content to bypass the memoryLimit DoS protection with approximately 2,500x amplification, potentially causing out-of-memory conditions. This vulnerability is fixed in 10.25.3.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Denial of Service\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"LiquidJS replace filter (memoryLimit option)\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Denial of Service",
+        "attack_vector": "Network",
+        "affected_component": "LiquidJS replace filter (memoryLimit option)",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.051
+    },
+    {
+      "cve_id": "CVE-2026-29138",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "SEPPmail Secure Email Gateway before version 15.0.3 allows attackers with a specially crafted email address to claim another user's PGP signature as their own.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"SEPPmail Secure Email Gateway\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "SEPPmail Secure Email Gateway",
+        "confidentiality_impact": "None",
+        "integrity_impact": "High",
+        "availability_impact": "None"
+      },
+      "time": 2.06
+    },
+    {
+      "cve_id": "CVE-2026-40606",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "mitmproxy is a interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers and mitmweb is a web-based interface for mitmproxy. In mitmproxy 12.2.1 and below, the builtin LDAP proxy authentication does not correctly sanitize the username when querying the LDAP server. This allows a malicious client to bypass authentication. Only mitmproxy instances using the proxyauth option with LDAP are affected. This option is not enabled by default. The vulnerability has been fixed in mitmproxy 12.2.2 and above.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Input Validation\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"mitmproxy 12.2.1 builtin LDAP proxy authentication (proxyauth option)\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Input Validation",
+        "attack_vector": "Network",
+        "affected_component": "mitmproxy 12.2.1 builtin LDAP proxy authentication (proxyauth option)",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "None"
+      },
+      "time": 2.11
+    },
+    {
+      "cve_id": "CVE-2026-35626",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "OpenClaw before 2026.3.22 contains an unauthenticated resource exhaustion vulnerability in voice call webhook handling that buffers request bodies before provider signature checks. Attackers can send large or malicious webhook requests to exhaust server resources without authentication by bypassing signature validation.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Resource Exhaustion\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"OpenClaw voice call webhook handling\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Resource Exhaustion",
+        "attack_vector": "Network",
+        "affected_component": "OpenClaw voice call webhook handling",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 3.42
+    },
+    {
+      "cve_id": "CVE-2026-33207",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "DataEase is an open-source data visualization and analytics platform. Versions 2.10.20 and below contain a SQL injection vulnerability in the /datasource/getTableField endpoint. The getTableFiledSql method in CalciteProvider.java incorporates the tableName parameter directly into SQL query strings using String.format without parameterization or sanitization. Although DatasourceServer.java validates that the table name exists in the datasource, an attacker can bypass this by first registering an API datasource with a malicious deTableName, which is then returned by getTables and passes the validation check. An authenticated attacker can execute arbitrary SQL commands, enabling error-based extraction of sensitive database information. This issue has been fixed in version 2.10.21.",
+      "raw_response": "{\n  \"vulnerability_type\": \"SQL Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"DataEase /datasource/getTableField endpoint, getTableFiledSql method in CalciteProvider.java\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "SQL Injection",
+        "attack_vector": "Network",
+        "affected_component": "DataEase /datasource/getTableField endpoint, getTableFiledSql method in CalciteProvider.java",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.077
+    },
+    {
+      "cve_id": "CVE-2026-6985",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "A weakness has been identified in Cesanta Mongoose up to 7.20. This vulnerability affects the function handle_opt of the file /src/net_builtin.c of the component TCP Option Handler. This manipulation of the argument optlen causes infinite loop. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 7.21 is able to resolve this issue. Upgrading the affected component is advised. VulDB has contacted the vendor early and they confirmed quickly, that this issue got fixed already.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Infinite Loop\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Cesanta Mongoose up to 7.20 - handle_opt function in /src/net_builtin.c (TCP Option Handler)\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Infinite Loop",
+        "attack_vector": "Network",
+        "affected_component": "Cesanta Mongoose up to 7.20 - handle_opt function in /src/net_builtin.c (TCP Option Handler)",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.323
+    },
+    {
+      "cve_id": "CVE-2026-39421",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "MaxKB is an open-source AI assistant for enterprise. Versions 2.7.1 and below contain a sandbox escape vulnerability in the ToolExecutor component. By leveraging Python's ctypes library to execute raw system calls, an authenticated attacker with workspace privileges can bypass the LD_PRELOAD-based sandbox.so module to achieve arbitrary code execution via direct kernel system calls, enabling full network exfiltration and container compromise. The library intercepts critical standard system functions such as execve, system, connect, and open. It also intercepts mprotect to prevent PROT_EXEC (executable memory) allocations within the sandboxed Python processes, but pkey_mprotect is not blocked. This issue has been fixed in version 2.8.0.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Sandbox Escape\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"MaxKB ToolExecutor component (sandbox.so LD_PRELOAD-based sandbox)\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Sandbox Escape",
+        "attack_vector": "Network",
+        "affected_component": "MaxKB ToolExecutor component (sandbox.so LD_PRELOAD-based sandbox)",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.428
+    },
+    {
+      "cve_id": "CVE-2026-40518",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "ByteDance DeerFlow before commit 2176b2b contains a path traversal and arbitrary file write vulnerability in bootstrap-mode custom-agent creation where the agent name validation is bypassed. Attackers can supply traversal-style values or absolute paths as the agent name to influence directory creation and write files outside the intended custom-agent directory, potentially achieving arbitrary file write on the system subject to filesystem permissions.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Path Traversal\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"ByteDance DeerFlow bootstrap-mode custom-agent creation (agent name validation)\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"Low\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Path Traversal",
+        "attack_vector": "Network",
+        "affected_component": "ByteDance DeerFlow bootstrap-mode custom-agent creation (agent name validation)",
+        "confidentiality_impact": "None",
+        "integrity_impact": "High",
+        "availability_impact": "Low"
+      },
+      "time": 2.063
+    },
+    {
+      "cve_id": "CVE-2026-40385",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "In libexif through 0.6.25, an unsigned 32bit integer overflow in Nikon MakerNote handling could be used by local attackers to cause crashes or information leaks. This only affects 32bit systems.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Integer Overflow\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"libexif 0.6.25 - Nikon MakerNote handling\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"Low\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Integer Overflow",
+        "attack_vector": "Local",
+        "affected_component": "libexif 0.6.25 - Nikon MakerNote handling",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "Low"
+      },
+      "time": 2.649
+    },
+    {
+      "cve_id": "CVE-2026-31527",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndriver core: platform: use generic driver_override infrastructure\n\nWhen a driver is probed through __driver_attach(), the bus' match()\ncallback is called without the device lock held, thus accessing the\ndriver_override field without a lock, which can cause a UAF.\n\nFix this by using the driver-core driver_override infrastructure taking\ncare of proper locking internally.\n\nNote that calling match() from __driver_attach() without the device lock\nheld is intentional. [1]",
+      "raw_response": "{\n  \"vulnerability_type\": \"Use-After-Free\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"Linux kernel driver core platform bus driver_override handling in __driver_attach()\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Use-After-Free",
+        "attack_vector": "Local",
+        "affected_component": "Linux kernel driver core platform bus driver_override handling in __driver_attach()",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.585
+    },
+    {
+      "cve_id": "CVE-2026-5570",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "A vulnerability was determined in Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30. The affected element is the function index_config of the file /LoginCB. This manipulation causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authentication\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 - function index_config in /LoginCB\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authentication",
+        "attack_vector": "Network",
+        "affected_component": "Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30 - function index_config in /LoginCB",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.389
+    },
+    {
+      "cve_id": "CVE-2025-59709",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "An issue was discovered in Biztalk360 through 11.5. because of mishandling of user-provided input in a path to be read by the server, a Super User attacker is able to read files on the system and/or coerce an authentication from the service, aka Directory Traversal.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Path Traversal\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Biztalk360 (through version 11.5)\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Path Traversal",
+        "attack_vector": "Network",
+        "affected_component": "Biztalk360 (through version 11.5)",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "time": 2.757
+    },
+    {
+      "cve_id": "CVE-2026-41382",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "OpenClaw before 2026.3.31 contains an authorization bypass vulnerability in Discord voice ingress that allows attackers to bypass channel and member allowlist restrictions. Attackers can exploit stale-role validation gaps and improper channel name validation to gain unauthorized access to restricted voice channels.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"OpenClaw Discord voice ingress\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"Low\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "OpenClaw Discord voice ingress",
+        "confidentiality_impact": "High",
+        "integrity_impact": "Low",
+        "availability_impact": "None"
+      },
+      "time": 2.124
+    },
+    {
+      "cve_id": "CVE-2026-34951",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "Workbench is a suite of tools for administrators and developers to interact with Salesforce.com organizations via the Force.com APIs. Prior to 65.0.0, Workbench contains a reflected cross-site scripting vulnerability via the footerScripts parameter, which does not sanitize user-supplied input before rendering it in the page response. Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Workbench allows XSS Targeting Error Pages. This vulnerability is fixed in 65.0.0.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Cross-Site Scripting\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Workbench footerScripts parameter\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"Low\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Cross-Site Scripting",
+        "attack_vector": "Network",
+        "affected_component": "Workbench footerScripts parameter",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "Low",
+        "availability_impact": "None"
+      },
+      "time": 2.145
+    },
+    {
+      "cve_id": "CVE-2026-5188",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "An integer underflow issue exists in wolfSSL when parsing the Subject Alternative Name (SAN) extension of X.509 certificates. A malformed certificate can specify an entry length larger than the enclosing sequence, causing the internal length counter to wrap during parsing. This results in incorrect handling of certificate data. The issue is limited to configurations using the original ASN.1 parsing implementation which is off by default.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Integer Underflow\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"wolfSSL X.509 certificate SAN extension ASN.1 parser\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"Low\",\n  \"availability_impact\": \"Low\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Integer Underflow",
+        "attack_vector": "Network",
+        "affected_component": "wolfSSL X.509 certificate SAN extension ASN.1 parser",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "Low",
+        "availability_impact": "Low"
+      },
+      "time": 2.037
+    },
+    {
+      "cve_id": "CVE-2026-32957",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "SD-330AC and AMC Manager provided by silex technology, Inc. contain a missing authentication for critical function issue on firmware maintenance. Arbitrary file may be uploaded on the device without authentication.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Missing Authentication for Critical Function\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"SD-330AC and AMC Manager firmware maintenance function\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"Low\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Missing Authentication for Critical Function",
+        "attack_vector": "Network",
+        "affected_component": "SD-330AC and AMC Manager firmware maintenance function",
+        "confidentiality_impact": "None",
+        "integrity_impact": "High",
+        "availability_impact": "Low"
+      },
+      "time": 2.144
+    },
+    {
+      "cve_id": "CVE-2026-7030",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "A security vulnerability has been detected in Tenda F456 1.0.0.5. This affects the function fromRouteStatic of the file /goform/RouteStatic. The manipulation of the argument page leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Buffer Overflow\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Tenda F456 1.0.0.5 - function fromRouteStatic in /goform/RouteStatic\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Buffer Overflow",
+        "attack_vector": "Network",
+        "affected_component": "Tenda F456 1.0.0.5 - function fromRouteStatic in /goform/RouteStatic",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.13
+    },
+    {
+      "cve_id": "CVE-2026-25908",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "Dell Alienware Command Center (AWCC), versions prior to 6.13.8.0, contain an Execution with Unnecessary Privileges vulnerability in the AWCC. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Execution with Unnecessary Privileges\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"Dell Alienware Command Center (AWCC) versions prior to 6.13.8.0\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Execution with Unnecessary Privileges",
+        "attack_vector": "Local",
+        "affected_component": "Dell Alienware Command Center (AWCC) versions prior to 6.13.8.0",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.18
+    },
+    {
+      "cve_id": "CVE-2026-30999",
+      "prompt_condition": "zero_shot",
+      "model": "claude-sonnet-4.6",
+      "description": "A heap buffer overflow in the av_bprint_finalize() function of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Buffer Overflow\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"FFmpeg v8.0.1 av_bprint_finalize() function\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Buffer Overflow",
+        "attack_vector": "Network",
+        "affected_component": "FFmpeg v8.0.1 av_bprint_finalize() function",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.997
+    }
+  ],
+  "deepseek-v4-pro": [
+    {
+      "cve_id": "CVE-2026-4152",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "GIMP JP2 File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of GIMP. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.\n\nThe specific flaw exists within the parsing of JP2 files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28863.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Heap-based Buffer Overflow\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"GIMP JP2 File Parsing\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Heap-based Buffer Overflow",
+        "attack_vector": "Local",
+        "affected_component": "GIMP JP2 File Parsing",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 1.894
+    },
+    {
+      "cve_id": "CVE-2026-25917",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "Dag Authors, who normally should not be able to execute code in the webserver context could craft XCom payload causing the webserver to execute arbitrary code. Since Dag Authors are already highly trusted, severity of this issue is Low.\n\nUsers are recommended to upgrade to Apache Airflow 3.2.0, which fixes the issue.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Command Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Apache Airflow webserver\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Command Injection",
+        "attack_vector": "Network",
+        "affected_component": "Apache Airflow webserver",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.426
+    },
+    {
+      "cve_id": "CVE-2026-5526",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "A security flaw has been discovered in Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53/192.168.0.1. Affected by this vulnerability is an unknown functionality of the file /bin/httpd. The manipulation results in improper access controls. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks.",
+      "raw_response": "```json\n{\n  \"vulnerability_type\": \"Improper Access Control\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Tenda 4G03 Pro /bin/httpd\",\n  \"confidentiality_impact\": null,\n  \"integrity_impact\": null,\n  \"availability_impact\": null\n}\n```",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Access Control",
+        "attack_vector": "Network",
+        "affected_component": "Tenda 4G03 Pro /bin/httpd",
+        "confidentiality_impact": null,
+        "integrity_impact": null,
+        "availability_impact": null
+      },
+      "time": 1.487
+    },
+    {
+      "cve_id": "CVE-2026-28390",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "Issue summary: During processing of a crafted CMS EnvelopedData message\nwith KeyTransportRecipientInfo a NULL pointer dereference can happen.\n\nImpact summary: Applications that process attacker-controlled CMS data may\ncrash before authentication or cryptographic operations occur resulting in\nDenial of Service.\n\nWhen a CMS EnvelopedData message that uses KeyTransportRecipientInfo with\nRSA-OAEP encryption is processed, the optional parameters field of\nRSA-OAEP SourceFunc algorithm identifier is examined without checking\nfor its presence. This results in a NULL pointer dereference if the field\nis missing.\n\nApplications and services that call CMS_decrypt() on untrusted input\n(e.g., S/MIME processing or CMS-based protocols) are vulnerable.\n\nThe FIPS modules in 3.6, 3.5, 3.4, 3.3 and 3.0 are not affected by this\nissue, as the affected code is outside the OpenSSL FIPS module boundary.",
+      "raw_response": "```json\n{\n  \"vulnerability_type\": \"NULL Pointer Dereference\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo using RSA-OAEP\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}\n```",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "NULL Pointer Dereference",
+        "attack_vector": "Network",
+        "affected_component": "OpenSSL CMS_decrypt() processing of CMS EnvelopedData with KeyTransportRecipientInfo using RSA-OAEP",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 2.404
+    },
+    {
+      "cve_id": "CVE-2026-6539",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "Notepad++ 8.9.3 contains a format string injection vulnerability in the Find Results panel handler that allows attackers to cause denial of service and information disclosure by crafting a malicious nativeLang.xml language pack file. Attackers can distribute a poisoned language pack through community channels that triggers format string interpretation when a user performs search operations, leading to access violations and potential leakage of stack or register contents.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Format String Injection\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"Notepad++ 8.9.3 Find Results panel handler\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Format String Injection",
+        "attack_vector": "Local",
+        "affected_component": "Notepad++ 8.9.3 Find Results panel handler",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.997
+    },
+    {
+      "cve_id": "CVE-2026-42171",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12 sometimes uses the Low IL temp directory when executing as SYSTEM, allowing local attackers to gain privileges (if they can cause my_GetTempFileName to return 0, as shown in the references).",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Privilege Management\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Privilege Management",
+        "attack_vector": "Local",
+        "affected_component": "NSIS (Nullsoft Scriptable Install System) 3.06.1 before 3.12",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 1.825
+    },
+    {
+      "cve_id": "CVE-2026-34166",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.25.3, the replace filter in LiquidJS incorrectly accounts for memory usage when the memoryLimit option is enabled. It charges str.length + pattern.length + replacement.length bytes to the memory limiter, but the actual output from str.split(pattern).join(replacement) can be quadratically larger when the pattern occurs many times in the input string. This allows an attacker who controls template content to bypass the memoryLimit DoS protection with approximately 2,500x amplification, potentially causing out-of-memory conditions. This vulnerability is fixed in 10.25.3.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Resource Exhaustion\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"LiquidJS replace filter\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Resource Exhaustion",
+        "attack_vector": "Network",
+        "affected_component": "LiquidJS replace filter",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.964
+    },
+    {
+      "cve_id": "CVE-2026-29138",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "SEPPmail Secure Email Gateway before version 15.0.3 allows attackers with a specially crafted email address to claim another user's PGP signature as their own.",
+      "raw_response": "```json\n{\n  \"vulnerability_type\": \"Improper Authentication\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"SEPPmail Secure Email Gateway\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"None\"\n}\n```",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authentication",
+        "attack_vector": "Network",
+        "affected_component": "SEPPmail Secure Email Gateway",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "High",
+        "availability_impact": "None"
+      },
+      "time": 1.849
+    },
+    {
+      "cve_id": "CVE-2026-40606",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "mitmproxy is a interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers and mitmweb is a web-based interface for mitmproxy. In mitmproxy 12.2.1 and below, the builtin LDAP proxy authentication does not correctly sanitize the username when querying the LDAP server. This allows a malicious client to bypass authentication. Only mitmproxy instances using the proxyauth option with LDAP are affected. This option is not enabled by default. The vulnerability has been fixed in mitmproxy 12.2.2 and above.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Input Validation\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"mitmproxy builtin LDAP proxy authentication\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Input Validation",
+        "attack_vector": "Network",
+        "affected_component": "mitmproxy builtin LDAP proxy authentication",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "None"
+      },
+      "time": 2.232
+    },
+    {
+      "cve_id": "CVE-2026-35626",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "OpenClaw before 2026.3.22 contains an unauthenticated resource exhaustion vulnerability in voice call webhook handling that buffers request bodies before provider signature checks. Attackers can send large or malicious webhook requests to exhaust server resources without authentication by bypassing signature validation.",
+      "raw_response": "```json\n{\n  \"vulnerability_type\": \"Resource Exhaustion\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"OpenClaw voice call webhook handling\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}\n```",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Resource Exhaustion",
+        "attack_vector": "Network",
+        "affected_component": "OpenClaw voice call webhook handling",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.969
+    },
+    {
+      "cve_id": "CVE-2026-33207",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "DataEase is an open-source data visualization and analytics platform. Versions 2.10.20 and below contain a SQL injection vulnerability in the /datasource/getTableField endpoint. The getTableFiledSql method in CalciteProvider.java incorporates the tableName parameter directly into SQL query strings using String.format without parameterization or sanitization. Although DatasourceServer.java validates that the table name exists in the datasource, an attacker can bypass this by first registering an API datasource with a malicious deTableName, which is then returned by getTables and passes the validation check. An authenticated attacker can execute arbitrary SQL commands, enabling error-based extraction of sensitive database information. This issue has been fixed in version 2.10.21.",
+      "raw_response": "{\n  \"vulnerability_type\": \"SQL Injection\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"DataEase /datasource/getTableField endpoint, CalciteProvider.java getTableFiledSql method\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"Low\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "SQL Injection",
+        "attack_vector": "Network",
+        "affected_component": "DataEase /datasource/getTableField endpoint, CalciteProvider.java getTableFiledSql method",
+        "confidentiality_impact": "High",
+        "integrity_impact": "Low",
+        "availability_impact": "None"
+      },
+      "time": 1.91
+    },
+    {
+      "cve_id": "CVE-2026-6985",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "A weakness has been identified in Cesanta Mongoose up to 7.20. This vulnerability affects the function handle_opt of the file /src/net_builtin.c of the component TCP Option Handler. This manipulation of the argument optlen causes infinite loop. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 7.21 is able to resolve this issue. Upgrading the affected component is advised. VulDB has contacted the vendor early and they confirmed quickly, that this issue got fixed already.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Infinite Loop\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Cesanta Mongoose up to 7.20, function handle_opt in /src/net_builtin.c, TCP Option Handler\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Infinite Loop",
+        "attack_vector": "Network",
+        "affected_component": "Cesanta Mongoose up to 7.20, function handle_opt in /src/net_builtin.c, TCP Option Handler",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.932
+    },
+    {
+      "cve_id": "CVE-2026-39421",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "MaxKB is an open-source AI assistant for enterprise. Versions 2.7.1 and below contain a sandbox escape vulnerability in the ToolExecutor component. By leveraging Python's ctypes library to execute raw system calls, an authenticated attacker with workspace privileges can bypass the LD_PRELOAD-based sandbox.so module to achieve arbitrary code execution via direct kernel system calls, enabling full network exfiltration and container compromise. The library intercepts critical standard system functions such as execve, system, connect, and open. It also intercepts mprotect to prevent PROT_EXEC (executable memory) allocations within the sandboxed Python processes, but pkey_mprotect is not blocked. This issue has been fixed in version 2.8.0.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Sandbox Escape\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"MaxKB ToolExecutor component\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Sandbox Escape",
+        "attack_vector": "Network",
+        "affected_component": "MaxKB ToolExecutor component",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.128
+    },
+    {
+      "cve_id": "CVE-2026-40518",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "ByteDance DeerFlow before commit 2176b2b contains a path traversal and arbitrary file write vulnerability in bootstrap-mode custom-agent creation where the agent name validation is bypassed. Attackers can supply traversal-style values or absolute paths as the agent name to influence directory creation and write files outside the intended custom-agent directory, potentially achieving arbitrary file write on the system subject to filesystem permissions.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Path Traversal\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"ByteDance DeerFlow bootstrap-mode custom-agent creation\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Path Traversal",
+        "attack_vector": "Network",
+        "affected_component": "ByteDance DeerFlow bootstrap-mode custom-agent creation",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 1.817
+    },
+    {
+      "cve_id": "CVE-2026-40385",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "In libexif through 0.6.25, an unsigned 32bit integer overflow in Nikon MakerNote handling could be used by local attackers to cause crashes or information leaks. This only affects 32bit systems.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Integer Overflow\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"libexif through 0.6.25, Nikon MakerNote handling\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"Low\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Integer Overflow",
+        "attack_vector": "Local",
+        "affected_component": "libexif through 0.6.25, Nikon MakerNote handling",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "Low"
+      },
+      "time": 2.038
+    },
+    {
+      "cve_id": "CVE-2026-31527",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndriver core: platform: use generic driver_override infrastructure\n\nWhen a driver is probed through __driver_attach(), the bus' match()\ncallback is called without the device lock held, thus accessing the\ndriver_override field without a lock, which can cause a UAF.\n\nFix this by using the driver-core driver_override infrastructure taking\ncare of proper locking internally.\n\nNote that calling match() from __driver_attach() without the device lock\nheld is intentional. [1]",
+      "raw_response": "{\n  \"vulnerability_type\": \"Use-After-Free\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"Linux kernel driver core platform driver_override\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Use-After-Free",
+        "attack_vector": "Local",
+        "affected_component": "Linux kernel driver core platform driver_override",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.182
+    },
+    {
+      "cve_id": "CVE-2026-5570",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "A vulnerability was determined in Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30. The affected element is the function index_config of the file /LoginCB. This manipulation causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Improper Authentication\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30, function index_config of /LoginCB\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authentication",
+        "attack_vector": "Network",
+        "affected_component": "Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30, function index_config of /LoginCB",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.122
+    },
+    {
+      "cve_id": "CVE-2025-59709",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "An issue was discovered in Biztalk360 through 11.5. because of mishandling of user-provided input in a path to be read by the server, a Super User attacker is able to read files on the system and/or coerce an authentication from the service, aka Directory Traversal.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Directory Traversal\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Biztalk360 through 11.5\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Directory Traversal",
+        "attack_vector": "Network",
+        "affected_component": "Biztalk360 through 11.5",
+        "confidentiality_impact": "High",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "time": 1.839
+    },
+    {
+      "cve_id": "CVE-2026-41382",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "OpenClaw before 2026.3.31 contains an authorization bypass vulnerability in Discord voice ingress that allows attackers to bypass channel and member allowlist restrictions. Attackers can exploit stale-role validation gaps and improper channel name validation to gain unauthorized access to restricted voice channels.",
+      "raw_response": "```json\n{\n  \"vulnerability_type\": \"Improper Authorization\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"OpenClaw Discord voice ingress\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"None\"\n}\n```",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Improper Authorization",
+        "attack_vector": "Network",
+        "affected_component": "OpenClaw Discord voice ingress",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "None",
+        "availability_impact": "None"
+      },
+      "time": 2.175
+    },
+    {
+      "cve_id": "CVE-2026-34951",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "Workbench is a suite of tools for administrators and developers to interact with Salesforce.com organizations via the Force.com APIs. Prior to 65.0.0, Workbench contains a reflected cross-site scripting vulnerability via the footerScripts parameter, which does not sanitize user-supplied input before rendering it in the page response. Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Workbench allows XSS Targeting Error Pages. This vulnerability is fixed in 65.0.0.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Cross-Site Scripting\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Workbench\",\n  \"confidentiality_impact\": \"Low\",\n  \"integrity_impact\": \"Low\",\n  \"availability_impact\": \"None\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Cross-Site Scripting",
+        "attack_vector": "Network",
+        "affected_component": "Workbench",
+        "confidentiality_impact": "Low",
+        "integrity_impact": "Low",
+        "availability_impact": "None"
+      },
+      "time": 2.006
+    },
+    {
+      "cve_id": "CVE-2026-5188",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "An integer underflow issue exists in wolfSSL when parsing the Subject Alternative Name (SAN) extension of X.509 certificates. A malformed certificate can specify an entry length larger than the enclosing sequence, causing the internal length counter to wrap during parsing. This results in incorrect handling of certificate data. The issue is limited to configurations using the original ASN.1 parsing implementation which is off by default.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Integer Underflow\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"wolfSSL X.509 certificate Subject Alternative Name (SAN) extension parser\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Integer Underflow",
+        "attack_vector": "Network",
+        "affected_component": "wolfSSL X.509 certificate Subject Alternative Name (SAN) extension parser",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 1.785
+    },
+    {
+      "cve_id": "CVE-2026-32957",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "SD-330AC and AMC Manager provided by silex technology, Inc. contain a missing authentication for critical function issue on firmware maintenance. Arbitrary file may be uploaded on the device without authentication.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Missing Authentication for Critical Function\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"SD-330AC and AMC Manager firmware maintenance\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Missing Authentication for Critical Function",
+        "attack_vector": "Network",
+        "affected_component": "SD-330AC and AMC Manager firmware maintenance",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.33
+    },
+    {
+      "cve_id": "CVE-2026-7030",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "A security vulnerability has been detected in Tenda F456 1.0.0.5. This affects the function fromRouteStatic of the file /goform/RouteStatic. The manipulation of the argument page leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Buffer Overflow\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"Tenda F456 1.0.0.5 /goform/RouteStatic fromRouteStatic\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Buffer Overflow",
+        "attack_vector": "Network",
+        "affected_component": "Tenda F456 1.0.0.5 /goform/RouteStatic fromRouteStatic",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.173
+    },
+    {
+      "cve_id": "CVE-2026-25908",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "Dell Alienware Command Center (AWCC), versions prior to 6.13.8.0, contain an Execution with Unnecessary Privileges vulnerability in the AWCC. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
+      "raw_response": "{\n  \"vulnerability_type\": \"Execution with Unnecessary Privileges\",\n  \"attack_vector\": \"Local\",\n  \"affected_component\": \"Dell Alienware Command Center (AWCC)\",\n  \"confidentiality_impact\": \"High\",\n  \"integrity_impact\": \"High\",\n  \"availability_impact\": \"High\"\n}",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Execution with Unnecessary Privileges",
+        "attack_vector": "Local",
+        "affected_component": "Dell Alienware Command Center (AWCC)",
+        "confidentiality_impact": "High",
+        "integrity_impact": "High",
+        "availability_impact": "High"
+      },
+      "time": 2.129
+    },
+    {
+      "cve_id": "CVE-2026-30999",
+      "prompt_condition": "zero_shot",
+      "model": "deepseek-v4-pro",
+      "description": "A heap buffer overflow in the av_bprint_finalize() function of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
+      "raw_response": "```json\n{\n  \"vulnerability_type\": \"Heap Buffer Overflow\",\n  \"attack_vector\": \"Network\",\n  \"affected_component\": \"FFmpeg v8.0.1 av_bprint_finalize() function\",\n  \"confidentiality_impact\": \"None\",\n  \"integrity_impact\": \"None\",\n  \"availability_impact\": \"High\"\n}\n```",
+      "valid": true,
+      "parsed": {
+        "vulnerability_type": "Heap Buffer Overflow",
+        "attack_vector": "Network",
+        "affected_component": "FFmpeg v8.0.1 av_bprint_finalize() function",
+        "confidentiality_impact": "None",
+        "integrity_impact": "None",
+        "availability_impact": "High"
+      },
+      "time": 1.566
+    }
+  ],
+  "total_time": 161.642,
+  "gpt_time": 53.233,
+  "claude_time": 58.23,
+  "deepseek_time": 50.179
+}

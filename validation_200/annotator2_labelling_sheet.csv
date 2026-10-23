@@ -1,0 +1,201 @@
+item_id,extracted,ground_truth,cwe_ids,your_label
+VT-001,Algorithmic Complexity,Uncontrolled Resource Consumption,CWE-400,family
+VT-002,Denial of Service,Out-of-bounds Read,CWE-125,miss
+VT-003,Code Injection,Improperly Controlled Modification of Dynamically-Determined Object Attributes,CWE-915,miss
+VT-004,User Enumeration,Observable Response Discrepancy,CWE-204,miss
+VT-005,Uncontrolled Recursion,Uncontrolled Recursion,CWE-674,exact
+VT-006,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-007,Path Traversal,Relative Path Traversal,CWE-23,family
+VT-008,Policy Bypass,Improper Handling of Insufficient Permissions or Privileges,CWE-280,miss
+VT-009,Heap-based Buffer Overflow,Heap-based Buffer Overflow,CWE-122,exact
+VT-010,Improper Validation of Certificate with Host Mismatch,Improper Validation of Certificate with Host Mismatch,CWE-297,exact
+VT-011,Resource Leak,Improper Restriction of Operations within the Bounds of a Memory Buffer,CWE-119,miss
+VT-012,Privilege Escalation,Improper Privilege Management,CWE-269,family
+VT-013,Uncontrolled Recursion,Uncontrolled Recursion,CWE-674,exact
+VT-014,Improper Certificate Validation,Improper Certificate Validation,CWE-295,exact
+VT-015,Arbitrary Code Execution,Untrusted Search Path,CWE-426,miss
+VT-016,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'),CWE-89,exact
+VT-017,Session Fixation,Session Fixation,CWE-384,exact
+VT-018,Resource Allocation Without Limits,Uncontrolled Resource Consumption | Allocation of Resources Without Limits or Throttling,CWE-400 | CWE-770,exact
+VT-019,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-020,Insufficient Input Validation,Uncontrolled Resource Consumption,CWE-400,miss
+VT-021,Stack Overflow,Out-of-bounds Write,CWE-787,family
+VT-022,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-023,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-024,Improper Authorization,Incorrect Privilege Assignment | Improper Authorization,CWE-266 | CWE-285,exact
+VT-025,Path Traversal,Improper Link Resolution Before File Access ('Link Following'),CWE-59,miss
+VT-026,Out-of-Bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-027,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-028,Uncontrolled Resource Consumption,Improper Verification of Cryptographic Signature,CWE-347,miss
+VT-029,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-030,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-031,Symlink Race Condition,Improper Link Resolution Before File Access ('Link Following') | Time-of-check Time-of-use (TOCTOU) Race Condition,CWE-59 | CWE-367,family
+VT-032,NULL Pointer Dereference,NULL Pointer Dereference,CWE-476,exact
+VT-033,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-034,Privilege Escalation,Uncontrolled Search Path Element,CWE-427,miss
+VT-035,Improper Check or Handling of Exceptional Conditions,Improper Check or Handling of Exceptional Conditions,CWE-703,exact
+VT-036,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-037,Improper Input Validation,Stack-based Buffer Overflow,CWE-121,miss
+VT-038,Uncontrolled Recursion,Uncontrolled Recursion,CWE-674,exact
+VT-039,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-040,Insecure Deserialization,Deserialization of Untrusted Data,CWE-502,family
+VT-041,Server-Side Request Forgery,Files or Directories Accessible to External Parties | Server-Side Request Forgery (SSRF),CWE-552 | CWE-918,exact
+VT-042,Buffer Overflow,Improper Handling of Length Parameter Inconsistency,CWE-130,family
+VT-043,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-044,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-045,Symlink Following,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') | UNIX Symbolic Link (Symlink) Following,CWE-22 | CWE-61,exact
+VT-046,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-047,Privilege Escalation,Uncontrolled Search Path Element,CWE-427,miss
+VT-048,Denial of Service,Uncaught Exception | Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution'),CWE-248 | CWE-1321,miss
+VT-049,Integer Overflow,Integer Overflow or Wraparound,CWE-190,exact
+VT-050,Integer Overflow,Out-of-bounds Read | Integer Overflow or Wraparound,CWE-125 | CWE-190,exact
+VT-051,Insecure Deserialization,Deserialization of Untrusted Data | Incorrect Permission Assignment for Critical Resource,CWE-502 | CWE-732,family
+VT-052,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-053,Embedded Malicious Code,Improper Control of Generation of Code ('Code Injection'),CWE-94,miss
+VT-054,Improper Authorization,Incorrect Privilege Assignment,CWE-266,family
+VT-055,Server-Side Request Forgery,Server-Side Request Forgery (SSRF) | Initialization of a Resource with an Insecure Default,CWE-918 | CWE-1188,exact
+VT-056,PHP Object Injection,Deserialization of Untrusted Data,CWE-502,family
+VT-057,Missing Authorization,Missing Authorization,CWE-862,exact
+VT-058,Resource Exhaustion,Improper Enforcement of Message Integrity During Transmission in a Communication Channel,CWE-924,miss
+VT-059,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') | Improper Neutralization of Argument Delimiters in a Command ('Argument Injection'),CWE-78 | CWE-88,family
+VT-060,Improper Authorization,Deserialization of Untrusted Data,CWE-502,miss
+VT-061,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-062,Improper Authorization,Insufficiently Protected Credentials,CWE-522,miss
+VT-063,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,family
+VT-064,Information Disclosure,Missing Release of Memory after Effective Lifetime,CWE-401,miss
+VT-065,Privilege Escalation,Improper Privilege Management,CWE-269,family
+VT-066,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-067,Environment Variable Injection,External Control of System or Configuration Setting,CWE-15,family
+VT-068,Improper Authorization,Use of Client-Side Authentication,CWE-603,miss
+VT-069,Privilege Escalation,Uncontrolled Search Path Element,CWE-427,miss
+VT-070,Improper Link Resolution Before File Access,UNIX Symbolic Link (Symlink) Following,CWE-61,family
+VT-071,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-072,Uncontrolled Resource Consumption,Uncontrolled Resource Consumption,CWE-400,exact
+VT-073,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-074,Integer Overflow,Integer Overflow or Wraparound,CWE-190,exact
+VT-075,Uncontrolled Resource Consumption,Uncontrolled Resource Consumption,CWE-400,exact
+VT-076,Use-After-Free,Use After Free,CWE-416,exact
+VT-077,Out-of-bounds Read,Out-of-bounds Write,CWE-787,family
+VT-078,Information Leak,Missing Release of Memory after Effective Lifetime,CWE-401,miss
+VT-079,Path Traversal,Absolute Path Traversal | Files or Directories Accessible to External Parties,CWE-36 | CWE-552,family
+VT-080,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-081,Use-After-Free,Use After Free,CWE-416,exact
+VT-082,Improper Input Validation,Origin Validation Error,CWE-346,miss
+VT-083,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-084,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-085,Insertion of Sensitive Information into Log File,Insertion of Sensitive Information into Log File,CWE-532,exact
+VT-086,Double Free,Double Free,CWE-415,exact
+VT-087,Denial of Service,Missing Release of Resource after Effective Lifetime,CWE-772,miss
+VT-088,Server-Side Template Injection,Improper Neutralization of Special Elements Used in a Template Engine,CWE-1336,exact
+VT-089,Improper Authorization,Missing Authorization,CWE-862,exact
+VT-090,Use After Free,Use After Free,CWE-416,exact
+VT-091,Buffer Overflow,Heap-based Buffer Overflow,CWE-122,family
+VT-092,Out-of-bounds Write,Out-of-bounds Write,CWE-787,exact
+VT-093,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-094,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-095,Improper Input Validation,Loop with Unreachable Exit Condition ('Infinite Loop'),CWE-835,miss
+VT-096,Improper Check or Handling of Exceptional Conditions,Improper Check or Handling of Exceptional Conditions,CWE-703,exact
+VT-097,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'),CWE-89,exact
+VT-098,Authentication Bypass,Incorrect Authorization,CWE-863,miss
+VT-099,Path Traversal,Improper Link Resolution Before File Access ('Link Following') | Incorrect Permission Assignment for Critical Resource,CWE-59 | CWE-732,miss
+VT-100,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-101,Information Disclosure,Exposure of Sensitive Information to an Unauthorized Actor | Use of Cache Containing Sensitive Information | Operation on a Resource after Expiration or Release,CWE-200 | CWE-524 | CWE-672,family
+VT-102,Improper Authorization,Improper Privilege Management,CWE-269,family
+VT-103,Improper TLS Enforcement,Improper Certificate Validation,CWE-295,miss
+VT-104,Improper Authorization,Missing Authorization,CWE-862,exact
+VT-105,Out-of-bounds Read,Improper Handling of Length Parameter Inconsistency,CWE-130,family
+VT-106,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-107,Buffer Over-read,Out-of-bounds Read,CWE-125,family
+VT-108,Integer Overflow,Integer Overflow or Wraparound,CWE-190,exact
+VT-109,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,family
+VT-110,Information Disclosure,Missing Authorization,CWE-862,miss
+VT-111,Improper Restriction of Excessive Authentication Attempts,Improper Restriction of Excessive Authentication Attempts,CWE-307,exact
+VT-112,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-113,Improper Input Validation,Out-of-bounds Write,CWE-787,miss
+VT-114,Improper Restriction of Excessive Authentication Attempts,Improper Restriction of Excessive Authentication Attempts,CWE-307,exact
+VT-115,Information Disclosure,Exposure of Sensitive Information to an Unauthorized Actor | Improper Access Control,CWE-200 | CWE-284,family
+VT-116,Improper Authorization,Missing Authorization,CWE-862,exact
+VT-117,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-118,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'),CWE-89,exact
+VT-119,Uncontrolled Resource Consumption,Allocation of Resources Without Limits or Throttling,CWE-770,family
+VT-120,Improper Verification of Cryptographic Signature,Improper Verification of Cryptographic Signature,CWE-347,exact
+VT-121,Out-of-bounds Read,Uncontrolled Recursion,CWE-674,miss
+VT-122,Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-123,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-124,Buffer Overflow,Improper Restriction of Operations within the Bounds of a Memory Buffer | Buffer Copy without Checking Size of Input ('Classic Buffer Overflow'),CWE-119 | CWE-120,exact
+VT-125,Improper Input Validation,Improper Authorization in Handler for Custom URL Scheme,CWE-939,miss
+VT-126,Insecure Permissions,Incorrect Default Permissions,CWE-276,family
+VT-127,Improper Authorization,Missing Authorization,CWE-862,exact
+VT-128,Server-Side Request Forgery,Server-Side Request Forgery (SSRF),CWE-918,exact
+VT-129,Heap Buffer Overflow,Heap-based Buffer Overflow,CWE-122,exact
+VT-130,Buffer Overflow,Out-of-bounds Write,CWE-787,family
+VT-131,Improper Authentication,Insufficient Session Expiration,CWE-613,miss
+VT-132,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection') | Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-77 | CWE-78,exact
+VT-133,Improper Input Validation,Improper Validation of Array Index,CWE-129,family
+VT-134,Prototype Pollution,Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution'),CWE-1321,exact
+VT-135,Improper URL Normalization,Use of Non-Canonical URL Paths for Authorization Decisions,CWE-647,family
+VT-136,Insufficient Input Validation,Allocation of Resources Without Limits or Throttling,CWE-770,miss
+VT-137,Arbitrary Code Execution,Untrusted Search Path,CWE-426,miss
+VT-138,Heap Information Disclosure,Missing Release of Memory after Effective Lifetime,CWE-401,miss
+VT-139,Improper Link Resolution,UNIX Symbolic Link (Symlink) Following,CWE-61,family
+VT-140,Use After Free,Use After Free,CWE-416,exact
+VT-141,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-142,Improper Input Validation,Improper Validation of Specified Type of Input,CWE-1287,family
+VT-143,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-144,Improper Authorization,Incorrect Permission Assignment for Critical Resource,CWE-732,family
+VT-145,Code Execution via Malicious Image,Inclusion of Functionality from Untrusted Control Sphere,CWE-829,miss
+VT-146,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-147,Resource Leak,Improper Restriction of Operations within the Bounds of a Memory Buffer,CWE-119,miss
+VT-148,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-77,exact
+VT-149,Improper Input Validation,Incorrect Permission Assignment for Critical Resource,CWE-732,miss
+VT-150,Uncontrolled Resource Consumption,Memory Allocation with Excessive Size Value,CWE-789,family
+VT-151,TOCTOU Race Condition,Time-of-check Time-of-use (TOCTOU) Race Condition,CWE-367,exact
+VT-152,Time-of-check to time-of-use (TOCTOU),Time-of-check Time-of-use (TOCTOU) Race Condition,CWE-367,exact
+VT-153,Improper Certificate Validation,Improper Certificate Validation,CWE-295,exact
+VT-154,Out-of-Bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-155,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-77,exact
+VT-156,Information Disclosure,Exposure of Sensitive Information to an Unauthorized Actor | Improper Access Control,CWE-200 | CWE-284,family
+VT-157,Uncontrolled Resource Consumption,Uncontrolled Resource Consumption,CWE-400,exact
+VT-158,Improper Input Validation,Interpretation Conflict,CWE-436,miss
+VT-159,OS Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,exact
+VT-160,Cleartext Storage of Sensitive Information,Insertion of Sensitive Information into Log File,CWE-532,miss
+VT-161,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-162,Code Execution,Inclusion of Functionality from Untrusted Control Sphere,CWE-829,miss
+VT-163,Improper Authorization,Incorrect Privilege Assignment,CWE-266,family
+VT-164,Cleartext Transmission of Sensitive Information,Cleartext Transmission of Sensitive Information,CWE-319,exact
+VT-165,Improper Authorization,Incorrect Default Permissions,CWE-276,miss
+VT-166,Reflected Cross-Site Scripting,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'),CWE-79,exact
+VT-167,XML External Entity (XXE) Injection,Improper Restriction of XML External Entity Reference,CWE-611,exact
+VT-168,Command Injection,Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') | Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-74 | CWE-77,exact
+VT-169,Improper Authorization,Authentication Bypass Using an Alternate Path or Channel,CWE-288,miss
+VT-170,Improper Input Validation,Incorrect Type Conversion or Cast,CWE-704,miss
+VT-171,Path Traversal,Improper Link Resolution Before File Access ('Link Following') | Incorrect Permission Assignment for Critical Resource,CWE-59 | CWE-732,miss
+VT-172,Stack Overflow,Stack-based Buffer Overflow,CWE-121,family
+VT-173,Prompt Injection,Improper Neutralization of Special Elements Used in a Template Engine,CWE-1336,miss
+VT-174,Denial of Service,Improper Resource Shutdown or Release,CWE-404,family
+VT-175,Out-of-bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-176,Improper Authorization,Improper Authorization | Authorization Bypass Through User-Controlled Key,CWE-285 | CWE-639,exact
+VT-177,SQL Injection,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') | Improper Access Control,CWE-89 | CWE-284,exact
+VT-178,Out-of-bounds Write,Out-of-bounds Write,CWE-787,exact
+VT-179,Improper Authorization,Incorrect Permission Assignment for Critical Resource,CWE-732,family
+VT-180,Improper Input Validation,Out-of-bounds Read,CWE-125,miss
+VT-181,Command Injection,Improper Neutralization of Special Elements used in a Command ('Command Injection'),CWE-77,exact
+VT-182,Use-After-Free,Use After Free,CWE-416,exact
+VT-183,Out-of-bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-184,Improper Access Control,Authorization Bypass Through User-Controlled Key,CWE-639,family
+VT-185,Arbitrary Code Execution,Untrusted Search Path,CWE-426,miss
+VT-186,Path Traversal,Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'),CWE-22,exact
+VT-187,Server-Side Request Forgery (SSRF),Files or Directories Accessible to External Parties | Server-Side Request Forgery (SSRF),CWE-552 | CWE-918,exact
+VT-188,Improper Authorization,Incorrect Authorization,CWE-863,exact
+VT-189,Regular Expression Denial of Service,Inefficient Regular Expression Complexity,CWE-1333,exact
+VT-190,Out-of-bounds Read,Out-of-bounds Read,CWE-125,exact
+VT-191,Authentication Brute Force,Improper Restriction of Excessive Authentication Attempts,CWE-307,family
+VT-192,Improper Authorization,Incorrect Privilege Assignment,CWE-266,family
+VT-193,Improper Access Control,Authorization Bypass Through User-Controlled Key,CWE-639,family
+VT-194,Integer Overflow,Out-of-bounds Read | Integer Overflow or Wraparound,CWE-125 | CWE-190,exact
+VT-195,Use-After-Free,Release of Invalid Pointer or Reference,CWE-763,family
+VT-196,Improper Authorization,Improper Certificate Validation,CWE-295,miss
+VT-197,Command Injection,Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'),CWE-78,family
+VT-198,DLL Hijacking,Uncontrolled Search Path Element,CWE-427,exact
+VT-199,Buffer Overflow,Improper Restriction of Operations within the Bounds of a Memory Buffer | Buffer Copy without Checking Size of Input ('Classic Buffer Overflow'),CWE-119 | CWE-120,family
+VT-200,LDAP Injection,Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection'),CWE-90,exact

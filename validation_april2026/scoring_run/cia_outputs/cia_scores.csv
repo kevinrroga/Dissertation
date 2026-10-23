@@ -1,0 +1,10 @@
+component,model,condition,macro_f1,accuracy,commit_rate,n,n_unmapped,n_declined,n_malformed
+availability_impact,claude-sonnet-4.6,zero_shot,0.5475,0.64,1.0,25,0,0,0
+availability_impact,deepseek-v4-pro,zero_shot,0.5278,0.68,0.96,25,0,1,0
+availability_impact,gpt-5.5,zero_shot,0.5006,0.52,0.72,25,0,7,0
+confidentiality_impact,claude-sonnet-4.6,zero_shot,0.7167,0.76,1.0,25,0,0,0
+confidentiality_impact,deepseek-v4-pro,zero_shot,0.7128,0.72,0.96,25,0,1,0
+confidentiality_impact,gpt-5.5,zero_shot,0.7439,0.64,0.72,25,0,7,0
+integrity_impact,claude-sonnet-4.6,zero_shot,0.7397,0.8,1.0,25,0,0,0
+integrity_impact,deepseek-v4-pro,zero_shot,0.6415,0.72,0.96,25,0,1,0
+integrity_impact,gpt-5.5,zero_shot,0.6021,0.6,0.76,25,0,6,0

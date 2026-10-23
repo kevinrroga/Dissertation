@@ -1,0 +1,217 @@
+{
+  "entity": "attack_vector",
+  "input_file": "C:\\Users\\kevin\\Desktop\\cve-ner-dissertation\\validation_april2026\\merging_results_validation.json",
+  "classes": [
+    "NETWORK",
+    "ADJACENT_NETWORK",
+    "LOCAL",
+    "PHYSICAL"
+  ],
+  "policy": {
+    "no_prediction_categories": [
+      "Unmapped",
+      "Declined",
+      "Malformed"
+    ],
+    "no_prediction_treatment": "FN for ground truth class, no FP",
+    "denominator": "all records retained",
+    "undefined_precision": 0.0
+  },
+  "cells": {
+    "claude-sonnet-4.6|zero_shot": {
+      "n": 25,
+      "outcomes": {
+        "Correct": 24,
+        "Incorrect": 1,
+        "Unmapped": 0,
+        "Declined": 0,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 19,
+          "fp": 1,
+          "fn": 0,
+          "support": 19,
+          "precision": 0.95,
+          "recall": 1.0,
+          "f1": 0.9743589743589743,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined": true
+        },
+        "LOCAL": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "support": 6,
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined": true
+        }
+      },
+      "macro_f1": 0.47086247086247085,
+      "accuracy": 0.96,
+      "no_prediction_count": 0,
+      "no_prediction_rate": 0.0,
+      "confusion": {
+        "LOCAL": {
+          "NETWORK": 1,
+          "LOCAL": 5
+        },
+        "NETWORK": {
+          "NETWORK": 19
+        }
+      }
+    },
+    "deepseek-v4-pro|zero_shot": {
+      "n": 25,
+      "outcomes": {
+        "Correct": 25,
+        "Incorrect": 0,
+        "Unmapped": 0,
+        "Declined": 0,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 19,
+          "fp": 0,
+          "fn": 0,
+          "support": 19,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined": true
+        },
+        "LOCAL": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "support": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined": true
+        }
+      },
+      "macro_f1": 0.5,
+      "accuracy": 1.0,
+      "no_prediction_count": 0,
+      "no_prediction_rate": 0.0,
+      "confusion": {
+        "LOCAL": {
+          "LOCAL": 6
+        },
+        "NETWORK": {
+          "NETWORK": 19
+        }
+      }
+    },
+    "gpt-5.5|zero_shot": {
+      "n": 25,
+      "outcomes": {
+        "Correct": 21,
+        "Incorrect": 1,
+        "Unmapped": 0,
+        "Declined": 3,
+        "Malformed": 0
+      },
+      "per_class": {
+        "NETWORK": {
+          "tp": 16,
+          "fp": 1,
+          "fn": 3,
+          "support": 19,
+          "precision": 0.9411764705882353,
+          "recall": 0.8421052631578947,
+          "f1": 0.8888888888888888,
+          "precision_undefined": false
+        },
+        "ADJACENT_NETWORK": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined": true
+        },
+        "LOCAL": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "support": 6,
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "precision_undefined": false
+        },
+        "PHYSICAL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined": true
+        }
+      },
+      "macro_f1": 0.4494949494949495,
+      "accuracy": 0.84,
+      "no_prediction_count": 3,
+      "no_prediction_rate": 0.12,
+      "confusion": {
+        "LOCAL": {
+          "NETWORK": 1,
+          "LOCAL": 5
+        },
+        "NETWORK": {
+          "NETWORK": 16,
+          "Declined": 3
+        }
+      }
+    }
+  }
+}

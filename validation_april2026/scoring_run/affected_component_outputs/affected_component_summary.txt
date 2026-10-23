@@ -1,0 +1,40 @@
+==========================================================================================
+AFFECTED COMPONENT SCORING
+==========================================================================================
+Records: 75   Cells: 3 (3 models x 2 conditions)
+
+Matching policy:
+  Layer 1 (Match)   — bidirectional token-overlap against any GT component
+  Layer 2 (Partial) — vendor-token presence fallback
+  Any-match across multi-component GT lists.
+  Partial is FN for the headline metric; reported separately for discussion.
+
+------------------------------------------------------------------------------------------
+1. OUTCOME BREAKDOWN per cell
+------------------------------------------------------------------------------------------
+model                    condition     Match       Partial     No Match    Declined    Malformed   
+claude-sonnet-4.6        zero_shot     20          2           3           0           0           
+deepseek-v4-pro          zero_shot     21          2           2           0           0           
+gpt-5.5                  zero_shot     20          2           3           0           0           
+
+------------------------------------------------------------------------------------------
+2. BINARY F1  [PRIMARY METRIC]
+------------------------------------------------------------------------------------------
+model                    condition     F1       precision  recall   accuracy  partial%  
+claude-sonnet-4.6        zero_shot     0.889    1.000      0.800    0.800     8.0       
+deepseek-v4-pro          zero_shot     0.913    1.000      0.840    0.840     8.0       
+gpt-5.5                  zero_shot     0.889    1.000      0.800    0.800     8.0       
+
+------------------------------------------------------------------------------------------
+3. COUNTS
+------------------------------------------------------------------------------------------
+model                    condition     n     TP    FN    partial  no_match   no_pred  
+claude-sonnet-4.6        zero_shot     25    20    5     2        3          0        
+deepseek-v4-pro          zero_shot     25    21    4     2        2          0        
+gpt-5.5                  zero_shot     25    20    5     2        3          0        
+
+NOTE: FP is defined as 0 throughout. Precision is always 1.0.
+The meaningful metric is recall (= accuracy). F1 reported for comparability.
+
+NOTE: No Match does not purely indicate failure — LLMs extract feature-level
+names from description text rather than CPE-registered product names.

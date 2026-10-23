@@ -1,0 +1,2452 @@
+{
+  "CVE-2026-42402__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-42402",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Algorithmic Complexity",
+    "gt": [
+      "Uncontrolled Resource Consumption"
+    ],
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  "CVE-2026-9803__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-9803",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2026-41139__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-41139",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Code Injection",
+    "gt": [
+      "Improperly Controlled Modification of Dynamically-Determined Object Attributes"
+    ],
+    "cwes": [
+      "CWE-915"
+    ]
+  },
+  "CVE-2024-0391__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2024-0391",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "User Enumeration",
+    "gt": [
+      "Observable Response Discrepancy"
+    ],
+    "cwes": [
+      "CWE-204"
+    ]
+  },
+  "CVE-2026-47317__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-47317",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Uncontrolled Recursion",
+    "gt": [
+      "Uncontrolled Recursion"
+    ],
+    "cwes": [
+      "CWE-674"
+    ]
+  },
+  "CVE-2026-8121__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-8121",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2025-41268__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2025-41268",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Relative Path Traversal"
+    ],
+    "cwes": [
+      "CWE-23"
+    ]
+  },
+  "CVE-2026-9792__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-9792",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Policy Bypass",
+    "gt": [
+      "Improper Handling of Insufficient Permissions or Privileges"
+    ],
+    "cwes": [
+      "CWE-280"
+    ]
+  },
+  "CVE-2026-47311__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-47311",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Heap-based Buffer Overflow",
+    "gt": [
+      "Heap-based Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-122"
+    ]
+  },
+  "CVE-2026-43869__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-43869",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Validation of Certificate with Host Mismatch",
+    "gt": [
+      "Improper Validation of Certificate with Host Mismatch"
+    ],
+    "cwes": [
+      "CWE-297"
+    ]
+  },
+  "CVE-2026-39830__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-39830",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Resource Leak",
+    "gt": [
+      "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+    ],
+    "cwes": [
+      "CWE-119"
+    ]
+  },
+  "CVE-2026-24072__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-24072",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Privilege Escalation",
+    "gt": [
+      "Improper Privilege Management"
+    ],
+    "cwes": [
+      "CWE-269"
+    ]
+  },
+  "CVE-2026-41311__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-41311",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Uncontrolled Recursion",
+    "gt": [
+      "Uncontrolled Recursion"
+    ],
+    "cwes": [
+      "CWE-674"
+    ]
+  },
+  "CVE-2026-7009__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-7009",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Certificate Validation",
+    "gt": [
+      "Improper Certificate Validation"
+    ],
+    "cwes": [
+      "CWE-295"
+    ]
+  },
+  "CVE-2026-45772__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-45772",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Arbitrary Code Execution",
+    "gt": [
+      "Untrusted Search Path"
+    ],
+    "cwes": [
+      "CWE-426"
+    ]
+  },
+  "CVE-2025-14179__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2025-14179",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "SQL Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+    ],
+    "cwes": [
+      "CWE-89"
+    ]
+  },
+  "CVE-2026-40010__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-40010",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Session Fixation",
+    "gt": [
+      "Session Fixation"
+    ],
+    "cwes": [
+      "CWE-384"
+    ]
+  },
+  "CVE-2026-8124__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-8124",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Resource Allocation Without Limits",
+    "gt": [
+      "Uncontrolled Resource Consumption",
+      "Allocation of Resources Without Limits or Throttling"
+    ],
+    "cwes": [
+      "CWE-400",
+      "CWE-770"
+    ]
+  },
+  "CVE-2026-6735__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-6735",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-42001__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-42001",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Insufficient Input Validation",
+    "gt": [
+      "Uncontrolled Resource Consumption"
+    ],
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  "CVE-2026-7372__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-7372",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Stack Overflow",
+    "gt": [
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-28732__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-28732",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-8770__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-8770",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    ],
+    "cwes": [
+      "CWE-22"
+    ]
+  },
+  "CVE-2026-8743__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-8743",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Privilege Assignment",
+      "Improper Authorization"
+    ],
+    "cwes": [
+      "CWE-266",
+      "CWE-285"
+    ]
+  },
+  "CVE-2026-42496__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-42496",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Link Resolution Before File Access ('Link Following')"
+    ],
+    "cwes": [
+      "CWE-59"
+    ]
+  },
+  "CVE-2026-43620__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-43620",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Out-of-Bounds Read",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2026-28732__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-28732",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-39829__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-39829",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Uncontrolled Resource Consumption",
+    "gt": [
+      "Improper Verification of Cryptographic Signature"
+    ],
+    "cwes": [
+      "CWE-347"
+    ]
+  },
+  "CVE-2026-9312__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-9312",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-42509__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-42509",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-43619__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-43619",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Symlink Race Condition",
+    "gt": [
+      "Improper Link Resolution Before File Access ('Link Following')",
+      "Time-of-check Time-of-use (TOCTOU) Race Condition"
+    ],
+    "cwes": [
+      "CWE-59",
+      "CWE-367"
+    ]
+  },
+  "CVE-2026-7259__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-7259",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "NULL Pointer Dereference",
+    "gt": [
+      "NULL Pointer Dereference"
+    ],
+    "cwes": [
+      "CWE-476"
+    ]
+  },
+  "CVE-2026-43001__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-43001",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-40004__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-40004",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Privilege Escalation",
+    "gt": [
+      "Uncontrolled Search Path Element"
+    ],
+    "cwes": [
+      "CWE-427"
+    ]
+  },
+  "CVE-2026-47316__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-47316",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Check or Handling of Exceptional Conditions",
+    "gt": [
+      "Improper Check or Handling of Exceptional Conditions"
+    ],
+    "cwes": [
+      "CWE-703"
+    ]
+  },
+  "CVE-2026-43530__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-43530",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-39461__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-39461",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Stack-based Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-121"
+    ]
+  },
+  "CVE-2026-47309__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-47309",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Uncontrolled Recursion",
+    "gt": [
+      "Uncontrolled Recursion"
+    ],
+    "cwes": [
+      "CWE-674"
+    ]
+  },
+  "CVE-2026-42404__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-42404",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-7584__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-7584",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Insecure Deserialization",
+    "gt": [
+      "Deserialization of Untrusted Data"
+    ],
+    "cwes": [
+      "CWE-502"
+    ]
+  },
+  "CVE-2026-40564__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-40564",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Files or Directories Accessible to External Parties",
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-552",
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-48685__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-48685",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Improper Handling of Length Parameter Inconsistency"
+    ],
+    "cwes": [
+      "CWE-130"
+    ]
+  },
+  "CVE-2026-42404__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-42404",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-42439__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-42439",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-42275__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-42275",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Symlink Following",
+    "gt": [
+      "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+      "UNIX Symbolic Link (Symlink) Following"
+    ],
+    "cwes": [
+      "CWE-22",
+      "CWE-61"
+    ]
+  },
+  "CVE-2026-3495__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-3495",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2024-47091__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2024-47091",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Privilege Escalation",
+    "gt": [
+      "Uncontrolled Search Path Element"
+    ],
+    "cwes": [
+      "CWE-427"
+    ]
+  },
+  "CVE-2026-8161__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-8161",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Uncaught Exception",
+      "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+    ],
+    "cwes": [
+      "CWE-248",
+      "CWE-1321"
+    ]
+  },
+  "CVE-2026-41142__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-41142",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Integer Overflow",
+    "gt": [
+      "Integer Overflow or Wraparound"
+    ],
+    "cwes": [
+      "CWE-190"
+    ]
+  },
+  "CVE-2026-7568__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-7568",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Integer Overflow",
+    "gt": [
+      "Out-of-bounds Read",
+      "Integer Overflow or Wraparound"
+    ],
+    "cwes": [
+      "CWE-125",
+      "CWE-190"
+    ]
+  },
+  "CVE-2026-8612__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-8612",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Insecure Deserialization",
+    "gt": [
+      "Deserialization of Untrusted Data",
+      "Incorrect Permission Assignment for Critical Resource"
+    ],
+    "cwes": [
+      "CWE-502",
+      "CWE-732"
+    ]
+  },
+  "CVE-2026-8745__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-8745",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-42994__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-42994",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Embedded Malicious Code",
+    "gt": [
+      "Improper Control of Generation of Code ('Code Injection')"
+    ],
+    "cwes": [
+      "CWE-94"
+    ]
+  },
+  "CVE-2026-43535__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-43535",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Privilege Assignment"
+    ],
+    "cwes": [
+      "CWE-266"
+    ]
+  },
+  "CVE-2026-43527__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-43527",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Server-Side Request Forgery (SSRF)",
+      "Initialization of a Resource with an Insecure Default"
+    ],
+    "cwes": [
+      "CWE-918",
+      "CWE-1188"
+    ]
+  },
+  "CVE-2026-45247__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-45247",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "PHP Object Injection",
+    "gt": [
+      "Deserialization of Untrusted Data"
+    ],
+    "cwes": [
+      "CWE-502"
+    ]
+  },
+  "CVE-2024-47268__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2024-47268",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Missing Authorization",
+    "gt": [
+      "Missing Authorization"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  "CVE-2026-39827__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-39827",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Resource Exhaustion",
+    "gt": [
+      "Improper Enforcement of Message Integrity During Transmission in a Communication Channel"
+    ],
+    "cwes": [
+      "CWE-924"
+    ]
+  },
+  "CVE-2026-46483__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-46483",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+      "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+    ],
+    "cwes": [
+      "CWE-78",
+      "CWE-88"
+    ]
+  },
+  "CVE-2026-39832__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-39832",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Deserialization of Untrusted Data"
+    ],
+    "cwes": [
+      "CWE-502"
+    ]
+  },
+  "CVE-2026-8269__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-8269",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-6253__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-6253",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Insufficiently Protected Credentials"
+    ],
+    "cwes": [
+      "CWE-522"
+    ]
+  },
+  "CVE-2026-8265__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-8265",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    ],
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  "CVE-2026-46151__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-46151",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Information Disclosure",
+    "gt": [
+      "Missing Release of Memory after Effective Lifetime"
+    ],
+    "cwes": [
+      "CWE-401"
+    ]
+  },
+  "CVE-2026-24072__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-24072",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Privilege Escalation",
+    "gt": [
+      "Improper Privilege Management"
+    ],
+    "cwes": [
+      "CWE-269"
+    ]
+  },
+  "CVE-2026-45249__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-45249",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-43531__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-43531",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Environment Variable Injection",
+    "gt": [
+      "External Control of System or Configuration Setting"
+    ],
+    "cwes": [
+      "CWE-15"
+    ]
+  },
+  "CVE-2026-8830__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-8830",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Use of Client-Side Authentication"
+    ],
+    "cwes": [
+      "CWE-603"
+    ]
+  },
+  "CVE-2026-40004__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-40004",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Privilege Escalation",
+    "gt": [
+      "Uncontrolled Search Path Element"
+    ],
+    "cwes": [
+      "CWE-427"
+    ]
+  },
+  "CVE-2026-5223__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-5223",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Link Resolution Before File Access",
+    "gt": [
+      "UNIX Symbolic Link (Symlink) Following"
+    ],
+    "cwes": [
+      "CWE-61"
+    ]
+  },
+  "CVE-2026-40982__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-40982",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    ],
+    "cwes": [
+      "CWE-22"
+    ]
+  },
+  "CVE-2026-47071__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-47071",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Uncontrolled Resource Consumption",
+    "gt": [
+      "Uncontrolled Resource Consumption"
+    ],
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  "CVE-2026-8269__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-8269",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-42308__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-42308",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Integer Overflow",
+    "gt": [
+      "Integer Overflow or Wraparound"
+    ],
+    "cwes": [
+      "CWE-190"
+    ]
+  },
+  "CVE-2026-5308__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-5308",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Uncontrolled Resource Consumption",
+    "gt": [
+      "Uncontrolled Resource Consumption"
+    ],
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  "CVE-2026-31695__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-31695",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Use-After-Free",
+    "gt": [
+      "Use After Free"
+    ],
+    "cwes": [
+      "CWE-416"
+    ]
+  },
+  "CVE-2026-31698__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-31698",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Out-of-bounds Read",
+    "gt": [
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-43089__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-43089",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Information Leak",
+    "gt": [
+      "Missing Release of Memory after Effective Lifetime"
+    ],
+    "cwes": [
+      "CWE-401"
+    ]
+  },
+  "CVE-2026-6418__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-6418",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Absolute Path Traversal",
+      "Files or Directories Accessible to External Parties"
+    ],
+    "cwes": [
+      "CWE-36",
+      "CWE-552"
+    ]
+  },
+  "CVE-2026-8120__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-8120",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-31695__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-31695",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Use-After-Free",
+    "gt": [
+      "Use After Free"
+    ],
+    "cwes": [
+      "CWE-416"
+    ]
+  },
+  "CVE-2026-6339__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-6339",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Origin Validation Error"
+    ],
+    "cwes": [
+      "CWE-346"
+    ]
+  },
+  "CVE-2026-45249__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-45249",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-6841__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-6841",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2025-13755__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2025-13755",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Insertion of Sensitive Information into Log File",
+    "gt": [
+      "Insertion of Sensitive Information into Log File"
+    ],
+    "cwes": [
+      "CWE-532"
+    ]
+  },
+  "CVE-2026-43097__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-43097",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Double Free",
+    "gt": [
+      "Double Free"
+    ],
+    "cwes": [
+      "CWE-415"
+    ]
+  },
+  "CVE-2026-9156__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-9156",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Missing Release of Resource after Effective Lifetime"
+    ],
+    "cwes": [
+      "CWE-772"
+    ]
+  },
+  "CVE-2026-42203__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-42203",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Server-Side Template Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements Used in a Template Engine"
+    ],
+    "cwes": [
+      "CWE-1336"
+    ]
+  },
+  "CVE-2026-41498__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-41498",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Missing Authorization"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  "CVE-2026-47310__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-47310",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Use After Free",
+    "gt": [
+      "Use After Free"
+    ],
+    "cwes": [
+      "CWE-416"
+    ]
+  },
+  "CVE-2026-42309__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-42309",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Heap-based Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-122"
+    ]
+  },
+  "CVE-2026-21018__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-21018",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Out-of-bounds Write",
+    "gt": [
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-6735__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-6735",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-8728__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-8728",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-46146__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-46146",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Loop with Unreachable Exit Condition ('Infinite Loop')"
+    ],
+    "cwes": [
+      "CWE-835"
+    ]
+  },
+  "CVE-2026-47316__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-47316",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Check or Handling of Exceptional Conditions",
+    "gt": [
+      "Improper Check or Handling of Exceptional Conditions"
+    ],
+    "cwes": [
+      "CWE-703"
+    ]
+  },
+  "CVE-2025-14179__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2025-14179",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "SQL Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+    ],
+    "cwes": [
+      "CWE-89"
+    ]
+  },
+  "CVE-2025-10908__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2025-10908",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Authentication Bypass",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-42497__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-42497",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Link Resolution Before File Access ('Link Following')",
+      "Incorrect Permission Assignment for Critical Resource"
+    ],
+    "cwes": [
+      "CWE-59",
+      "CWE-732"
+    ]
+  },
+  "CVE-2026-28732__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-28732",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-32244__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-32244",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Information Disclosure",
+    "gt": [
+      "Exposure of Sensitive Information to an Unauthorized Actor",
+      "Use of Cache Containing Sensitive Information",
+      "Operation on a Resource after Expiration or Release"
+    ],
+    "cwes": [
+      "CWE-200",
+      "CWE-524",
+      "CWE-672"
+    ]
+  },
+  "CVE-2026-24072__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-24072",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Improper Privilege Management"
+    ],
+    "cwes": [
+      "CWE-269"
+    ]
+  },
+  "CVE-2026-4873__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-4873",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper TLS Enforcement",
+    "gt": [
+      "Improper Certificate Validation"
+    ],
+    "cwes": [
+      "CWE-295"
+    ]
+  },
+  "CVE-2026-39833__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-39833",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Missing Authorization"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  "CVE-2026-48685__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-48685",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Out-of-bounds Read",
+    "gt": [
+      "Improper Handling of Length Parameter Inconsistency"
+    ],
+    "cwes": [
+      "CWE-130"
+    ]
+  },
+  "CVE-2026-42150__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-42150",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-42216__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-42216",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Buffer Over-read",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2026-24214__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-24214",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Integer Overflow",
+    "gt": [
+      "Integer Overflow or Wraparound"
+    ],
+    "cwes": [
+      "CWE-190"
+    ]
+  },
+  "CVE-2026-4480__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-4480",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    ],
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  "CVE-2026-42051__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-42051",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Information Disclosure",
+    "gt": [
+      "Missing Authorization"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  "CVE-2026-7255__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-7255",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Restriction of Excessive Authentication Attempts",
+    "gt": [
+      "Improper Restriction of Excessive Authentication Attempts"
+    ],
+    "cwes": [
+      "CWE-307"
+    ]
+  },
+  "CVE-2025-10466__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2025-10466",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-43500__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-43500",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-7255__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-7255",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Restriction of Excessive Authentication Attempts",
+    "gt": [
+      "Improper Restriction of Excessive Authentication Attempts"
+    ],
+    "cwes": [
+      "CWE-307"
+    ]
+  },
+  "CVE-2026-8766__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-8766",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Information Disclosure",
+    "gt": [
+      "Exposure of Sensitive Information to an Unauthorized Actor",
+      "Improper Access Control"
+    ],
+    "cwes": [
+      "CWE-200",
+      "CWE-284"
+    ]
+  },
+  "CVE-2026-42174__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-42174",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Missing Authorization"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  "CVE-2026-46595__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-46595",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-41640__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-41640",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "SQL Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+    ],
+    "cwes": [
+      "CWE-89"
+    ]
+  },
+  "CVE-2026-8202__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-8202",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Uncontrolled Resource Consumption",
+    "gt": [
+      "Allocation of Resources Without Limits or Throttling"
+    ],
+    "cwes": [
+      "CWE-770"
+    ]
+  },
+  "CVE-2026-9793__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-9793",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Verification of Cryptographic Signature",
+    "gt": [
+      "Improper Verification of Cryptographic Signature"
+    ],
+    "cwes": [
+      "CWE-347"
+    ]
+  },
+  "CVE-2026-46149__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-46149",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Out-of-bounds Read",
+    "gt": [
+      "Uncontrolled Recursion"
+    ],
+    "cwes": [
+      "CWE-674"
+    ]
+  },
+  "CVE-2026-33862__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-33862",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-8270__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-8270",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-7735__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-7735",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+      "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+    ],
+    "cwes": [
+      "CWE-119",
+      "CWE-120"
+    ]
+  },
+  "CVE-2026-3471__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-3471",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Improper Authorization in Handler for Custom URL Scheme"
+    ],
+    "cwes": [
+      "CWE-939"
+    ]
+  },
+  "CVE-2026-44468__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-44468",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Insecure Permissions",
+    "gt": [
+      "Incorrect Default Permissions"
+    ],
+    "cwes": [
+      "CWE-276"
+    ]
+  },
+  "CVE-2026-42297__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-42297",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Missing Authorization"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  "CVE-2026-8768__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-8768",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Server-Side Request Forgery",
+    "gt": [
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-40033__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-40033",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Heap Buffer Overflow",
+    "gt": [
+      "Heap-based Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-122"
+    ]
+  },
+  "CVE-2026-5405__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-5405",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-5545__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-5545",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authentication",
+    "gt": [
+      "Insufficient Session Expiration"
+    ],
+    "cwes": [
+      "CWE-613"
+    ]
+  },
+  "CVE-2026-8227__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-8227",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    ],
+    "cwes": [
+      "CWE-77",
+      "CWE-78"
+    ]
+  },
+  "CVE-2026-46598__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-46598",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Improper Validation of Array Index"
+    ],
+    "cwes": [
+      "CWE-129"
+    ]
+  },
+  "CVE-2026-42264__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-42264",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Prototype Pollution",
+    "gt": [
+      "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+    ],
+    "cwes": [
+      "CWE-1321"
+    ]
+  },
+  "CVE-2026-5222__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-5222",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper URL Normalization",
+    "gt": [
+      "Use of Non-Canonical URL Paths for Authorization Decisions"
+    ],
+    "cwes": [
+      "CWE-647"
+    ]
+  },
+  "CVE-2026-1659__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-1659",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Insufficient Input Validation",
+    "gt": [
+      "Allocation of Resources Without Limits or Throttling"
+    ],
+    "cwes": [
+      "CWE-770"
+    ]
+  },
+  "CVE-2026-45772__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-45772",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Arbitrary Code Execution",
+    "gt": [
+      "Untrusted Search Path"
+    ],
+    "cwes": [
+      "CWE-426"
+    ]
+  },
+  "CVE-2026-46151__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-46151",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Heap Information Disclosure",
+    "gt": [
+      "Missing Release of Memory after Effective Lifetime"
+    ],
+    "cwes": [
+      "CWE-401"
+    ]
+  },
+  "CVE-2026-5223__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-5223",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Link Resolution",
+    "gt": [
+      "UNIX Symbolic Link (Symlink) Following"
+    ],
+    "cwes": [
+      "CWE-61"
+    ]
+  },
+  "CVE-2026-47310__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-47310",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Use After Free",
+    "gt": [
+      "Use After Free"
+    ],
+    "cwes": [
+      "CWE-416"
+    ]
+  },
+  "CVE-2024-47267__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2024-47267",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    ],
+    "cwes": [
+      "CWE-22"
+    ]
+  },
+  "CVE-2026-4646__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-4646",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Improper Validation of Specified Type of Input"
+    ],
+    "cwes": [
+      "CWE-1287"
+    ]
+  },
+  "CVE-2026-41863__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-41863",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    ],
+    "cwes": [
+      "CWE-22"
+    ]
+  },
+  "CVE-2026-2254__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-2254",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Permission Assignment for Critical Resource"
+    ],
+    "cwes": [
+      "CWE-732"
+    ]
+  },
+  "CVE-2026-43003__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-43003",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Code Execution via Malicious Image",
+    "gt": [
+      "Inclusion of Functionality from Untrusted Control Sphere"
+    ],
+    "cwes": [
+      "CWE-829"
+    ]
+  },
+  "CVE-2026-6341__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-6341",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-39830__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-39830",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Resource Leak",
+    "gt": [
+      "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+    ],
+    "cwes": [
+      "CWE-119"
+    ]
+  },
+  "CVE-2026-40135__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-40135",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+    ],
+    "cwes": [
+      "CWE-77"
+    ]
+  },
+  "CVE-2026-0541__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-0541",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Incorrect Permission Assignment for Critical Resource"
+    ],
+    "cwes": [
+      "CWE-732"
+    ]
+  },
+  "CVE-2026-47313__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-47313",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Uncontrolled Resource Consumption",
+    "gt": [
+      "Memory Allocation with Excessive Size Value"
+    ],
+    "cwes": [
+      "CWE-789"
+    ]
+  },
+  "CVE-2026-41002__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-41002",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "TOCTOU Race Condition",
+    "gt": [
+      "Time-of-check Time-of-use (TOCTOU) Race Condition"
+    ],
+    "cwes": [
+      "CWE-367"
+    ]
+  },
+  "CVE-2026-9796__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-9796",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Time-of-check to time-of-use (TOCTOU)",
+    "gt": [
+      "Time-of-check Time-of-use (TOCTOU) Race Condition"
+    ],
+    "cwes": [
+      "CWE-367"
+    ]
+  },
+  "CVE-2026-42508__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-42508",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Certificate Validation",
+    "gt": [
+      "Improper Certificate Validation"
+    ],
+    "cwes": [
+      "CWE-295"
+    ]
+  },
+  "CVE-2026-46155__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-46155",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Out-of-Bounds Read",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2026-41501__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-41501",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+    ],
+    "cwes": [
+      "CWE-77"
+    ]
+  },
+  "CVE-2026-8750__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-8750",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Information Disclosure",
+    "gt": [
+      "Exposure of Sensitive Information to an Unauthorized Actor",
+      "Improper Access Control"
+    ],
+    "cwes": [
+      "CWE-200",
+      "CWE-284"
+    ]
+  },
+  "CVE-2026-5308__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-5308",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Uncontrolled Resource Consumption",
+    "gt": [
+      "Uncontrolled Resource Consumption"
+    ],
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  "CVE-2026-6322__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-6322",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Interpretation Conflict"
+    ],
+    "cwes": [
+      "CWE-436"
+    ]
+  },
+  "CVE-2025-41270__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2025-41270",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "OS Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    ],
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  "CVE-2026-49200__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-49200",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Cleartext Storage of Sensitive Information",
+    "gt": [
+      "Insertion of Sensitive Information into Log File"
+    ],
+    "cwes": [
+      "CWE-532"
+    ]
+  },
+  "CVE-2026-8745__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-8745",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-43003__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-43003",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Code Execution",
+    "gt": [
+      "Inclusion of Functionality from Untrusted Control Sphere"
+    ],
+    "cwes": [
+      "CWE-829"
+    ]
+  },
+  "CVE-2026-43535__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-43535",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Privilege Assignment"
+    ],
+    "cwes": [
+      "CWE-266"
+    ]
+  },
+  "CVE-2024-47269__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2024-47269",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Cleartext Transmission of Sensitive Information",
+    "gt": [
+      "Cleartext Transmission of Sensitive Information"
+    ],
+    "cwes": [
+      "CWE-319"
+    ]
+  },
+  "CVE-2026-41712__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-41712",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Default Permissions"
+    ],
+    "cwes": [
+      "CWE-276"
+    ]
+  },
+  "CVE-2026-6841__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-6841",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Reflected Cross-Site Scripting",
+    "gt": [
+      "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  "CVE-2026-2253__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-2253",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "XML External Entity (XXE) Injection",
+    "gt": [
+      "Improper Restriction of XML External Entity Reference"
+    ],
+    "cwes": [
+      "CWE-611"
+    ]
+  },
+  "CVE-2026-7692__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-7692",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+      "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+    ],
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ]
+  },
+  "CVE-2026-4524__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-4524",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Authentication Bypass Using an Alternate Path or Channel"
+    ],
+    "cwes": [
+      "CWE-288"
+    ]
+  },
+  "CVE-2026-46597__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-46597",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Incorrect Type Conversion or Cast"
+    ],
+    "cwes": [
+      "CWE-704"
+    ]
+  },
+  "CVE-2026-42497__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-42497",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Link Resolution Before File Access ('Link Following')",
+      "Incorrect Permission Assignment for Critical Resource"
+    ],
+    "cwes": [
+      "CWE-59",
+      "CWE-732"
+    ]
+  },
+  "CVE-2026-6665__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-6665",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Stack Overflow",
+    "gt": [
+      "Stack-based Buffer Overflow"
+    ],
+    "cwes": [
+      "CWE-121"
+    ]
+  },
+  "CVE-2026-41713__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-41713",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Prompt Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements Used in a Template Engine"
+    ],
+    "cwes": [
+      "CWE-1336"
+    ]
+  },
+  "CVE-2026-8269__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-8269",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Denial of Service",
+    "gt": [
+      "Improper Resource Shutdown or Release"
+    ],
+    "cwes": [
+      "CWE-404"
+    ]
+  },
+  "CVE-2026-6104__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-6104",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Out-of-bounds Read",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2026-8786__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-8786",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Improper Authorization",
+      "Authorization Bypass Through User-Controlled Key"
+    ],
+    "cwes": [
+      "CWE-285",
+      "CWE-639"
+    ]
+  },
+  "CVE-2026-41641__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-41641",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "SQL Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+      "Improper Access Control"
+    ],
+    "cwes": [
+      "CWE-89",
+      "CWE-284"
+    ]
+  },
+  "CVE-2026-47314__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-47314",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Out-of-bounds Write",
+    "gt": [
+      "Out-of-bounds Write"
+    ],
+    "cwes": [
+      "CWE-787"
+    ]
+  },
+  "CVE-2026-2254__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-2254",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Permission Assignment for Critical Resource"
+    ],
+    "cwes": [
+      "CWE-732"
+    ]
+  },
+  "CVE-2026-9803__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-9803",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Input Validation",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2026-46508__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-46508",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+    ],
+    "cwes": [
+      "CWE-77"
+    ]
+  },
+  "CVE-2026-6722__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-6722",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Use-After-Free",
+    "gt": [
+      "Use After Free"
+    ],
+    "cwes": [
+      "CWE-416"
+    ]
+  },
+  "CVE-2026-24213__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-24213",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Out-of-bounds Read",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2026-3074__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-3074",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Access Control",
+    "gt": [
+      "Authorization Bypass Through User-Controlled Key"
+    ],
+    "cwes": [
+      "CWE-639"
+    ]
+  },
+  "CVE-2026-45772__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-45772",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Arbitrary Code Execution",
+    "gt": [
+      "Untrusted Search Path"
+    ],
+    "cwes": [
+      "CWE-426"
+    ]
+  },
+  "CVE-2026-8765__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-8765",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Path Traversal",
+    "gt": [
+      "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    ],
+    "cwes": [
+      "CWE-22"
+    ]
+  },
+  "CVE-2026-40564__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-40564",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Server-Side Request Forgery (SSRF)",
+    "gt": [
+      "Files or Directories Accessible to External Parties",
+      "Server-Side Request Forgery (SSRF)"
+    ],
+    "cwes": [
+      "CWE-552",
+      "CWE-918"
+    ]
+  },
+  "CVE-2026-6342__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-6342",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Authorization"
+    ],
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  "CVE-2026-8159__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-8159",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Regular Expression Denial of Service",
+    "gt": [
+      "Inefficient Regular Expression Complexity"
+    ],
+    "cwes": [
+      "CWE-1333"
+    ]
+  },
+  "CVE-2026-43620__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-43620",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Out-of-bounds Read",
+    "gt": [
+      "Out-of-bounds Read"
+    ],
+    "cwes": [
+      "CWE-125"
+    ]
+  },
+  "CVE-2023-54347__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2023-54347",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Authentication Brute Force",
+    "gt": [
+      "Improper Restriction of Excessive Authentication Attempts"
+    ],
+    "cwes": [
+      "CWE-307"
+    ]
+  },
+  "CVE-2026-9795__deepseek-v4-pro__few_shot": {
+    "cve_id": "CVE-2026-9795",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Incorrect Privilege Assignment"
+    ],
+    "cwes": [
+      "CWE-266"
+    ]
+  },
+  "CVE-2026-6063__gpt-5.5__few_shot": {
+    "cve_id": "CVE-2026-6063",
+    "model": "gpt-5.5",
+    "prompt_condition": "few_shot",
+    "ext": "Improper Access Control",
+    "gt": [
+      "Authorization Bypass Through User-Controlled Key"
+    ],
+    "cwes": [
+      "CWE-639"
+    ]
+  },
+  "CVE-2026-7568__claude-sonnet-4.6__few_shot": {
+    "cve_id": "CVE-2026-7568",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "few_shot",
+    "ext": "Integer Overflow",
+    "gt": [
+      "Out-of-bounds Read",
+      "Integer Overflow or Wraparound"
+    ],
+    "cwes": [
+      "CWE-125",
+      "CWE-190"
+    ]
+  },
+  "CVE-2026-47312__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2026-47312",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "Use-After-Free",
+    "gt": [
+      "Release of Invalid Pointer or Reference"
+    ],
+    "cwes": [
+      "CWE-763"
+    ]
+  },
+  "CVE-2026-39828__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-39828",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Improper Authorization",
+    "gt": [
+      "Improper Certificate Validation"
+    ],
+    "cwes": [
+      "CWE-295"
+    ]
+  },
+  "CVE-2026-45035__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-45035",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "Command Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    ],
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  "CVE-2024-36333__deepseek-v4-pro__zero_shot": {
+    "cve_id": "CVE-2024-36333",
+    "model": "deepseek-v4-pro",
+    "prompt_condition": "zero_shot",
+    "ext": "DLL Hijacking",
+    "gt": [
+      "Uncontrolled Search Path Element"
+    ],
+    "cwes": [
+      "CWE-427"
+    ]
+  },
+  "CVE-2026-7607__claude-sonnet-4.6__zero_shot": {
+    "cve_id": "CVE-2026-7607",
+    "model": "claude-sonnet-4.6",
+    "prompt_condition": "zero_shot",
+    "ext": "Buffer Overflow",
+    "gt": [
+      "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+      "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+    ],
+    "cwes": [
+      "CWE-119",
+      "CWE-120"
+    ]
+  },
+  "CVE-2026-46745__gpt-5.5__zero_shot": {
+    "cve_id": "CVE-2026-46745",
+    "model": "gpt-5.5",
+    "prompt_condition": "zero_shot",
+    "ext": "LDAP Injection",
+    "gt": [
+      "Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')"
+    ],
+    "cwes": [
+      "CWE-90"
+    ]
+  }
+}
