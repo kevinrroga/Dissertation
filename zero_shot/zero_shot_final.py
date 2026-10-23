@@ -1,22 +1,7 @@
 """
-Final zero-shot experiment script.
-
-What it does:
-- Loads CVEs from the locked dataset.
-- Sends the corrected zero-shot prompt to three models.
-- Validates the six-field JSON response.
-- Prints live progress in the terminal.
-- Saves after every CVE so the run can resume safely.
-- Writes results to: zero_shot/output_of_zero-shot.json
-
-Install:
-    pip install openai anthropic python-dotenv
-
-Run all 500 CVEs:
-    python zero_shot_final.py
-
-Run a smaller test:
-    python zero_shot_final.py 5
+Zero-shot experiment: runs the locked 500-CVE dataset through three models and
+saves per-CVE results to output_of_zero-shot.json. Pass an integer argument to
+limit the run to N CVEs (e.g. python zero_shot_final.py 5).
 """
 
 import json

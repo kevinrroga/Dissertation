@@ -5,9 +5,6 @@ DeepSeek's API is OpenAI-compatible, so we reuse the openai SDK
 with a different base_url. Reads DEEPSEEK_API_KEY from the same
 .env file as your NVD and OpenAI keys.
 
-Usage:
-    pip install python-dotenv openai
-    python test_deepseek.py
 """
 
 import json
@@ -34,12 +31,9 @@ def test_deepseek_connection():
 
     client = OpenAI(api_key=api_key, base_url=BASE_URL)
 
-    # IMPORTANT: DeepSeek V4 defaults to thinking mode ENABLED, not disabled.
-    # Confirmed by a live test call returning reasoning_tokens > 0 with no
-    # extra_body set. Must explicitly pass thinking: disabled to match
-    # Decision 4 (reasoning off across all three models).
-    # temperature=0 is honoured ONLY because thinking is disabled here; in
-    # thinking mode DeepSeek silently ignores temperature.
+    # DeepSeek V4 defaults to thinking mode ON (confirmed: reasoning_tokens > 0
+    # without extra_body). Thinking must be explicitly disabled; in thinking mode
+    # the API silently ignores temperature.
     response = client.chat.completions.create(
         model=MODEL,
         messages=[

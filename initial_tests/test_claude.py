@@ -17,9 +17,6 @@ separate "disable reasoning" flag to set here — simply not passing a
 which is the correct floor for matching the project's "reasoning off"
 condition across providers.
 
-Usage:
-    pip install anthropic python-dotenv
-    python test_claude.py
 """
 
 import importlib
@@ -29,11 +26,7 @@ from datetime import datetime, timezone
 
 from dotenv import load_dotenv
 
-MODEL = "claude-sonnet-4-6"  # selected over Opus 4.7/4.8 because the Opus
-# tier deprecated user-settable sampling parameters (temperature/top_p/top_k)
-# at the API level (verified by direct 400 response on 2026-06-27); Sonnet 4.6
-# still exposes temperature, which is required to maintain an identical
-# decoding configuration across all three providers in this experiment.
+MODEL = "claude-sonnet-4-6"  # Sonnet 4.6; Opus tier deprecated temperature at API level
 OUTPUT_PATH = "claude_sample_response.json"
 
 
@@ -53,7 +46,7 @@ def test_claude_connection():
     response = client.messages.create(
         model=MODEL,
         max_tokens=1024,
-        temperature=0,  # greedy decoding for deterministic extraction (Decision: decoding config)
+        temperature=0,  # greedy decoding
         messages=[
             {"role": "user", "content": "Reply with exactly: API connection successful."}
         ],

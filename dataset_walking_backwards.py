@@ -192,19 +192,6 @@ def is_complete(record):
     )
 
 
-def _missing_fields(record):
-    missing = []
-    if not record["description"]:
-        missing.append("description")
-    if not record["cvss_vector"]:
-        missing.append("cvss_vector")
-    if not record["cwe_id"]:
-        missing.append("cwe_id")
-    if record["affected_component_source"] != "cpe" or not record["affected_cpes_raw"]:
-        missing.append(f"cpe (source was '{record['affected_component_source']}')")
-    return missing
-
-
 def _save(records, path=OUTPUT_FILE):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(records, f, indent=4)

@@ -12,18 +12,6 @@ integrity_impact, availability_impact) across 18 cells (3 components x 3
 models x 2 conditions) - same scheme, same category definitions, same
 scoring rule, just run three times.
 
-USAGE
------
-Place this script in:   cve-ner-dissertation/scoring_for_CIA/
-Input is read from:     cve-ner-dissertation/ultimate_dataset/merging_results.json
-Outputs are written to: cve-ner-dissertation/scoring_for_CIA/outputs/
-
-    cd cve-ner-dissertation/scoring_for_CIA
-    python cia_scorer.py
-
-Requires: nothing beyond the standard library.
-
-
 METHODOLOGY DECISIONS (identical wording/logic to attack_vector, by design)
 -----------------------------------------------------------------------------
 1. INDEPENDENT SCORING
@@ -96,10 +84,9 @@ METHODOLOGY DECISIONS (identical wording/logic to attack_vector, by design)
    normalisation philosophy: anything that does not land exactly on one of
    the three classes goes to Unmapped rather than being coerced by substring
    matching.
-   IMPORTANT: the string 'None' (the model asserts no impact) and JSON null
-   (the model gave no answer) are semantically distinct and are never
-   conflated - null is checked before any string handling, so this
-   distinction cannot be lost.
+   The string 'None' (the model asserts no impact) and JSON null (the model
+   gave no answer) are semantically distinct: null is checked before any string
+   handling, so this distinction is never lost.
 
 
 OUTPUTS

@@ -1,32 +1,11 @@
 """
-run_fewshot.py — Day 13-14 full few-shot run  (CORRECTED)
-========================================================
-3 models x 500 CVEs = 1,500 calls, few-shot condition.
+Few-shot experiment: runs the locked 500-CVE dataset through three models under
+the few-shot condition and saves per-CVE results to results_fewshot_v1.json.
+Pass an integer argument to limit the run to N CVEs (e.g. python few_shot.py 5).
 
-WHAT WAS WRONG IN THE PREVIOUS VERSION (and is now fixed):
-  1. call_gpt5/call_claude/call_deepseek were NotImplementedError stubs, so
-     every call failed with "Paste your zero-shot ... call here". The real,
-     working bodies (from test_few_shot_prompt.py / Day 7) are now inlined.
-  2. The model list said "claude-opus-4.7". Every other file in the project
-     (zero-shot Day 11, Day 6, Day 7) uses "claude-sonnet-4.6". Opus 4.7+
-     rejects a user-set temperature (400 error), which would crash every
-     Claude call AND break RQ2 (you'd compare few-shot-Opus vs zero-shot-
-     Sonnet). Corrected to claude-sonnet-4.6, matching the zero-shot snapshot.
-  3. The leakage gate checked examples_file.json, but the prompt taught from
-     a DIFFERENT hardcoded set of examples. The gate was theatre. This
-     version refuses to run unless the prompt's example CVE ids and
-     examples_file.json's ids are the SAME three, so the check actually
-     governs what the model sees.
-
-BEFORE YOU RUN — you must resolve ONE methodological decision:
-  Your Day-7 exemplars were drawn from INSIDE the locked 500-CVE set. For the
-  real experiment that is data leakage for RQ2. Pick one, set RESOLVED = True:
-    ROUTE A: replace the 3 exemplars with 3 CVEs OUTSIDE the 500, rebuild the
-             prompt to use them, and keep n=500 scored.
-    ROUTE B: keep the 3 inside-set exemplars but EXCLUDE them from scoring
-             under BOTH conditions (n=497), documented in your Decision Log.
-  This script cannot choose for you. It only enforces that whatever you chose
-  is internally consistent.
+Leakage decision (Route A, confirmed 5 Jul 2026): all three exemplars were drawn
+from data/prompts/diverse_candidates.json, verified disjoint from the locked
+500-CVE eval set. n=500, no exclusions needed.
 """
 
 import os
@@ -49,17 +28,12 @@ OUTPUT_PATH      = str(_ROOT / "few_shot" / "results_fewshot_v1.json")
 CONDITION        = "few_shot"
 TEMPERATURE      = 0.0
 
-# --- Set this True only AFTER you have resolved the leakage decision above. ---
-# ROUTE A confirmed 5 Jul 2026: all 3 exemplars below were drawn from
-# data/prompts/diverse_candidates.json, verified disjoint from the locked
-# 500-CVE eval set (dataset_v1_locked_24jun.json). n=500, no exclusions.
+# Route A confirmed 5 Jul 2026: exemplars drawn from diverse_candidates.json,
+# verified disjoint from the locked 500-CVE eval set. n=500, no exclusions.
 RESOLVED = True
-# The exact three CVE ids your few-shot prompt teaches from. These MUST match
-# the ids in examples_file.json AND the examples baked into few_shot_prompt.txt.
-# (If you go ROUTE B, list the three inside-set ids here and also add them to
-#  EXCLUDE_FROM_SCORING so your Day-18 scorer drops them under both conditions.)
+# Must match the ids in examples_file.json and few_shot_prompt.txt.
 EXPECTED_EXAMPLE_IDS = {"CVE-2026-11281", "CVE-2026-11245", "CVE-2026-25657"}
-EXCLUDE_FROM_SCORING = set()   # ROUTE B only: the inside-set exemplar ids to drop
+EXCLUDE_FROM_SCORING = set()
 
 REQUIRED_KEYS = [
     "vulnerability_type",
@@ -72,7 +46,7 @@ REQUIRED_KEYS = [
 ALLOWED_AV  = {"Network", "Adjacent Network", "Local", "Physical", None}
 ALLOWED_CIA = {"None", "Low", "High", None}
 
-# Model ids matched to the zero-shot run. DO NOT change claude to Opus.
+# Model ids must match the zero-shot run for conditions to be comparable.
 MODELS = ["gpt-5.5", "claude-sonnet-4.6", "deepseek-v4-pro"]
 
 # Short keys used only for the flattened timing summary below.
@@ -84,7 +58,7 @@ MODEL_TIME_KEYS = {
 RATE_DELAY = {"gpt-5.5": 1.0, "claude-sonnet-4.6": 1.0, "deepseek-v4-pro": 0.5}
 
 
-# --------------------- MODEL CALLS (real bodies, from Day 7) ---------------------
+# --------------------- MODEL CALLS ---------------------
 def _require_key(name: str) -> str:
     value = os.environ.get(name)
     if not value:

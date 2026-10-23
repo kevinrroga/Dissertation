@@ -4,9 +4,6 @@ Day 5 — Confirm OpenAI (GPT-5.5) API access works.
 Reads OPENAI_API_KEY from a .env file in the same project
 (the same file your NVD_API_KEY already lives in).
 
-Usage:
-    pip install python-dotenv openai
-    python test_openai.py
 """
 
 import json
@@ -14,14 +11,14 @@ import os
 from datetime import datetime, timezone
 
 from dotenv import load_dotenv
-from openai import OpenAI  
+from openai import OpenAI
 
 MODEL = "gpt-5.5"
 OUTPUT_PATH = "openai_sample_response.json"
 
 
 def test_openai_connection():
-    load_dotenv()  # reads .env from the current working directory by default
+    load_dotenv()
 
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
@@ -33,8 +30,7 @@ def test_openai_connection():
 
     client = OpenAI(api_key=api_key)
 
-    # Reasoning off per Decision 4 — keeps this trivial call cheap and fast,
-    # and matches the configuration planned for the main experiment.
+    # Reasoning off to match the main experiment configuration.
     response = client.responses.create(
         model=MODEL,
         input="Reply with exactly: API connection successful.",

@@ -182,19 +182,6 @@ def is_complete(record):
     )
 
 
-def _missing_fields(record):
-    missing = []
-    if not record["description"]:
-        missing.append("description")
-    if not record["cvss_vector"]:
-        missing.append("cvss_vector")
-    if not record["cwe_id"]:
-        missing.append("cwe_id")
-    if record["affected_component_source"] != "cpe" or not record["affected_cpes_raw"]:
-        missing.append(f"cpe (source was '{record['affected_component_source']}')")
-    return missing
-
-
 def _save(records, path=OUTPUT_FILE):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(records, f, indent=4)
@@ -309,25 +296,15 @@ if __name__ == "__main__":
               f"under the CPE-required scope.")
     print(f"Saved to {OUTPUT_FILE}\n")
 
-    print("=" * 70)
-    print("DAY 3 'DONE WHEN' CHECK")
-    print("=" * 70)
     if len(records) >= TARGET_COMPLETE:
-        print(f"PASS: {len(records)}/{TARGET_COMPLETE} complete records, "
-              f"all four fields populated, affected_component backed by genuine CPE data.")
+        print(f"PASS: {len(records)}/{TARGET_COMPLETE} complete records collected.")
     else:
-        print(f"FAIL: only {len(records)}/{TARGET_COMPLETE} complete records found, "
-              f"even after extending the window to the {MAX_WINDOW_DAYS}-day cap.")
-        print(f"Per your proposal's documented contingency (Section 4.2.2): "
-              f"apply the 300-record fallback now, and document why in your Decision Log.")
+        print(f"FAIL: only {len(records)}/{TARGET_COMPLETE} complete records found "
+              f"after extending the window to the {MAX_WINDOW_DAYS}-day cap.")
 
-    # ------------------------------------------------------------------
-    # Quick diagnostic only -- NOT the full Day 4 deliverable, just an
-    # early look at the vendor/CWE concentration risk flagged earlier.
-    # ------------------------------------------------------------------
     if records:
         cwe_counts = Counter(r["cwe_id"] for r in records)
         vendor_counts = Counter(r["affected_cpes_raw"][0].split(":")[3] for r in records if r["affected_cpes_raw"])
-        print("\n--- Quick diagnostic (not the full Day 4 stats) ---")
+        print("\n--- Dataset diagnostics ---")
         print("Top 5 CWE categories:", cwe_counts.most_common(5))
         print("Top 5 vendors:", vendor_counts.most_common(5))

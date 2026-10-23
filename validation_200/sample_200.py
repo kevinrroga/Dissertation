@@ -19,13 +19,11 @@ SEED = 42
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 
-# ── load data ────────────────────────────────────────────────────────────────
 results = json.load(open(os.path.join(ROOT, 'ultimate_dataset', 'merging_results.json'), encoding='utf-8'))
 sample30 = json.load(open(os.path.join(ROOT, 'matcher_validator', 'sample30.json'), encoding='utf-8'))
 
 excluded_cves = set(sample30.keys())
 
-# ── filter ───────────────────────────────────────────────────────────────────
 eligible = [
     r for r in results
     if r.get('extracted', {}).get('vulnerability_type')
@@ -34,7 +32,6 @@ eligible = [
     and r['ground_truth'].get('vulnerability_type')
 ]
 
-# ── stratified sample ────────────────────────────────────────────────────────
 from collections import defaultdict
 cells = defaultdict(list)
 for r in eligible:
@@ -52,7 +49,7 @@ for i, (key, rows) in enumerate(sorted(cells.items())):
 
 rng.shuffle(sampled)
 
-# ── write CSV ─────────────────────────────────────────────────────────────────
+# write CSV
 csv_path = os.path.join(HERE, 'labelling_sheet.csv')
 with open(csv_path, 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
@@ -72,7 +69,7 @@ with open(csv_path, 'w', newline='', encoding='utf-8') as f:
             '',   # your_label — fill this in
         ])
 
-# ── write JSON (for the scorer) ───────────────────────────────────────────────
+# write JSON (for the scorer)
 json_path = os.path.join(HERE, 'sample_200.json')
 out = {}
 for r in sampled:
