@@ -116,7 +116,7 @@ CALLERS = {
 }
 
 
-# ------------------------- RETRY (from Day 7, transient-only) -------------------------
+# ------------------------- RETRY (transient errors only) -------------------------
 RETRYABLE_SIGNALS = (
     "503", "UNAVAILABLE", "overloaded",
     "429", "rate limit", "RateLimit", "Too Many Requests",
@@ -419,7 +419,7 @@ def main():
           f"(includes rate-limit pacing delays)")
     print_timing_summary(compute_timing_summary(completed_total))
     print(f"\nTiming summary is saved in {OUTPUT_PATH} at the top level.")
-    print("Log these failure counts in your Decision Log (Day 13-14).")
+    print("Review any failure counts above before treating results as final.")
 
 if __name__ == "__main__":
     main()

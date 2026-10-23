@@ -1,50 +1,29 @@
 """
 build_dataset.py
 ==================
-Day 3 deliverable: scale Day 1's completeness-filtered fetch loop from
-5 records to the full target of 500.
+Fetches 500 complete CVE records from the NVD API using a chunk-walking
+strategy to avoid dataset concentration from mass-disclosure batches.
+Supports multiple CWE IDs per CVE (cwe_ids list rather than a single cwe_id).
 
-Everything from Day 1/Step 1 is unchanged:
-  - get_description(), get_cvss_vector(), get_vulnerability_types() [cwe_ids],
-    get_attack_vector(), get_cia_impact(), get_affected_components()
-  - is_complete(): requires description, cvss_vector, a non-empty cwe_ids list,
-    AND genuine
-    CPE data specifically (affected_component_source == "cpe" with a
-    non-empty affected_cpes_raw list) -- the "affected" fallback alone is
-    NOT sufficient, per the scope decision locked 22 June.
+Completeness requires: description, cvss_vector, a non-empty cwe_ids list,
+and genuine CPE data (affected_component_source == "cpe" with a non-empty
+affected_cpes_raw list). The "affected" fallback alone is not sufficient.
 
-SAMPLING REDESIGN (replaces the old growing-window approach entirely):
+Three key design choices:
 
-The original version queried one large, growing date window and stopped
-the moment it hit 500 complete records. In practice this meant the
-script filled its entire quota from a 2-day mass-disclosure batch
-(Linux kernel CVEs) sitting at the OLDEST edge of the window, because
-NVD returns results oldest-first within any date range and the script
-never got further than that. The result was a dataset that was neither
-"recent" (as the proposal requires) nor diverse (over a third of it was
-2-3 vendors from a single 48-hour window).
+1. FIXED ANCHOR DATE. END_DATE is a fixed cutoff (31 May 2026), not "now",
+   deliberately excluding the most recent CVEs which may not yet be fully
+   enriched by NVD.
 
-Fixed by:
-1. FIXED ANCHOR DATE. END_DATE is a fixed cutoff (31 May 2026), not
-   "now" -- deliberately excluding the most recent ~3 weeks of CVEs,
-   which likely haven't finished NVD enrichment yet (the same
-   enrichment-lag risk the proposal already names in 4.2.2, applied
-   proactively).
-2. CHUNK-WALKING. Instead of one big window, the search walks backward
-   from END_DATE in CHUNK_DAYS-day slices, checking each slice fully
-   before stepping further back. This also incidentally fixes a second,
-   separate bug: NVD enforces a hard 120-day cap on any single
-   pubStartDate/pubEndDate request, and the old window-extension logic
-   would have exceeded that the first time it was actually needed.
-3. PER-DAY CAP. MAX_PER_DAY limits how many complete records can come
-   from any single calendar published-date, so no single mass-batch day
-   can dominate the dataset the way the Linux kernel batch did before.
+2. CHUNK-WALKING. The search walks backward from END_DATE in CHUNK_DAYS-day
+   slices. NVD enforces a hard 120-day cap on any single date-range request;
+   chunk-walking avoids hitting that cap.
 
-RATE LIMITING (unchanged from the previous version): NVD allows 5
-requests/30s without an API key, 50/30s with one. REQUEST_DELAY_SECONDS
-is sized accordingly. RESULTS_PER_PAGE is set to NVD's actual max
-(2000) to minimise the number of page-fetches, and therefore the total
-time spent sleeping between requests, for a given amount of CVE data.
+3. PER-DAY CAP. MAX_PER_DAY limits records from any single published-date,
+   preventing a mass-disclosure batch from dominating the dataset.
+
+Rate limiting: NVD allows 5 requests/30s without a key, 50/30s with one.
+REQUEST_DELAY_SECONDS is sized accordingly.
 """
 
 import os
@@ -61,7 +40,7 @@ API_KEY = os.getenv("NVD_API_KEY")
 NVD_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 HEADERS = {"apiKey": API_KEY} if API_KEY else {}
 
-TARGET_COMPLETE = 500            # Day 3's target
+TARGET_COMPLETE = 500
 END_DATE = datetime(2026, 5, 31)  # fixed anchor -- deliberately excludes likely-unenriched recent CVEs
 CHUNK_DAYS = 2                    # width of each backward-walking search slice
 MAX_PER_DAY = 20                  # cap on complete records taken from any single published-date
@@ -77,7 +56,7 @@ OUTPUT_FILE = "dataset_minus_rejected.json"
 
 
 # ---------------------------------------------------------------------
-# Extraction functions -- unchanged from Day 1
+# Extraction functions
 # ---------------------------------------------------------------------
 
 def get_description(cve):
@@ -445,16 +424,11 @@ if __name__ == "__main__":
     else:
         print(f"FAIL: only {len(records)}/{TARGET_COMPLETE} complete records found, "
               f"even after walking back {MAX_WINDOW_DAYS} days from {END_DATE.date()}.")
-        print(f"Per your proposal's documented contingency (Section 4.2.2): "
-              f"apply the 300-record fallback now, and document why in your Decision Log.")
+        print(f"Target not reached. Consider reducing the target or extending MAX_WINDOW_DAYS.")
 
-    # ------------------------------------------------------------------
-    # Quick diagnostic only -- NOT the full Day 4 deliverable, just an
-    # early look at the vendor/CWE concentration risk flagged earlier.
-    # ------------------------------------------------------------------
     if records:
         cwe_counts = Counter(cwe for r in records for cwe in r["cwe_ids"])
         vendor_counts = Counter(r["affected_cpes_raw"][0].split(":")[3] for r in records if r["affected_cpes_raw"])
-        print("\n--- Quick diagnostic (not the full Day 4 stats) ---")
+        print("\n--- Dataset diagnostics ---")
         print("Top 5 CWE categories:", cwe_counts.most_common(5))
         print("Top 5 vendors:", vendor_counts.most_common(5))

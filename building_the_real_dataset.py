@@ -1,40 +1,26 @@
 """
 build_dataset.py
 ==================
-Day 3 deliverable: scale Day 1's completeness-filtered fetch loop from
-5 records to the full target of 500.
+Fetches 500 complete CVE records from the NVD API with rate limiting and
+automatic window extension.
 
-Everything from Day 1/Step 1 is unchanged:
-  - get_description(), get_cvss_vector(), get_vulnerability_type() [cwe_id],
-    get_attack_vector(), get_cia_impact(), get_affected_components()
-  - is_complete(): requires description, cvss_vector, cwe_id, AND genuine
-    CPE data specifically (affected_component_source == "cpe" with a
-    non-empty affected_cpes_raw list) -- the "affected" fallback alone is
-    NOT sufficient, per the scope decision locked 22 June.
+Completeness requires: description, cvss_vector, cwe_id, and genuine CPE
+data (affected_component_source == "cpe" with a non-empty affected_cpes_raw
+list). The "affected" fallback alone is not sufficient.
 
-TWO THINGS ADDED FOR 500-SCALE (nothing else):
+Two key behaviours:
 
 1. RATE LIMITING. NVD allows 5 requests/30s without an API key, 50/30s
-   with one. The Day 1 script fired requests back-to-back with no delay,
-   which was fine for one page but will get you 403'd at 500-target
-   scale. A delay is now inserted between every page request, sized to
+   with one. A delay is inserted between every page request, sized to
    whether NVD_API_KEY is set.
 
-2. AUTOMATIC WINDOW EXTENSION. The proposal's own risk-analysis
-   contingency (Section 4.2.2) says: if the dataset doesn't reach target
-   size in the current date window, EXTEND THE WINDOW before reducing
-   the target below 500. The Day 1 script didn't do this automatically --
-   it just gave up at the end of a fixed 60-day window. This version
-   keeps extending the window backward in WINDOW_EXTENSION_DAYS steps,
-   up to MAX_WINDOW_DAYS, before finally giving up and telling you to
-   apply the documented 300-record fallback yourself.
+2. AUTOMATIC WINDOW EXTENSION. If the dataset does not reach the target
+   size in the current date window, the window extends backward in
+   WINDOW_EXTENSION_DAYS steps up to MAX_WINDOW_DAYS before giving up.
 
-EXPECTED BEHAVIOUR NOTE (flagged previously, worth re-reading now):
-requiring genuine CPE data will likely pull a higher proportion of
+Note: requiring genuine CPE data will likely pull a higher proportion of
 large, fast-CPE-tagging vendors (IBM, Microsoft, Oracle, etc.) than a
-looser filter would. Watch the vendor/CWE breakdown printed at the end
--- if one or two vendors dominate, that's a real finding to write into
-your Day 4 Decision Log, not something to silently fix here.
+looser filter would. Check the vendor/CWE breakdown printed at the end.
 """
 
 import os
@@ -51,8 +37,8 @@ API_KEY = os.getenv("NVD_API_KEY")
 NVD_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 HEADERS = {"apiKey": API_KEY} if API_KEY else {}
 
-TARGET_COMPLETE = 500            # Day 3's target
-INITIAL_WINDOW_DAYS = 90         # starting search window, widened vs Day 1's 5-record test
+TARGET_COMPLETE = 500
+INITIAL_WINDOW_DAYS = 90         # starting search window
 WINDOW_EXTENSION_DAYS = 90       # how much further back to extend if window is exhausted
 MAX_WINDOW_DAYS = 1095           # hard cap: 3 years back, matches "extend before reducing target" contingency
 RESULTS_PER_PAGE = 200           # max NVD allows per page is 2000, but smaller pages = more frequent progress feedback
@@ -66,7 +52,7 @@ OUTPUT_FILE = "build_dataset_output.json"
 
 
 # ---------------------------------------------------------------------
-# Extraction functions -- unchanged from Day 1
+# Extraction functions
 # ---------------------------------------------------------------------
 
 def get_description(cve):

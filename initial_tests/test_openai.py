@@ -1,5 +1,5 @@
 """
-Day 5 — Confirm OpenAI (GPT-5.5) API access works.
+Confirm OpenAI (GPT-5.5) API access works.
 
 Reads OPENAI_API_KEY from a .env file in the same project
 (the same file your NVD_API_KEY already lives in).

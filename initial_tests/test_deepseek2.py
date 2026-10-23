@@ -1,5 +1,5 @@
 """
-Day 5 — Confirm DeepSeek (V4) API access works.
+Confirm DeepSeek (V4) API access works.
 
 DeepSeek's API is OpenAI-compatible, so we reuse the openai SDK
 with a different base_url. Reads DEEPSEEK_API_KEY from the same

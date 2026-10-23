@@ -1,5 +1,5 @@
 """
-Day 5 — Confirm Claude (Sonnet 4.6) API access works.
+Confirm Claude (Sonnet 4.6) API access works.
 
 Reads ANTHROPIC_API_KEY from the same .env file as the other provider keys.
 

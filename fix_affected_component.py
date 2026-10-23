@@ -1,10 +1,9 @@
 """
 fix_affected_components.py
 ============================
-Standalone fix for ONE thing: the CPE escaped-colon parsing bug found during
-the Day 3 spot-check (via verify_sample.py's raw evidence). Does NOT touch
-dataset_multiple_cwes.py -- this is deliberately separate so the fix can be
-read and understood on its own before being folded into the main pipeline.
+Standalone fix for the CPE escaped-colon parsing bug found during dataset
+verification. Deliberately separate from the main pipeline so the fix can be
+read and understood on its own.
 
 THE BUG, BRIEFLY: CPE 2.3 strings use ':' to separate fields, but some
 product names contain a literal colon too (e.g. Perl's "Archive::Tar").
