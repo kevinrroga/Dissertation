@@ -52,8 +52,7 @@ def test_claude_connection():
         ],
         # No `thinking` parameter passed -> extended thinking stays off,
         # which is the genuine reasoning-off floor for this provider.
-        # NOTE: do not also set top_p alongside temperature on 4.x-gen models —
-        # use temperature alone.
+        # Do not set top_p alongside temperature on 4.x-gen models — use temperature alone.
     )
 
     output_text = response.content[0].text

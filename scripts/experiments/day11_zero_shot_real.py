@@ -1,58 +1,18 @@
 """
-Day 6 — Zero-shot prompt test script
-=====================================
+Zero-shot experiment runner (full 500-CVE scale)
+=================================================
+Sends the finalized zero-shot extraction prompt to all three models
+(GPT-5.5, Claude Sonnet 4.6, DeepSeek V4-Pro) across the full locked dataset
+and saves results incrementally.
 
-Purpose
--------
-Send the finalized zero-shot extraction prompt to all three models
-(GPT-5.5, Claude Sonnet 4.6, DeepSeek V4-Pro) for 5 test CVEs, and check
-whether each response is valid JSON matching the required 6-field schema.
+All three models are called with reasoning/thinking disabled and temperature=0.
 
-All three models are called with reasoning/thinking disabled and
-temperature=0 — see decisions_2026-06-27_model-choice-and-decoding-config.md.
+Note: Gemini was replaced with Claude after persistent 503 instability across
+two Gemini models. Claude Sonnet 4.6 is used rather than the Opus tier because
+Opus 4.7+ deprecated user-settable sampling parameters at the API level.
 
-NOTE: Gemini was replaced with Claude on 27 June 2026, after persistent
-unresolved 503 instability across two different Gemini models (3.1 Pro
-Preview and 3.5 Flash) over multiple days. Claude variant is Sonnet 4.6
-rather than the Opus tier because Opus 4.7+ deprecated user-settable
-sampling parameters at the API level; Sonnet 4.6 still exposes them,
-which is required for an identical decoding configuration across all
-three providers. See your Decision Log for the full justification.
-
-This is meant to be run on YOUR machine, not in a sandboxed chat
-environment — it needs outbound internet access to the model APIs.
-
-Setup
------
-1. Install dependencies:
-       pip install openai anthropic google-genai requests python-dotenv
-
-   (google-genai is Google's current Gemini SDK; if you're using a
-   different one, swap out call_gemini() accordingly — the rest of
-   the script doesn't care how each call_* function is implemented,
-   only that it returns a string.)
-
-2. Set your API keys as environment variables (or put them in a
-   .env file in this folder):
-       export OPENAI_API_KEY="..."
-       export GEMINI_API_KEY="..."
-       export DEEPSEEK_API_KEY="..."
-
-3. If you already have a locked dataset, point DATASET_PATH at it.
-   The script expects a JSON list of records with at least a
-   "cve_id" and "description" field. If the file isn't found, it
-   falls back to 5 built-in sample CVEs so you can test the script
-   itself before your dataset is ready.
-
-4. Run:
-       python test_zero_shot_prompt.py
-
-Output
-------
-- Prints each model's raw response per CVE to the console.
-- Writes everything to day6_results.json for your records.
-- Prints a final pass/fail summary table per model
-  (need >=4/5 valid to hit Day 6's "Done when").
+Requires outbound internet access to the model APIs and the following env vars:
+OPENAI_API_KEY, ANTHROPIC_API_KEY, DEEPSEEK_API_KEY (or a .env file).
 """
 
 import os
@@ -77,7 +37,7 @@ NUM_TEST_CVES = 500             # full zero-shot run: all 500 CVEs per model
                                 #  for a smaller pilot without editing this file)
 
 # ---------------------------------------------------------------------------
-# THE FINALIZED ZERO-SHOT PROMPT (Day 6 deliverable — keep this verbatim
+# THE FINALIZED ZERO-SHOT PROMPT (keep verbatim
 # for your Methodology/Appendix once finalized)
 # ---------------------------------------------------------------------------
 ZERO_SHOT_TEMPLATE = """You are a cybersecurity analyst assistant. You will be given a single CVE
@@ -242,8 +202,8 @@ def call_with_retry(fn, *args, label="model", max_attempts=6,
     Generic retry-with-exponential-backoff-and-jitter wrapper.
 
     Used for ALL three providers, not just Gemini — at the scale of
-    Day 9's 120-call pilot and Phase 3's 3,000-call full run, GPT-5.5
-    and DeepSeek will also occasionally hit rate limits, timeouts, or
+    the full 3,000-call run, GPT-5.5 and DeepSeek will also occasionally
+    hit rate limits, timeouts, or
     transient 5xx errors. Gemini gets more attempts since its
     preview-tier 503s are more frequent and well-documented; the other
     two get fewer attempts since a real failure there is more likely

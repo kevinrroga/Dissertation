@@ -1,17 +1,17 @@
 """
-run_fewshot.py — Day 13-14 full few-shot run  (CORRECTED)
-========================================================
+run_fewshot.py
+==============
 3 models x 500 CVEs = 1,500 calls, few-shot condition.
 
-WHAT WAS WRONG IN THE PREVIOUS VERSION (and is now fixed):
+Issues fixed in this version:
   1. call_gpt5/call_claude/call_deepseek were NotImplementedError stubs, so
      every call failed with "Paste your zero-shot ... call here". The real,
-     working bodies (from test_few_shot_prompt.py / Day 7) are now inlined.
+     working bodies are now inlined.
   2. The model list said "claude-opus-4.7". Every other file in the project
-     (zero-shot Day 11, Day 6, Day 7) uses "claude-sonnet-4.6". Opus 4.7+
-     rejects a user-set temperature (400 error), which would crash every
-     Claude call AND break RQ2 (you'd compare few-shot-Opus vs zero-shot-
-     Sonnet). Corrected to claude-sonnet-4.6, matching the zero-shot snapshot.
+     uses "claude-sonnet-4.6". Opus 4.7+ rejects a user-set temperature
+     (400 error), which would crash every Claude call and break RQ2 (you'd
+     compare few-shot-Opus vs zero-shot-Sonnet). Corrected to claude-sonnet-4.6,
+     matching the zero-shot snapshot.
   3. The leakage gate checked examples_file.json, but the prompt taught from
      a DIFFERENT hardcoded set of examples. The gate was theatre. This
      version refuses to run unless the prompt's example CVE ids and
@@ -77,7 +77,7 @@ MODELS = ["gpt-5.5", "claude-sonnet-4.6", "deepseek-v4-pro"]
 RATE_DELAY = {"gpt-5.5": 1.0, "claude-sonnet-4.6": 1.0, "deepseek-v4-pro": 0.5}
 
 
-# --------------------- MODEL CALLS (real bodies, from Day 7) ---------------------
+# --------------------- MODEL CALLS ---------------------
 def _require_key(name: str) -> str:
     value = os.environ.get(name)
     if not value:
@@ -135,7 +135,7 @@ CALLERS = {
 }
 
 
-# ------------------------- RETRY (from Day 7, transient-only) -------------------------
+# ------------------------- RETRY (transient errors only) -------------------------
 RETRYABLE_SIGNALS = (
     "503", "UNAVAILABLE", "overloaded",
     "429", "rate limit", "RateLimit", "Too Many Requests",
@@ -352,7 +352,7 @@ def main():
     for m in MODELS:
         print(f"{m}: {fails[m]} failures / {len(eval_cves)}")
     print(f"Total run time: {format_duration(total_elapsed)}")
-    print("Log these failure counts in your Decision Log (Day 13-14).")
+    print("Review any failure counts above before treating results as final.")
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,7 @@
 """
 match_affected_component.py
 =============================
-Day 2 deliverable (FINAL, locked 22 June).
+Affected-component matcher (FINAL, locked 22 June).
 
 Locks down how an LLM's free-text "affected component" answer is scored
 against the structured NVD CPE ground truth.
@@ -21,7 +21,7 @@ Two alternatives were considered and rejected:
       scale to 500 CVEs x 3 models x 2 conditions = 3,000 judgments.
       Retained only as a validation check on a small sample (see the
       REAL_CASES test suite below, which uses actual CVE/CPE pairs from
-      the locked Day 1 dataset rather than invented ones).
+      the locked dataset rather than invented ones).
 
 (a) Token overlap was chosen because it is deterministic, free, fully
 reproducible by anyone reading the rule (no model dependency), and
@@ -56,7 +56,7 @@ tokens alone made up half the token pool for short product names. Fixed
 by requiring at least one product token -- later tightened further, see
 Revision 2.
 
-Revision 2 (testing against REAL Day 1 dataset, not invented cases): the
+Revision 2 (testing against real CVE/CPE pairs from the locked dataset): the
 vague answer "an IBM data security product" was passing because the
 generic English word "data" happened to also appear in the real product
 name "Guardium Data Protection." The LLM named no actual product, but a
@@ -72,8 +72,7 @@ vendor that share a brand prefix -- e.g. IBM "Guardium Data Protection"
 vs IBM "Guardium Key Lifecycle Manager" both start with "guardium." An
 LLM naming the wrong sibling product will still pass. Correctly
 resolving this would require a vendor-specific product taxonomy this
-function has no access to. This is flagged here for the Error Analysis
-chapter (Day 21) rather than patched, because patching it generically
+function has no access to. This is flagged here as a known limitation rather than patched, because patching it generically
 (e.g. requiring ALL product tokens) would break legitimate partial
 matches elsewhere (abbreviations, dropped trailing words like "Server").
 
@@ -82,8 +81,8 @@ TEST EVIDENCE (both suites run automatically when this file executes)
 ----------------------------------------------------------------------
 Suite 1: 10 hand-written, invented CVE/CPE pairs covering edge cases
          (typos, hallucination, vague answers, compound names, etc).
-Suite 2: 5 REAL CVE/CPE pairs taken directly from the locked Day 1
-         dataset (build_dataset_output.json), each with a "good" and a
+Suite 2: 5 real CVE/CPE pairs taken directly from the locked dataset
+         (build_dataset_output.json), each with a "good" and a
          "flawed" plausible LLM-style answer -- 10 cases total. This is
          the suite that actually satisfies the roadmap's "tested on
          real examples" requirement; Suite 1 alone would not have.
@@ -241,7 +240,7 @@ INVENTED_CASES = [
 
 
 # ===========================================================================
-# TEST SUITE 2 -- REAL CVE/CPE pairs from the locked Day 1 dataset
+# TEST SUITE 2 -- real CVE/CPE pairs from the locked dataset
 # (build_dataset_output.json), each with a "good" and "flawed" plausible
 # LLM-style answer. The Guardium sibling-product case is intentionally
 # marked as a known, accepted limitation rather than a bug -- see module
@@ -310,7 +309,7 @@ def run_invented_suite():
 
 
 def run_real_suite():
-    print("SUITE 2 -- REAL CVE/CPE pairs from locked Day 1 dataset")
+    print("SUITE 2 -- real CVE/CPE pairs from locked dataset")
     print(f"{'CVE':<18} {'Variant':<10} {'Score':>6} {'Pred':>6} {'Expect':>7} {'Result':>20}")
     print("-" * 90)
     n_correct = 0
@@ -337,12 +336,12 @@ if __name__ == "__main__":
     real_ok, real_total = run_real_suite()
 
     print("=" * 90)
-    print("DAY 2 'DONE WHEN' CHECK")
+    print("TEST RESULTS")
     print("=" * 90)
     total_ok = inv_ok + real_ok
     total_cases = inv_total + real_total
     print(f"Invented edge cases: {inv_ok}/{inv_total}")
-    print(f"Real Day 1 data:     {real_ok}/{real_total}")
+    print(f"Real CVE/CPE pairs:  {real_ok}/{real_total}")
     if total_ok == total_cases:
         print("PASS: match_affected_component() behaves as expected on every test case, "
               "including real CVE/CPE pairs. One known, documented limitation (Guardium "

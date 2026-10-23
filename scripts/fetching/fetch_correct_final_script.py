@@ -1,51 +1,18 @@
 """
 build_dataset.py
 ==================
-Day 1 deliverable. This blends together everything built across
-part1-part8 into one script:
+Fetches 5 complete CVE records from the NVD API, combining all per-field
+extraction functions into one script with a completeness filter and
+pagination loop.
 
-  - get_description()           (part5)
-  - get_cvss_vector()            (part6)
-  - get_vulnerability_type()     (part2)  -> this is your cwe_id
-  - get_attack_vector()          (part3)
-  - get_cia_impact()              (part4)
-  - get_affected_components()    (part7)  -> CPE first, "affected" fallback
+Completeness requires: description, cvss_vector, cwe_id, and genuine CPE
+data (affected_component_source == "cpe" with a non-empty raw_cpes list).
+The "affected" fallback alone is not sufficient — a CVE without a CPE string
+cannot be scored by the affected-component matcher.
 
-THE ONE NEW THING (everything else above is unchanged from before):
-A completeness filter + a pagination loop. Up to now, every script
-fetched exactly 5 CVEs and printed whatever it got, gaps and all
-(e.g. the Nuxt CVE with a missing cvss_vector). That's not what Day 1
-actually asks for. The roadmap's "Done when" is a 5-record file where
-ALL FIVE records have ALL FOUR fields populated.
-
-So this script instead: pulls a page of CVEs, checks each one for
-completeness, KEEPS the complete ones and THROWS AWAY the incomplete
-ones, and keeps pulling more pages until it actually has 5 complete
-records (or runs out of CVEs in the date window, in which case it
-tells you honestly instead of pretending it succeeded).
-
-SCOPE CHANGE (locked after Day 2's matcher was built and tested):
-The affected-component ground truth for scoring is the CPE 2.3 string
-(see match_affected_component.py), which is parsed directly out of
-cpe:2.3:vendor:product:version. A CVE whose only affected-component
-data comes from the CNA-supplied "affected" field has no CPE string to
-parse, so it cannot be scored by that matcher -- it would be a silent
-gap in one of the four evaluation columns at scoring time, not a
-usable record.
-
-Completeness therefore now requires GENUINE CPE DATA SPECIFICALLY
-(affected_component_source == "cpe" and a non-empty raw_cpes list).
-The "affected" field is still extracted and kept in the record for
-reference/debugging, but it no longer satisfies the completeness
-filter on its own. This is a deliberate narrowing of the dataset scope
-beyond what the original proposal's inclusion criteria stated (CVSS +
-CWE only) -- see Decision Log entry, 22 June.
-
-EXPECTED CONSEQUENCE: this will likely require a wider WINDOW_DAYS
-than before, since CPE matching is not applied uniformly or instantly
-across all NVD entries. Watch the "examined vs. complete" ratio printed
-at the end -- if it's very high, that's the moment to widen the window,
-per the roadmap's contingency plan, not to relax this filter back.
+Note: CPE enrichment is not applied uniformly across all NVD entries, so a
+wider WINDOW_DAYS may be needed to fill the target. Watch the
+"examined vs. complete" ratio printed at the end.
 """
 
 import os
@@ -61,13 +28,13 @@ API_KEY = os.getenv("NVD_API_KEY")
 NVD_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 HEADERS = {"apiKey": API_KEY} if API_KEY else {}
 
-TARGET_COMPLETE = 5          # how many complete records we need (Day 1's "Done when")
+TARGET_COMPLETE = 5          # fetch this many complete records
 WINDOW_DAYS = 60             # how far back to search if one page isn't enough
 RESULTS_PER_PAGE = 50        # CVEs fetched per API call while searching for complete ones
 
 
 # ---------------------------------------------------------------------
-# Extraction functions -- unchanged from part2/3/4/5/6/7
+# Extraction functions
 # ---------------------------------------------------------------------
 
 def get_description(cve):
@@ -124,7 +91,7 @@ def get_cia_impact(cve):
 def get_affected_components(cve):
     """
     Returns BOTH a human-readable "vendor product" list (for spot-checking)
-    AND the raw CPE 2.3 criteria strings (for the Day 2 matcher, which
+    AND the raw CPE 2.3 criteria strings (for the affected-component matcher, which
     parses vendor/product directly out of the cpe:2.3:... format).
 
     The "affected" fallback is still extracted here for visibility/
@@ -184,16 +151,15 @@ def extract_record(cve):
 
 def is_complete(record):
     """
-    Day 1 completeness rule (REVISED, 22 June):
-    description, cvss_vector, cwe_id must all be non-empty, AND the
-    affected-component data must be genuine CPE data specifically --
+    Completeness rule: description, cvss_vector, cwe_id must all be non-empty,
+    AND the affected-component data must be genuine CPE data specifically --
     affected_component_source == "cpe" with a non-empty raw_cpes list.
 
     The "affected" fallback (source == "affected") no longer satisfies
     completeness on its own. It is still extracted and saved in every
     record for reference, but a CVE with only "affected" data and no
-    CPE match is excluded from the dataset, because match_affected_
-    component() (Day 2) requires a CPE string to score against.
+    CPE match is excluded from the dataset, because the affected-component
+    matcher requires a CPE string to score against.
     """
     return bool(
         record["description"]
@@ -295,7 +261,7 @@ if __name__ == "__main__":
     print(f"Saved to build_dataset_output.json\n")
 
     print("=" * 70)
-    print("DAY 1 'DONE WHEN' CHECK")
+    print("DATASET BUILD CHECK")
     print("=" * 70)
     if len(records) == TARGET_COMPLETE:
         print(f"PASS: {TARGET_COMPLETE}/{TARGET_COMPLETE} records have all 4 fields populated, "

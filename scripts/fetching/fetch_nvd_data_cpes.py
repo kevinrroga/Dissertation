@@ -1,13 +1,9 @@
 """
 fetch_sample_cpes.py
 
-Day 1/2 support script: pull a small batch of real CVEs from the NVD API 2.0
-and print out their raw CPE match data, so we can SEE what "affected
-component" ground truth actually looks like before building matching logic
-on top of it.
-
-This does NOT build the dataset (that's Day 1's build_dataset.py). This is
-purely an inspection tool.
+NVD API inspection tool: pulls a small batch of CVEs and prints their raw
+CPE match data to show what "affected component" ground truth looks like.
+This does not build the dataset — it is purely an inspection utility.
 """
 
 import requests

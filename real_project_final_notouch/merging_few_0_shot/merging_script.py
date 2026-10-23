@@ -1,8 +1,8 @@
 """
 consolidate_results.py
 =======================
-Day 15: merges zero-shot results + few-shot results + ground truth from the
-locked dataset into ONE flat file, ready for Day 18 scoring.
+Merges zero-shot results, few-shot results, and ground truth from the
+locked dataset into ONE flat file, ready for scoring.
 
 Input files (must all score/cover the same 500-CVE locked set):
   - output_of_zero-shot_tidy.json   (500 CVEs x 3 models, prompt_condition=zero_shot)
@@ -23,8 +23,8 @@ Deliberately excluded from the output, and why:
     "High", "ADJACENT_NETWORK" vs "Adjacent Network"). That casing/format
     mismatch is real and matters, but deciding HOW to match them (exact
     string match after normalization? substring? mapping table?) is a
-    Day 18 scoring decision, not a Day 15 consolidation decision. Baking an
-    assumption in here would hide that decision instead of making it explicit.
+    scoring decision, not a consolidation decision. Baking an assumption
+    in here would hide that decision instead of making it explicit.
 
 Usage:
     python consolidate_results.py

@@ -1,43 +1,23 @@
 """
-Day 9 — Pilot run harness
-=========================================================================
-20 CVEs x {zero-shot, few-shot} x 3 models = 120 calls.
+Pilot run harness — 20 CVEs x 2 conditions x 3 models = 120 calls
+==================================================================
+Runs both zero-shot and few-shot conditions in one pass over a
+deterministic 20-CVE sample, checks mechanical failure rates, and
+produces a human-inspection file for plausibility review.
 
-This is the Day 9 deliverable. It reuses, verbatim, the model-call,
-retry, validation, and incremental-save machinery you finalised in
-test_zero_shot_prompt.py (Day 6) and test_few_shot_prompt.py (Day 7).
-The ONLY new logic here is:
-  1. A deterministic 20-CVE sampler that EXCLUDES the three few-shot
-     exemplars (so few-shot can't "succeed" on a CVE whose answer is
-     already in its own prompt).
-  2. A two-condition runner (zero-shot AND few-shot in one pass).
-  3. A failure-rate reporter that prints a per-model, per-condition
-     mechanical-failure table and a PROCEED / FIX-AND-REPILOT verdict
-     against a hard threshold.
-  4. A human-inspection file pairing each extraction next to its CVE
-     description, so you can eyeball plausibility (the part the
-     failure rate CANNOT tell you).
+"Failure" here means mechanical only: API error after retries, response
+that does not parse as JSON, or missing/out-of-enum fields. A semantically
+wrong but well-formed answer is not a failure at this stage; the inspection
+file is where you catch bad-but-valid output by eye.
 
-WHAT "FAILURE" MEANS HERE (mechanical only):
-  - API error after retries, OR
-  - response does not parse as JSON, OR
-  - parses but is missing a required key / has an out-of-enum value.
-A semantically WRONG-but-well-formed answer is NOT a failure at this
-stage. That is a Day 18 scoring concern. Conflating the two would
-corrupt both. The inspection file is where you catch bad-but-valid
-output by eye.
-
-RUN THIS ON YOUR MACHINE (needs outbound access to the model APIs):
-
-    pip install openai anthropic requests python-dotenv
-    # set OPENAI_API_KEY, ANTHROPIC_API_KEY, DEEPSEEK_API_KEY
-    python run_day9_pilot.py
-
-Outputs (written next to this script):
+Outputs written next to this script:
   - day9_pilot_raw.json            every call's raw response + validity
   - day9_pilot_failures.csv        per-model x condition failure table
   - day9_pilot_inspection.txt      extractions laid out for manual review
   - day9_pilot_sample_cves.json    the exact 20 CVEs used (reproducibility)
+
+Requires outbound internet access and env vars:
+OPENAI_API_KEY, ANTHROPIC_API_KEY, DEEPSEEK_API_KEY (or a .env file).
 """
 
 import os
@@ -57,17 +37,16 @@ load_dotenv()
 # ===========================================================================
 _ROOT = Path(__file__).resolve().parent.parent.parent
 DATASET_PATH = str(_ROOT / "data/datasets/dataset_v1_locked_24jun.json")
-NUM_PILOT_CVES = 20            # Day 9: 20 CVEs (not 5)
+NUM_PILOT_CVES = 20
 SAMPLE_SEED = 42              # deterministic -> the pilot is reproducible
 
 # The three few-shot exemplars, drawn from inside the 500. They MUST be
 # excluded from the pilot sample so few-shot is never scored on a CVE
-# whose gold answer sits in its own prompt. (Day 7 decision: n=497.)
+# whose gold answer sits in its own prompt.
 FEWSHOT_EXEMPLAR_IDS = {"CVE-2026-6073", "CVE-2026-47307", "CVE-2026-44409"}
 
-# Day 9 "Done when" bar, made concrete so the verdict isn't hand-waved:
-#   mechanical failure rate per (model, condition) must be <= this.
-# Above it -> FIX-AND-REPILOT, do not scale to the full 3,000.
+# Mechanical failure rate threshold per (model, condition).
+# Above this -> investigate before scaling to the full run.
 MAX_ACCEPTABLE_FAILURE_RATE = 0.05   # 5%
 
 # How many extractions to drop into the manual-inspection file per
@@ -76,7 +55,7 @@ MAX_ACCEPTABLE_FAILURE_RATE = 0.05   # 5%
 INSPECT_PER_CELL = 5
 
 # ===========================================================================
-# SCHEMA + VALIDATION (identical to Day 6/7 — kept in sync deliberately)
+# SCHEMA + VALIDATION
 # ===========================================================================
 REQUIRED_KEYS = [
     "vulnerability_type",
@@ -131,10 +110,7 @@ def validate_response(raw_text: str):
 
 
 # ===========================================================================
-# PROMPTS — imported verbatim from your Day 6 / Day 7 scripts so there is a
-# SINGLE source of truth. If those files sit next to this one, we import the
-# templates directly rather than copy-pasting (copy-paste drift is how the
-# zero-shot/few-shot comparison silently stops being clean).
+# PROMPTS — imported from the sibling scripts to avoid copy-paste drift.
 # ===========================================================================
 try:
     import importlib.util
@@ -147,14 +123,12 @@ try:
 
     ZERO_SHOT_TEMPLATE = _load_template("test_zero_shot_prompt.py", "ZERO_SHOT_TEMPLATE")
     FEW_SHOT_TEMPLATE = _load_template("test_few_shot_prompt.py", "FEW_SHOT_TEMPLATE")
-    print("[i] Imported prompt templates from your Day 6/7 scripts (single source of truth).")
+    print("[i] Imported prompt templates from sibling scripts.")
 except Exception as e:
     raise SystemExit(
-        f"[FATAL] Could not import prompt templates from your Day 6/7 scripts: {e}\n"
+        f"[FATAL] Could not import prompt templates: {e}\n"
         f"        Make sure test_zero_shot_prompt.py and test_few_shot_prompt.py\n"
-        f"        sit in the same folder as this harness. The harness deliberately\n"
-        f"        does NOT keep its own copy of the prompts, so the pilot uses the\n"
-        f"        exact finalised wording and your conditions stay comparable."
+        f"        sit in the same folder as this script."
     )
 
 CONDITIONS = {
@@ -163,7 +137,7 @@ CONDITIONS = {
 }
 
 # ===========================================================================
-# MODEL CALLS + RETRY (identical to Day 6/7)
+# MODEL CALLS + RETRY
 # ===========================================================================
 def _require_key(name: str) -> str:
     value = os.environ.get(name)
@@ -332,7 +306,7 @@ def write_failure_csv(path: Path, results: dict, n_per_cell: int):
 
 def write_inspection_file(path: Path, results: dict, cve_by_id: dict, n: int):
     lines = []
-    lines.append("DAY 9 PILOT — MANUAL SANITY INSPECTION")
+    lines.append("PILOT — MANUAL SANITY INSPECTION")
     lines.append("=" * 72)
     lines.append("Failure rate proves the pipeline is mechanically sound. It does")
     lines.append("NOT prove the extractions are GOOD. Read these by eye: does the")
@@ -341,7 +315,7 @@ def write_inspection_file(path: Path, results: dict, cve_by_id: dict, n: int):
     lines.append("")
     lines.append("Note: ground truth below uses NVD's UPPER_CASE enum (e.g. NETWORK,")
     lines.append("HIGH); the model is prompted for Title Case (Network, High). That")
-    lines.append("casing gap is handled at Day 18 scoring, not here — don't mistake")
+    lines.append("casing gap is handled at scoring time, not here — don't mistake")
     lines.append("it for a wrong answer during inspection.")
     lines.append("=" * 72)
     lines.append("")
@@ -458,7 +432,7 @@ def main():
     rows = write_failure_csv(out_csv, results, NUM_PILOT_CVES)
     write_inspection_file(out_inspect, results, cve_by_id, INSPECT_PER_CELL)
 
-    print(f"\n{'='*70}\nDAY 9 PILOT — FAILURE RATES "
+    print(f"\n{'='*70}\nPILOT — FAILURE RATES "
           f"(threshold {MAX_ACCEPTABLE_FAILURE_RATE:.0%})\n{'='*70}")
     print(f"{'model':20s} {'condition':11s} {'fail':>5s} {'rate':>7s}  verdict")
     print("-" * 60)

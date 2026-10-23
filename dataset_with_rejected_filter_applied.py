@@ -335,7 +335,7 @@ if __name__ == "__main__":
     print(f"\nOutput saved to: {OUTPUT_FILE}")
 
     print("\n" + "=" * 70)
-    print("DAY 3 'DONE WHEN' CHECK")
+    print("DATASET BUILD CHECK")
     print("=" * 70)
     if stats["target_reached"]:
         print(f"PASS: {len(records)}/{TARGET_COMPLETE} complete records, "
